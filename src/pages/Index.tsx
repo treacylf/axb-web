@@ -8,6 +8,7 @@ import { CoworkingGrid } from "@/components/CoworkingGrid";
 import { CreativeParkGrid } from "@/components/CreativeParkGrid";
 import { ServiceSection } from "@/components/ServiceSection";
 import { Footer } from "@/components/Footer";
+import { FloatingSidebar } from "@/components/FloatingSidebar";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
@@ -50,6 +51,9 @@ const Index = () => {
         <CreativeParkGrid />
       </main>
       <Footer />
+      
+      {/* Floating Sidebar */}
+      <FloatingSidebar />
     </div>
   );
 };

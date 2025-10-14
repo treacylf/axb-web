@@ -1,6 +1,18 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
+  const friendlyLinks = [
+    { name: "办公室设计装修", url: "#" },
+    { name: "北京写字楼出租", url: "#" },
+    { name: "深圳办公室出租", url: "#" },
+    { name: "昆明装修公司", url: "#" },
+    { name: "南京新房网", url: "#" },
+    { name: "上海办公室装修", url: "#" },
+    { name: "大虹桥写字楼出租", url: "#" },
+    { name: "北京写字楼租售", url: "#" },
+    { name: "涿州新房", url: "#" },
+  ];
+
   return (
     <footer className="border-t bg-card">
       <div className="container mx-auto px-4 py-12">
@@ -73,14 +85,49 @@ export const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span>上海市</span>
+                <span>上海市闵行区泰虹路268弄1号万科时一区T3栋305室</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 上海超办信息服务有限公司. 保留所有权利.</p>
+        {/* Friendly Links */}
+        <div className="mt-8 border-t pt-8">
+          <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+            <span className="font-medium">友情链接：</span>
+            {friendlyLinks.map((link, index) => (
+              <span key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-primary"
+                >
+                  {link.name}
+                </a>
+                {index < friendlyLinks.length - 1 && (
+                  <span className="mx-1">|</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-4 border-t pt-6 text-center text-sm text-muted-foreground">
+          <p className="mb-2">
+            Copyright © 2025 上海超办信息服务有限公司. 保留所有权利.
+          </p>
+          <p className="text-xs">
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-primary"
+            >
+              网站备案/许可证号：沪ICP备2021012780号-2
+            </a>
+          </p>
         </div>
       </div>
     </footer>
