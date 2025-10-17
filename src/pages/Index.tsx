@@ -7,6 +7,8 @@ import { BuildingGrid } from "@/components/BuildingGrid";
 import { CoworkingGrid } from "@/components/CoworkingGrid";
 import { CreativeParkGrid } from "@/components/CreativeParkGrid";
 import { ServiceSection } from "@/components/ServiceSection";
+import { ConsultationCTA } from "@/components/ConsultationCTA";
+import { NewsSection } from "@/components/NewsSection";
 import { Footer } from "@/components/Footer";
 import { FloatingSidebar } from "@/components/FloatingSidebar";
 import heroSlide1 from "@/assets/carousel-1.jpg";
@@ -49,6 +51,12 @@ const Index = () => {
 
         {/* Creative Parks */}
         <CreativeParkGrid />
+
+        {/* Consultation CTA */}
+        <ConsultationCTA />
+
+        {/* News Section */}
+        <NewsSection />
       </main>
       <Footer />
       
