@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import creativeImage from "@/assets/creative-placeholder.jpg";
+import show800 from "@/assets/creative/800show.jpg";
+import anken from "@/assets/creative/anken.jpg";
+import bridge8 from "@/assets/creative/bridge8.jpg";
 
 interface CreativePark {
   name: string;
@@ -9,14 +11,14 @@ interface CreativePark {
 
 export const CreativeParkGrid = () => {
   const parks: CreativePark[] = [
-    { name: "虹桥德必易园", location: "闵行", image: creativeImage },
-    { name: "X2创意空间", location: "徐汇", image: creativeImage },
-    { name: "越界智造局", location: "静安", image: creativeImage },
-    { name: "锦和越界文创园", location: "浦东", image: creativeImage },
-    { name: "德必易园800秀", location: "长宁", image: creativeImage },
-    { name: "上海国际时尚中心", location: "杨浦", image: creativeImage },
-    { name: "M50创意园", location: "普陀", image: creativeImage },
-    { name: "8号桥创意园", location: "黄浦", image: creativeImage },
+    { name: "800秀创意园", location: "静安", image: show800 },
+    { name: "安垦汇智创意园", location: "静安", image: anken },
+    { name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
+    { name: "800秀创意园", location: "静安", image: show800 },
+    { name: "安垦汇智创意园", location: "静安", image: anken },
+    { name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
+    { name: "800秀创意园", location: "静安", image: show800 },
+    { name: "安垦汇智创意园", location: "静安", image: anken },
   ];
 
   return (

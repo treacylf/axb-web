@@ -9,10 +9,10 @@ import { CreativeParkGrid } from "@/components/CreativeParkGrid";
 import { ServiceSection } from "@/components/ServiceSection";
 import { Footer } from "@/components/Footer";
 import { FloatingSidebar } from "@/components/FloatingSidebar";
-import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
-import heroSlide4 from "@/assets/hero-slide-4.jpg";
+import heroSlide1 from "@/assets/carousel-1.jpg";
+import heroSlide2 from "@/assets/carousel-2.jpg";
+import heroSlide3 from "@/assets/carousel-3.jpg";
+import heroSlide4 from "@/assets/carousel-4.jpg";
 
 const Index = () => {
   const carouselImages = [

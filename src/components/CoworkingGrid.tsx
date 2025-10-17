@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import coworkingImage from "@/assets/coworking-placeholder.jpg";
+import distrii1 from "@/assets/coworking/distrii-1.jpg";
+import umon1 from "@/assets/coworking/umon-1.jpg";
+import wework1 from "@/assets/coworking/wework-1.jpg";
 
 interface Coworking {
   name: string;
@@ -9,14 +11,14 @@ interface Coworking {
 
 export const CoworkingGrid = () => {
   const coworkings: Coworking[] = [
-    { name: "WIZWORK（环球港）", location: "普陀", image: coworkingImage },
-    { name: "艾克商务中心（外滩金融中心）", location: "黄浦", image: coworkingImage },
-    { name: "大树下办公空间（龙湖虹桥天街）", location: "长宁", image: coworkingImage },
-    { name: "德事商务中心（静安嘉里中心）", location: "静安", image: coworkingImage },
-    { name: "寰图办公空间（上海白玉兰广场）", location: "虹口", image: coworkingImage },
-    { name: "氪空间KrSpace（虹桥绿谷社区）", location: "青浦", image: coworkingImage },
-    { name: "快易名商（虹桥万通中心）", location: "长宁", image: coworkingImage },
-    { name: "雷格斯商务中心（1788国际中心）", location: "浦东", image: coworkingImage },
+    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
+    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
+    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
   ];
 
   return (

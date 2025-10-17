@@ -1,6 +1,7 @@
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/assets/logo.png";
 
 export const Header = () => {
   const navItems = [
@@ -20,12 +21,7 @@ export const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="#" className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <span className="text-xl font-bold text-primary-foreground">超办</span>
-              </div>
-              <span className="hidden text-lg font-bold text-foreground sm:inline-block">
-                超办网
-              </span>
+              <img src={logo} alt="上海超办网" className="h-12 w-auto" />
             </a>
           </div>
 

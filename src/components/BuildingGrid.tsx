@@ -1,6 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { MapPin, Building2 } from "lucide-react";
-import buildingImage from "@/assets/building-placeholder.jpg";
+import vankeCenter from "@/assets/buildings/vanke-center.jpg";
+import exhibitionHub from "@/assets/buildings/exhibition-hub.jpg";
+import hongqiaoHui from "@/assets/buildings/hongqiao-hui.jpg";
+import sohoTianshan from "@/assets/buildings/soho-tianshan.jpg";
+import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi.jpg";
+import worldCenter from "@/assets/buildings/world-center.jpg";
 
 interface Building {
   name: string;
@@ -10,14 +15,14 @@ interface Building {
 
 export const BuildingGrid = () => {
   const buildings: Building[] = [
-    { name: "虹桥万科中心", location: "虹桥商务区", image: buildingImage },
-    { name: "虹桥国际展汇", location: "虹桥商务区", image: buildingImage },
-    { name: "中信泰富广场", location: "南京西路", image: buildingImage },
-    { name: "环球金融中心", location: "陆家嘴", image: buildingImage },
-    { name: "长风大悦城", location: "长风商务区", image: buildingImage },
-    { name: "仲盛世界商城", location: "莘庄", image: buildingImage },
-    { name: "正大广场", location: "陆家嘴", image: buildingImage },
-    { name: "协信星光广场", location: "徐泾", image: buildingImage },
+    { name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
+    { name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
+    { name: "虹桥汇", location: "虹桥商务区", image: hongqiaoHui },
+    { name: "SOHO天山广场", location: "长宁区", image: sohoTianshan },
+    { name: "虹桥天地", location: "闵行区", image: hongqiaoTiandi },
+    { name: "虹桥世界中心", location: "闵行区", image: worldCenter },
+    { name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
+    { name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
   ];
 
   return (

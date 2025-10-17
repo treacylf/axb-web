@@ -1,5 +1,12 @@
 import { Card } from "@/components/ui/card";
-import districtImage from "@/assets/district-placeholder.jpg";
+import hongqiaoBusiness from "@/assets/districts/hongqiao-business.jpg";
+import hongqiaoAirport from "@/assets/districts/hongqiao-airport.jpg";
+import gubei from "@/assets/districts/gubei.jpg";
+import renminSquare from "@/assets/districts/renmin-square.jpg";
+import changfeng from "@/assets/districts/changfeng.jpg";
+import xinzhuang from "@/assets/districts/xinzhuang.jpg";
+import lujiazui from "@/assets/districts/lujiazui.jpg";
+import districtPlaceholder from "@/assets/district-placeholder.jpg";
 
 interface District {
   name: string;
@@ -8,14 +15,14 @@ interface District {
 
 export const DistrictGrid = () => {
   const districts: District[] = [
-    { name: "虹桥商务区", image: districtImage },
-    { name: "徐泾/西虹桥", image: districtImage },
-    { name: "虹桥临空经济区", image: districtImage },
-    { name: "虹桥古北开发区", image: districtImage },
-    { name: "人民广场", image: districtImage },
-    { name: "长风商务区", image: districtImage },
-    { name: "莘庄商务区", image: districtImage },
-    { name: "陆家嘴", image: districtImage },
+    { name: "虹桥商务区", image: hongqiaoBusiness },
+    { name: "徐泾/西虹桥", image: districtPlaceholder },
+    { name: "虹桥临空经济区", image: hongqiaoAirport },
+    { name: "虹桥古北开发区", image: gubei },
+    { name: "人民广场", image: renminSquare },
+    { name: "长风商务区", image: changfeng },
+    { name: "莘庄商务区", image: xinzhuang },
+    { name: "陆家嘴", image: lujiazui },
   ];
 
   return (
