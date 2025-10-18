@@ -36,40 +36,40 @@ export default function SearchResults() {
   const itemsPerPage = 6;
   const totalPages = 5; // 总共5页示例数据
 
-  // Mock data - 模拟搜索结果数据（扩展到30条以支持5页）
+  // 真实数据 - 来自GitHub项目
   const allBuildings: Building[] = [
     {
       id: 1,
-      name: "虹桥天地",
-      district: "长宁",
+      name: "虹桥万科中心",
+      district: "闵行",
       subway: "10号线",
-      area: "200-500m²",
-      price: "5-7元/天/㎡",
-      image: "/src/assets/buildings/hongqiao-tiandi.jpg",
-      tags: ["地铁直达", "精装修", "配套完善"],
-      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利，周边配套齐全。"
+      area: "500-1000m²",
+      price: "4-6元/天/㎡",
+      image: "/src/assets/buildings/vanke-center-real.jpg",
+      tags: ["万科品牌", "大面积", "配套齐全"],
+      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境，周边配套完善。"
     },
     {
       id: 2,
+      name: "虹桥国际展汇",
+      district: "青浦",
+      subway: "2号线/17号线",
+      area: "200-800m²",
+      price: "3-5元/天/㎡",
+      image: "/src/assets/buildings/exhibition-hub-real.jpg",
+      tags: ["国家会展中心", "交通枢纽", "性价比高"],
+      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
+    },
+    {
+      id: 3,
       name: "虹桥汇",
       district: "闵行",
       subway: "2号线",
       area: "100-300m²",
       price: "4-6元/天/㎡",
-      image: "/src/assets/buildings/hongqiao-hui.jpg",
+      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
       tags: ["近地铁", "停车便利", "品牌入驻"],
       description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
-    },
-    {
-      id: 3,
-      name: "世界中心大厦",
-      district: "长宁",
-      subway: "2号线/10号线",
-      area: "300-1000m²",
-      price: "6-8元/天/㎡",
-      image: "/src/assets/buildings/world-center.jpg",
-      tags: ["双地铁", "甲级写字楼", "景观好"],
-      description: "世界中心大厦是虹桥地区标志性建筑，享有优越的地理位置和一流的办公环境。"
     },
     {
       id: 4,
@@ -78,44 +78,297 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-200m²",
       price: "5-7元/天/㎡",
-      image: "/src/assets/buildings/soho-tianshan.jpg",
+      image: "/src/assets/buildings/soho-tianshan-real.jpg",
       tags: ["SOHO品牌", "小面积", "灵活租期"],
       description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
     },
     {
       id: 5,
-      name: "万科中心",
+      name: "虹桥天地",
+      district: "长宁",
+      subway: "10号线",
+      area: "200-500m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      tags: ["地铁直达", "精装修", "配套完善"],
+      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利，周边配套齐全。"
+    },
+    {
+      id: 6,
+      name: "虹桥世界中心",
+      district: "长宁",
+      subway: "2号线/10号线",
+      area: "300-1000m²",
+      price: "6-8元/天/㎡",
+      image: "/src/assets/buildings/world-center-real.jpg",
+      tags: ["双地铁", "甲级写字楼", "景观好"],
+      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置和一流的办公环境。"
+    },
+    {
+      id: 7,
+      name: "中骏广场二期",
+      district: "长宁",
+      subway: "2号线",
+      area: "300-800m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/zhongjun-plaza.png",
+      tags: ["品牌楼盘", "交通便利", "精装修"],
+      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+    },
+    {
+      id: 8,
+      name: "虹桥阿里中心",
+      district: "闵行",
+      subway: "10号线",
+      area: "500-1500m²",
+      price: "5-8元/天/㎡",
+      image: "/src/assets/buildings/ali-center.jpg",
+      tags: ["阿里入驻", "大面积", "科技园区"],
+      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+    },
+    {
+      id: 9,
+      name: "远东国际广场",
+      district: "长宁",
+      subway: "2号线/10号线",
+      area: "200-600m²",
+      price: "6-8元/天/㎡",
+      image: "/src/assets/buildings/yuandong-plaza.jpg",
+      tags: ["双地铁", "国际化", "甲级写字楼"],
+      description: "远东国际广场位于虹桥核心区域，国际化办公环境。"
+    },
+    {
+      id: 10,
+      name: "维璟中心",
+      district: "长宁",
+      subway: "10号线",
+      area: "300-800m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/weijing-center.jpg",
+      tags: ["地铁直达", "精装修", "配套齐全"],
+      description: "维璟中心紧邻地铁站，办公便利，配套设施完善。"
+    },
+    {
+      id: 11,
+      name: "尚嘉中心",
+      district: "长宁",
+      subway: "2号线",
+      area: "200-500m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/shangjia-center.jpg",
+      tags: ["商业配套", "精装修", "交通便利"],
+      description: "尚嘉中心集办公、商业于一体，配套设施齐全。"
+    },
+    // 重复数据以模拟更多页面
+    {
+      id: 12,
+      name: "虹桥万科中心",
       district: "闵行",
       subway: "10号线",
       area: "500-1000m²",
       price: "4-6元/天/㎡",
-      image: "/src/assets/buildings/vanke-center.jpg",
+      image: "/src/assets/buildings/vanke-center-real.jpg",
       tags: ["万科品牌", "大面积", "配套齐全"],
-      description: "万科中心位于虹桥商务区南片区，提供高品质的办公环境。"
+      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境。"
     },
     {
-      id: 6,
-      name: "国展中心",
+      id: 13,
+      name: "虹桥国际展汇",
       district: "青浦",
       subway: "2号线/17号线",
       area: "200-800m²",
       price: "3-5元/天/㎡",
-      image: "/src/assets/buildings/exhibition-hub.jpg",
+      image: "/src/assets/buildings/exhibition-hub-real.jpg",
       tags: ["国家会展中心", "交通枢纽", "性价比高"],
-      description: "国展中心毗邻国家会展中心，是商务办公的理想选择。"
+      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
     },
-    // 重复数据以模拟更多页面
-    ...Array.from({ length: 24 }, (_, i) => ({
-      id: 7 + i,
-      name: `虹桥办公楼 ${i + 1}`,
-      district: ["长宁", "闵行", "青浦"][i % 3],
-      subway: ["2号线", "10号线", "17号线"][i % 3],
-      area: "200-500m²",
+    {
+      id: 14,
+      name: "虹桥汇",
+      district: "闵行",
+      subway: "2号线",
+      area: "100-300m²",
       price: "4-6元/天/㎡",
-      image: "/src/assets/building-placeholder.jpg",
-      tags: ["地铁直达", "精装修"],
-      description: `优质办公空间，位于虹桥商务区，交通便利，配套完善。`
-    }))
+      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
+      tags: ["近地铁", "停车便利", "品牌入驻"],
+      description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
+    },
+    {
+      id: 15,
+      name: "SOHO天山广场",
+      district: "长宁",
+      subway: "2号线",
+      area: "100-200m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/soho-tianshan-real.jpg",
+      tags: ["SOHO品牌", "小面积", "灵活租期"],
+      description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
+    },
+    {
+      id: 16,
+      name: "虹桥天地",
+      district: "长宁",
+      subway: "10号线",
+      area: "200-500m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      tags: ["地铁直达", "精装修", "配套完善"],
+      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利。"
+    },
+    {
+      id: 17,
+      name: "虹桥世界中心",
+      district: "长宁",
+      subway: "2号线/10号线",
+      area: "300-1000m²",
+      price: "6-8元/天/㎡",
+      image: "/src/assets/buildings/world-center-real.jpg",
+      tags: ["双地铁", "甲级写字楼", "景观好"],
+      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置。"
+    },
+    {
+      id: 18,
+      name: "中骏广场二期",
+      district: "长宁",
+      subway: "2号线",
+      area: "300-800m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/zhongjun-plaza.png",
+      tags: ["品牌楼盘", "交通便利", "精装修"],
+      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+    },
+    {
+      id: 19,
+      name: "虹桥阿里中心",
+      district: "闵行",
+      subway: "10号线",
+      area: "500-1500m²",
+      price: "5-8元/天/㎡",
+      image: "/src/assets/buildings/ali-center.jpg",
+      tags: ["阿里入驻", "大面积", "科技园区"],
+      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+    },
+    {
+      id: 20,
+      name: "远东国际广场",
+      district: "长宁",
+      subway: "2号线/10号线",
+      area: "200-600m²",
+      price: "6-8元/天/㎡",
+      image: "/src/assets/buildings/yuandong-plaza.jpg",
+      tags: ["双地铁", "国际化", "甲级写字楼"],
+      description: "远东国际广场位于虹桥核心区域，国际化办公环境。"
+    },
+    {
+      id: 21,
+      name: "维璟中心",
+      district: "长宁",
+      subway: "10号线",
+      area: "300-800m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/weijing-center.jpg",
+      tags: ["地铁直达", "精装修", "配套齐全"],
+      description: "维璟中心紧邻地铁站，办公便利，配套设施完善。"
+    },
+    {
+      id: 22,
+      name: "尚嘉中心",
+      district: "长宁",
+      subway: "2号线",
+      area: "200-500m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/shangjia-center.jpg",
+      tags: ["商业配套", "精装修", "交通便利"],
+      description: "尚嘉中心集办公、商业于一体，配套设施齐全。"
+    },
+    {
+      id: 23,
+      name: "虹桥万科中心",
+      district: "闵行",
+      subway: "10号线",
+      area: "500-1000m²",
+      price: "4-6元/天/㎡",
+      image: "/src/assets/buildings/vanke-center-real.jpg",
+      tags: ["万科品牌", "大面积", "配套齐全"],
+      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境。"
+    },
+    {
+      id: 24,
+      name: "虹桥国际展汇",
+      district: "青浦",
+      subway: "2号线/17号线",
+      area: "200-800m²",
+      price: "3-5元/天/㎡",
+      image: "/src/assets/buildings/exhibition-hub-real.jpg",
+      tags: ["国家会展中心", "交通枢纽", "性价比高"],
+      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
+    },
+    {
+      id: 25,
+      name: "虹桥汇",
+      district: "闵行",
+      subway: "2号线",
+      area: "100-300m²",
+      price: "4-6元/天/㎡",
+      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
+      tags: ["近地铁", "停车便利", "品牌入驻"],
+      description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
+    },
+    {
+      id: 26,
+      name: "SOHO天山广场",
+      district: "长宁",
+      subway: "2号线",
+      area: "100-200m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/soho-tianshan-real.jpg",
+      tags: ["SOHO品牌", "小面积", "灵活租期"],
+      description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
+    },
+    {
+      id: 27,
+      name: "虹桥天地",
+      district: "长宁",
+      subway: "10号线",
+      area: "200-500m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      tags: ["地铁直达", "精装修", "配套完善"],
+      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利。"
+    },
+    {
+      id: 28,
+      name: "虹桥世界中心",
+      district: "长宁",
+      subway: "2号线/10号线",
+      area: "300-1000m²",
+      price: "6-8元/天/㎡",
+      image: "/src/assets/buildings/world-center-real.jpg",
+      tags: ["双地铁", "甲级写字楼", "景观好"],
+      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置。"
+    },
+    {
+      id: 29,
+      name: "中骏广场二期",
+      district: "长宁",
+      subway: "2号线",
+      area: "300-800m²",
+      price: "5-7元/天/㎡",
+      image: "/src/assets/buildings/zhongjun-plaza.png",
+      tags: ["品牌楼盘", "交通便利", "精装修"],
+      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+    },
+    {
+      id: 30,
+      name: "虹桥阿里中心",
+      district: "闵行",
+      subway: "10号线",
+      area: "500-1500m²",
+      price: "5-8元/天/㎡",
+      image: "/src/assets/buildings/ali-center.jpg",
+      tags: ["阿里入驻", "大面积", "科技园区"],
+      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+    }
   ];
 
   // 计算当前页显示的数据
