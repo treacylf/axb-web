@@ -2,16 +2,17 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SearchBox = () => {
+  const navigate = useNavigate();
   const [selectedDistrict, setSelectedDistrict] = useState("虹桥商务区");
   const [searchQuery, setSearchQuery] = useState("");
 
   const districts = ["虹桥商务区", "徐泾/西虹桥", "虹桥临空经济区"];
 
   const handleSearch = () => {
-    console.log("Searching for:", searchQuery);
-    // 在实际应用中,这里会执行搜索逻辑
+    navigate(`/search?q=${encodeURIComponent(searchQuery)}&district=${encodeURIComponent(selectedDistrict)}`);
   };
 
   return (
@@ -45,6 +46,7 @@ export const SearchBox = () => {
                   placeholder="请输入大厦名称开始选址"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                   className="pl-10"
                 />
               </div>
