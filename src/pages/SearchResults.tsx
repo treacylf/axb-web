@@ -1,10 +1,19 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Building2 } from "lucide-react";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 interface Building {
   id: number;
@@ -19,11 +28,16 @@ interface Building {
 }
 
 export default function SearchResults() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const query = searchParams.get("q") || "";
+  const currentPage = parseInt(searchParams.get("page") || "1");
+  
+  const itemsPerPage = 6;
+  const totalPages = 5; // 总共5页示例数据
 
-  // Mock data - 模拟搜索结果数据
-  const buildings: Building[] = [
+  // Mock data - 模拟搜索结果数据（扩展到30条以支持5页）
+  const allBuildings: Building[] = [
     {
       id: 1,
       name: "虹桥天地",
@@ -89,8 +103,33 @@ export default function SearchResults() {
       image: "/src/assets/buildings/exhibition-hub.jpg",
       tags: ["国家会展中心", "交通枢纽", "性价比高"],
       description: "国展中心毗邻国家会展中心，是商务办公的理想选择。"
-    }
+    },
+    // 重复数据以模拟更多页面
+    ...Array.from({ length: 24 }, (_, i) => ({
+      id: 7 + i,
+      name: `虹桥办公楼 ${i + 1}`,
+      district: ["长宁", "闵行", "青浦"][i % 3],
+      subway: ["2号线", "10号线", "17号线"][i % 3],
+      area: "200-500m²",
+      price: "4-6元/天/㎡",
+      image: "/src/assets/building-placeholder.jpg",
+      tags: ["地铁直达", "精装修"],
+      description: `优质办公空间，位于虹桥商务区，交通便利，配套完善。`
+    }))
   ];
+
+  // 计算当前页显示的数据
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const buildings = allBuildings.slice(startIndex, endIndex);
+
+  // 页面导航函数
+  const goToPage = (page: number) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set("page", page.toString());
+    navigate(`/search?${newParams.toString()}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -208,22 +247,81 @@ export default function SearchResults() {
         </div>
 
         {/* 分页 */}
-        <div className="mt-8 flex justify-center gap-2">
-          <button className="px-4 py-2 border rounded-md hover:bg-muted transition-colors">
-            上一页
-          </button>
-          <button className="px-4 py-2 bg-primary text-primary-foreground rounded-md">
-            1
-          </button>
-          <button className="px-4 py-2 border rounded-md hover:bg-muted transition-colors">
-            2
-          </button>
-          <button className="px-4 py-2 border rounded-md hover:bg-muted transition-colors">
-            3
-          </button>
-          <button className="px-4 py-2 border rounded-md hover:bg-muted transition-colors">
-            下一页
-          </button>
+        <div className="mt-8">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+              
+              {/* 第一页 */}
+              {currentPage > 2 && (
+                <PaginationItem>
+                  <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
+                    1
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              
+              {/* 省略号 */}
+              {currentPage > 3 && (
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              )}
+              
+              {/* 当前页前一页 */}
+              {currentPage > 1 && (
+                <PaginationItem>
+                  <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
+                    {currentPage - 1}
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              
+              {/* 当前页 */}
+              <PaginationItem>
+                <PaginationLink isActive>
+                  {currentPage}
+                </PaginationLink>
+              </PaginationItem>
+              
+              {/* 当前页后一页 */}
+              {currentPage < totalPages && (
+                <PaginationItem>
+                  <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
+                    {currentPage + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              
+              {/* 省略号 */}
+              {currentPage < totalPages - 2 && (
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              )}
+              
+              {/* 最后一页 */}
+              {currentPage < totalPages - 1 && (
+                <PaginationItem>
+                  <PaginationLink onClick={() => goToPage(totalPages)} className="cursor-pointer">
+                    {totalPages}
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              
+              <PaginationItem>
+                <PaginationNext 
+                  onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
 
