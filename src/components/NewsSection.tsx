@@ -190,14 +190,15 @@ export const NewsSection = () => {
     <section id="news" className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="border-b pb-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {newsCategories.map((category) => (
-              <div key={category.cateId}>
-                <h4 className="text-lg font-semibold mb-4 flex items-center justify-between">
+          {/* First Row - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {newsCategories.slice(0, 2).map((category) => (
+              <div key={category.cateId} className="news-items">
+                <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
                   {category.title}
                   <a
                     href={`#news-${category.cateId}`}
-                    className="text-sm text-primary hover:underline"
+                    className="text-sm text-primary hover:underline font-normal"
                   >
                     更多 &gt;&gt;
                   </a>
@@ -207,13 +208,50 @@ export const NewsSection = () => {
                     <li key={index}>
                       <a
                         href="#"
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors line-clamp-1 flex items-start gap-1"
+                        className="text-sm hover:text-primary transition-colors flex items-start justify-between gap-2"
                       >
-                        <span className="text-primary shrink-0">·</span>
-                        <span className="flex-1">
-                          {item.title}
-                          <span className="text-xs ml-2">{item.date}</span>
+                        <span className="flex items-start gap-1 flex-1 line-clamp-1">
+                          <span className="text-primary shrink-0">·</span>
+                          <span className="text-muted-foreground hover:text-primary">
+                            {item.title}
+                          </span>
                         </span>
+                        <span className="text-xs text-muted-foreground shrink-0">{item.date}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Row - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {newsCategories.slice(2, 4).map((category) => (
+              <div key={category.cateId} className="news-items">
+                <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
+                  {category.title}
+                  <a
+                    href={`#news-${category.cateId}`}
+                    className="text-sm text-primary hover:underline font-normal"
+                  >
+                    更多 &gt;&gt;
+                  </a>
+                </h4>
+                <ul className="space-y-2">
+                  {category.items.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href="#"
+                        className="text-sm hover:text-primary transition-colors flex items-start justify-between gap-2"
+                      >
+                        <span className="flex items-start gap-1 flex-1 line-clamp-1">
+                          <span className="text-primary shrink-0">·</span>
+                          <span className="text-muted-foreground hover:text-primary">
+                            {item.title}
+                          </span>
+                        </span>
+                        <span className="text-xs text-muted-foreground shrink-0">{item.date}</span>
                       </a>
                     </li>
                   ))}
