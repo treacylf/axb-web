@@ -42,23 +42,23 @@ export default function SearchResults() {
       id: 1,
       name: "虹桥万科中心",
       district: "闵行",
-      subway: "10号线",
+      subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
-      price: "4-6元/天/㎡",
+      price: "4.3元/m²/天 起",
       image: "/src/assets/buildings/vanke-center-real.jpg",
-      tags: ["万科品牌", "大面积", "配套齐全"],
-      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境，周边配套完善。"
+      tags: ["198m²", "350m²", "456m²", "600m²", "820m²", "1053m²", "2352m²"],
+      description: "上海市闵行区申长路988弄"
     },
     {
       id: 2,
       name: "虹桥国际展汇",
       district: "青浦",
-      subway: "2号线/17号线",
+      subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
-      price: "3-5元/天/㎡",
+      price: "2.5元/m²/天 起",
       image: "/src/assets/buildings/exhibition-hub-real.jpg",
-      tags: ["国家会展中心", "交通枢纽", "性价比高"],
-      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
+      tags: ["188m²", "300m²", "450m²", "642m²", "850m²", "980m²", "1350m²", "1853m²"],
+      description: "上海市闵行区申昆路2377号"
     },
     {
       id: 3,
@@ -66,10 +66,10 @@ export default function SearchResults() {
       district: "闵行",
       subway: "2号线",
       area: "100-300m²",
-      price: "4-6元/天/㎡",
+      price: "4.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-hui-real.jpg",
-      tags: ["近地铁", "停车便利", "品牌入驻"],
-      description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
+      tags: ["120m²", "200m²", "280m²", "350m²"],
+      description: "上海市闵行区虹桥商务区核心"
     },
     {
       id: 4,
@@ -77,10 +77,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "100-200m²",
-      price: "5-7元/天/㎡",
+      price: "5.8元/m²/天 起",
       image: "/src/assets/buildings/soho-tianshan-real.jpg",
-      tags: ["SOHO品牌", "小面积", "灵活租期"],
-      description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
+      tags: ["100m²", "150m²", "180m²", "220m²"],
+      description: "上海市长宁区天山路"
     },
     {
       id: 5,
@@ -88,21 +88,21 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "200-500m²",
-      price: "5-7元/天/㎡",
+      price: "5.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
-      tags: ["地铁直达", "精装修", "配套完善"],
-      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利，周边配套齐全。"
+      tags: ["200m²", "300m²", "400m²", "500m²"],
+      description: "上海市长宁区虹桥商务区"
     },
     {
       id: 6,
       name: "虹桥世界中心",
       district: "长宁",
-      subway: "2号线/10号线",
+      subway: "2号线,10号线",
       area: "300-1000m²",
-      price: "6-8元/天/㎡",
+      price: "6.5元/m²/天 起",
       image: "/src/assets/buildings/world-center-real.jpg",
-      tags: ["双地铁", "甲级写字楼", "景观好"],
-      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置和一流的办公环境。"
+      tags: ["300m²", "500m²", "800m²", "1000m²", "1500m²"],
+      description: "上海市长宁区虹桥核心区域"
     },
     {
       id: 7,
@@ -110,10 +110,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "300-800m²",
-      price: "5-7元/天/㎡",
+      price: "5.6元/m²/天 起",
       image: "/src/assets/buildings/zhongjun-plaza.png",
-      tags: ["品牌楼盘", "交通便利", "精装修"],
-      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+      tags: ["300m²", "450m²", "600m²", "800m²"],
+      description: "上海市长宁区核心商务区"
     },
     {
       id: 8,
@@ -121,21 +121,21 @@ export default function SearchResults() {
       district: "闵行",
       subway: "10号线",
       area: "500-1500m²",
-      price: "5-8元/天/㎡",
+      price: "5.2元/m²/天 起",
       image: "/src/assets/buildings/ali-center.jpg",
-      tags: ["阿里入驻", "大面积", "科技园区"],
-      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+      tags: ["500m²", "800m²", "1000m²", "1200m²", "1500m²"],
+      description: "上海市闵行区虹桥商务区"
     },
     {
       id: 9,
       name: "远东国际广场",
       district: "长宁",
-      subway: "2号线/10号线",
+      subway: "2号线,10号线",
       area: "200-600m²",
-      price: "6-8元/天/㎡",
+      price: "6.2元/m²/天 起",
       image: "/src/assets/buildings/yuandong-plaza.jpg",
-      tags: ["双地铁", "国际化", "甲级写字楼"],
-      description: "远东国际广场位于虹桥核心区域，国际化办公环境。"
+      tags: ["200m²", "350m²", "480m²", "600m²"],
+      description: "上海市长宁区虹桥核心区域"
     },
     {
       id: 10,
@@ -143,10 +143,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "300-800m²",
-      price: "5-7元/天/㎡",
+      price: "5.4元/m²/天 起",
       image: "/src/assets/buildings/weijing-center.jpg",
-      tags: ["地铁直达", "精装修", "配套齐全"],
-      description: "维璟中心紧邻地铁站，办公便利，配套设施完善。"
+      tags: ["300m²", "450m²", "600m²", "800m²"],
+      description: "上海市长宁区地铁站旁"
     },
     {
       id: 11,
@@ -154,33 +154,33 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "200-500m²",
-      price: "5-7元/天/㎡",
+      price: "5.8元/m²/天 起",
       image: "/src/assets/buildings/shangjia-center.jpg",
-      tags: ["商业配套", "精装修", "交通便利"],
-      description: "尚嘉中心集办公、商业于一体，配套设施齐全。"
+      tags: ["200m²", "300m²", "400m²", "500m²"],
+      description: "上海市长宁区商业配套齐全"
     },
     // 重复数据以模拟更多页面
     {
       id: 12,
       name: "虹桥万科中心",
       district: "闵行",
-      subway: "10号线",
+      subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
-      price: "4-6元/天/㎡",
+      price: "4.3元/m²/天 起",
       image: "/src/assets/buildings/vanke-center-real.jpg",
-      tags: ["万科品牌", "大面积", "配套齐全"],
-      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境。"
+      tags: ["198m²", "350m²", "456m²", "600m²", "820m²"],
+      description: "上海市闵行区申长路988弄"
     },
     {
       id: 13,
       name: "虹桥国际展汇",
       district: "青浦",
-      subway: "2号线/17号线",
+      subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
-      price: "3-5元/天/㎡",
+      price: "2.5元/m²/天 起",
       image: "/src/assets/buildings/exhibition-hub-real.jpg",
-      tags: ["国家会展中心", "交通枢纽", "性价比高"],
-      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
+      tags: ["188m²", "300m²", "450m²", "642m²", "850m²"],
+      description: "上海市闵行区申昆路2377号"
     },
     {
       id: 14,
@@ -188,10 +188,10 @@ export default function SearchResults() {
       district: "闵行",
       subway: "2号线",
       area: "100-300m²",
-      price: "4-6元/天/㎡",
+      price: "4.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-hui-real.jpg",
-      tags: ["近地铁", "停车便利", "品牌入驻"],
-      description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
+      tags: ["120m²", "200m²", "280m²", "350m²"],
+      description: "上海市闵行区虹桥商务区核心"
     },
     {
       id: 15,
@@ -199,10 +199,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "100-200m²",
-      price: "5-7元/天/㎡",
+      price: "5.8元/m²/天 起",
       image: "/src/assets/buildings/soho-tianshan-real.jpg",
-      tags: ["SOHO品牌", "小面积", "灵活租期"],
-      description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
+      tags: ["100m²", "150m²", "180m²", "220m²"],
+      description: "上海市长宁区天山路"
     },
     {
       id: 16,
@@ -210,21 +210,21 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "200-500m²",
-      price: "5-7元/天/㎡",
+      price: "5.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
-      tags: ["地铁直达", "精装修", "配套完善"],
-      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利。"
+      tags: ["200m²", "300m²", "400m²", "500m²"],
+      description: "上海市长宁区虹桥商务区"
     },
     {
       id: 17,
       name: "虹桥世界中心",
       district: "长宁",
-      subway: "2号线/10号线",
+      subway: "2号线,10号线",
       area: "300-1000m²",
-      price: "6-8元/天/㎡",
+      price: "6.5元/m²/天 起",
       image: "/src/assets/buildings/world-center-real.jpg",
-      tags: ["双地铁", "甲级写字楼", "景观好"],
-      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置。"
+      tags: ["300m²", "500m²", "800m²", "1000m²"],
+      description: "上海市长宁区虹桥核心区域"
     },
     {
       id: 18,
@@ -232,10 +232,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "300-800m²",
-      price: "5-7元/天/㎡",
+      price: "5.6元/m²/天 起",
       image: "/src/assets/buildings/zhongjun-plaza.png",
-      tags: ["品牌楼盘", "交通便利", "精装修"],
-      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+      tags: ["300m²", "450m²", "600m²", "800m²"],
+      description: "上海市长宁区核心商务区"
     },
     {
       id: 19,
@@ -243,21 +243,21 @@ export default function SearchResults() {
       district: "闵行",
       subway: "10号线",
       area: "500-1500m²",
-      price: "5-8元/天/㎡",
+      price: "5.2元/m²/天 起",
       image: "/src/assets/buildings/ali-center.jpg",
-      tags: ["阿里入驻", "大面积", "科技园区"],
-      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+      tags: ["500m²", "800m²", "1000m²", "1200m²"],
+      description: "上海市闵行区虹桥商务区"
     },
     {
       id: 20,
       name: "远东国际广场",
       district: "长宁",
-      subway: "2号线/10号线",
+      subway: "2号线,10号线",
       area: "200-600m²",
-      price: "6-8元/天/㎡",
+      price: "6.2元/m²/天 起",
       image: "/src/assets/buildings/yuandong-plaza.jpg",
-      tags: ["双地铁", "国际化", "甲级写字楼"],
-      description: "远东国际广场位于虹桥核心区域，国际化办公环境。"
+      tags: ["200m²", "350m²", "480m²", "600m²"],
+      description: "上海市长宁区虹桥核心区域"
     },
     {
       id: 21,
@@ -265,10 +265,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "300-800m²",
-      price: "5-7元/天/㎡",
+      price: "5.4元/m²/天 起",
       image: "/src/assets/buildings/weijing-center.jpg",
-      tags: ["地铁直达", "精装修", "配套齐全"],
-      description: "维璟中心紧邻地铁站，办公便利，配套设施完善。"
+      tags: ["300m²", "450m²", "600m²", "800m²"],
+      description: "上海市长宁区地铁站旁"
     },
     {
       id: 22,
@@ -276,32 +276,32 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "200-500m²",
-      price: "5-7元/天/㎡",
+      price: "5.8元/m²/天 起",
       image: "/src/assets/buildings/shangjia-center.jpg",
-      tags: ["商业配套", "精装修", "交通便利"],
-      description: "尚嘉中心集办公、商业于一体，配套设施齐全。"
+      tags: ["200m²", "300m²", "400m²", "500m²"],
+      description: "上海市长宁区商业配套齐全"
     },
     {
       id: 23,
       name: "虹桥万科中心",
       district: "闵行",
-      subway: "10号线",
+      subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
-      price: "4-6元/天/㎡",
+      price: "4.3元/m²/天 起",
       image: "/src/assets/buildings/vanke-center-real.jpg",
-      tags: ["万科品牌", "大面积", "配套齐全"],
-      description: "虹桥万科中心位于虹桥商务区南片区，提供高品质的办公环境。"
+      tags: ["198m²", "350m²", "456m²", "600m²"],
+      description: "上海市闵行区申长路988弄"
     },
     {
       id: 24,
       name: "虹桥国际展汇",
       district: "青浦",
-      subway: "2号线/17号线",
+      subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
-      price: "3-5元/天/㎡",
+      price: "2.5元/m²/天 起",
       image: "/src/assets/buildings/exhibition-hub-real.jpg",
-      tags: ["国家会展中心", "交通枢纽", "性价比高"],
-      description: "虹桥国际展汇毗邻国家会展中心，是商务办公的理想选择。"
+      tags: ["188m²", "300m²", "450m²", "642m²"],
+      description: "上海市闵行区申昆路2377号"
     },
     {
       id: 25,
@@ -309,10 +309,10 @@ export default function SearchResults() {
       district: "闵行",
       subway: "2号线",
       area: "100-300m²",
-      price: "4-6元/天/㎡",
+      price: "4.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-hui-real.jpg",
-      tags: ["近地铁", "停车便利", "品牌入驻"],
-      description: "虹桥汇商务中心，位于虹桥核心区域，适合各类企业办公需求。"
+      tags: ["120m²", "200m²", "280m²"],
+      description: "上海市闵行区虹桥商务区核心"
     },
     {
       id: 26,
@@ -320,10 +320,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "100-200m²",
-      price: "5-7元/天/㎡",
+      price: "5.8元/m²/天 起",
       image: "/src/assets/buildings/soho-tianshan-real.jpg",
-      tags: ["SOHO品牌", "小面积", "灵活租期"],
-      description: "SOHO天山广场提供灵活的办公空间，适合中小型企业和创业团队。"
+      tags: ["100m²", "150m²", "180m²"],
+      description: "上海市长宁区天山路"
     },
     {
       id: 27,
@@ -331,21 +331,21 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "200-500m²",
-      price: "5-7元/天/㎡",
+      price: "5.5元/m²/天 起",
       image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
-      tags: ["地铁直达", "精装修", "配套完善"],
-      description: "虹桥天地位于上海市长宁区，紧邻虹桥商务区核心，交通便利。"
+      tags: ["200m²", "300m²", "400m²"],
+      description: "上海市长宁区虹桥商务区"
     },
     {
       id: 28,
       name: "虹桥世界中心",
       district: "长宁",
-      subway: "2号线/10号线",
+      subway: "2号线,10号线",
       area: "300-1000m²",
-      price: "6-8元/天/㎡",
+      price: "6.5元/m²/天 起",
       image: "/src/assets/buildings/world-center-real.jpg",
-      tags: ["双地铁", "甲级写字楼", "景观好"],
-      description: "虹桥世界中心是虹桥地区标志性建筑，享有优越的地理位置。"
+      tags: ["300m²", "500m²", "800m²"],
+      description: "上海市长宁区虹桥核心区域"
     },
     {
       id: 29,
@@ -353,10 +353,10 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线",
       area: "300-800m²",
-      price: "5-7元/天/㎡",
+      price: "5.6元/m²/天 起",
       image: "/src/assets/buildings/zhongjun-plaza.png",
-      tags: ["品牌楼盘", "交通便利", "精装修"],
-      description: "中骏广场二期位于长宁核心商务区，办公环境优越。"
+      tags: ["300m²", "450m²", "600m²"],
+      description: "上海市长宁区核心商务区"
     },
     {
       id: 30,
@@ -364,10 +364,10 @@ export default function SearchResults() {
       district: "闵行",
       subway: "10号线",
       area: "500-1500m²",
-      price: "5-8元/天/㎡",
+      price: "5.2元/m²/天 起",
       image: "/src/assets/buildings/ali-center.jpg",
-      tags: ["阿里入驻", "大面积", "科技园区"],
-      description: "虹桥阿里中心，高科技企业聚集地，提供现代化办公环境。"
+      tags: ["500m²", "800m²", "1000m²"],
+      description: "上海市闵行区虹桥商务区"
     }
   ];
 
@@ -415,73 +415,79 @@ export default function SearchResults() {
           </div>
 
           {/* 建筑列表 */}
-          <div className="space-y-4">
-            {buildings.map((building) => (
-              <div key={building.id} className="bg-card rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                <div className="flex gap-4 p-4">
-                  {/* 图片 */}
-                  <div className="w-64 h-48 flex-shrink-0">
-                    <img
-                      src={building.image}
-                      alt={building.name}
-                      className="w-full h-full object-cover rounded"
-                    />
-                  </div>
+          <div className="space-y-0">
+            {buildings.map((building, index) => (
+              <div key={building.id}>
+                <div className="bg-card p-4 hover:bg-accent/5 transition-colors">
+                  <div className="flex gap-4">
+                    {/* 图片 */}
+                    <div className="w-64 h-48 flex-shrink-0">
+                      <a href={`#building-${building.id}`}>
+                        <img
+                          src={building.image}
+                          alt={building.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </a>
+                    </div>
 
-                  {/* 内容 */}
-                  <div className="flex-1 flex flex-col">
-                    {/* 标题和价格 */}
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-foreground">
-                        <a href={`#building-${building.id}`} className="hover:text-primary">
-                          {building.name}
-                        </a>
-                      </h3>
-                      <div className="text-right">
-                        <span className="text-primary font-bold text-xl">{building.price.split('/')[0]}</span>
-                        <span className="text-sm text-muted-foreground">元/m²/天 起</span>
+                    {/* 内容 */}
+                    <div className="flex-1 flex flex-col" style={{ width: '79%' }}>
+                      {/* 标题和价格 */}
+                      <div className="flex justify-between items-start mb-1">
+                        <h4 className="text-lg font-bold">
+                          <a href={`#building-${building.id}`} className="hover:text-primary">
+                            {building.name}
+                          </a>
+                        </h4>
+                        <div className="text-right">
+                          <span className="text-primary font-bold text-xl">{building.price.split('元')[0]}</span>
+                          <span className="text-sm">元/m²/天 起</span>
+                        </div>
+                      </div>
+
+                      {/* 地址信息 */}
+                      <p className="text-sm text-muted-foreground py-0.5">
+                        <MapPin className="inline h-4 w-4 mr-1" />
+                        {building.description}
+                      </p>
+                      <p className="text-sm text-muted-foreground py-0.5 mb-3">
+                        距离地铁：{building.subway}站步行约5分钟
+                      </p>
+
+                      {/* 下方区域 - 可用面积和查看详情按钮 */}
+                      <div className="flex mt-auto">
+                        {/* 可用面积标签 */}
+                        <div className="flex-1 overflow-hidden" style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', height: '68px' }}>
+                          <div className="flex flex-wrap gap-2">
+                            {building.tags.map((tag, tagIndex) => (
+                              <a
+                                key={tagIndex}
+                                href="#"
+                                className="px-3 py-1.5 text-sm border border-border rounded hover:border-primary hover:text-primary transition-colors inline-block"
+                              >
+                                {tag}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* 查看详情按钮 */}
+                        <div className="ml-4">
+                          <a
+                            href={`#building-${building.id}`}
+                            className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors text-sm"
+                          >
+                            查看详情
+                          </a>
+                        </div>
                       </div>
                     </div>
-
-                    {/* 地址信息 */}
-                    <p className="text-sm text-muted-foreground mb-1">
-                      <MapPin className="inline h-4 w-4 mr-1" />
-                      {building.description}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      距离地铁：{building.subway}站步行约5分钟
-                    </p>
-
-                    {/* 可用面积标签 */}
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      {building.tags.map((tag, index) => (
-                        <a
-                          key={index}
-                          href="#"
-                          className="px-3 py-1 text-xs border border-border rounded hover:border-primary hover:text-primary transition-colors"
-                        >
-                          {tag}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* 操作按钮 */}
-                  <div className="flex flex-col gap-2 justify-center">
-                    <a
-                      href={`tel:021-64202027`}
-                      className="px-6 py-2 bg-primary text-primary-foreground rounded text-sm hover:bg-primary/90 transition-colors whitespace-nowrap"
-                    >
-                      立即咨询
-                    </a>
-                    <a
-                      href={`#building-${building.id}`}
-                      className="px-6 py-2 border border-primary text-primary rounded text-sm hover:bg-primary/10 transition-colors whitespace-nowrap text-center"
-                    >
-                      查看详情
-                    </a>
                   </div>
                 </div>
+                {index < buildings.length - 1 && (
+                  <div className="border-b border-border"></div>
+                )}
               </div>
             ))}
           </div>
