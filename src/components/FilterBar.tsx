@@ -1,24 +1,9 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-
-interface FilterOption {
-  label: string;
-  value: string;
-}
-
-interface FilterSection {
-  title: string;
-  options: FilterOption[];
-}
-
 export const FilterBar = () => {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-
-  const filters: FilterSection[] = [
+  const filters = [
     {
-      title: "位置",
+      title: "区域",
       options: [
-        { label: "不限", value: "" },
+        { label: "不限", value: "", active: true },
         { label: "浦东", value: "pudong" },
         { label: "黄浦", value: "huangpu" },
         { label: "静安", value: "jingan" },
@@ -39,7 +24,7 @@ export const FilterBar = () => {
     {
       title: "地铁",
       options: [
-        { label: "不限", value: "" },
+        { label: "不限", value: "", active: true },
         { label: "1号线", value: "line1" },
         { label: "2号线", value: "line2" },
         { label: "3号线", value: "line3" },
@@ -54,12 +39,18 @@ export const FilterBar = () => {
         { label: "12号线", value: "line12" },
         { label: "13号线", value: "line13" },
         { label: "14号线", value: "line14" },
+        { label: "15号线", value: "line15" },
+        { label: "16号线", value: "line16" },
+        { label: "17号线", value: "line17" },
+        { label: "18号线", value: "line18" },
+        { label: "19号线", value: "line19" },
+        { label: "20号线", value: "line20" },
       ],
     },
     {
       title: "面积",
       options: [
-        { label: "不限", value: "" },
+        { label: "不限", value: "", active: true },
         { label: "100m²以下", value: "0-100" },
         { label: "100-200m²", value: "100-200" },
         { label: "200-300m²", value: "200-300" },
@@ -71,7 +62,7 @@ export const FilterBar = () => {
     {
       title: "价格",
       options: [
-        { label: "单价不限", value: "" },
+        { label: "不限", value: "", active: true },
         { label: "3元以下", value: "0-3" },
         { label: "3-4元", value: "3-4" },
         { label: "4-5元", value: "4-5" },
@@ -83,63 +74,31 @@ export const FilterBar = () => {
     },
   ];
 
-  const toggleSection = (title: string) => {
-    setExpandedSection(expandedSection === title ? null : title);
-  };
-
   return (
     <div className="border-b bg-card">
-      <div className="container mx-auto px-4 py-6">
-        <div className="space-y-4">
-          {filters.map((filter) => (
-            <div key={filter.title} className="border-b pb-4 last:border-0">
-              <div className="flex items-start gap-4">
-                <div className="min-w-[80px] pt-2">
-                  <span className="font-semibold text-foreground">
-                    {filter.title}
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <div
-                    className={`flex flex-wrap gap-2 ${
-                      expandedSection !== filter.title &&
-                      filter.options.length > 10
-                        ? "max-h-[100px] overflow-hidden"
-                        : ""
-                    }`}
-                  >
-                    {filter.options.map((option, index) => (
-                      <a
-                        key={index}
-                        href="#"
-                        className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
-                          option.value === ""
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-muted text-foreground hover:bg-primary/10 hover:text-primary"
-                        }`}
-                      >
-                        {option.label}
-                      </a>
-                    ))}
-                  </div>
-                  {filter.options.length > 10 && (
-                    <button
-                      onClick={() => toggleSection(filter.title)}
-                      className="mt-2 flex items-center gap-1 text-sm text-primary hover:underline"
-                    >
-                      {expandedSection === filter.title ? "收起" : "展开更多"}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          expandedSection === filter.title ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                  )}
-                </div>
-              </div>
+      <div className="container mx-auto px-4 py-3">
+        {filters.map((filter) => (
+          <div key={filter.title} className="flex border-b last:border-0 py-3">
+            <div className="min-w-[60px] font-semibold text-foreground">
+              {filter.title}
             </div>
-          ))}
-        </div>
+            <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2">
+              {filter.options.map((option, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className={`text-sm transition-colors ${
+                    option.active
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
+                >
+                  {option.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

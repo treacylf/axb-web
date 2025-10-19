@@ -390,17 +390,11 @@ export default function SearchResults() {
       
       {/* 面包屑导航 */}
       <div className="border-b bg-muted/30">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-2">
           <div className="text-sm text-muted-foreground">
             <a href="/" className="hover:text-primary">首页</a>
             <span className="mx-2">/</span>
             <span className="text-foreground">搜索结果</span>
-            {query && (
-              <>
-                <span className="mx-2">/</span>
-                <span className="text-foreground">"{query}"</span>
-              </>
-            )}
           </div>
         </div>
       </div>
@@ -408,173 +402,160 @@ export default function SearchResults() {
       {/* 筛选栏 */}
       <FilterBar />
 
-      {/* 搜索结果 */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-foreground">
-            找到 <span className="text-primary">{buildings.length}</span> 个结果
-            {query && <span className="ml-2">- "{query}"</span>}
-          </h1>
-        </div>
+      {/* 搜索结果主体 */}
+      <div className="bg-muted/20">
+        <div className="container mx-auto px-4 py-6">
+          {/* 排序和结果数量 */}
+          <div className="flex justify-between items-center mb-4 pb-3 border-b">
+            <div className="flex gap-4">
+              <a href="#" className="text-sm text-primary font-medium">综合排序</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-primary">价格排序</a>
+            </div>
+            <p className="text-sm text-muted-foreground">已为您找到了2738条相关信息</p>
+          </div>
 
-        <div className="grid gap-6">
-          {buildings.map((building) => (
-            <Card key={building.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-[300px_1fr] gap-6">
+          {/* 建筑列表 */}
+          <div className="space-y-4">
+            {buildings.map((building) => (
+              <div key={building.id} className="bg-card rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                <div className="flex gap-4 p-4">
                   {/* 图片 */}
-                  <div className="relative h-48 md:h-full overflow-hidden">
+                  <div className="w-64 h-48 flex-shrink-0">
                     <img
                       src={building.image}
                       alt={building.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover rounded"
                     />
                   </div>
 
-                  {/* 信息 */}
-                  <div className="p-6">
-                    <div className="mb-3">
-                      <h2 className="text-xl font-bold text-foreground mb-2">
-                        {building.name}
-                      </h2>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {building.tags.map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                  {/* 内容 */}
+                  <div className="flex-1 flex flex-col">
+                    {/* 标题和价格 */}
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-lg font-bold text-foreground">
+                        <a href={`#building-${building.id}`} className="hover:text-primary">
+                          {building.name}
+                        </a>
+                      </h3>
+                      <div className="text-right">
+                        <span className="text-primary font-bold text-xl">{building.price.split('/')[0]}</span>
+                        <span className="text-sm text-muted-foreground">元/m²/天 起</span>
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                    {/* 地址信息 */}
+                    <p className="text-sm text-muted-foreground mb-1">
+                      <MapPin className="inline h-4 w-4 mr-1" />
                       {building.description}
                     </p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      距离地铁：{building.subway}站步行约5分钟
+                    </p>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-sm">
-                        <MapPin className="h-4 w-4 text-primary" />
-                        <span className="text-muted-foreground">
-                          {building.district}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <Building2 className="h-4 w-4 text-primary" />
-                        <span className="text-muted-foreground">
-                          {building.subway}
-                        </span>
-                      </div>
-                      <div className="text-sm">
-                        <span className="text-muted-foreground">面积：</span>
-                        <span className="font-medium">{building.area}</span>
-                      </div>
-                      <div className="text-sm">
-                        <span className="text-primary font-bold text-lg">
-                          {building.price}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-3">
-                      <a
-                        href={`tel:021-64202027`}
-                        className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm"
-                      >
-                        <Phone className="h-4 w-4" />
-                        立即咨询
-                      </a>
-                      <a
-                        href={`#building-${building.id}`}
-                        className="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors text-sm"
-                      >
-                        查看详情
-                      </a>
+                    {/* 可用面积标签 */}
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {building.tags.map((tag, index) => (
+                        <a
+                          key={index}
+                          href="#"
+                          className="px-3 py-1 text-xs border border-border rounded hover:border-primary hover:text-primary transition-colors"
+                        >
+                          {tag}
+                        </a>
+                      ))}
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
 
-        {/* 分页 */}
-        <div className="mt-8">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious 
-                  onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
-                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-              
-              {/* 第一页 */}
-              {currentPage > 2 && (
+                  {/* 操作按钮 */}
+                  <div className="flex flex-col gap-2 justify-center">
+                    <a
+                      href={`tel:021-64202027`}
+                      className="px-6 py-2 bg-primary text-primary-foreground rounded text-sm hover:bg-primary/90 transition-colors whitespace-nowrap"
+                    >
+                      立即咨询
+                    </a>
+                    <a
+                      href={`#building-${building.id}`}
+                      className="px-6 py-2 border border-primary text-primary rounded text-sm hover:bg-primary/10 transition-colors whitespace-nowrap text-center"
+                    >
+                      查看详情
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 分页 */}
+          <div className="mt-6 flex justify-center">
+            <Pagination>
+              <PaginationContent>
                 <PaginationItem>
-                  <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
-                    1
+                  <PaginationPrevious 
+                    onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+                    className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
+                </PaginationItem>
+                
+                {currentPage > 2 && (
+                  <PaginationItem>
+                    <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
+                      1
+                    </PaginationLink>
+                  </PaginationItem>
+                )}
+                
+                {currentPage > 3 && (
+                  <PaginationItem>
+                    <PaginationEllipsis />
+                  </PaginationItem>
+                )}
+                
+                {currentPage > 1 && (
+                  <PaginationItem>
+                    <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
+                      {currentPage - 1}
+                    </PaginationLink>
+                  </PaginationItem>
+                )}
+                
+                <PaginationItem>
+                  <PaginationLink isActive>
+                    {currentPage}
                   </PaginationLink>
                 </PaginationItem>
-              )}
-              
-              {/* 省略号 */}
-              {currentPage > 3 && (
+                
+                {currentPage < totalPages && (
+                  <PaginationItem>
+                    <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
+                      {currentPage + 1}
+                    </PaginationLink>
+                  </PaginationItem>
+                )}
+                
+                {currentPage < totalPages - 2 && (
+                  <PaginationItem>
+                    <PaginationEllipsis />
+                  </PaginationItem>
+                )}
+                
+                {currentPage < totalPages - 1 && (
+                  <PaginationItem>
+                    <PaginationLink onClick={() => goToPage(totalPages)} className="cursor-pointer">
+                      {totalPages}
+                    </PaginationLink>
+                  </PaginationItem>
+                )}
+                
                 <PaginationItem>
-                  <PaginationEllipsis />
+                  <PaginationNext 
+                    onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
+                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
                 </PaginationItem>
-              )}
-              
-              {/* 当前页前一页 */}
-              {currentPage > 1 && (
-                <PaginationItem>
-                  <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
-                    {currentPage - 1}
-                  </PaginationLink>
-                </PaginationItem>
-              )}
-              
-              {/* 当前页 */}
-              <PaginationItem>
-                <PaginationLink isActive>
-                  {currentPage}
-                </PaginationLink>
-              </PaginationItem>
-              
-              {/* 当前页后一页 */}
-              {currentPage < totalPages && (
-                <PaginationItem>
-                  <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
-                    {currentPage + 1}
-                  </PaginationLink>
-                </PaginationItem>
-              )}
-              
-              {/* 省略号 */}
-              {currentPage < totalPages - 2 && (
-                <PaginationItem>
-                  <PaginationEllipsis />
-                </PaginationItem>
-              )}
-              
-              {/* 最后一页 */}
-              {currentPage < totalPages - 1 && (
-                <PaginationItem>
-                  <PaginationLink onClick={() => goToPage(totalPages)} className="cursor-pointer">
-                    {totalPages}
-                  </PaginationLink>
-                </PaginationItem>
-              )}
-              
-              <PaginationItem>
-                <PaginationNext 
-                  onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
-                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
+              </PaginationContent>
+            </Pagination>
+          </div>
         </div>
       </div>
 
