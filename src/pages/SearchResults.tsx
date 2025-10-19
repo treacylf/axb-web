@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
+import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Building2 } from "lucide-react";
 import {
@@ -405,14 +406,17 @@ export default function SearchResults() {
       {/* 搜索结果主体 */}
       <div className="bg-muted/20">
         <div className="container mx-auto px-4 py-6">
-          {/* 排序和结果数量 */}
-          <div className="flex justify-between items-center mb-4 pb-3 border-b">
-            <div className="flex gap-4">
-              <a href="#" className="text-sm text-primary font-medium">综合排序</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">价格排序</a>
-            </div>
-            <p className="text-sm text-muted-foreground">已为您找到了2738条相关信息</p>
-          </div>
+          <div className="flex gap-6">
+            {/* 左侧列表 */}
+            <div className="flex-1">
+              {/* 排序和结果数量 */}
+              <div className="flex justify-between items-center mb-4 pb-3 border-b bg-card px-4 py-3">
+                <div className="flex gap-4">
+                  <a href="#" className="text-sm text-primary font-medium">综合排序</a>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-primary">价格排序</a>
+                </div>
+                <p className="text-sm text-muted-foreground">已为您找到了2738条相关信息</p>
+              </div>
 
           {/* 建筑列表 */}
           <div className="space-y-0">
@@ -492,58 +496,58 @@ export default function SearchResults() {
             ))}
           </div>
 
-          {/* 分页 */}
-          <div className="mt-6 flex justify-center">
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious 
-                    onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
-                    className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                  />
-                </PaginationItem>
-                
-                {currentPage > 2 && (
-                  <PaginationItem>
-                    <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
-                      1
-                    </PaginationLink>
-                  </PaginationItem>
-                )}
-                
-                {currentPage > 3 && (
-                  <PaginationItem>
-                    <PaginationEllipsis />
-                  </PaginationItem>
-                )}
-                
-                {currentPage > 1 && (
-                  <PaginationItem>
-                    <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
-                      {currentPage - 1}
-                    </PaginationLink>
-                  </PaginationItem>
-                )}
-                
-                <PaginationItem>
-                  <PaginationLink isActive>
-                    {currentPage}
-                  </PaginationLink>
-                </PaginationItem>
-                
-                {currentPage < totalPages && (
-                  <PaginationItem>
-                    <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
-                      {currentPage + 1}
-                    </PaginationLink>
-                  </PaginationItem>
-                )}
-                
-                {currentPage < totalPages - 2 && (
-                  <PaginationItem>
-                    <PaginationEllipsis />
-                  </PaginationItem>
-                )}
+              {/* 分页 */}
+              <div className="mt-6 flex justify-center">
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious 
+                        onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+                        className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                      />
+                    </PaginationItem>
+                    
+                    {currentPage > 2 && (
+                      <PaginationItem>
+                        <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
+                          1
+                        </PaginationLink>
+                      </PaginationItem>
+                    )}
+                    
+                    {currentPage > 3 && (
+                      <PaginationItem>
+                        <PaginationEllipsis />
+                      </PaginationItem>
+                    )}
+                    
+                    {currentPage > 1 && (
+                      <PaginationItem>
+                        <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
+                          {currentPage - 1}
+                        </PaginationLink>
+                      </PaginationItem>
+                    )}
+                    
+                    <PaginationItem>
+                      <PaginationLink isActive>
+                        {currentPage}
+                      </PaginationLink>
+                    </PaginationItem>
+                    
+                    {currentPage < totalPages && (
+                      <PaginationItem>
+                        <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
+                          {currentPage + 1}
+                        </PaginationLink>
+                      </PaginationItem>
+                    )}
+                    
+                    {currentPage < totalPages - 2 && (
+                      <PaginationItem>
+                        <PaginationEllipsis />
+                      </PaginationItem>
+                    )}
                 
                 {currentPage < totalPages - 1 && (
                   <PaginationItem>
@@ -559,8 +563,15 @@ export default function SearchResults() {
                     className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                   />
                 </PaginationItem>
-              </PaginationContent>
-            </Pagination>
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            </div>
+
+            {/* 右侧边栏 */}
+            <div className="w-80 flex-shrink-0">
+              <SearchSidebar />
+            </div>
           </div>
         </div>
       </div>
