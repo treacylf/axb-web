@@ -5,12 +5,12 @@ import logo from "@/assets/logo.jpg";
 
 export const Header = () => {
   const navItems = [
-    { label: "首页", href: "#" },
-    { label: "租办公室", href: "#offices" },
-    { label: "写字楼", href: "#buildings" },
-    { label: "创意园区", href: "#creative" },
-    { label: "共享办公", href: "#coworking" },
-    { label: "总部独栋", href: "#headquarters" },
+    { label: "首页", href: "/" },
+    { label: "租办公室", href: "/search?nav_id=0" },
+    { label: "写字楼", href: "/search?nav_id=1" },
+    { label: "创意园区", href: "/search?nav_id=2" },
+    { label: "共享办公", href: "/search?nav_id=3" },
+    { label: "总部独栋", href: "/search?nav_id=4" },
     { label: "资讯中心", href: "#news" },
   ];
 
@@ -20,7 +20,7 @@ export const Header = () => {
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
               <img src={logo} alt="上海超办网" className="h-12 w-auto" />
             </a>
           </div>
