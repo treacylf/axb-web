@@ -16,12 +16,12 @@ export const Header = () => {
     { label: "创意园区", href: "/search?nav_id=2", navId: "2" },
     { label: "共享办公", href: "/search?nav_id=3", navId: "3" },
     { label: "总部独栋", href: "/search?nav_id=4", navId: "4" },
-    { label: "资讯中心", href: "#news", navId: "news" },
+    { label: "资讯中心", href: "/news", navId: "news" },
   ];
 
   const isActive = (item: typeof navItems[0]) => {
     if (item.href === "/" && location.pathname === "/") return true;
-    if (item.href === "#news" && location.hash === "#news") return true;
+    if (item.href === "/news" && location.pathname === "/news") return true;
     if (item.navId && navId === item.navId) return true;
     return false;
   };
