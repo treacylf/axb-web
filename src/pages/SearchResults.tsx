@@ -411,6 +411,64 @@ export default function SearchResults() {
         </div>
       </div>
 
+      {/* 顶部tabs导航 */}
+      <div className="bg-card border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex gap-6">
+            <a 
+              href="/search?nav_id=0" 
+              className={`py-3 text-sm border-b-2 transition-colors ${
+                (!searchParams.get("nav_id") || searchParams.get("nav_id") === "0")
+                  ? "border-primary text-primary font-medium" 
+                  : "border-transparent text-muted-foreground hover:text-primary"
+              }`}
+            >
+              租办公室
+            </a>
+            <a 
+              href="/search?nav_id=1" 
+              className={`py-3 text-sm border-b-2 transition-colors ${
+                searchParams.get("nav_id") === "1"
+                  ? "border-primary text-primary font-medium" 
+                  : "border-transparent text-muted-foreground hover:text-primary"
+              }`}
+            >
+              写字楼
+            </a>
+            <a 
+              href="/search?nav_id=2" 
+              className={`py-3 text-sm border-b-2 transition-colors ${
+                searchParams.get("nav_id") === "2"
+                  ? "border-primary text-primary font-medium" 
+                  : "border-transparent text-muted-foreground hover:text-primary"
+              }`}
+            >
+              创意园区
+            </a>
+            <a 
+              href="/search?nav_id=3" 
+              className={`py-3 text-sm border-b-2 transition-colors ${
+                searchParams.get("nav_id") === "3"
+                  ? "border-primary text-primary font-medium" 
+                  : "border-transparent text-muted-foreground hover:text-primary"
+              }`}
+            >
+              共享办公
+            </a>
+            <a 
+              href="/search?nav_id=4" 
+              className={`py-3 text-sm border-b-2 transition-colors ${
+                searchParams.get("nav_id") === "4"
+                  ? "border-primary text-primary font-medium" 
+                  : "border-transparent text-muted-foreground hover:text-primary"
+              }`}
+            >
+              总部独栋
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* 筛选栏 */}
       <FilterBar />
 
@@ -420,17 +478,6 @@ export default function SearchResults() {
           <div className="flex gap-6">
             {/* 左侧列表 */}
             <div className="flex-1">
-              {/* 顶部tabs导航 */}
-              <div className="bg-card mb-4 border-b">
-                <div className="flex gap-6 px-4">
-                  <a href="/search?nav_id=0" className="py-3 text-sm border-b-2 border-primary text-primary font-medium">租办公室</a>
-                  <a href="/search?nav_id=1" className="py-3 text-sm text-muted-foreground hover:text-primary">写字楼</a>
-                  <a href="/search?nav_id=2" className="py-3 text-sm text-muted-foreground hover:text-primary">创意园区</a>
-                  <a href="/search?nav_id=3" className="py-3 text-sm text-muted-foreground hover:text-primary">共享办公</a>
-                  <a href="/search?nav_id=4" className="py-3 text-sm text-muted-foreground hover:text-primary">总部独栋</a>
-                </div>
-              </div>
-              
               {/* 排序和结果数量 */}
               <div className="flex justify-between items-center mb-4 pb-3 border-b bg-card px-4 py-3">
                 <div className="flex gap-4">
