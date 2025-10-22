@@ -1,18 +1,30 @@
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useLocation, useSearchParams } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 export const Header = () => {
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const navId = searchParams.get("nav_id");
+
   const navItems = [
-    { label: "首页", href: "/" },
-    { label: "租办公室", href: "/search?nav_id=0" },
-    { label: "写字楼", href: "/search?nav_id=1" },
-    { label: "创意园区", href: "/search?nav_id=2" },
-    { label: "共享办公", href: "/search?nav_id=3" },
-    { label: "总部独栋", href: "/search?nav_id=4" },
-    { label: "资讯中心", href: "#news" },
+    { label: "首页", href: "/", navId: null },
+    { label: "租办公室", href: "/search?nav_id=0", navId: "0" },
+    { label: "写字楼", href: "/search?nav_id=1", navId: "1" },
+    { label: "创意园区", href: "/search?nav_id=2", navId: "2" },
+    { label: "共享办公", href: "/search?nav_id=3", navId: "3" },
+    { label: "总部独栋", href: "/search?nav_id=4", navId: "4" },
+    { label: "资讯中心", href: "#news", navId: "news" },
   ];
+
+  const isActive = (item: typeof navItems[0]) => {
+    if (item.href === "/" && location.pathname === "/") return true;
+    if (item.href === "#news" && location.hash === "#news") return true;
+    if (item.navId && navId === item.navId) return true;
+    return false;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
@@ -31,7 +43,9 @@ export const Header = () => {
               <a
                 key={index}
                 href={item.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive(item) ? "text-primary font-semibold" : "text-foreground/80"
+                }`}
               >
                 {item.label}
               </a>
@@ -61,7 +75,9 @@ export const Header = () => {
                     <a
                       key={index}
                       href={item.href}
-                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className={`text-lg font-medium transition-colors hover:text-primary ${
+                        isActive(item) ? "text-primary font-semibold" : "text-foreground/80"
+                      }`}
                     >
                       {item.label}
                     </a>
