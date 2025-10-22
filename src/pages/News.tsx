@@ -22,67 +22,115 @@ interface PropertyItem {
   image: string;
 }
 
+import list1360 from "@/assets/news/list_1360.jpg";
+import list1359 from "@/assets/news/list_1359.jpg";
+import list1358 from "@/assets/news/list_1358.jpg";
+import list1357 from "@/assets/news/list_1357.jpg";
+import list1356 from "@/assets/news/list_1356.jpg";
+import list1355 from "@/assets/news/list_1355.jpg";
+import list1354 from "@/assets/news/list_1354.jpg";
+import list1353 from "@/assets/news/list_1353.jpg";
+import list1352 from "@/assets/news/list_1352.jpg";
+import house2162 from "@/assets/properties/house_2162.jpg";
+import house2070 from "@/assets/properties/house_2070.jpg";
+import house895 from "@/assets/properties/house_895.jpg";
+import house170 from "@/assets/properties/house_170.jpg";
+import house2303 from "@/assets/properties/house_2303.jpg";
+import house1928 from "@/assets/properties/house_1928.jpg";
+
 const newsData: NewsItem[] = [
   {
-    id: 1350,
-    title: '虹桥新天地焕新出发，升级"上海第一站"体验',
-    date: "2025-09-25 11:16",
-    excerpt: '枢纽"新天地"，焕彩"第一站"。作为虹桥国际中央商务区核心区的重要商业地标之一，"虹桥天地"正式焕新升级更名为"虹桥新天地"，以文旅商体展融合发展的新姿态，助力虹桥深入推进国际级消费集聚区建设。',
-    image: "/placeholder.svg",
-    category: "industry"
-  },
-  {
-    id: 1349,
-    title: "上海写字楼市场2024年第三季度报告",
-    date: "2024-09-20 14:30",
-    excerpt: "第三季度上海核心商圈写字楼租金保持稳定，空置率小幅下降。陆家嘴金融城和虹桥商务区表现尤为突出，优质资源供不应求。",
-    image: "/placeholder.svg",
-    category: "industry"
-  },
-  {
-    id: 1348,
-    title: "共享办公空间需求持续增长",
-    date: "2024-09-15 10:00",
-    excerpt: "随着灵活办公模式的普及，上海联合办公空间的需求量持续攀升，WeWork、DISTRII等品牌纷纷扩张新店。",
-    image: "/placeholder.svg",
+    id: 1360,
+    title: '公司办公选址在风水方面有哪些讲究',
+    date: "2025-10-21 11:17",
+    excerpt: '企业办公选址都很慎重，希望在新的办公环境中可以迎来事业发展，公司规模扩大。谁都不能否认一个好的办公室对企业发展的重要性',
+    image: list1360,
     category: "finding"
   },
   {
-    id: 1347,
-    title: "创意园区改造升级成趋势",
-    date: "2024-09-10 16:45",
-    excerpt: "多个老工业厂房经过改造升级，转型为现代化创意园区，为中小企业和创业团队提供特色办公环境。",
-    image: "/placeholder.svg",
+    id: 1359,
+    title: "办公室装修如何有效进行空间布置？",
+    date: "2025-10-20 10:54",
+    excerpt: "办公室装修设计空间布置",
+    image: list1359,
+    category: "decoration"
+  },
+  {
+    id: 1358,
+    title: '"绿地中央广场"系大型商务综合体：静安绿地中央广场',
+    date: "2025-10-17 13:18",
+    excerpt: '静安绿地中央广场，位于上海市静安区江场路与寿阳路交汇处、走马塘南岸，落址静安市北高新园区，毗邻大宁商圈，是世界500强绿地集团、旭辉集团、市北高新集团联手打造的"绿地中央广场"系大型商务综合体。',
+    image: list1358,
     category: "property"
   },
   {
-    id: 1346,
-    title: "2024年办公楼租赁政策解读",
-    date: "2024-09-05 09:20",
-    excerpt: "本文详细解读2024年上海市关于办公楼租赁的最新政策，以及企业可享受的税务优惠措施。",
-    image: "/placeholder.svg",
+    id: 1357,
+    title: "全域！虹桥国际中央商务区纳入上海自贸试验区联动创新区",
+    date: "2025-10-16 10:57",
+    excerpt: "10月15日上午，中国（上海）自由贸易试验区推进工作领导小组发布《第二批上海自贸试验区联动创新区建设方案》，《建设方案》明确增设虹桥国际中央商务区、上海国际旅游度假区、静安、长宁、普陀、青浦、嘉定、金山等8个重点区域。",
+    image: list1357,
+    category: "industry"
+  },
+  {
+    id: 1356,
+    title: "办公室怎么选址风水好",
+    date: "2025-10-15 16:46",
+    excerpt: "选择一个合适的办公室位置对于公司的未来发展和员工的工作质量都具有重要的影响。",
+    image: list1356,
+    category: "finding"
+  },
+  {
+    id: 1355,
+    title: "办公室装修之设计十大要点",
+    date: "2025-10-14 14:55",
+    excerpt: "一个别具一格的办公室装修设计，需要在室内划分、平面布局、界面处理、采光及照明、色彩的选择、氛围的营造等方面考虑。",
+    image: list1355,
     category: "decoration"
+  },
+  {
+    id: 1354,
+    title: "中铁中环时代广场",
+    date: "2025-10-13 11:38",
+    excerpt: "中铁中环时代广场位于江场西路，项目由7幢塔楼、开放的商业街区、主题广场和主题绿化公园组成，是一个集精装SOHO、百变LOFT、甲级办公、星级酒店、休闲娱乐于一体的大型城市综合体。",
+    image: list1354,
+    category: "property"
+  },
+  {
+    id: 1353,
+    title: "今年年底正式启幕，虹桥前湾印象城MEGA首发阵容曝光！",
+    date: "2025-10-11 11:18",
+    excerpt: '近日，作为定位大虹桥"国际化社交度假漫游湾"的商业新地标，虹桥前湾印象城MEGA公布首轮招商成果，官宣签约品牌逾200家。项目落位于虹桥前湾核心区域，将于今年年底正式启幕。',
+    image: list1353,
+    category: "industry"
+  },
+  {
+    id: 1352,
+    title: "办公室选址技巧有哪些？",
+    date: "2025-10-10 16:31",
+    excerpt: "办公室环境，在一定程度上影响员工的工作质量。虽然租办公室要花费大量成本，但这种花费是值得的。舒适的办公室环境不但会提高品牌形象、还会提高员工的工作效率。",
+    image: list1352,
+    category: "finding"
   }
 ];
 
 const hotProperties: PropertyItem[] = [
-  { id: 982, name: "桂箐园", price: "2.2", unit: "元/m²/天 起", location: "徐汇区 - 漕河泾开发区", image: "/placeholder.svg" },
-  { id: 1358, name: "合生财富广场", price: "4.2", unit: "元/m²/天 起", location: "虹口区 - 临平/和平公园", image: "/placeholder.svg" },
-  { id: 490, name: "泓毅大厦", price: "4.0", unit: "元/m²/天 起", location: "闵行区 - 龙柏/虹桥镇", image: "/placeholder.svg" },
-  { id: 794, name: "华侨城中意国际", price: "2.2", unit: "元/m²/天 起", location: "闵行区 - 浦江镇", image: "/placeholder.svg" },
-  { id: 1672, name: "寰图办公空间（上海白玉兰广场）", price: "2200.0", unit: "元/月 起", location: "虹口区 - 北外滩", image: "/placeholder.svg" },
-  { id: 2192, name: "上海智能制造科技创业中心", price: "6.0", unit: "元/m²/天 起", location: "徐汇区 - 漕河泾开发区", image: "/placeholder.svg" },
+  { id: 2162, name: "众原企业天地", price: "1.8", unit: "元/m²/天 起", location: "浦东区 - 外高桥", image: house2162 },
+  { id: 2070, name: "高维大厦", price: "6.3", unit: "元/m²/天 起", location: "浦东区 - 竹园商贸区", image: house2070 },
+  { id: 895, name: "嘉宁国际大厦", price: "7.0", unit: "元/m²/天 起", location: "长宁区 - 中山公园", image: house895 },
+  { id: 170, name: "宝业中心", price: "2.3", unit: "元/m²/天 起", location: "长宁区 - 虹桥火车站", image: house170 },
+  { id: 2303, name: "氪空间（来福士广场）", price: "4000.0", unit: "元/月 起", location: "黄浦区 - 人民广场", image: house2303 },
+  { id: 1928, name: "金桥151", price: "2.2", unit: "元/m²/天 起", location: "浦东区 - 金桥", image: house1928 },
 ];
 
 export default function News() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = [
-    { value: "all", label: "全部", count: 1314 },
-    { value: "industry", label: "行业新闻", count: 352 },
-    { value: "finding", label: "找房攻略", count: 307 },
-    { value: "property", label: "楼盘百科", count: 341 },
-    { value: "decoration", label: "装修攻略", count: 314 },
+    { value: "all", label: "全部", count: 1324 },
+    { value: "industry", label: "行业新闻", count: 354 },
+    { value: "finding", label: "找房攻略", count: 310 },
+    { value: "property", label: "楼盘百科", count: 343 },
+    { value: "decoration", label: "装修攻略", count: 317 },
   ];
 
   const filteredNews = activeCategory === "all" 
