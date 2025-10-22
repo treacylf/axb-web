@@ -6,6 +6,17 @@ import { FilterBar } from "@/components/FilterBar";
 import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Building2 } from "lucide-react";
+import vankeCenter from "@/assets/buildings/vanke-center-real.jpg";
+import exhibitionHub from "@/assets/buildings/exhibition-hub-real.jpg";
+import hongqiaoHui from "@/assets/buildings/hongqiao-hui-real.jpg";
+import sohoTianshan from "@/assets/buildings/soho-tianshan-real.jpg";
+import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi-real.jpg";
+import worldCenter from "@/assets/buildings/world-center-real.jpg";
+import zhongjunPlaza from "@/assets/buildings/zhongjun-plaza.png";
+import aliCenter from "@/assets/buildings/ali-center.jpg";
+import yuandongPlaza from "@/assets/buildings/yuandong-plaza.jpg";
+import weijingCenter from "@/assets/buildings/weijing-center.jpg";
+import shangjiaCenter from "@/assets/buildings/shangjia-center.jpg";
 import {
   Pagination,
   PaginationContent,
@@ -46,7 +57,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
       price: "4.3元/m²/天 起",
-      image: "/src/assets/buildings/vanke-center-real.jpg",
+      image: vankeCenter,
       tags: ["198m²", "350m²", "456m²", "600m²", "820m²", "1053m²", "2352m²"],
       description: "上海市闵行区申长路988弄"
     },
@@ -57,7 +68,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
       price: "2.5元/m²/天 起",
-      image: "/src/assets/buildings/exhibition-hub-real.jpg",
+      image: exhibitionHub,
       tags: ["188m²", "300m²", "450m²", "642m²", "850m²", "980m²", "1350m²", "1853m²"],
       description: "上海市闵行区申昆路2377号"
     },
@@ -68,7 +79,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-300m²",
       price: "4.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
+      image: hongqiaoHui,
       tags: ["120m²", "200m²", "280m²", "350m²"],
       description: "上海市闵行区虹桥商务区核心"
     },
@@ -79,7 +90,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-200m²",
       price: "5.8元/m²/天 起",
-      image: "/src/assets/buildings/soho-tianshan-real.jpg",
+      image: sohoTianshan,
       tags: ["100m²", "150m²", "180m²", "220m²"],
       description: "上海市长宁区天山路"
     },
@@ -90,7 +101,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "200-500m²",
       price: "5.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      image: hongqiaoTiandi,
       tags: ["200m²", "300m²", "400m²", "500m²"],
       description: "上海市长宁区虹桥商务区"
     },
@@ -101,7 +112,7 @@ export default function SearchResults() {
       subway: "2号线,10号线",
       area: "300-1000m²",
       price: "6.5元/m²/天 起",
-      image: "/src/assets/buildings/world-center-real.jpg",
+      image: worldCenter,
       tags: ["300m²", "500m²", "800m²", "1000m²", "1500m²"],
       description: "上海市长宁区虹桥核心区域"
     },
@@ -112,7 +123,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "300-800m²",
       price: "5.6元/m²/天 起",
-      image: "/src/assets/buildings/zhongjun-plaza.png",
+      image: zhongjunPlaza,
       tags: ["300m²", "450m²", "600m²", "800m²"],
       description: "上海市长宁区核心商务区"
     },
@@ -123,7 +134,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "500-1500m²",
       price: "5.2元/m²/天 起",
-      image: "/src/assets/buildings/ali-center.jpg",
+      image: aliCenter,
       tags: ["500m²", "800m²", "1000m²", "1200m²", "1500m²"],
       description: "上海市闵行区虹桥商务区"
     },
@@ -134,7 +145,7 @@ export default function SearchResults() {
       subway: "2号线,10号线",
       area: "200-600m²",
       price: "6.2元/m²/天 起",
-      image: "/src/assets/buildings/yuandong-plaza.jpg",
+      image: yuandongPlaza,
       tags: ["200m²", "350m²", "480m²", "600m²"],
       description: "上海市长宁区虹桥核心区域"
     },
@@ -145,7 +156,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "300-800m²",
       price: "5.4元/m²/天 起",
-      image: "/src/assets/buildings/weijing-center.jpg",
+      image: weijingCenter,
       tags: ["300m²", "450m²", "600m²", "800m²"],
       description: "上海市长宁区地铁站旁"
     },
@@ -156,7 +167,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "200-500m²",
       price: "5.8元/m²/天 起",
-      image: "/src/assets/buildings/shangjia-center.jpg",
+      image: shangjiaCenter,
       tags: ["200m²", "300m²", "400m²", "500m²"],
       description: "上海市长宁区商业配套齐全"
     },
@@ -168,7 +179,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
       price: "4.3元/m²/天 起",
-      image: "/src/assets/buildings/vanke-center-real.jpg",
+      image: vankeCenter,
       tags: ["198m²", "350m²", "456m²", "600m²", "820m²"],
       description: "上海市闵行区申长路988弄"
     },
@@ -179,7 +190,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
       price: "2.5元/m²/天 起",
-      image: "/src/assets/buildings/exhibition-hub-real.jpg",
+      image: exhibitionHub,
       tags: ["188m²", "300m²", "450m²", "642m²", "850m²"],
       description: "上海市闵行区申昆路2377号"
     },
@@ -190,7 +201,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-300m²",
       price: "4.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
+      image: hongqiaoHui,
       tags: ["120m²", "200m²", "280m²", "350m²"],
       description: "上海市闵行区虹桥商务区核心"
     },
@@ -201,7 +212,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-200m²",
       price: "5.8元/m²/天 起",
-      image: "/src/assets/buildings/soho-tianshan-real.jpg",
+      image: sohoTianshan,
       tags: ["100m²", "150m²", "180m²", "220m²"],
       description: "上海市长宁区天山路"
     },
@@ -212,7 +223,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "200-500m²",
       price: "5.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      image: hongqiaoTiandi,
       tags: ["200m²", "300m²", "400m²", "500m²"],
       description: "上海市长宁区虹桥商务区"
     },
@@ -223,7 +234,7 @@ export default function SearchResults() {
       subway: "2号线,10号线",
       area: "300-1000m²",
       price: "6.5元/m²/天 起",
-      image: "/src/assets/buildings/world-center-real.jpg",
+      image: worldCenter,
       tags: ["300m²", "500m²", "800m²", "1000m²"],
       description: "上海市长宁区虹桥核心区域"
     },
@@ -234,7 +245,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "300-800m²",
       price: "5.6元/m²/天 起",
-      image: "/src/assets/buildings/zhongjun-plaza.png",
+      image: zhongjunPlaza,
       tags: ["300m²", "450m²", "600m²", "800m²"],
       description: "上海市长宁区核心商务区"
     },
@@ -245,7 +256,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "500-1500m²",
       price: "5.2元/m²/天 起",
-      image: "/src/assets/buildings/ali-center.jpg",
+      image: aliCenter,
       tags: ["500m²", "800m²", "1000m²", "1200m²"],
       description: "上海市闵行区虹桥商务区"
     },
@@ -256,7 +267,7 @@ export default function SearchResults() {
       subway: "2号线,10号线",
       area: "200-600m²",
       price: "6.2元/m²/天 起",
-      image: "/src/assets/buildings/yuandong-plaza.jpg",
+      image: yuandongPlaza,
       tags: ["200m²", "350m²", "480m²", "600m²"],
       description: "上海市长宁区虹桥核心区域"
     },
@@ -267,7 +278,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "300-800m²",
       price: "5.4元/m²/天 起",
-      image: "/src/assets/buildings/weijing-center.jpg",
+      image: weijingCenter,
       tags: ["300m²", "450m²", "600m²", "800m²"],
       description: "上海市长宁区地铁站旁"
     },
@@ -278,7 +289,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "200-500m²",
       price: "5.8元/m²/天 起",
-      image: "/src/assets/buildings/shangjia-center.jpg",
+      image: shangjiaCenter,
       tags: ["200m²", "300m²", "400m²", "500m²"],
       description: "上海市长宁区商业配套齐全"
     },
@@ -289,7 +300,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,17号线,虹桥火车站",
       area: "500-1000m²",
       price: "4.3元/m²/天 起",
-      image: "/src/assets/buildings/vanke-center-real.jpg",
+      image: vankeCenter,
       tags: ["198m²", "350m²", "456m²", "600m²"],
       description: "上海市闵行区申长路988弄"
     },
@@ -300,7 +311,7 @@ export default function SearchResults() {
       subway: "2号线,10号线,虹桥2号航站楼",
       area: "200-800m²",
       price: "2.5元/m²/天 起",
-      image: "/src/assets/buildings/exhibition-hub-real.jpg",
+      image: exhibitionHub,
       tags: ["188m²", "300m²", "450m²", "642m²"],
       description: "上海市闵行区申昆路2377号"
     },
@@ -311,7 +322,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-300m²",
       price: "4.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-hui-real.jpg",
+      image: hongqiaoHui,
       tags: ["120m²", "200m²", "280m²"],
       description: "上海市闵行区虹桥商务区核心"
     },
@@ -322,7 +333,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "100-200m²",
       price: "5.8元/m²/天 起",
-      image: "/src/assets/buildings/soho-tianshan-real.jpg",
+      image: sohoTianshan,
       tags: ["100m²", "150m²", "180m²"],
       description: "上海市长宁区天山路"
     },
@@ -333,7 +344,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "200-500m²",
       price: "5.5元/m²/天 起",
-      image: "/src/assets/buildings/hongqiao-tiandi-real.jpg",
+      image: hongqiaoTiandi,
       tags: ["200m²", "300m²", "400m²"],
       description: "上海市长宁区虹桥商务区"
     },
@@ -344,7 +355,7 @@ export default function SearchResults() {
       subway: "2号线,10号线",
       area: "300-1000m²",
       price: "6.5元/m²/天 起",
-      image: "/src/assets/buildings/world-center-real.jpg",
+      image: worldCenter,
       tags: ["300m²", "500m²", "800m²"],
       description: "上海市长宁区虹桥核心区域"
     },
@@ -355,7 +366,7 @@ export default function SearchResults() {
       subway: "2号线",
       area: "300-800m²",
       price: "5.6元/m²/天 起",
-      image: "/src/assets/buildings/zhongjun-plaza.png",
+      image: zhongjunPlaza,
       tags: ["300m²", "450m²", "600m²"],
       description: "上海市长宁区核心商务区"
     },
@@ -366,7 +377,7 @@ export default function SearchResults() {
       subway: "10号线",
       area: "500-1500m²",
       price: "5.2元/m²/天 起",
-      image: "/src/assets/buildings/ali-center.jpg",
+      image: aliCenter,
       tags: ["500m²", "800m²", "1000m²"],
       description: "上海市闵行区虹桥商务区"
     }
@@ -409,6 +420,17 @@ export default function SearchResults() {
           <div className="flex gap-6">
             {/* 左侧列表 */}
             <div className="flex-1">
+              {/* 顶部tabs导航 */}
+              <div className="bg-card mb-4 border-b">
+                <div className="flex gap-6 px-4">
+                  <a href="/search?nav_id=0" className="py-3 text-sm border-b-2 border-primary text-primary font-medium">租办公室</a>
+                  <a href="/search?nav_id=1" className="py-3 text-sm text-muted-foreground hover:text-primary">写字楼</a>
+                  <a href="/search?nav_id=2" className="py-3 text-sm text-muted-foreground hover:text-primary">创意园区</a>
+                  <a href="/search?nav_id=3" className="py-3 text-sm text-muted-foreground hover:text-primary">共享办公</a>
+                  <a href="/search?nav_id=4" className="py-3 text-sm text-muted-foreground hover:text-primary">总部独栋</a>
+                </div>
+              </div>
+              
               {/* 排序和结果数量 */}
               <div className="flex justify-between items-center mb-4 pb-3 border-b bg-card px-4 py-3">
                 <div className="flex gap-4">

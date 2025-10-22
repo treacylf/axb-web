@@ -1,9 +1,33 @@
+import { useNavigate, useSearchParams } from "react-router-dom";
+
 export const FilterBar = () => {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  
+  const currentDistrict = searchParams.get("district") || "";
+  const currentSubway = searchParams.get("subway") || "";
+  const currentArea = searchParams.get("area") || "";
+  const currentPrice = searchParams.get("price") || "";
+
+  const handleFilterClick = (filterType: string, value: string) => {
+    const params = new URLSearchParams(searchParams);
+    
+    if (value === "") {
+      params.delete(filterType);
+    } else {
+      params.set(filterType, value);
+    }
+    
+    navigate(`/search?${params.toString()}`);
+  };
+
   const filters = [
     {
       title: "区域",
+      type: "district",
+      current: currentDistrict,
       options: [
-        { label: "不限", value: "", active: true },
+        { label: "不限", value: "" },
         { label: "浦东", value: "pudong" },
         { label: "黄浦", value: "huangpu" },
         { label: "静安", value: "jingan" },
@@ -23,8 +47,10 @@ export const FilterBar = () => {
     },
     {
       title: "地铁",
+      type: "subway",
+      current: currentSubway,
       options: [
-        { label: "不限", value: "", active: true },
+        { label: "不限", value: "" },
         { label: "1号线", value: "line1" },
         { label: "2号线", value: "line2" },
         { label: "3号线", value: "line3" },
@@ -49,8 +75,10 @@ export const FilterBar = () => {
     },
     {
       title: "面积",
+      type: "area",
+      current: currentArea,
       options: [
-        { label: "不限", value: "", active: true },
+        { label: "不限", value: "" },
         { label: "100m²以下", value: "0-100" },
         { label: "100-200m²", value: "100-200" },
         { label: "200-300m²", value: "200-300" },
@@ -61,8 +89,10 @@ export const FilterBar = () => {
     },
     {
       title: "价格",
+      type: "price",
+      current: currentPrice,
       options: [
-        { label: "不限", value: "", active: true },
+        { label: "不限", value: "" },
         { label: "3元以下", value: "0-3" },
         { label: "3-4元", value: "3-4" },
         { label: "4-5元", value: "4-5" },
@@ -86,9 +116,14 @@ export const FilterBar = () => {
               {filter.options.map((option, index) => (
                 <a
                   key={index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleFilterClick(filter.type, option.value);
+                  }}
                   href="#"
-                  className={`text-sm transition-colors ${
-                    option.active
+                  className={`text-sm transition-colors cursor-pointer ${
+                    (option.value === "" && filter.current === "") || 
+                    (option.value !== "" && filter.current === option.value)
                       ? "text-primary font-medium"
                       : "text-muted-foreground hover:text-primary"
                   }`}
