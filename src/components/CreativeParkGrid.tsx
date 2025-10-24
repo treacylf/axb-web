@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import show800 from "@/assets/creative/800show.jpg";
 import anken from "@/assets/creative/anken.jpg";
 import bridge8 from "@/assets/creative/bridge8.jpg";
@@ -58,11 +59,10 @@ export const CreativeParkGrid = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <a
-            href="#"
-            className="inline-block rounded-lg border-2 border-primary px-8 py-3 font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
-          >
-            更多创意园区
+          <a href="/search?nav_id=2">
+            <Button size="lg" variant="outline">
+              更多创意园区
+            </Button>
           </a>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { DistrictGrid } from "@/components/DistrictGrid";
 import { BuildingGrid } from "@/components/BuildingGrid";
 import { CoworkingGrid } from "@/components/CoworkingGrid";
 import { CreativeParkGrid } from "@/components/CreativeParkGrid";
-import { ServiceSection } from "@/components/ServiceSection";
+import { HeadquartersGrid } from "@/components/HeadquartersGrid";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
 import { NewsSection } from "@/components/NewsSection";
 import { Footer } from "@/components/Footer";
@@ -37,9 +37,6 @@ const Index = () => {
         {/* Filter Bar */}
         <FilterBar />
 
-        {/* Service Section */}
-        <ServiceSection />
-
         {/* Districts */}
         <DistrictGrid />
 
@@ -51,6 +48,9 @@ const Index = () => {
 
         {/* Creative Parks */}
         <CreativeParkGrid />
+
+        {/* Headquarters */}
+        <HeadquartersGrid />
 
         {/* Consultation CTA */}
         <ConsultationCTA />

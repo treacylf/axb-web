@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const ConsultationCTA = () => {
@@ -13,16 +13,12 @@ export const ConsultationCTA = () => {
             10年行业经验，5000+成功案例，为您提供一站式办公选址服务
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:021-64202027">
+            <a href="/findhouse">
               <Button size="lg" className="gap-2 text-lg px-8 py-6">
-                <Phone className="h-5 w-5" />
-                立即致电咨询
+                <Search className="h-5 w-5" />
+                智能选址
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6">
-              <MessageCircle className="h-5 w-5" />
-              在线咨询
-            </Button>
           </div>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="p-4 bg-card rounded-lg border">

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
 import vankeCenter from "@/assets/buildings/vanke-center.jpg";
 import exhibitionHub from "@/assets/buildings/exhibition-hub.jpg";
 import hongqiaoHui from "@/assets/buildings/hongqiao-hui.jpg";
@@ -64,6 +65,14 @@ export const BuildingGrid = () => {
               </a>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <a href="/search?nav_id=1">
+            <Button size="lg" variant="outline">
+              更多上海写字楼出租
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import distrii1 from "@/assets/coworking/distrii-1.jpg";
 import umon1 from "@/assets/coworking/umon-1.jpg";
 import wework1 from "@/assets/coworking/wework-1.jpg";
@@ -58,11 +59,10 @@ export const CoworkingGrid = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <a
-            href="#"
-            className="inline-block rounded-lg border-2 border-primary px-8 py-3 font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
-          >
-            更多上海热门联合办公
+          <a href="/search?nav_id=3">
+            <Button size="lg" variant="outline">
+              更多联合办公
+            </Button>
           </a>
         </div>
       </div>
