@@ -24,7 +24,10 @@ export const SearchBox = () => {
             {districts.map((district) => (
               <button
                 key={district}
-                onClick={() => setSelectedDistrict(district)}
+                onClick={() => {
+                  setSelectedDistrict(district);
+                  navigate(`/search?q=&district=${encodeURIComponent(district)}`);
+                }}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                   selectedDistrict === district
                     ? "bg-accent text-white"
