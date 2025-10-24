@@ -55,7 +55,7 @@ export const FloatingSidebar = () => {
 
         {/* 委托找房 */}
         <a
-          href="#"
+          href="/findhouse"
           className="flex w-16 flex-col items-center gap-1 bg-primary py-3 text-white transition-colors hover:bg-primary/90"
         >
           <Home className="h-5 w-5" />
@@ -68,7 +68,7 @@ export const FloatingSidebar = () => {
 
         {/* 投放房源 */}
         <a
-          href="#"
+          href="/findhouse"
           className="flex w-16 flex-col items-center gap-1 bg-secondary py-3 text-secondary-foreground transition-colors hover:bg-secondary/90"
         >
           <FileText className="h-5 w-5" />
