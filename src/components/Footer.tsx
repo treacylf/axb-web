@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const friendlyLinks = [
@@ -19,8 +20,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div>
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <span className="text-xl font-bold text-primary-foreground">超办</span>
+            <div className="mb-4">
+              <img src={logo} alt="超办" className="h-12 w-auto" />
             </div>
             <h3 className="mb-4 text-lg font-semibold text-foreground">
               上海超办信息服务有限公司
