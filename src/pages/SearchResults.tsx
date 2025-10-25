@@ -495,7 +495,7 @@ export default function SearchResults() {
                   <div className="flex gap-4">
                     {/* 图片 */}
                     <div className="w-64 h-48 flex-shrink-0">
-                      <a href={`#building-${building.id}`}>
+                      <a href={`/building/${building.id}`}>
                         <img
                           src={building.image}
                           alt={building.name}
@@ -506,10 +506,10 @@ export default function SearchResults() {
 
                     {/* 内容 */}
                     <div className="flex-1 flex flex-col" style={{ width: '79%' }}>
-                      {/* 标题和价格 */}
+                       {/* 标题和价格 */}
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="text-lg font-bold">
-                          <a href={`#building-${building.id}`} className="hover:text-primary">
+                          <a href={`/building/${building.id}`} className="hover:text-primary">
                             {building.name}
                           </a>
                         </h4>
@@ -548,7 +548,7 @@ export default function SearchResults() {
                         {/* 查看详情按钮 */}
                         <div className="ml-4">
                           <a
-                            href={`#building-${building.id}`}
+                            href={`/building/${building.id}`}
                             className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors text-sm"
                           >
                             查看详情
