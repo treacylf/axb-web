@@ -46,7 +46,6 @@ export default function SearchResults() {
   const currentPage = parseInt(searchParams.get("page") || "1");
   
   const itemsPerPage = 6;
-  const totalPages = 5; // 总共5页示例数据
 
   // 真实数据 - 来自GitHub项目
   const allBuildings: Building[] = [
@@ -383,10 +382,90 @@ export default function SearchResults() {
     }
   ];
 
+  // 获取筛选参数
+  const navId = searchParams.get("nav_id") || "0";
+  const district = searchParams.get("district") || "";
+  const subway = searchParams.get("subway") || "";
+  const area = searchParams.get("area") || "";
+  const price = searchParams.get("price") || "";
+
+  // 根据筛选条件过滤数据
+  const filteredBuildings = allBuildings.filter((building) => {
+    // 区域筛选
+    if (district && building.district !== district && 
+        !(district === "changning" && building.district === "长宁") &&
+        !(district === "minhang" && building.district === "闵行") &&
+        !(district === "qingpu" && building.district === "青浦")) {
+      return false;
+    }
+
+    // 地铁筛选
+    if (subway) {
+      const subwayLine = subway.replace("line", "") + "号线";
+      if (!building.subway.includes(subwayLine)) {
+        return false;
+      }
+    }
+
+    // 面积筛选
+    if (area) {
+      const [minArea, maxArea] = area.split("-").map(a => a ? parseInt(a) : null);
+      const buildingAreaMatch = building.area.match(/(\d+)-(\d+)/);
+      if (buildingAreaMatch) {
+        const buildingMin = parseInt(buildingAreaMatch[1]);
+        const buildingMax = parseInt(buildingAreaMatch[2]);
+        
+        if (minArea !== null && maxArea !== null) {
+          // 范围筛选
+          if (buildingMax < minArea || buildingMin > maxArea) {
+            return false;
+          }
+        } else if (minArea !== null && maxArea === null) {
+          // 最小值筛选（1000m²以上）
+          if (buildingMax < minArea) {
+            return false;
+          }
+        } else if (minArea === null && maxArea !== null) {
+          // 最大值筛选（100m²以下）
+          if (buildingMin > maxArea) {
+            return false;
+          }
+        }
+      }
+    }
+
+    // 价格筛选
+    if (price) {
+      const [minPrice, maxPrice] = price.split("-").map(p => p ? parseFloat(p) : null);
+      const buildingPrice = parseFloat(building.price.match(/[\d.]+/)?.[0] || "0");
+      
+      if (minPrice !== null && maxPrice !== null) {
+        // 范围筛选
+        if (buildingPrice < minPrice || buildingPrice > maxPrice) {
+          return false;
+        }
+      } else if (minPrice !== null && maxPrice === null) {
+        // 最小值筛选（12元以上）
+        if (buildingPrice < minPrice) {
+          return false;
+        }
+      } else if (minPrice === null && maxPrice !== null) {
+        // 最大值筛选（3元以下）
+        if (buildingPrice > maxPrice) {
+          return false;
+        }
+      }
+    }
+
+    return true;
+  });
+
   // 计算当前页显示的数据
+  const totalFilteredItems = filteredBuildings.length;
+  const totalPages = Math.max(1, Math.ceil(totalFilteredItems / itemsPerPage));
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const buildings = allBuildings.slice(startIndex, endIndex);
+  const buildings = filteredBuildings.slice(startIndex, endIndex);
 
   // 页面导航函数
   const goToPage = (page: number) => {
@@ -484,7 +563,7 @@ export default function SearchResults() {
                   <a href="#" className="text-sm text-primary font-medium">综合排序</a>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary">价格排序</a>
                 </div>
-                <p className="text-sm text-muted-foreground">已为您找到了2738条相关信息</p>
+                <p className="text-sm text-muted-foreground">已为您找到了{totalFilteredItems}条相关信息</p>
               </div>
 
           {/* 建筑列表 */}
