@@ -492,11 +492,11 @@ export default function SearchResults() {
 
       {/* 顶部tabs导航 */}
       <div className="bg-card border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex gap-6">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="flex gap-2 sm:gap-6 overflow-x-auto scrollbar-hide">
             <a 
               href="/search?nav_id=0" 
-              className={`py-3 text-sm border-b-2 transition-colors ${
+              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
                 (!searchParams.get("nav_id") || searchParams.get("nav_id") === "0")
                   ? "border-primary text-primary font-medium" 
                   : "border-transparent text-muted-foreground hover:text-primary"
@@ -506,7 +506,7 @@ export default function SearchResults() {
             </a>
             <a 
               href="/search?nav_id=1" 
-              className={`py-3 text-sm border-b-2 transition-colors ${
+              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
                 searchParams.get("nav_id") === "1"
                   ? "border-primary text-primary font-medium" 
                   : "border-transparent text-muted-foreground hover:text-primary"
@@ -516,7 +516,7 @@ export default function SearchResults() {
             </a>
             <a 
               href="/search?nav_id=2" 
-              className={`py-3 text-sm border-b-2 transition-colors ${
+              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
                 searchParams.get("nav_id") === "2"
                   ? "border-primary text-primary font-medium" 
                   : "border-transparent text-muted-foreground hover:text-primary"
@@ -526,7 +526,7 @@ export default function SearchResults() {
             </a>
             <a 
               href="/search?nav_id=3" 
-              className={`py-3 text-sm border-b-2 transition-colors ${
+              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
                 searchParams.get("nav_id") === "3"
                   ? "border-primary text-primary font-medium" 
                   : "border-transparent text-muted-foreground hover:text-primary"
@@ -536,7 +536,7 @@ export default function SearchResults() {
             </a>
             <a 
               href="/search?nav_id=4" 
-              className={`py-3 text-sm border-b-2 transition-colors ${
+              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
                 searchParams.get("nav_id") === "4"
                   ? "border-primary text-primary font-medium" 
                   : "border-transparent text-muted-foreground hover:text-primary"
@@ -553,82 +553,87 @@ export default function SearchResults() {
 
       {/* 搜索结果主体 */}
       <div className="bg-muted/20">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex gap-6">
+        <div className="container mx-auto px-2 sm:px-4 py-3 sm:py-6">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
             {/* 左侧列表 */}
             <div className="flex-1">
               {/* 排序和结果数量 */}
-              <div className="flex justify-between items-center mb-4 pb-3 border-b bg-card px-4 py-3">
-                <div className="flex gap-4">
-                  <a href="#" className="text-sm text-primary font-medium">综合排序</a>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-primary">价格排序</a>
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 sm:mb-4 pb-2 sm:pb-3 border-b bg-card px-3 sm:px-4 py-2 sm:py-3 gap-2">
+                <div className="flex gap-3 sm:gap-4">
+                  <a href="#" className="text-xs sm:text-sm text-primary font-medium">综合排序</a>
+                  <a href="#" className="text-xs sm:text-sm text-muted-foreground hover:text-primary">价格排序</a>
                 </div>
-                <p className="text-sm text-muted-foreground">已为您找到了{totalFilteredItems}条相关信息</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">已为您找到了{totalFilteredItems}条相关信息</p>
               </div>
 
           {/* 建筑列表 */}
           <div className="space-y-0">
             {buildings.map((building, index) => (
               <div key={building.id}>
-                <div className="bg-card p-4 hover:bg-accent/5 transition-colors">
-                  <div className="flex gap-4">
+                <div className="bg-card p-3 sm:p-4 hover:bg-accent/5 transition-colors">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     {/* 图片 */}
-                    <div className="w-64 h-48 flex-shrink-0">
+                    <div className="w-full sm:w-64 h-48 sm:h-48 flex-shrink-0">
                       <a href={`/building/${building.id}`}>
                         <img
                           src={building.image}
                           alt={building.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover rounded sm:rounded-none"
                         />
                       </a>
                     </div>
 
                     {/* 内容 */}
-                    <div className="flex-1 flex flex-col" style={{ width: '79%' }}>
+                    <div className="flex-1 flex flex-col">
                        {/* 标题和价格 */}
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="text-lg font-bold">
+                      <div className="flex justify-between items-start mb-1 sm:mb-1">
+                        <h4 className="text-base sm:text-lg font-bold flex-1">
                           <a href={`/building/${building.id}`} className="hover:text-primary">
                             {building.name}
                           </a>
                         </h4>
-                        <div className="text-right">
-                          <span className="text-primary font-bold text-xl">{building.price.split('元')[0]}</span>
-                          <span className="text-sm">元/m²/天 起</span>
+                        <div className="text-right ml-2">
+                          <span className="text-primary font-bold text-lg sm:text-xl">{building.price.split('元')[0]}</span>
+                          <span className="text-xs sm:text-sm">元/m²/天 起</span>
                         </div>
                       </div>
 
                       {/* 地址信息 */}
-                      <p className="text-sm text-muted-foreground py-0.5">
-                        <MapPin className="inline h-4 w-4 mr-1" />
+                      <p className="text-xs sm:text-sm text-muted-foreground py-0.5">
+                        <MapPin className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         {building.description}
                       </p>
-                      <p className="text-sm text-muted-foreground py-0.5 mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground py-0.5 mb-2 sm:mb-3">
                         距离地铁：{building.subway}站步行约5分钟
                       </p>
 
                       {/* 下方区域 - 可用面积和查看详情按钮 */}
-                      <div className="flex mt-auto">
+                      <div className="flex flex-col sm:flex-row mt-auto gap-3 sm:gap-0">
                         {/* 可用面积标签 */}
-                        <div className="flex-1 overflow-hidden" style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', height: '68px' }}>
-                          <div className="flex flex-wrap gap-2">
-                            {building.tags.map((tag, tagIndex) => (
+                        <div className="flex-1 overflow-hidden">
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                            {building.tags.slice(0, 4).map((tag, tagIndex) => (
                               <a
                                 key={tagIndex}
                                 href="#"
-                                className="px-3 py-1.5 text-sm border border-border rounded hover:border-primary hover:text-primary transition-colors inline-block"
+                                className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm border border-border rounded hover:border-primary hover:text-primary transition-colors inline-block"
                               >
                                 {tag}
                               </a>
                             ))}
+                            {building.tags.length > 4 && (
+                              <span className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm text-muted-foreground">
+                                +{building.tags.length - 4}
+                              </span>
+                            )}
                           </div>
                         </div>
                         
                         {/* 查看详情按钮 */}
-                        <div className="ml-4">
+                        <div className="sm:ml-4">
                           <a
                             href={`/building/${building.id}`}
-                            className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors text-sm"
+                            className="block sm:inline-block text-center px-4 sm:px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors text-xs sm:text-sm"
                           >
                             查看详情
                           </a>
@@ -716,8 +721,8 @@ export default function SearchResults() {
               </div>
             </div>
 
-            {/* 右侧边栏 */}
-            <div className="w-80 flex-shrink-0">
+            {/* 右侧边栏 - 仅在大屏幕显示 */}
+            <div className="hidden lg:block lg:w-80 flex-shrink-0">
               <SearchSidebar />
             </div>
           </div>

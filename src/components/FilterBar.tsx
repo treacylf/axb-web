@@ -106,13 +106,13 @@ export const FilterBar = () => {
 
   return (
     <div className="border-b bg-card">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-3">
         {filters.map((filter) => (
-          <div key={filter.title} className="flex border-b last:border-0 py-3">
-            <div className="min-w-[60px] font-semibold text-foreground">
+          <div key={filter.title} className="flex flex-col sm:flex-row border-b last:border-0 py-2 sm:py-3 gap-2 sm:gap-0">
+            <div className="min-w-[60px] font-semibold text-foreground text-sm sm:text-base">
               {filter.title}
             </div>
-            <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2">
+            <div className="flex-1 flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-1.5 sm:gap-y-2">
               {filter.options.map((option, index) => (
                 <a
                   key={index}
@@ -121,7 +121,7 @@ export const FilterBar = () => {
                     handleFilterClick(filter.type, option.value);
                   }}
                   href="#"
-                  className={`text-sm transition-colors cursor-pointer ${
+                  className={`text-xs sm:text-sm transition-colors cursor-pointer ${
                     (option.value === "" && filter.current === "") || 
                     (option.value !== "" && filter.current === option.value)
                       ? "text-primary font-medium"
