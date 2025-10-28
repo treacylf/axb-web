@@ -16,16 +16,16 @@ export const Hero = () => {
       
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-6 text-4xl font-bold text-white lg:text-6xl">
+          <h1 className="mb-4 text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-6xl">
             上海写字楼出租
           </h1>
-          <p className="mb-10 text-lg text-white/90 lg:text-xl">
+          <p className="mb-6 text-base text-white/90 md:mb-10 md:text-lg lg:text-xl">
             专业提供上海写字楼、办公楼、共享办公、创意园区租赁服务
           </p>
 
           {/* Search Box */}
-          <div className="mx-auto max-w-3xl rounded-xl bg-white p-6 shadow-2xl">
-            <div className="grid gap-4 md:grid-cols-3">
+          <div className="mx-auto max-w-3xl rounded-lg bg-white p-3 shadow-2xl md:rounded-xl md:p-6">
+            <div className="grid gap-2 md:gap-4 md:grid-cols-3">
               <Select>
                 <SelectTrigger>
                   <SelectValue placeholder="选择区域" />
@@ -58,7 +58,7 @@ export const Hero = () => {
                 <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               </div>
             </div>
-            <Button className="mt-4 w-full md:w-auto" size="lg">
+            <Button className="mt-3 w-full md:mt-4 md:w-auto" size="default">
               <Search className="mr-2 h-4 w-4" />
               开始搜索
             </Button>
