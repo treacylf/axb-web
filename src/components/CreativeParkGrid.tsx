@@ -5,6 +5,7 @@ import anken from "@/assets/creative/anken.jpg";
 import bridge8 from "@/assets/creative/bridge8.jpg";
 
 interface CreativePark {
+  id: number;
   name: string;
   location: string;
   image: string;
@@ -12,14 +13,14 @@ interface CreativePark {
 
 export const CreativeParkGrid = () => {
   const parks: CreativePark[] = [
-    { name: "800秀创意园", location: "静安", image: show800 },
-    { name: "安垦汇智创意园", location: "静安", image: anken },
-    { name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
-    { name: "800秀创意园", location: "静安", image: show800 },
-    { name: "安垦汇智创意园", location: "静安", image: anken },
-    { name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
-    { name: "800秀创意园", location: "静安", image: show800 },
-    { name: "安垦汇智创意园", location: "静安", image: anken },
+    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
+    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
+    { id: 203, name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
+    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
+    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
+    { id: 203, name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
+    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
+    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
   ];
 
   return (
@@ -39,7 +40,7 @@ export const CreativeParkGrid = () => {
               className="group overflow-hidden border-0 transition-all duration-300 hover:-translate-y-1"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <a href="#" className="block">
+              <a href={`/building/${park.id}`} className="block">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={park.image}

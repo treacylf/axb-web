@@ -5,6 +5,7 @@ import umon1 from "@/assets/coworking/umon-1.jpg";
 import wework1 from "@/assets/coworking/wework-1.jpg";
 
 interface Coworking {
+  id: number;
   name: string;
   location: string;
   image: string;
@@ -12,14 +13,14 @@ interface Coworking {
 
 export const CoworkingGrid = () => {
   const coworkings: Coworking[] = [
-    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
-    { name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
-    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
-    { name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
-    { name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { id: 103, name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
+    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { id: 103, name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
+    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
   ];
 
   return (
@@ -39,7 +40,7 @@ export const CoworkingGrid = () => {
               className="group overflow-hidden border-0 transition-all duration-300 hover:-translate-y-1"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <a href="#" className="block">
+              <a href={`/building/${coworking.id}`} className="block">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={coworking.image}

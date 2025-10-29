@@ -9,6 +9,7 @@ import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi.jpg";
 import worldCenter from "@/assets/buildings/world-center.jpg";
 
 interface Building {
+  id: number;
   name: string;
   location: string;
   image: string;
@@ -16,14 +17,14 @@ interface Building {
 
 export const BuildingGrid = () => {
   const buildings: Building[] = [
-    { name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
-    { name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
-    { name: "虹桥汇", location: "虹桥商务区", image: hongqiaoHui },
-    { name: "SOHO天山广场", location: "长宁区", image: sohoTianshan },
-    { name: "虹桥天地", location: "闵行区", image: hongqiaoTiandi },
-    { name: "虹桥世界中心", location: "闵行区", image: worldCenter },
-    { name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
-    { name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
+    { id: 1, name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
+    { id: 2, name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
+    { id: 3, name: "虹桥汇", location: "虹桥商务区", image: hongqiaoHui },
+    { id: 4, name: "SOHO天山广场", location: "长宁区", image: sohoTianshan },
+    { id: 5, name: "虹桥天地", location: "闵行区", image: hongqiaoTiandi },
+    { id: 6, name: "虹桥世界中心", location: "闵行区", image: worldCenter },
+    { id: 1, name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
+    { id: 2, name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
   ];
 
   return (
@@ -45,7 +46,7 @@ export const BuildingGrid = () => {
                 boxShadow: "var(--card-shadow)",
               }}
             >
-              <a href="#" className="block">
+              <a href={`/building/${building.id}`} className="block">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={building.image}

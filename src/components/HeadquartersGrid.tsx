@@ -10,6 +10,7 @@ import pingjinCenter from "@/assets/headquarters/pingjin-center.jpg";
 import rongdaCenter from "@/assets/headquarters/rongda-center.jpg";
 
 interface Headquarters {
+  id: number;
   name: string;
   location: string;
   image: string;
@@ -17,14 +18,14 @@ interface Headquarters {
 
 export const HeadquartersGrid = () => {
   const headquarters: Headquarters[] = [
-    { name: "虹桥BU中心（独栋）", location: "长宁区", image: hongqiaoBu },
-    { name: "力波REEB1987（独栋）", location: "普陀区", image: liboReeb },
-    { name: "田林坊（独栋）", location: "徐汇区", image: tianlinFang },
-    { name: "中骏广场（独栋）", location: "长宁区", image: zhongjunPlaza },
-    { name: "虹桥正荣中心（独栋）", location: "闵行区", image: hongqiaoZhengrong },
-    { name: "MAX科技园（独栋）", location: "闵行区", image: maxTech },
-    { name: "平金中心（独栋）", location: "浦东新区", image: pingjinCenter },
-    { name: "容大中心（独栋）", location: "闵行区", image: rongdaCenter },
+    { id: 301, name: "虹桥BU中心（独栋）", location: "长宁区", image: hongqiaoBu },
+    { id: 302, name: "力波REEB1987（独栋）", location: "普陀区", image: liboReeb },
+    { id: 303, name: "田林坊（独栋）", location: "徐汇区", image: tianlinFang },
+    { id: 304, name: "中骏广场（独栋）", location: "长宁区", image: zhongjunPlaza },
+    { id: 305, name: "虹桥正荣中心（独栋）", location: "闵行区", image: hongqiaoZhengrong },
+    { id: 306, name: "MAX科技园（独栋）", location: "闵行区", image: maxTech },
+    { id: 307, name: "平金中心（独栋）", location: "浦东新区", image: pingjinCenter },
+    { id: 308, name: "容大中心（独栋）", location: "闵行区", image: rongdaCenter },
   ];
 
   return (
@@ -45,20 +46,22 @@ export const HeadquartersGrid = () => {
               key={index}
               className="group overflow-hidden border-0 shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={hq.image}
-                  alt={hq.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="mb-2 text-lg font-semibold text-foreground">
-                  {hq.name}
-                </h3>
-                <p className="text-sm text-muted-foreground">{hq.location}</p>
-              </div>
+              <a href={`/building/${hq.id}`} className="block">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={hq.image}
+                    alt={hq.name}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                    {hq.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{hq.location}</p>
+                </div>
+              </a>
             </Card>
           ))}
         </div>
