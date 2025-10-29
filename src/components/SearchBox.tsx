@@ -9,9 +9,9 @@ export const SearchBox = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const quickLinks = [
-    { label: "虹桥商务区", color: "bg-red-500" },
-    { label: "共享办公室", color: "bg-orange-500" },
-    { label: "近地铁写字楼", color: "bg-blue-500" },
+    { label: "虹桥商务区", color: "bg-red-500", params: { district: "虹桥商务区" } },
+    { label: "共享办公室", color: "bg-orange-500", params: { type: "共享办公" } },
+    { label: "近地铁写字楼", color: "bg-blue-500", params: { type: "写字楼", subway: "近地铁" } },
   ];
 
   const handleSearch = () => {
@@ -27,6 +27,10 @@ export const SearchBox = () => {
             {quickLinks.map((link) => (
               <button
                 key={link.label}
+                onClick={() => {
+                  const params = new URLSearchParams(link.params);
+                  navigate(`/search?${params.toString()}`);
+                }}
                 className={`${link.color} rounded px-3 py-1 text-xs font-medium text-white hover:opacity-90 md:px-4 md:py-1.5 md:text-sm`}
               >
                 {link.label}
