@@ -391,6 +391,11 @@ export default function SearchResults() {
 
   // 根据筛选条件过滤数据
   const filteredBuildings = allBuildings.filter((building) => {
+    // 名称搜索
+    if (query && !building.name.toLowerCase().includes(query.toLowerCase())) {
+      return false;
+    }
+
     // 区域筛选
     if (district && building.district !== district && 
         !(district === "changning" && building.district === "长宁") &&
