@@ -16,11 +16,14 @@ export const CoworkingGrid = () => {
     { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
     { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
     { id: 103, name: "WeWork（虹桥天地）", location: "闵行", image: wework1 },
-    { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
-    { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
-    { id: 103, name: "WeWork（虹桥天地）", location: "闵行", image: wework1 },
-    { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
-    { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
+    { id: 104, name: "WIZWORK（环球港）", location: "普陀", image: distrii1 },
+    { id: 105, name: "艾克商务中心（外滩金融中心）", location: "黄浦", image: umon1 },
+    { id: 106, name: "大树下办公空间（龙湖虹桥天街）", location: "闵行", image: wework1 },
+    { id: 107, name: "德事商务中心（静安嘉里中心）", location: "静安", image: distrii1 },
+    { id: 108, name: "寰图办公空间（上海白玉兰广场）", location: "黄浦", image: umon1 },
+    { id: 109, name: "氪空间KrSpace（虹桥绿谷社区）", location: "闵行", image: wework1 },
+    { id: 110, name: "快易名商（虹桥万通中心）", location: "闵行", image: distrii1 },
+    { id: 111, name: "雷格斯商务中心（1788国际中心）", location: "浦东", image: umon1 },
   ];
 
   return (

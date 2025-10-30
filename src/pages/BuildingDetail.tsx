@@ -424,6 +424,333 @@ export default function BuildingDetail() {
         { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" },
         { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
       ]
+    },
+    "104": {
+      id: 104,
+      name: "WIZWORK（环球港）",
+      district: "普陀 - 中环金沙江路",
+      subway: "3号线,4号线,13号线,金沙江路站步行约5分钟",
+      address: "上海市普陀区中山北路3300号环球港",
+      price: "1500~3800",
+      priceRange: "元/工位/月",
+      totalUnits: 15,
+      availableArea: "2 - 60工位",
+      images: [
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1500元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "4工位", price: "1650元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "6工位", price: "1850元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "8工位", price: "2000元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "10工位", price: "2200元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "15工位", price: "2600元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "20工位", price: "3000元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "30工位", price: "3400元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "60工位", price: "3800元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.5m",
+        totalFloors: "商场内",
+        elevators: "商场电梯",
+        efficiency: "80%",
+        propertyCompany: "WIZWORK",
+        developer: "月星集团"
+      },
+      description: "WIZWORK（环球港）位于上海环球港购物中心内，地理位置优越，交通便利。提供专业的联合办公服务，包括固定工位、流动工位和独立办公室。空间设计现代简约，配备齐全的办公设施和会议室，周边商业配套丰富，适合各类创业团队和企业入驻。",
+      nearbyBuildings: [
+        { name: "Distrii办伴（冠捷大厦）", price: "1200元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/101" },
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/103" },
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" }
+      ]
+    },
+    "105": {
+      id: 105,
+      name: "艾克商务中心（外滩金融中心）",
+      district: "黄浦 - 外滩",
+      subway: "2号线,10号线,南京东路站步行约5分钟",
+      address: "上海市黄浦区中山东二路外滩金融中心",
+      price: "2500~5000",
+      priceRange: "元/工位/月",
+      totalUnits: 12,
+      availableArea: "1 - 50工位",
+      images: [
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg"
+      ],
+      availableRooms: [
+        { area: "1工位", price: "2500元/工位/月", decoration: "精装修", floor: "热桌" },
+        { area: "2工位", price: "2700元/工位/月", decoration: "精装修", floor: "15F" },
+        { area: "4工位", price: "3000元/工位/月", decoration: "精装修", floor: "15F" },
+        { area: "6工位", price: "3300元/工位/月", decoration: "精装修", floor: "16F" },
+        { area: "8工位", price: "3600元/工位/月", decoration: "精装修", floor: "16F" },
+        { area: "10工位", price: "3900元/工位/月", decoration: "精装修", floor: "17F" },
+        { area: "15工位", price: "4300元/工位/月", decoration: "精装修", floor: "17F" },
+        { area: "20工位", price: "4600元/工位/月", decoration: "精装修", floor: "18F" },
+        { area: "50工位", price: "5000元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.0m",
+        totalFloors: "高层",
+        elevators: "高速电梯",
+        efficiency: "88%",
+        propertyCompany: "艾克商务",
+        developer: "外滩金融"
+      },
+      description: "艾克商务中心（外滩金融中心）位于上海外滩核心商务区，毗邻黄浦江，景观优美。提供高端的联合办公服务，包括固定工位、独立办公室和虚拟办公室。空间设计精致大气，配备先进的办公设施和完善的商务配套，是高端企业和金融机构的理想选择。",
+      nearbyBuildings: [
+        { name: "德事商务中心（静安嘉里中心）", price: "2800元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/107" },
+        { name: "寰图办公空间（上海白玉兰广场）", price: "2600元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/108" },
+        { name: "雷格斯商务中心（1788国际中心）", price: "2800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/111" }
+      ]
+    },
+    "106": {
+      id: 106,
+      name: "大树下办公空间（龙湖虹桥天街）",
+      district: "闵行 - 虹桥商务区",
+      subway: "10号线,龙柏新村站步行约10分钟",
+      address: "上海市闵行区申长路龙湖虹桥天街",
+      price: "1600~3600",
+      priceRange: "元/工位/月",
+      totalUnits: 14,
+      availableArea: "2 - 50工位",
+      images: [
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1600元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "4工位", price: "1750元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "6工位", price: "1950元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "8工位", price: "2100元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "10工位", price: "2300元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "15工位", price: "2700元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "20工位", price: "3100元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "50工位", price: "3600元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.5m",
+        totalFloors: "商场内",
+        elevators: "商场电梯",
+        efficiency: "82%",
+        propertyCompany: "大树下",
+        developer: "龙湖集团"
+      },
+      description: "大树下办公空间（龙湖虹桥天街）位于龙湖虹桥天街商业综合体内，周边配套齐全，交通便利。提供灵活多样的办公空间解决方案，空间设计温馨舒适，配备完善的会议室和休闲区，适合创业团队和中小企业办公。",
+      nearbyBuildings: [
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/103" },
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" },
+        { name: "氪空间KrSpace（虹桥绿谷社区）", price: "1700元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/109" }
+      ]
+    },
+    "107": {
+      id: 107,
+      name: "德事商务中心（静安嘉里中心）",
+      district: "静安 - 静安寺",
+      subway: "2号线,7号线,静安寺站步行约3分钟",
+      address: "上海市静安区南京西路1515号静安嘉里中心",
+      price: "2800~5500",
+      priceRange: "元/工位/月",
+      totalUnits: 16,
+      availableArea: "1 - 80工位",
+      images: [
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg"
+      ],
+      availableRooms: [
+        { area: "1工位", price: "2800元/工位/月", decoration: "精装修", floor: "热桌" },
+        { area: "2工位", price: "3000元/工位/月", decoration: "精装修", floor: "20F" },
+        { area: "4工位", price: "3300元/工位/月", decoration: "精装修", floor: "20F" },
+        { area: "6工位", price: "3600元/工位/月", decoration: "精装修", floor: "21F" },
+        { area: "8工位", price: "3900元/工位/月", decoration: "精装修", floor: "21F" },
+        { area: "10工位", price: "4200元/工位/月", decoration: "精装修", floor: "22F" },
+        { area: "15工位", price: "4600元/工位/月", decoration: "精装修", floor: "22F" },
+        { area: "20工位", price: "5000元/工位/月", decoration: "精装修", floor: "23F" },
+        { area: "80工位", price: "5500元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.0m",
+        totalFloors: "高层",
+        elevators: "高速电梯",
+        efficiency: "90%",
+        propertyCompany: "德事商务",
+        developer: "嘉里建设"
+      },
+      description: "德事商务中心（静安嘉里中心）位于上海静安核心商圈，地理位置优越。提供高端专业的商务办公服务，包括固定工位、独立办公室和虚拟办公室。空间设计精致优雅，配备国际一流的办公设施和会议室，是跨国企业和高端企业的首选。",
+      nearbyBuildings: [
+        { name: "艾克商务中心（外滩金融中心）", price: "2500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/105" },
+        { name: "寰图办公空间（上海白玉兰广场）", price: "2600元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/108" },
+        { name: "雷格斯商务中心（1788国际中心）", price: "2800元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/111" }
+      ]
+    },
+    "108": {
+      id: 108,
+      name: "寰图办公空间（上海白玉兰广场）",
+      district: "黄浦 - 人民广场",
+      subway: "2号线,8号线,人民广场站步行约3分钟",
+      address: "上海市黄浦区延安东路白玉兰广场",
+      price: "2600~5200",
+      priceRange: "元/工位/月",
+      totalUnits: 18,
+      availableArea: "1 - 100工位",
+      images: [
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg"
+      ],
+      availableRooms: [
+        { area: "1工位", price: "2600元/工位/月", decoration: "精装修", floor: "热桌" },
+        { area: "2工位", price: "2800元/工位/月", decoration: "精装修", floor: "25F" },
+        { area: "4工位", price: "3100元/工位/月", decoration: "精装修", floor: "25F" },
+        { area: "6工位", price: "3400元/工位/月", decoration: "精装修", floor: "26F" },
+        { area: "8工位", price: "3700元/工位/月", decoration: "精装修", floor: "26F" },
+        { area: "10工位", price: "4000元/工位/月", decoration: "精装修", floor: "27F" },
+        { area: "15工位", price: "4400元/工位/月", decoration: "精装修", floor: "27F" },
+        { area: "20工位", price: "4800元/工位/月", decoration: "精装修", floor: "28F" },
+        { area: "100工位", price: "5200元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.2m",
+        totalFloors: "高层",
+        elevators: "高速电梯",
+        efficiency: "88%",
+        propertyCompany: "寰图",
+        developer: "绿地集团"
+      },
+      description: "寰图办公空间（上海白玉兰广场）位于人民广场核心商圈，地标性建筑内。提供国际化的联合办公服务，空间设计高端大气，配备先进的办公设施和多功能会议室，周边商业配套完善，适合各类企业和创业团队。",
+      nearbyBuildings: [
+        { name: "艾克商务中心（外滩金融中心）", price: "2500元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/105" },
+        { name: "德事商务中心（静安嘉里中心）", price: "2800元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/107" },
+        { name: "雷格斯商务中心（1788国际中心）", price: "2800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/111" }
+      ]
+    },
+    "109": {
+      id: 109,
+      name: "氪空间KrSpace（虹桥绿谷社区）",
+      district: "闵行 - 虹桥商务区",
+      subway: "10号线,龙溪路站步行约5分钟",
+      address: "上海市闵行区虹桥绿谷广场",
+      price: "1700~4000",
+      priceRange: "元/工位/月",
+      totalUnits: 16,
+      availableArea: "2 - 80工位",
+      images: [
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1700元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "4工位", price: "1850元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "6工位", price: "2050元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "8工位", price: "2200元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "10工位", price: "2400元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "15工位", price: "2800元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "20工位", price: "3200元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "30工位", price: "3600元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "80工位", price: "4000元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.6m",
+        totalFloors: "多层",
+        elevators: "客梯",
+        efficiency: "83%",
+        propertyCompany: "氪空间",
+        developer: "绿谷集团"
+      },
+      description: "氪空间KrSpace（虹桥绿谷社区）位于虹桥商务区核心位置，交通便利。提供专业的联合办公服务和创业孵化支持，空间设计现代时尚，配备完善的办公设施和会议室，定期举办创业活动，适合科技类创业团队和中小企业。",
+      nearbyBuildings: [
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/103" },
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" },
+        { name: "大树下办公空间（龙湖虹桥天街）", price: "1600元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/106" }
+      ]
+    },
+    "110": {
+      id: 110,
+      name: "快易名商（虹桥万通中心）",
+      district: "闵行 - 虹桥商务区",
+      subway: "10号线,龙溪路站步行约8分钟",
+      address: "上海市闵行区虹桥万通中心",
+      price: "1800~4200",
+      priceRange: "元/工位/月",
+      totalUnits: 14,
+      availableArea: "2 - 70工位",
+      images: [
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1800元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "4工位", price: "1950元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "6工位", price: "2150元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "8工位", price: "2300元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "10工位", price: "2500元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "15工位", price: "2900元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "20工位", price: "3300元/工位/月", decoration: "精装修", floor: "8F" },
+        { area: "30工位", price: "3700元/工位/月", decoration: "精装修", floor: "8F" },
+        { area: "70工位", price: "4200元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.5m",
+        totalFloors: "高层",
+        elevators: "高速电梯",
+        efficiency: "85%",
+        propertyCompany: "快易名商",
+        developer: "万通集团"
+      },
+      description: "快易名商（虹桥万通中心）位于虹桥商务区核心位置，交通便利。提供灵活的办公空间解决方案，包括固定工位、独立办公室和虚拟办公室服务。空间设计简约现代，配备完善的商务配套设施，适合各类企业和创业团队。",
+      nearbyBuildings: [
+        { name: "氪空间KrSpace（虹桥绿谷社区）", price: "1700元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/109" },
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/103" },
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/102" }
+      ]
+    },
+    "111": {
+      id: 111,
+      name: "雷格斯商务中心（1788国际中心）",
+      district: "浦东 - 陆家嘴",
+      subway: "2号线,陆家嘴站步行约3分钟",
+      address: "上海市浦东新区陆家嘴环路1788号国际中心",
+      price: "2800~6000",
+      priceRange: "元/工位/月",
+      totalUnits: 20,
+      availableArea: "1 - 120工位",
+      images: [
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg"
+      ],
+      availableRooms: [
+        { area: "1工位", price: "2800元/工位/月", decoration: "精装修", floor: "热桌" },
+        { area: "2工位", price: "3000元/工位/月", decoration: "精装修", floor: "30F" },
+        { area: "4工位", price: "3400元/工位/月", decoration: "精装修", floor: "30F" },
+        { area: "6工位", price: "3800元/工位/月", decoration: "精装修", floor: "31F" },
+        { area: "8工位", price: "4200元/工位/月", decoration: "精装修", floor: "31F" },
+        { area: "10工位", price: "4600元/工位/月", decoration: "精装修", floor: "32F" },
+        { area: "15工位", price: "5000元/工位/月", decoration: "精装修", floor: "32F" },
+        { area: "20工位", price: "5400元/工位/月", decoration: "精装修", floor: "33F" },
+        { area: "120工位", price: "6000元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.5m",
+        totalFloors: "高层",
+        elevators: "高速电梯",
+        efficiency: "92%",
+        propertyCompany: "雷格斯",
+        developer: "陆家嘴集团"
+      },
+      description: "雷格斯商务中心（1788国际中心）位于陆家嘴金融贸易区核心位置，地标性建筑内。提供国际化的高端商务办公服务，空间设计精致专业，配备国际一流的办公设施和会议室，周边金融配套完善，是金融和跨国企业的理想选择。",
+      nearbyBuildings: [
+        { name: "艾克商务中心（外滩金融中心）", price: "2500元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/105" },
+        { name: "德事商务中心（静安嘉里中心）", price: "2800元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/107" },
+        { name: "寰图办公空间（上海白玉兰广场）", price: "2600元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/108" }
+      ]
     }
   };
 
