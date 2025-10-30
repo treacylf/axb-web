@@ -13,14 +13,14 @@ interface Coworking {
 
 export const CoworkingGrid = () => {
   const coworkings: Coworking[] = [
-    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
-    { id: 103, name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
-    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
-    { id: 103, name: "WeWork(虹桥天地)", location: "闵行", image: wework1 },
-    { id: 101, name: "Distrii办伴(冠捷大厦)", location: "长宁", image: distrii1 },
-    { id: 102, name: "Umon优盟(虹桥丽宝广场)", location: "闵行", image: umon1 },
+    { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
+    { id: 103, name: "WeWork（虹桥天地）", location: "闵行", image: wework1 },
+    { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
+    { id: 103, name: "WeWork（虹桥天地）", location: "闵行", image: wework1 },
+    { id: 101, name: "Distrii办伴（冠捷大厦）", location: "长宁", image: distrii1 },
+    { id: 102, name: "Umon优盟（虹桥丽宝广场）", location: "闵行", image: umon1 },
   ];
 
   return (

@@ -298,6 +298,132 @@ export default function BuildingDetail() {
         { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
         { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
       ]
+    },
+    "101": {
+      id: 101,
+      name: "Distrii办伴（冠捷大厦）",
+      district: "长宁 - 虹桥商务区",
+      subway: "2号线,淞虹路站步行约5分钟",
+      address: "上海市长宁区金钟路631号冠捷大厦",
+      price: "1200~3500",
+      priceRange: "元/工位/月",
+      totalUnits: 15,
+      availableArea: "2 - 50工位",
+      images: [
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg",
+        "/src/assets/coworking/distrii-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1200元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "4工位", price: "1350元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "6工位", price: "1500元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "8工位", price: "1650元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "10工位", price: "1800元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "15工位", price: "2100元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "20工位", price: "2400元/工位/月", decoration: "精装修", floor: "8F" },
+        { area: "30工位", price: "2800元/工位/月", decoration: "精装修", floor: "8F" },
+        { area: "50工位", price: "3500元/工位/月", decoration: "精装修", floor: "9F" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.2m",
+        totalFloors: "12层",
+        elevators: "客梯4部",
+        efficiency: "80%",
+        propertyCompany: "Distrii办伴",
+        developer: "冠捷科技集团"
+      },
+      description: "Distrii办伴（冠捷大厦）位于长宁区虹桥商务区核心地段，毗邻地铁2号线淞虹路站，交通便利。空间设计现代简约，配备齐全的办公设施，包括高速wifi、打印复印、会议室、茶水间等。提供灵活的工位租赁方案，适合初创企业和中小团队。周边商业配套完善，餐饮、银行、便利店等一应俱全。",
+      nearbyBuildings: [
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" },
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/103" },
+        { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" }
+      ]
+    },
+    "102": {
+      id: 102,
+      name: "Umon优盟（虹桥丽宝广场）",
+      district: "闵行 - 虹桥商务区",
+      subway: "2号线,10号线,虹桥火车站步行约8分钟",
+      address: "上海市闵行区申虹路800号虹桥丽宝广场",
+      price: "1500~4000",
+      priceRange: "元/工位/月",
+      totalUnits: 18,
+      availableArea: "2 - 80工位",
+      images: [
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg",
+        "/src/assets/coworking/umon-1.jpg"
+      ],
+      availableRooms: [
+        { area: "2工位", price: "1500元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "4工位", price: "1650元/工位/月", decoration: "精装修", floor: "3F" },
+        { area: "6工位", price: "1800元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "8工位", price: "2000元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "10工位", price: "2200元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "15工位", price: "2600元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "20工位", price: "3000元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "30工位", price: "3400元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "50工位", price: "3800元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "80工位", price: "4000元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.5m",
+        totalFloors: "15层",
+        elevators: "客梯6部",
+        efficiency: "82%",
+        propertyCompany: "Umon优盟",
+        developer: "丽宝集团"
+      },
+      description: "Umon优盟（虹桥丽宝广场）位于虹桥商务区核心位置，紧邻虹桥火车站和虹桥机场，交通极为便利。空间设计时尚前卫，配备智能化办公系统，提供24小时安保和空调服务。拥有多种规格的独立办公室和开放工位，适合不同规模的团队。配套设施完善，包括健身房、咖啡厅、休闲区等，打造全方位的办公生活体验。",
+      nearbyBuildings: [
+        { name: "Distrii办伴（冠捷大厦）", price: "1200元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/101" },
+        { name: "WeWork（虹桥天地）", price: "1800元/工位/月", image: "/src/assets/coworking/wework-1.jpg", link: "/building/103" },
+        { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+      ]
+    },
+    "103": {
+      id: 103,
+      name: "WeWork（虹桥天地）",
+      district: "闵行 - 虹桥商务区",
+      subway: "10号线,伊犁路站步行约3分钟",
+      address: "上海市闵行区申长路869号虹桥天地",
+      price: "1800~4500",
+      priceRange: "元/工位/月",
+      totalUnits: 20,
+      availableArea: "1 - 100工位",
+      images: [
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg",
+        "/src/assets/coworking/wework-1.jpg"
+      ],
+      availableRooms: [
+        { area: "1工位", price: "1800元/工位/月", decoration: "精装修", floor: "热桌" },
+        { area: "2工位", price: "1950元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "4工位", price: "2100元/工位/月", decoration: "精装修", floor: "4F" },
+        { area: "6工位", price: "2300元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "8工位", price: "2500元/工位/月", decoration: "精装修", floor: "5F" },
+        { area: "10工位", price: "2700元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "15工位", price: "3100元/工位/月", decoration: "精装修", floor: "6F" },
+        { area: "20工位", price: "3500元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "30工位", price: "3900元/工位/月", decoration: "精装修", floor: "7F" },
+        { area: "50工位", price: "4200元/工位/月", decoration: "精装修", floor: "8F" },
+        { area: "100工位", price: "4500元/工位/月", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.8m",
+        totalFloors: "18层",
+        elevators: "客梯8部",
+        efficiency: "85%",
+        propertyCompany: "WeWork",
+        developer: "瑞安集团"
+      },
+      description: "WeWork（虹桥天地）是WeWork在上海虹桥地区的旗舰空间，位于虹桥天地核心商圈，地理位置优越。空间采用WeWork标志性的设计风格，充满创意和活力。提供从热桌到独立办公室的多种办公方案，满足自由职业者、初创团队到成熟企业的各类需求。配备全球化的社区网络，会员可享受WeWork全球办公空间的使用权。定期举办各类社区活动，促进会员之间的交流与合作。",
+      nearbyBuildings: [
+        { name: "Distrii办伴（冠捷大厦）", price: "1200元/工位/月", image: "/src/assets/coworking/distrii-1.jpg", link: "/building/101" },
+        { name: "Umon优盟（虹桥丽宝广场）", price: "1500元/工位/月", image: "/src/assets/coworking/umon-1.jpg", link: "/building/102" },
+        { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+      ]
     }
   };
 
