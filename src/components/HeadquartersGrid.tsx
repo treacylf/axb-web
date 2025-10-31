@@ -26,6 +26,10 @@ export const HeadquartersGrid = () => {
     { id: 306, name: "MAX科技园（独栋）", location: "闵行区", image: maxTech },
     { id: 307, name: "平金中心（独栋）", location: "浦东新区", image: pingjinCenter },
     { id: 308, name: "容大中心（独栋）", location: "闵行区", image: rongdaCenter },
+    { id: 309, name: "E通世界·华新园（独栋）", location: "青浦区", image: hongqiaoBu },
+    { id: 310, name: "丰隆虹桥中心（独栋）", location: "闵行区", image: liboReeb },
+    { id: 311, name: "虹桥展汇（独栋）", location: "闵行区", image: tianlinFang },
+    { id: 312, name: "中建锦绣天地（独栋）", location: "闵行区", image: maxTech },
   ];
 
   return (
