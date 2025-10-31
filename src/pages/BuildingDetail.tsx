@@ -11,6 +11,9 @@ import hongqiaoHui from "@/assets/buildings/hongqiao-hui-real.jpg";
 import sohoTianshan from "@/assets/buildings/soho-tianshan-real.jpg";
 import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi-real.jpg";
 import worldCenter from "@/assets/buildings/world-center-real.jpg";
+import show800 from "@/assets/creative/800show.jpg";
+import anken from "@/assets/creative/anken.jpg";
+import bridge8 from "@/assets/creative/bridge8.jpg";
 
 interface BuildingData {
   id: number;
@@ -297,6 +300,347 @@ export default function BuildingDetail() {
         { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
         { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
         { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
+      ]
+    },
+    "201": {
+      id: 201,
+      name: "800秀创意园",
+      district: "静安 - 曹家渡",
+      subway: "2号线,7号线,静安寺站步行约8分钟",
+      address: "上海市静安区常德路800号",
+      price: "3.0~4.5",
+      priceRange: "元/m²/天",
+      totalUnits: 12,
+      availableArea: "100 - 1200m²",
+      images: [
+        show800,
+        show800,
+        show800,
+        show800
+      ],
+      availableRooms: [
+        { area: "100m²", price: "3.5元/m²/天", decoration: "精装修", floor: "3F" },
+        { area: "150m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "4F" },
+        { area: "200m²", price: "3.8元/m²/天", decoration: "精装修", floor: "5F" },
+        { area: "300m²", price: "3.2元/m²/天", decoration: "标准交付", floor: "6F" },
+        { area: "450m²", price: "4.0元/m²/天", decoration: "精装修", floor: "7F" },
+        { area: "600m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "8F" },
+        { area: "800m²", price: "4.2元/m²/天", decoration: "精装修", floor: "9F" },
+        { area: "1000m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "10F" },
+        { area: "1200m²", price: "4.5元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.2m",
+        totalFloors: "12层",
+        elevators: "客梯3部，货梯1部",
+        efficiency: "75%",
+        propertyCompany: "800秀物业",
+        developer: "上海静安置业"
+      },
+      description: "800秀创意园位于静安区核心地段，是由老工业厂房改造而成的创意产业园区。园区保留了工业建筑的历史特色，融入现代设计元素，打造独特的办公环境。适合文化创意、设计、传媒等行业企业入驻。周边商业配套完善，交通便利。",
+      nearbyBuildings: [
+        { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+        { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+        { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
+      ]
+    },
+    "202": {
+      id: 202,
+      name: "安垦汇智创意园",
+      district: "静安 - 大宁",
+      subway: "1号线,上海马戏城站步行约10分钟",
+      address: "上海市静安区共和新路3550弄",
+      price: "2.8~4.0",
+      priceRange: "元/m²/天",
+      totalUnits: 15,
+      availableArea: "80 - 1500m²",
+      images: [
+        anken,
+        anken,
+        anken,
+        anken
+      ],
+      availableRooms: [
+        { area: "80m²", price: "3.2元/m²/天", decoration: "精装修", floor: "2F" },
+        { area: "120m²", price: "3.0元/m²/天", decoration: "标准交付", floor: "3F" },
+        { area: "180m²", price: "3.5元/m²/天", decoration: "精装修", floor: "4F" },
+        { area: "250m²", price: "2.9元/m²/天", decoration: "标准交付", floor: "5F" },
+        { area: "350m²", price: "3.7元/m²/天", decoration: "精装修", floor: "6F" },
+        { area: "500m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "7F" },
+        { area: "700m²", price: "3.8元/m²/天", decoration: "精装修", floor: "8F" },
+        { area: "900m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "9F" },
+        { area: "1200m²", price: "3.9元/m²/天", decoration: "精装修", floor: "10F" },
+        { area: "1500m²", price: "4.0元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.0m",
+        totalFloors: "10层",
+        elevators: "客梯4部，货梯2部",
+        efficiency: "78%",
+        propertyCompany: "安垦物业",
+        developer: "安垦集团"
+      },
+      description: "安垦汇智创意园是一座综合性创意产业园区，位于静安区大宁商圈。园区建筑风格现代，配套设施完善，提供灵活的办公空间解决方案。适合科技、文化、设计等各类创意企业入驻。周边有大宁国际商业广场等大型商业配套。",
+      nearbyBuildings: [
+        { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+        { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+        { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" }
+      ]
+    },
+    "203": {
+      id: 203,
+      name: "八号桥Ⅳ期",
+      district: "闸北 - 汶水路",
+      subway: "1号线,汶水路站步行约5分钟",
+      address: "上海市闸北区南通路",
+      price: "3.5~5.0",
+      priceRange: "元/m²/天",
+      totalUnits: 10,
+      availableArea: "120 - 1000m²",
+      images: [
+        bridge8,
+        bridge8,
+        bridge8,
+        bridge8
+      ],
+      availableRooms: [
+        { area: "120m²", price: "3.8元/m²/天", decoration: "精装修", floor: "2F" },
+        { area: "180m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "3F" },
+        { area: "250m²", price: "4.2元/m²/天", decoration: "精装修", floor: "4F" },
+        { area: "350m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "5F" },
+        { area: "500m²", price: "4.5元/m²/天", decoration: "精装修", floor: "6F" },
+        { area: "650m²", price: "4.1元/m²/天", decoration: "标准交付", floor: "7F" },
+        { area: "800m²", price: "4.7元/m²/天", decoration: "精装修", floor: "8F" },
+        { area: "1000m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.5m",
+        totalFloors: "8层",
+        elevators: "客梯3部，货梯1部",
+        efficiency: "80%",
+        propertyCompany: "八号桥物业",
+        developer: "上海城投"
+      },
+      description: "八号桥Ⅳ期是八号桥创意产业园区的第四期项目，延续了八号桥品牌的高品质定位。园区由老厂房改造而成，保留工业遗存，融入现代设计理念。适合设计、传媒、科技等创意产业入驻。交通便利，周边配套完善。",
+      nearbyBuildings: [
+        { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+        { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+        { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" }
+      ]
+    },
+    "204": {
+      id: 204,
+      name: "大宁德必易园",
+      district: "静安 - 大宁",
+      subway: "1号线,上海马戏城站步行约8分钟",
+      address: "上海市静安区广中西路",
+      price: "3.0~4.2",
+      priceRange: "元/m²/天",
+      totalUnits: 14,
+      availableArea: "100 - 1300m²",
+      images: [
+        show800,
+        show800,
+        show800,
+        show800
+      ],
+      availableRooms: [
+        { area: "100m²", price: "3.3元/m²/天", decoration: "精装修", floor: "2F" },
+        { area: "150m²", price: "3.1元/m²/天", decoration: "标准交付", floor: "3F" },
+        { area: "220m²", price: "3.6元/m²/天", decoration: "精装修", floor: "4F" },
+        { area: "300m²", price: "3.2元/m²/天", decoration: "标准交付", floor: "5F" },
+        { area: "420m²", price: "3.8元/m²/天", decoration: "精装修", floor: "6F" },
+        { area: "550m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "7F" },
+        { area: "700m²", price: "3.9元/m²/天", decoration: "精装修", floor: "8F" },
+        { area: "900m²", price: "3.7元/m²/天", decoration: "标准交付", floor: "9F" },
+        { area: "1100m²", price: "4.1元/m²/天", decoration: "精装修", floor: "10F" },
+        { area: "1300m²", price: "4.2元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.8m",
+        totalFloors: "10层",
+        elevators: "客梯4部，货梯2部",
+        efficiency: "76%",
+        propertyCompany: "德必集团",
+        developer: "德必集团"
+      },
+      description: "大宁德必易园是德必集团在静安区打造的创意产业园区，位于大宁商圈核心位置。园区设计现代时尚，配套设施齐全，提供多种面积的办公空间。适合文化创意、科技研发、设计咨询等企业入驻。周边商业配套完善，生活便利。",
+      nearbyBuildings: [
+        { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+        { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+        { name: "复地四季广场", price: "3.5元/m²/天", image: anken, link: "/building/205" }
+      ]
+    },
+    "205": {
+      id: 205,
+      name: "复地四季广场",
+      district: "静安 - 大宁",
+      subway: "1号线,上海马戏城站步行约6分钟",
+      address: "上海市静安区共和新路",
+      price: "3.2~4.5",
+      priceRange: "元/m²/天",
+      totalUnits: 13,
+      availableArea: "90 - 1100m²",
+      images: [
+        anken,
+        anken,
+        anken,
+        anken
+      ],
+      availableRooms: [
+        { area: "90m²", price: "3.5元/m²/天", decoration: "精装修", floor: "2F" },
+        { area: "140m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "3F" },
+        { area: "200m²", price: "3.8元/m²/天", decoration: "精装修", floor: "4F" },
+        { area: "280m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "5F" },
+        { area: "380m²", price: "4.0元/m²/天", decoration: "精装修", floor: "6F" },
+        { area: "500m²", price: "3.7元/m²/天", decoration: "标准交付", floor: "7F" },
+        { area: "650m²", price: "4.2元/m²/天", decoration: "精装修", floor: "8F" },
+        { area: "800m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "9F" },
+        { area: "1000m²", price: "4.4元/m²/天", decoration: "精装修", floor: "10F" },
+        { area: "1100m²", price: "4.5元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.9m",
+        totalFloors: "10层",
+        elevators: "客梯3部，货梯1部",
+        efficiency: "77%",
+        propertyCompany: "复地集团",
+        developer: "复地集团"
+      },
+      description: "复地四季广场位于静安区大宁商圈，是集商业、办公于一体的综合性项目。办公空间设计现代，配套设施完善，适合各类企业入驻。周边有大型购物中心、餐饮娱乐等配套，生活便利。交通便捷，地铁直达。",
+      nearbyBuildings: [
+        { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" },
+        { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+        { name: "老码头创意园", price: "3.6元/m²/天", image: bridge8, link: "/building/206" }
+      ]
+    },
+    "206": {
+      id: 206,
+      name: "老码头创意园",
+      district: "黄浦 - 外滩",
+      subway: "4号线,南浦大桥站步行约10分钟",
+      address: "上海市黄浦区中山南路",
+      price: "3.5~5.2",
+      priceRange: "元/m²/天",
+      totalUnits: 11,
+      availableArea: "110 - 950m²",
+      images: [
+        bridge8,
+        bridge8,
+        bridge8,
+        bridge8
+      ],
+      availableRooms: [
+        { area: "110m²", price: "3.8元/m²/天", decoration: "精装修", floor: "1F" },
+        { area: "160m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "2F" },
+        { area: "230m²", price: "4.2元/m²/天", decoration: "精装修", floor: "3F" },
+        { area: "320m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "4F" },
+        { area: "450m²", price: "4.6元/m²/天", decoration: "精装修", floor: "5F" },
+        { area: "580m²", price: "4.3元/m²/天", decoration: "标准交付", floor: "6F" },
+        { area: "720m²", price: "4.9元/m²/天", decoration: "精装修", floor: "7F" },
+        { area: "850m²", price: "4.5元/m²/天", decoration: "标准交付", floor: "8F" },
+        { area: "950m²", price: "5.2元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.3m",
+        totalFloors: "8层",
+        elevators: "客梯2部，货梯1部",
+        efficiency: "74%",
+        propertyCompany: "老码头物业",
+        developer: "上海外滩投资"
+      },
+      description: "老码头创意园位于黄浦江畔，是由老码头仓库改造而成的创意产业园区。园区保留了老建筑的历史韵味，融入现代艺术设计元素。周边有丰富的餐饮、娱乐、文化设施，适合文化创意、艺术设计、传媒等行业企业入驻。",
+      nearbyBuildings: [
+        { name: "幸福里创意园", price: "3.4元/m²/天", image: show800, link: "/building/207" },
+        { name: "越界·世博园", price: "3.7元/m²/天", image: anken, link: "/building/208" },
+        { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" }
+      ]
+    },
+    "207": {
+      id: 207,
+      name: "幸福里创意园",
+      district: "浦东 - 北蔡",
+      subway: "7号线,花木路站步行约12分钟",
+      address: "上海市浦东新区沪南路",
+      price: "2.8~4.0",
+      priceRange: "元/m²/天",
+      totalUnits: 16,
+      availableArea: "85 - 1400m²",
+      images: [
+        show800,
+        show800,
+        show800,
+        show800
+      ],
+      availableRooms: [
+        { area: "85m²", price: "3.2元/m²/天", decoration: "精装修", floor: "1F" },
+        { area: "130m²", price: "3.0元/m²/天", decoration: "标准交付", floor: "2F" },
+        { area: "190m²", price: "3.5元/m²/天", decoration: "精装修", floor: "3F" },
+        { area: "260m²", price: "2.9元/m²/天", decoration: "标准交付", floor: "4F" },
+        { area: "360m²", price: "3.7元/m²/天", decoration: "精装修", floor: "5F" },
+        { area: "480m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "6F" },
+        { area: "620m²", price: "3.8元/m²/天", decoration: "精装修", floor: "7F" },
+        { area: "780m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "8F" },
+        { area: "950m²", price: "3.9元/m²/天", decoration: "精装修", floor: "9F" },
+        { area: "1200m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "10F" },
+        { area: "1400m²", price: "4.0元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "3.7m",
+        totalFloors: "10层",
+        elevators: "客梯4部，货梯2部",
+        efficiency: "79%",
+        propertyCompany: "幸福里物业",
+        developer: "上海浦东新区投资"
+      },
+      description: "幸福里创意园位于浦东新区北蔡地区，是一座现代化的创意产业园区。园区环境优美，配套设施齐全，提供灵活的办公空间解决方案。适合科技、文化、设计等各类企业入驻。周边有商业配套和生活设施，交通便利。",
+      nearbyBuildings: [
+        { name: "越界·世博园", price: "3.7元/m²/天", image: anken, link: "/building/208" },
+        { name: "老码头创意园", price: "3.8元/m²/天", image: bridge8, link: "/building/206" },
+        { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" }
+      ]
+    },
+    "208": {
+      id: 208,
+      name: "越界·世博园",
+      district: "浦东 - 世博",
+      subway: "13号线,世博大道站步行约5分钟",
+      address: "上海市浦东新区世博园区",
+      price: "3.5~5.0",
+      priceRange: "元/m²/天",
+      totalUnits: 12,
+      availableArea: "100 - 1150m²",
+      images: [
+        anken,
+        anken,
+        anken,
+        anken
+      ],
+      availableRooms: [
+        { area: "100m²", price: "3.7元/m²/天", decoration: "精装修", floor: "2F" },
+        { area: "155m²", price: "3.5元/m²/天", decoration: "标准交付", floor: "3F" },
+        { area: "225m²", price: "4.1元/m²/天", decoration: "精装修", floor: "4F" },
+        { area: "310m²", price: "3.8元/m²/天", decoration: "标准交付", floor: "5F" },
+        { area: "430m²", price: "4.4元/m²/天", decoration: "精装修", floor: "6F" },
+        { area: "560m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "7F" },
+        { area: "700m²", price: "4.6元/m²/天", decoration: "精装修", floor: "8F" },
+        { area: "850m²", price: "4.3元/m²/天", decoration: "标准交付", floor: "9F" },
+        { area: "1000m²", price: "4.8元/m²/天", decoration: "精装修", floor: "10F" },
+        { area: "1150m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整层" }
+      ],
+      buildingInfo: {
+        floorHeight: "4.1m",
+        totalFloors: "10层",
+        elevators: "客梯5部，货梯2部",
+        efficiency: "81%",
+        propertyCompany: "越界集团",
+        developer: "越界集团"
+      },
+      description: "越界·世博园位于上海世博园区核心位置，是越界集团打造的高品质创意产业园区。园区设计现代时尚，配备先进的办公设施和完善的商务配套。适合科技创新、文化创意、设计研发等企业入驻。紧邻地铁，交通便利，周边配套完善。",
+      nearbyBuildings: [
+        { name: "幸福里创意园", price: "3.4元/m²/天", image: show800, link: "/building/207" },
+        { name: "老码头创意园", price: "3.8元/m²/天", image: bridge8, link: "/building/206" },
+        { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" }
       ]
     },
     "101": {

@@ -16,11 +16,11 @@ export const CreativeParkGrid = () => {
     { id: 201, name: "800秀创意园", location: "静安", image: show800 },
     { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
     { id: 203, name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
-    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
-    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
-    { id: 203, name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
-    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
-    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
+    { id: 204, name: "大宁德必易园", location: "静安", image: show800 },
+    { id: 205, name: "复地四季广场", location: "静安", image: anken },
+    { id: 206, name: "老码头创意园", location: "黄浦", image: bridge8 },
+    { id: 207, name: "幸福里创意园", location: "浦东", image: show800 },
+    { id: 208, name: "越界·世博园", location: "浦东", image: anken },
   ];
 
   return (
