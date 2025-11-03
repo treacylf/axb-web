@@ -1724,7 +1724,7 @@ export default function BuildingDetail() {
 
                 <Button className="w-full mt-4" size="lg">
                   <Phone className="w-4 h-4 mr-2" />
-                  咨询电话 021-64202027
+                  咨询电话 16651188000
                 </Button>
               </CardContent>
             </Card>

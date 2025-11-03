@@ -39,10 +39,10 @@ export const SearchSidebar = () => {
           <div className="text-center py-4 bg-muted/30 rounded">
             <Phone className="h-12 w-12 mx-auto mb-2 text-primary" />
             <p className="text-sm text-muted-foreground mb-1">专业顾问为您服务</p>
-            <p className="text-lg font-bold text-primary">021-64202027</p>
+            <p className="text-lg font-bold text-primary">16651188000</p>
           </div>
           <a
-            href="tel:021-64202027"
+            href="tel:16651188000"
             className="block w-full text-center py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
           >
             免费电话预约

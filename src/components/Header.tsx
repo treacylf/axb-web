@@ -55,11 +55,11 @@ export const Header = () => {
           {/* Contact & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <a
-              href="tel:021-64202027"
+              href="tel:16651188000"
               className="hidden items-center space-x-2 text-sm font-medium text-foreground md:flex"
             >
               <Phone className="h-4 w-4 text-accent" />
-              <span>021-64202027</span>
+              <span>16651188000</span>
             </a>
 
             {/* Mobile Menu */}
@@ -83,11 +83,11 @@ export const Header = () => {
                     </a>
                   ))}
                   <a
-                    href="tel:021-64202027"
+                    href="tel:16651188000"
                     className="flex items-center space-x-2 border-t pt-4 text-lg font-medium text-accent"
                   >
                     <Phone className="h-5 w-5" />
-                    <span>021-64202027</span>
+                    <span>16651188000</span>
                   </a>
                 </nav>
               </SheetContent>

@@ -38,7 +38,7 @@ export const FloatingSidebar = () => {
             <div className="absolute right-full top-0 mr-2 w-64 rounded-lg bg-gray-800 p-4 text-center text-white shadow-xl">
               <h3 className="mb-2 text-lg font-semibold">免费咨询</h3>
               <div className="mb-3 text-2xl font-bold text-primary">
-                021-64202027
+                16651188000
               </div>
               <div className="mb-2 flex items-center justify-center gap-2 text-sm">
                 <CheckCircle className="h-4 w-4" />

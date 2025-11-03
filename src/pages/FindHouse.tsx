@@ -133,10 +133,10 @@ const FindHouse = () => {
             <p className="text-center mt-8 text-lg">
               拨打委托热线：
               <a
-                href="tel:021-64202027"
+                href="tel:16651188000"
                 className="text-primary font-semibold hover:underline ml-2"
               >
-                021-64202027
+                16651188000
               </a>
             </p>
           </div>
