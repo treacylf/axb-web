@@ -22,6 +22,7 @@ import hongqiaoZhengrong from "@/assets/headquarters/hongqiao-zhengrong.jpg";
 import maxTech from "@/assets/headquarters/max-tech.jpg";
 import pingjinCenter from "@/assets/headquarters/pingjin-center.jpg";
 import rongdaCenter from "@/assets/headquarters/rongda-center.jpg";
+import wxCode from "@/assets/wx_code.png";
 
 interface BuildingData {
   id: number;
@@ -1717,9 +1718,7 @@ export default function BuildingDetail() {
                 </div>
 
                 <div className="mt-6 flex justify-center">
-                  <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
-                    <QrCode className="w-16 h-16 text-muted-foreground" />
-                  </div>
+                  <img src={wxCode} alt="微信咨询二维码" className="w-32 h-32 rounded-lg" />
                 </div>
 
                 <Button className="w-full mt-4" size="lg">
