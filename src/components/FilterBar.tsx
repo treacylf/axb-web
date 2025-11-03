@@ -6,7 +6,8 @@ export const FilterBar = () => {
   
   const currentDistrict = searchParams.get("district") || "";
   const currentSubway = searchParams.get("subway") || "";
-  const currentArea = searchParams.get("area") || "";
+  const currentBusinessArea = searchParams.get("area") || "";
+  const currentSize = searchParams.get("size") || "";
   const currentPrice = searchParams.get("price") || "";
 
   const handleFilterClick = (filterType: string, value: string) => {
@@ -23,7 +24,7 @@ export const FilterBar = () => {
 
   const filters = [
     {
-      title: "区域",
+      title: "位置",
       type: "district",
       current: currentDistrict,
       options: [
@@ -74,9 +75,25 @@ export const FilterBar = () => {
       ],
     },
     {
-      title: "面积",
+      title: "商圈",
       type: "area",
-      current: currentArea,
+      current: currentBusinessArea,
+      options: [
+        { label: "不限", value: "" },
+        { label: "虹桥商务区", value: "99" },
+        { label: "徐泾/西虹桥", value: "108" },
+        { label: "虹桥临空经济区", value: "86" },
+        { label: "虹桥古北开发区", value: "87" },
+        { label: "人民广场", value: "63" },
+        { label: "长风商务区", value: "91" },
+        { label: "莘庄商务区", value: "101" },
+        { label: "陆家嘴", value: "48" },
+      ],
+    },
+    {
+      title: "面积",
+      type: "size",
+      current: currentSize,
       options: [
         { label: "不限", value: "" },
         { label: "100m²以下", value: "0-100" },
@@ -92,7 +109,7 @@ export const FilterBar = () => {
       type: "price",
       current: currentPrice,
       options: [
-        { label: "不限", value: "" },
+        { label: "单价不限", value: "" },
         { label: "3元以下", value: "0-3" },
         { label: "3-4元", value: "3-4" },
         { label: "4-5元", value: "4-5" },

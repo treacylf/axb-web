@@ -386,7 +386,8 @@ export default function SearchResults() {
   const navId = searchParams.get("nav_id") || "0";
   const district = searchParams.get("district") || "";
   const subway = searchParams.get("subway") || "";
-  const area = searchParams.get("area") || "";
+  const businessArea = searchParams.get("area") || ""; // 商圈
+  const size = searchParams.get("size") || ""; // 面积
   const price = searchParams.get("price") || "";
 
   // 根据筛选条件过滤数据
@@ -412,9 +413,34 @@ export default function SearchResults() {
       }
     }
 
+    // 商圈筛选 - 基于商圈ID映射
+    if (businessArea) {
+      const areaMap: Record<string, string[]> = {
+        "99": ["虹桥商务区", "闵行"],  // 虹桥商务区
+        "108": ["徐泾", "西虹桥", "青浦"],  // 徐泾/西虹桥
+        "86": ["虹桥临空", "闵行"],  // 虹桥临空经济区
+        "87": ["古北", "虹桥古北", "长宁"],  // 虹桥古北开发区
+        "63": ["人民广场", "黄浦"],  // 人民广场
+        "91": ["长风", "普陀"],  // 长风商务区
+        "101": ["莘庄", "闵行"],  // 莘庄商务区
+        "48": ["陆家嘴", "浦东"],  // 陆家嘴
+      };
+      
+      const areaKeywords = areaMap[businessArea] || [];
+      const matchesArea = areaKeywords.some(keyword => 
+        building.name.includes(keyword) || 
+        building.description.includes(keyword) ||
+        building.district.includes(keyword)
+      );
+      
+      if (!matchesArea) {
+        return false;
+      }
+    }
+
     // 面积筛选
-    if (area) {
-      const [minArea, maxArea] = area.split("-").map(a => a ? parseInt(a) : null);
+    if (size) {
+      const [minArea, maxArea] = size.split("-").map(a => a ? parseInt(a) : null);
       const buildingAreaMatch = building.area.match(/(\d+)-(\d+)/);
       if (buildingAreaMatch) {
         const buildingMin = parseInt(buildingAreaMatch[1]);

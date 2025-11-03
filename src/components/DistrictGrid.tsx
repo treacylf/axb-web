@@ -11,18 +11,19 @@ import districtPlaceholder from "@/assets/district-placeholder.jpg";
 interface District {
   name: string;
   image: string;
+  aid: string;
 }
 
 export const DistrictGrid = () => {
   const districts: District[] = [
-    { name: "虹桥商务区", image: hongqiaoBusiness },
-    { name: "徐泾/西虹桥", image: districtPlaceholder },
-    { name: "虹桥临空经济区", image: hongqiaoAirport },
-    { name: "虹桥古北开发区", image: gubei },
-    { name: "人民广场", image: renminSquare },
-    { name: "长风商务区", image: changfeng },
-    { name: "莘庄商务区", image: xinzhuang },
-    { name: "陆家嘴", image: lujiazui },
+    { name: "虹桥商务区", image: hongqiaoBusiness, aid: "99" },
+    { name: "徐泾/西虹桥", image: districtPlaceholder, aid: "108" },
+    { name: "虹桥临空经济区", image: hongqiaoAirport, aid: "86" },
+    { name: "虹桥古北开发区", image: gubei, aid: "87" },
+    { name: "人民广场", image: renminSquare, aid: "63" },
+    { name: "长风商务区", image: changfeng, aid: "91" },
+    { name: "莘庄商务区", image: xinzhuang, aid: "101" },
+    { name: "陆家嘴", image: lujiazui, aid: "48" },
   ];
 
   return (
@@ -42,7 +43,7 @@ export const DistrictGrid = () => {
               className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all duration-300 hover:shadow-xl"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <a href="#" className="block">
+              <a href={`/search?area=${district.aid}`} className="block">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
                     src={district.image}
