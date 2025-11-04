@@ -89,14 +89,14 @@ export default function SearchResults() {
     {
       id: 4,
       name: "SOHO天山广场",
-      district: "长宁",
+      district: "闵行",
       subway: "2号线",
       area: "100-200m²",
       price: "5.8元/m²/天 起",
       image: sohoTianshan,
       tags: ["100m²", "150m²", "180m²", "220m²"],
-      description: "上海市长宁区天山路",
-      businessArea: "虹桥临空经济区"
+      description: "上海市闵行区天山路",
+      businessArea: "虹桥商务区"
     },
     {
       id: 5,
@@ -149,49 +149,49 @@ export default function SearchResults() {
     {
       id: 9,
       name: "远东国际广场",
-      district: "长宁",
+      district: "闵行",
       subway: "2号线,10号线",
       area: "200-600m²",
       price: "3.8元/m²/天 起",
       image: yuandongPlaza,
       tags: ["200m²", "350m²", "480m²", "600m²"],
-      description: "上海市长宁区虹桥核心区域",
-      businessArea: "虹桥临空经济区"
+      description: "上海市闵行区虹桥核心区域",
+      businessArea: "虹桥商务区"
     },
     {
       id: 10,
       name: "维璟中心",
-      district: "长宁",
+      district: "闵行",
       subway: "10号线",
       area: "300-800m²",
       price: "4.2元/m²/天 起",
       image: weijingCenter,
       tags: ["300m²", "450m²", "600m²", "800m²"],
-      description: "上海市长宁区地铁站旁",
-      businessArea: "虹桥临空经济区"
+      description: "上海市闵行区地铁站旁",
+      businessArea: "虹桥商务区"
     },
     {
       id: 11,
       name: "尚嘉中心",
-      district: "长宁",
+      district: "闵行",
       subway: "2号线",
       area: "200-500m²",
       price: "5.8元/m²/天 起",
       image: shangjiaCenter,
       tags: ["200m²", "300m²", "400m²", "500m²"],
-      description: "上海市长宁区商业配套齐全",
-      businessArea: "虹桥临空经济区"
+      description: "上海市闵行区商业配套齐全",
+      businessArea: "虹桥商务区"
     },
     {
       id: 12,
       name: "虹桥正荣中心（独栋）",
-      district: "徐汇",
+      district: "闵行",
       subway: "2号线,10号线,17号线,虹桥火车站",
       area: "1000-3000m²",
       price: "4.5元/m²/天 起",
       image: vankeCenter,
       tags: ["1000m²", "1500m²", "2000m²", "3000m²"],
-      description: "上海市徐汇区申虹路666弄",
+      description: "上海市闵行区申虹路666弄",
       businessArea: "虹桥商务区"
     },
     {
@@ -257,14 +257,14 @@ export default function SearchResults() {
     {
       id: 18,
       name: "田林坊（独栋）",
-      district: "徐汇",
+      district: "闵行",
       subway: "9号线",
       area: "1200-3500m²",
       price: "5.2元/m²/天 起",
       image: zhongjunPlaza,
       tags: ["1200m²", "2000m²", "2800m²", "3500m²"],
-      description: "上海市徐汇区田林路",
-      businessArea: "徐家汇"
+      description: "上海市闵行区田林路",
+      businessArea: "虹桥商务区"
     },
     {
       id: 19,

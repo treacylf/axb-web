@@ -195,9 +195,9 @@ export default function BuildingDetail() {
     "4": {
       id: 4,
       name: "SOHO天山广场",
-      district: "长宁 - 天山路",
+      district: "闵行 - 虹桥商务区",
       subway: "2号线,娄山关路站步行约8分钟",
-      address: "上海市长宁区天山路",
+      address: "上海市闵行区天山路",
       price: "5.0~6.5",
       priceRange: "元/m²/天",
       totalUnits: 5,
@@ -223,7 +223,7 @@ export default function BuildingDetail() {
         propertyCompany: "SOHO中国",
         developer: "SOHO中国"
       },
-      description: "SOHO天山广场位于长宁区天山路商圈核心位置，是SOHO中国在上海的标志性项目之一。项目采用现代化设计理念，配备智能化办公系统，为企业提供高品质的办公环境。周边商业配套完善，交通便利。",
+      description: "SOHO天山广场位于闵行区虹桥商务区，是SOHO中国在上海的标志性项目之一。项目采用现代化设计理念，配备智能化办公系统，为企业提供高品质的办公环境。周边商业配套完善，交通便利。",
       nearbyBuildings: [
         { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
         { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
@@ -233,13 +233,13 @@ export default function BuildingDetail() {
     "5": {
       id: 5,
       name: "虹桥天地",
-      district: "长宁 - 虹桥商务区",
-      subway: "10号线,伊犁路站步行约3分钟",
-      address: "上海市长宁区虹桥商务区",
-      price: "5.0~6.0",
+      district: "闵行 - 虹桥商务区",
+      subway: "2号线,10号线,17号线,虹桥火车站站步行约5分钟",
+      address: "上海市闵行区苏虹路33号",
+      price: "4.5~5.5",
       priceRange: "元/m²/天",
-      totalUnits: 6,
-      availableArea: "200 - 800m²",
+      totalUnits: 10,
+      availableArea: "189 - 2200m²",
       images: [
         hongqiaoTiandi,
         hongqiaoTiandi,
@@ -247,12 +247,16 @@ export default function BuildingDetail() {
         hongqiaoTiandi
       ],
       availableRooms: [
-        { area: "200m²", price: "5.5元/m²/天", decoration: "精装修", floor: "中区" },
-        { area: "300m²", price: "5.3元/m²/天", decoration: "精装修", floor: "高区" },
-        { area: "400m²", price: "5.8元/m²/天", decoration: "精装修", floor: "高区" },
-        { area: "500m²", price: "5.2元/m²/天", decoration: "标准交付", floor: "中区" },
-        { area: "650m²", price: "6.0元/m²/天", decoration: "精装修", floor: "高区" },
-        { area: "800m²", price: "5.6元/m²/天", decoration: "标准交付", floor: "低区" }
+        { area: "189m²", price: "4.5元/m²/天", decoration: "精装修", floor: "中区" },
+        { area: "325m²", price: "4.6元/m²/天", decoration: "精装修", floor: "高区" },
+        { area: "421m²", price: "4.8元/m²/天", decoration: "精装修", floor: "高区" },
+        { area: "589m²", price: "4.7元/m²/天", decoration: "标准交付", floor: "中区" },
+        { area: "720m²", price: "5.0元/m²/天", decoration: "精装修", floor: "高区" },
+        { area: "872m²", price: "4.9元/m²/天", decoration: "标准交付", floor: "低区" },
+        { area: "1307m²", price: "5.2元/m²/天", decoration: "精装修", floor: "高区" },
+        { area: "1520m²", price: "5.1元/m²/天", decoration: "标准交付", floor: "中区" },
+        { area: "1763m²", price: "5.3元/m²/天", decoration: "精装修", floor: "高区" },
+        { area: "2200m²", price: "5.5元/m²/天", decoration: "精装修", floor: "整层" }
       ],
       buildingInfo: {
         floorHeight: "3.8m",
@@ -272,9 +276,9 @@ export default function BuildingDetail() {
     "6": {
       id: 6,
       name: "虹桥世界中心",
-      district: "长宁 - 虹桥商务区",
-      subway: "2号线,10号线,虹桥火车站步行约10分钟",
-      address: "上海市长宁区虹桥核心区域",
+      district: "闵行 - 虹桥商务区",
+      subway: "10号线,虹桥火车站步行约10分钟",
+      address: "上海市闵行区虹翔三路88号",
       price: "6.0~7.5",
       priceRange: "元/m²/天",
       totalUnits: 8,
