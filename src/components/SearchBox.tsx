@@ -9,9 +9,9 @@ export const SearchBox = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const quickLinks = [
-    { label: "虹桥商务区", color: "bg-red-500", params: { nav_id: "0", district: "闵行" } },
-    { label: "共享办公室", color: "bg-orange-500", params: { nav_id: "3" } },
-    { label: "近地铁写字楼", color: "bg-blue-500", params: { nav_id: "1" } },
+    { label: "虹桥商务区", color: "bg-red-500", params: { area: "99" } },
+    { label: "徐泾/西虹桥", color: "bg-orange-500", params: { area: "108" } },
+    { label: "虹桥临空经济区", color: "bg-blue-500", params: { area: "86" } },
   ];
 
   const handleSearch = () => {
