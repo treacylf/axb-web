@@ -37,6 +37,7 @@ interface Building {
   image: string;
   tags: string[];
   description: string;
+  businessArea?: string;
 }
 
 export default function SearchResults() {
@@ -47,29 +48,31 @@ export default function SearchResults() {
   
   const itemsPerPage = 6;
 
-  // 真实数据 - 来自GitHub项目
+  // 真实数据 - 来自 chaobanwang.com
   const allBuildings: Building[] = [
     {
       id: 1,
       name: "虹桥万科中心",
       district: "闵行",
       subway: "2号线,10号线,17号线,虹桥火车站",
-      area: "500-1000m²",
+      area: "198-2352m²",
       price: "4.3元/m²/天 起",
       image: vankeCenter,
       tags: ["198m²", "350m²", "456m²", "600m²", "820m²", "1053m²", "2352m²"],
-      description: "上海市闵行区申长路988弄"
+      description: "上海市闵行区申长路988弄",
+      businessArea: "虹桥商务区"
     },
     {
       id: 2,
       name: "虹桥国际展汇",
-      district: "青浦",
+      district: "闵行",
       subway: "2号线,10号线,虹桥2号航站楼",
-      area: "200-800m²",
+      area: "188-1853m²",
       price: "2.5元/m²/天 起",
       image: exhibitionHub,
       tags: ["188m²", "300m²", "450m²", "642m²", "850m²", "980m²", "1350m²", "1853m²"],
-      description: "上海市闵行区申昆路2377号"
+      description: "上海市闵行区申昆路2377号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 3,
@@ -80,7 +83,8 @@ export default function SearchResults() {
       price: "4.5元/m²/天 起",
       image: hongqiaoHui,
       tags: ["120m²", "200m²", "280m²", "350m²"],
-      description: "上海市闵行区虹桥商务区核心"
+      description: "上海市闵行区虹桥商务区核心",
+      businessArea: "虹桥商务区"
     },
     {
       id: 4,
@@ -91,51 +95,56 @@ export default function SearchResults() {
       price: "5.8元/m²/天 起",
       image: sohoTianshan,
       tags: ["100m²", "150m²", "180m²", "220m²"],
-      description: "上海市长宁区天山路"
+      description: "上海市长宁区天山路",
+      businessArea: "虹桥临空经济区"
     },
     {
       id: 5,
       name: "虹桥天地",
-      district: "长宁",
-      subway: "10号线",
-      area: "200-500m²",
-      price: "5.5元/m²/天 起",
+      district: "闵行",
+      subway: "2号线,10号线,17号线,虹桥火车站",
+      area: "189-2200m²",
+      price: "4.5元/m²/天 起",
       image: hongqiaoTiandi,
-      tags: ["200m²", "300m²", "400m²", "500m²"],
-      description: "上海市长宁区虹桥商务区"
+      tags: ["189m²", "325m²", "421m²", "589m²", "720m²", "872m²", "1307m²", "1520m²", "1763m²", "2200m²"],
+      description: "上海市闵行区苏虹路33号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 6,
       name: "虹桥世界中心",
-      district: "长宁",
-      subway: "2号线,10号线",
+      district: "闵行",
+      subway: "10号线",
       area: "300-1000m²",
-      price: "6.5元/m²/天 起",
+      price: "4.8元/m²/天 起",
       image: worldCenter,
       tags: ["300m²", "500m²", "800m²", "1000m²", "1500m²"],
-      description: "上海市长宁区虹桥核心区域"
+      description: "上海市闵行区虹翔三路88号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 7,
-      name: "中骏广场二期",
-      district: "长宁",
-      subway: "2号线",
-      area: "300-800m²",
-      price: "5.6元/m²/天 起",
+      name: "中骏广场（独栋）",
+      district: "闵行",
+      subway: "2号线,10号线,17号线,虹桥火车站",
+      area: "3400-5600m²",
+      price: "5.0元/m²/天 起",
       image: zhongjunPlaza,
-      tags: ["300m²", "450m²", "600m²", "800m²"],
-      description: "上海市长宁区核心商务区"
+      tags: ["3400m²", "5600m²"],
+      description: "上海市闵行区申长路1588弄26号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 8,
       name: "虹桥阿里中心",
       district: "闵行",
-      subway: "10号线",
+      subway: "2号线",
       area: "500-1500m²",
-      price: "5.2元/m²/天 起",
+      price: "4.0元/m²/天 起",
       image: aliCenter,
       tags: ["500m²", "800m²", "1000m²", "1200m²", "1500m²"],
-      description: "上海市闵行区虹桥商务区"
+      description: "上海市闵行区申昆路1899号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 9,
@@ -143,10 +152,11 @@ export default function SearchResults() {
       district: "长宁",
       subway: "2号线,10号线",
       area: "200-600m²",
-      price: "6.2元/m²/天 起",
+      price: "3.8元/m²/天 起",
       image: yuandongPlaza,
       tags: ["200m²", "350m²", "480m²", "600m²"],
-      description: "上海市长宁区虹桥核心区域"
+      description: "上海市长宁区虹桥核心区域",
+      businessArea: "虹桥临空经济区"
     },
     {
       id: 10,
@@ -154,10 +164,11 @@ export default function SearchResults() {
       district: "长宁",
       subway: "10号线",
       area: "300-800m²",
-      price: "5.4元/m²/天 起",
+      price: "4.2元/m²/天 起",
       image: weijingCenter,
       tags: ["300m²", "450m²", "600m²", "800m²"],
-      description: "上海市长宁区地铁站旁"
+      description: "上海市长宁区地铁站旁",
+      businessArea: "虹桥临空经济区"
     },
     {
       id: 11,
@@ -168,227 +179,157 @@ export default function SearchResults() {
       price: "5.8元/m²/天 起",
       image: shangjiaCenter,
       tags: ["200m²", "300m²", "400m²", "500m²"],
-      description: "上海市长宁区商业配套齐全"
+      description: "上海市长宁区商业配套齐全",
+      businessArea: "虹桥临空经济区"
     },
-    // 重复数据以模拟更多页面
     {
       id: 12,
-      name: "虹桥万科中心",
-      district: "闵行",
+      name: "虹桥正荣中心（独栋）",
+      district: "徐汇",
       subway: "2号线,10号线,17号线,虹桥火车站",
-      area: "500-1000m²",
-      price: "4.3元/m²/天 起",
+      area: "1000-3000m²",
+      price: "4.5元/m²/天 起",
       image: vankeCenter,
-      tags: ["198m²", "350m²", "456m²", "600m²", "820m²"],
-      description: "上海市闵行区申长路988弄"
+      tags: ["1000m²", "1500m²", "2000m²", "3000m²"],
+      description: "上海市徐汇区申虹路666弄",
+      businessArea: "虹桥商务区"
     },
     {
       id: 13,
-      name: "虹桥国际展汇",
-      district: "青浦",
-      subway: "2号线,10号线,虹桥2号航站楼",
-      area: "200-800m²",
-      price: "2.5元/m²/天 起",
+      name: "力波REEB1987（独栋）",
+      district: "闵行",
+      subway: "1号线,莲花路",
+      area: "1600-3600m²",
+      price: "5.5元/m²/天 起",
       image: exhibitionHub,
-      tags: ["188m²", "300m²", "450m²", "642m²", "850m²"],
-      description: "上海市闵行区申昆路2377号"
+      tags: ["1600m²", "1980m²", "3000m²", "3600m²"],
+      description: "上海市闵行区益梅路91号",
+      businessArea: "莘庄商务区"
     },
     {
       id: 14,
-      name: "虹桥汇",
+      name: "虹桥BU中心（独栋）",
       district: "闵行",
-      subway: "2号线",
-      area: "100-300m²",
-      price: "4.5元/m²/天 起",
+      subway: "2号线,10号线,虹桥火车站",
+      area: "2000-5000m²",
+      price: "5.0元/m²/天 起",
       image: hongqiaoHui,
-      tags: ["120m²", "200m²", "280m²", "350m²"],
-      description: "上海市闵行区虹桥商务区核心"
+      tags: ["2000m²", "3000m²", "4000m²", "5000m²"],
+      description: "上海市闵行区虹桥商务区",
+      businessArea: "虹桥商务区"
     },
     {
       id: 15,
-      name: "SOHO天山广场",
-      district: "长宁",
-      subway: "2号线",
-      area: "100-200m²",
-      price: "5.8元/m²/天 起",
+      name: "MAX科技园（独栋）",
+      district: "闵行",
+      subway: "5号线",
+      area: "1500-4000m²",
+      price: "4.8元/m²/天 起",
       image: sohoTianshan,
-      tags: ["100m²", "150m²", "180m²", "220m²"],
-      description: "上海市长宁区天山路"
+      tags: ["1500m²", "2500m²", "3500m²", "4000m²"],
+      description: "上海市闵行区科技园区",
+      businessArea: "莘庄商务区"
     },
     {
       id: 16,
-      name: "虹桥天地",
-      district: "长宁",
-      subway: "10号线",
-      area: "200-500m²",
-      price: "5.5元/m²/天 起",
+      name: "平金中心（独栋）",
+      district: "闵行",
+      subway: "9号线",
+      area: "2000-6000m²",
+      price: "4.6元/m²/天 起",
       image: hongqiaoTiandi,
-      tags: ["200m²", "300m²", "400m²", "500m²"],
-      description: "上海市长宁区虹桥商务区"
+      tags: ["2000m²", "3500m²", "5000m²", "6000m²"],
+      description: "上海市闵行区商务区",
+      businessArea: "七莘路"
     },
     {
       id: 17,
-      name: "虹桥世界中心",
-      district: "长宁",
-      subway: "2号线,10号线",
-      area: "300-1000m²",
-      price: "6.5元/m²/天 起",
+      name: "容大中心（独栋）",
+      district: "闵行",
+      subway: "10号线",
+      area: "1800-5000m²",
+      price: "4.9元/m²/天 起",
       image: worldCenter,
-      tags: ["300m²", "500m²", "800m²", "1000m²"],
-      description: "上海市长宁区虹桥核心区域"
+      tags: ["1800m²", "3000m²", "4200m²", "5000m²"],
+      description: "上海市闵行区虹桥核心",
+      businessArea: "虹桥商务区"
     },
     {
       id: 18,
-      name: "中骏广场二期",
-      district: "长宁",
-      subway: "2号线",
-      area: "300-800m²",
-      price: "5.6元/m²/天 起",
+      name: "田林坊（独栋）",
+      district: "徐汇",
+      subway: "9号线",
+      area: "1200-3500m²",
+      price: "5.2元/m²/天 起",
       image: zhongjunPlaza,
-      tags: ["300m²", "450m²", "600m²", "800m²"],
-      description: "上海市长宁区核心商务区"
+      tags: ["1200m²", "2000m²", "2800m²", "3500m²"],
+      description: "上海市徐汇区田林路",
+      businessArea: "徐家汇"
     },
     {
       id: 19,
-      name: "虹桥阿里中心",
+      name: "Distrii办伴（冠捷大厦）",
       district: "闵行",
-      subway: "10号线",
-      area: "500-1500m²",
-      price: "5.2元/m²/天 起",
+      subway: "2号线,10号线,17号线,虹桥火车站",
+      area: "1-16人间",
+      price: "1400.0元/月 起",
       image: aliCenter,
-      tags: ["500m²", "800m²", "1000m²", "1200m²"],
-      description: "上海市闵行区虹桥商务区"
+      tags: ["1人间", "2人间", "4人间", "5人间", "6人间", "8人间", "10人间", "12人间", "16人间"],
+      description: "上海市闵行区申长路668号",
+      businessArea: "虹桥商务区"
     },
     {
       id: 20,
-      name: "远东国际广场",
-      district: "长宁",
-      subway: "2号线,10号线",
-      area: "200-600m²",
-      price: "6.2元/m²/天 起",
+      name: "Umon优盟（虹桥丽宝广场）",
+      district: "闵行",
+      subway: "2号线,10号线,虹桥火车站",
+      area: "1-16人间",
+      price: "1500.0元/月 起",
       image: yuandongPlaza,
-      tags: ["200m²", "350m²", "480m²", "600m²"],
-      description: "上海市长宁区虹桥核心区域"
+      tags: ["1人间", "2人间", "4人间", "6人间", "8人间", "10人间", "11人间", "13人间", "16人间"],
+      description: "上海市闵行区申滨路36号丽宝广场4号楼3层",
+      businessArea: "虹桥商务区"
     },
     {
       id: 21,
-      name: "维璟中心",
-      district: "长宁",
-      subway: "10号线",
-      area: "300-800m²",
-      price: "5.4元/m²/天 起",
-      image: weijingCenter,
-      tags: ["300m²", "450m²", "600m²", "800m²"],
-      description: "上海市长宁区地铁站旁"
-    },
-    {
-      id: 22,
-      name: "尚嘉中心",
-      district: "长宁",
-      subway: "2号线",
-      area: "200-500m²",
-      price: "5.8元/m²/天 起",
-      image: shangjiaCenter,
-      tags: ["200m²", "300m²", "400m²", "500m²"],
-      description: "上海市长宁区商业配套齐全"
-    },
-    {
-      id: 23,
-      name: "虹桥万科中心",
+      name: "WeWork（虹桥天地）",
       district: "闵行",
       subway: "2号线,10号线,17号线,虹桥火车站",
-      area: "500-1000m²",
-      price: "4.3元/m²/天 起",
-      image: vankeCenter,
-      tags: ["198m²", "350m²", "456m²", "600m²"],
-      description: "上海市闵行区申长路988弄"
+      area: "1-16人间",
+      price: "1800.0元/月 起",
+      image: weijingCenter,
+      tags: ["1人间", "2人间", "3人间", "5人间", "6人间", "8人间", "10人间", "12人间", "16人间"],
+      description: "上海市闵行区申长路688号",
+      businessArea: "虹桥商务区"
     },
-    {
-      id: 24,
-      name: "虹桥国际展汇",
-      district: "青浦",
-      subway: "2号线,10号线,虹桥2号航站楼",
-      area: "200-800m²",
-      price: "2.5元/m²/天 起",
-      image: exhibitionHub,
-      tags: ["188m²", "300m²", "450m²", "642m²"],
-      description: "上海市闵行区申昆路2377号"
-    },
-    {
-      id: 25,
-      name: "虹桥汇",
-      district: "闵行",
-      subway: "2号线",
-      area: "100-300m²",
-      price: "4.5元/m²/天 起",
-      image: hongqiaoHui,
-      tags: ["120m²", "200m²", "280m²"],
-      description: "上海市闵行区虹桥商务区核心"
-    },
-    {
-      id: 26,
-      name: "SOHO天山广场",
-      district: "长宁",
-      subway: "2号线",
-      area: "100-200m²",
-      price: "5.8元/m²/天 起",
-      image: sohoTianshan,
-      tags: ["100m²", "150m²", "180m²"],
-      description: "上海市长宁区天山路"
-    },
-    {
-      id: 27,
-      name: "虹桥天地",
-      district: "长宁",
-      subway: "10号线",
-      area: "200-500m²",
-      price: "5.5元/m²/天 起",
-      image: hongqiaoTiandi,
-      tags: ["200m²", "300m²", "400m²"],
-      description: "上海市长宁区虹桥商务区"
-    },
-    {
-      id: 28,
-      name: "虹桥世界中心",
-      district: "长宁",
-      subway: "2号线,10号线",
-      area: "300-1000m²",
-      price: "6.5元/m²/天 起",
-      image: worldCenter,
-      tags: ["300m²", "500m²", "800m²"],
-      description: "上海市长宁区虹桥核心区域"
-    },
-    {
-      id: 29,
-      name: "中骏广场二期",
-      district: "长宁",
-      subway: "2号线",
-      area: "300-800m²",
-      price: "5.6元/m²/天 起",
-      image: zhongjunPlaza,
-      tags: ["300m²", "450m²", "600m²"],
-      description: "上海市长宁区核心商务区"
-    },
-    {
-      id: 30,
-      name: "虹桥阿里中心",
-      district: "闵行",
-      subway: "10号线",
-      area: "500-1500m²",
-      price: "5.2元/m²/天 起",
-      image: aliCenter,
-      tags: ["500m²", "800m²", "1000m²"],
-      description: "上海市闵行区虹桥商务区"
-    }
   ];
 
   // 获取筛选参数
   const navId = searchParams.get("nav_id") || "0";
   const district = searchParams.get("district") || "";
   const subway = searchParams.get("subway") || "";
-  const businessArea = searchParams.get("area") || ""; // 商圈
+  const businessArea = searchParams.get("area") || ""; // 商圈 (aid)
   const size = searchParams.get("size") || ""; // 面积
   const price = searchParams.get("price") || "";
+
+  // 商圈ID映射 - 匹配 FilterBar 中的定义
+  const businessAreaMapping: { [key: string]: string[] } = {
+    "99": ["虹桥商务区"],
+    "100": ["七宝商务区"],
+    "101": ["莘庄商务区"],
+    "102": ["七莘路"],
+    "103": ["龙柏", "虹桥镇"],
+    "104": ["颛桥", "春申"],
+    "105": ["华漕"],
+    "106": ["南方商城"],
+    "107": ["浦江镇"],
+    "108": ["徐泾", "西虹桥"],
+    "86": ["虹桥临空经济区"],
+    "87": ["虹桥古北开发区"],
+    "63": ["人民广场"],
+    "91": ["长风商务区"],
+    "48": ["陆家嘴"]
+  };
 
   // 根据筛选条件过滤数据
   const filteredBuildings = allBuildings.filter((building) => {
@@ -398,362 +339,263 @@ export default function SearchResults() {
     }
 
     // 区域筛选
-    if (district && building.district !== district && 
-        !(district === "changning" && building.district === "长宁") &&
-        !(district === "minhang" && building.district === "闵行") &&
-        !(district === "qingpu" && building.district === "青浦")) {
+    if (district && building.district !== district) {
       return false;
     }
 
     // 地铁筛选
-    if (subway) {
-      const subwayLine = subway.replace("line", "") + "号线";
-      if (!building.subway.includes(subwayLine)) {
-        return false;
-      }
+    if (subway && !building.subway.includes(subway)) {
+      return false;
     }
 
-    // 商圈筛选 - 基于商圈ID映射
-    if (businessArea) {
-      const areaMap: Record<string, string[]> = {
-        "99": ["虹桥商务区", "闵行"],  // 虹桥商务区
-        "108": ["徐泾", "西虹桥", "青浦"],  // 徐泾/西虹桥
-        "86": ["虹桥临空", "闵行"],  // 虹桥临空经济区
-        "87": ["古北", "虹桥古北", "长宁"],  // 虹桥古北开发区
-        "63": ["人民广场", "黄浦"],  // 人民广场
-        "91": ["长风", "普陀"],  // 长风商务区
-        "101": ["莘庄", "闵行"],  // 莘庄商务区
-        "48": ["陆家嘴", "浦东"],  // 陆家嘴
-      };
-      
-      const areaKeywords = areaMap[businessArea] || [];
-      const matchesArea = areaKeywords.some(keyword => 
-        building.name.includes(keyword) || 
+    // 商圈筛选（根据 aid）
+    if (businessArea && businessAreaMapping[businessArea]) {
+      const keywords = businessAreaMapping[businessArea];
+      const matchesBusinessArea = keywords.some(keyword => 
+        building.businessArea?.includes(keyword) || 
         building.description.includes(keyword) ||
+        building.name.includes(keyword) ||
         building.district.includes(keyword)
       );
-      
-      if (!matchesArea) {
+      if (!matchesBusinessArea) {
         return false;
       }
     }
 
     // 面积筛选
     if (size) {
-      const [minArea, maxArea] = size.split("-").map(a => a ? parseInt(a) : null);
-      const buildingAreaMatch = building.area.match(/(\d+)-(\d+)/);
-      if (buildingAreaMatch) {
-        const buildingMin = parseInt(buildingAreaMatch[1]);
-        const buildingMax = parseInt(buildingAreaMatch[2]);
-        
-        if (minArea !== null && maxArea !== null) {
-          // 范围筛选
-          if (buildingMax < minArea || buildingMin > maxArea) {
-            return false;
-          }
-        } else if (minArea !== null && maxArea === null) {
-          // 最小值筛选（1000m²以上）
-          if (buildingMax < minArea) {
-            return false;
-          }
-        } else if (minArea === null && maxArea !== null) {
-          // 最大值筛选（100m²以下）
-          if (buildingMin > maxArea) {
-            return false;
-          }
+      const [minSize, maxSize] = size.split("-").map(s => parseInt(s));
+      const [buildingMin, buildingMax] = building.area.split("-").map(a => parseInt(a));
+      
+      if (maxSize) {
+        if (buildingMax < minSize || buildingMin > maxSize) {
+          return false;
         }
+      } else if (buildingMax < minSize) {
+        return false;
       }
     }
 
     // 价格筛选
     if (price) {
-      const [minPrice, maxPrice] = price.split("-").map(p => p ? parseFloat(p) : null);
-      const buildingPrice = parseFloat(building.price.match(/[\d.]+/)?.[0] || "0");
+      const [minPrice, maxPrice] = price.split("-").map(p => parseFloat(p));
+      const buildingPrice = parseFloat(building.price);
       
-      if (minPrice !== null && maxPrice !== null) {
-        // 范围筛选
+      if (maxPrice) {
         if (buildingPrice < minPrice || buildingPrice > maxPrice) {
           return false;
         }
-      } else if (minPrice !== null && maxPrice === null) {
-        // 最小值筛选（12元以上）
-        if (buildingPrice < minPrice) {
-          return false;
-        }
-      } else if (minPrice === null && maxPrice !== null) {
-        // 最大值筛选（3元以下）
-        if (buildingPrice > maxPrice) {
-          return false;
-        }
+      } else if (buildingPrice < minPrice) {
+        return false;
       }
     }
 
     return true;
   });
 
-  // 计算当前页显示的数据
-  const totalFilteredItems = filteredBuildings.length;
-  const totalPages = Math.max(1, Math.ceil(totalFilteredItems / itemsPerPage));
+  // 分页处理
+  const totalPages = Math.ceil(filteredBuildings.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const buildings = filteredBuildings.slice(startIndex, endIndex);
+  const currentBuildings = filteredBuildings.slice(startIndex, endIndex);
 
-  // 页面导航函数
+  // 跳转到指定页
   const goToPage = (page: number) => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("page", page.toString());
     navigate(`/search?${newParams.toString()}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* 面包屑导航 */}
-      <div className="border-b bg-muted/30">
-        <div className="container mx-auto px-4 py-2">
-          <div className="text-sm text-muted-foreground">
-            <a href="/" className="hover:text-primary">首页</a>
-            <span className="mx-2">/</span>
-            <span className="text-foreground">搜索结果</span>
-          </div>
-        </div>
-      </div>
+      <div className="flex-1 bg-gray-50">
+        {/* 筛选栏 */}
+        <FilterBar />
 
-      {/* 顶部tabs导航 */}
-      <div className="bg-card border-b">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="flex gap-2 sm:gap-6 overflow-x-auto scrollbar-hide">
-            <a 
-              href="/search?nav_id=0" 
-              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
-                (!searchParams.get("nav_id") || searchParams.get("nav_id") === "0")
-                  ? "border-primary text-primary font-medium" 
-                  : "border-transparent text-muted-foreground hover:text-primary"
-              }`}
+        <div className="container mx-auto px-4 py-6">
+          {/* 面包屑导航 */}
+          <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+            <a href="/" className="hover:text-primary">首页</a>
+            <span>/</span>
+            <span>搜索结果</span>
+          </div>
+
+          {/* 顶部导航标签 */}
+          <div className="flex gap-4 mb-6 border-b">
+            <a
+              href="/search?nav_id=0"
+              className={`px-4 py-2 ${navId === "0" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
             >
               租办公室
             </a>
-            <a 
-              href="/search?nav_id=1" 
-              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
-                searchParams.get("nav_id") === "1"
-                  ? "border-primary text-primary font-medium" 
-                  : "border-transparent text-muted-foreground hover:text-primary"
-              }`}
+            <a
+              href="/search?nav_id=1"
+              className={`px-4 py-2 ${navId === "1" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
             >
               写字楼
             </a>
-            <a 
-              href="/search?nav_id=2" 
-              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
-                searchParams.get("nav_id") === "2"
-                  ? "border-primary text-primary font-medium" 
-                  : "border-transparent text-muted-foreground hover:text-primary"
-              }`}
+            <a
+              href="/search?nav_id=2"
+              className={`px-4 py-2 ${navId === "2" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
             >
               创意园区
             </a>
-            <a 
-              href="/search?nav_id=3" 
-              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
-                searchParams.get("nav_id") === "3"
-                  ? "border-primary text-primary font-medium" 
-                  : "border-transparent text-muted-foreground hover:text-primary"
-              }`}
+            <a
+              href="/search?nav_id=3"
+              className={`px-4 py-2 ${navId === "3" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
             >
               共享办公
             </a>
-            <a 
-              href="/search?nav_id=4" 
-              className={`py-3 px-2 sm:px-0 text-xs sm:text-sm border-b-2 transition-colors whitespace-nowrap ${
-                searchParams.get("nav_id") === "4"
-                  ? "border-primary text-primary font-medium" 
-                  : "border-transparent text-muted-foreground hover:text-primary"
-              }`}
+            <a
+              href="/search?nav_id=4"
+              className={`px-4 py-2 ${navId === "4" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
             >
               总部独栋
             </a>
           </div>
-        </div>
-      </div>
 
-      {/* 筛选栏 */}
-      <FilterBar />
-
-      {/* 搜索结果主体 */}
-      <div className="bg-muted/20">
-        <div className="container mx-auto px-2 sm:px-4 py-3 sm:py-6">
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-            {/* 左侧列表 */}
+          <div className="flex gap-6">
+            {/* 主内容区 */}
             <div className="flex-1">
-              {/* 排序和结果数量 */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 sm:mb-4 pb-2 sm:pb-3 border-b bg-card px-3 sm:px-4 py-2 sm:py-3 gap-2">
-                <div className="flex gap-3 sm:gap-4">
-                  <a href="#" className="text-xs sm:text-sm text-primary font-medium">综合排序</a>
-                  <a href="#" className="text-xs sm:text-sm text-muted-foreground hover:text-primary">价格排序</a>
+              {/* 排序和统计 */}
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex gap-4">
+                  <button className="px-4 py-2 bg-primary text-white rounded">
+                    综合排序
+                  </button>
+                  <button className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded">
+                    价格排序
+                  </button>
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">已为您找到了{totalFilteredItems}条相关信息</p>
+                <div className="text-gray-600">
+                  已为您找到了 <span className="text-primary font-semibold">{filteredBuildings.length}</span> 条相关信息
+                </div>
               </div>
 
-          {/* 建筑列表 */}
-          <div className="space-y-0">
-            {buildings.map((building, index) => (
-              <div key={building.id}>
-                <div className="bg-card p-3 sm:p-4 hover:bg-accent/5 transition-colors">
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    {/* 图片 */}
-                    <div className="w-full sm:w-64 h-48 sm:h-48 flex-shrink-0">
-                      <a href={`/building/${building.id}`}>
-                        <img
-                          src={building.image}
-                          alt={building.name}
-                          className="w-full h-full object-cover rounded sm:rounded-none"
-                        />
-                      </a>
-                    </div>
-
-                    {/* 内容 */}
-                    <div className="flex-1 flex flex-col">
-                       {/* 标题和价格 */}
-                      <div className="flex justify-between items-start mb-1 sm:mb-1">
-                        <h4 className="text-base sm:text-lg font-bold flex-1">
-                          <a href={`/building/${building.id}`} className="hover:text-primary">
-                            {building.name}
-                          </a>
-                        </h4>
-                        <div className="text-right ml-2">
-                          <span className="text-primary font-bold text-lg sm:text-xl">{building.price.split('元')[0]}</span>
-                          <span className="text-xs sm:text-sm">元/m²/天 起</span>
+              {/* 楼盘列表 */}
+              <div className="space-y-6">
+                {currentBuildings.map((building) => (
+                  <Card key={building.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <CardContent className="p-0">
+                      <div className="flex">
+                        {/* 楼盘图片 */}
+                        <div className="w-80 h-60 flex-shrink-0">
+                          <img
+                            src={building.image}
+                            alt={building.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                      </div>
 
-                      {/* 地址信息 */}
-                      <p className="text-xs sm:text-sm text-muted-foreground py-0.5">
-                        <MapPin className="inline h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-                        {building.description}
-                      </p>
-                      <p className="text-xs sm:text-sm text-muted-foreground py-0.5 mb-2 sm:mb-3">
-                        距离地铁：{building.subway}站步行约5分钟
-                      </p>
+                        {/* 楼盘信息 */}
+                        <div className="flex-1 p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer">
+                              {building.name}
+                            </h3>
+                            <div className="text-right">
+                              <div className="text-3xl font-bold text-primary">
+                                {building.price.split(" ")[0]}
+                              </div>
+                              <div className="text-sm text-gray-500">
+                                {building.price.split(" ")[1] || ""}
+                              </div>
+                            </div>
+                          </div>
 
-                      {/* 下方区域 - 可用面积和查看详情按钮 */}
-                      <div className="flex flex-col sm:flex-row mt-auto gap-3 sm:gap-0">
-                        {/* 可用面积标签 */}
-                        <div className="flex-1 overflow-hidden">
-                          <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                            {building.tags.slice(0, 4).map((tag, tagIndex) => (
+                          <div className="space-y-3 mb-4">
+                            <div className="flex items-center gap-2 text-gray-600">
+                              <MapPin className="w-4 h-4" />
+                              <span>{building.description}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-gray-600">
+                              <Building2 className="w-4 h-4" />
+                              <span>距离地铁：{building.subway.split(",")[0]}站步行约5分钟</span>
+                            </div>
+                          </div>
+
+                          {/* 可租面积标签 */}
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {building.tags.map((tag, index) => (
                               <a
-                                key={tagIndex}
-                                href="#"
-                                className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm border border-border rounded hover:border-primary hover:text-primary transition-colors inline-block"
+                                key={index}
+                                href={`/building/${building.id}`}
+                                className="px-3 py-1 bg-blue-50 text-blue-600 rounded hover:bg-blue-100 text-sm"
                               >
                                 {tag}
                               </a>
                             ))}
-                            {building.tags.length > 4 && (
-                              <span className="px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm text-muted-foreground">
-                                +{building.tags.length - 4}
-                              </span>
-                            )}
                           </div>
-                        </div>
-                        
-                        {/* 查看详情按钮 */}
-                        <div className="sm:ml-4">
-                          <a
-                            href={`/building/${building.id}`}
-                            className="block sm:inline-block text-center px-4 sm:px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors text-xs sm:text-sm"
-                          >
+
+                          <button className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
                             查看详情
-                          </a>
+                          </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                {index < buildings.length - 1 && (
-                  <div className="border-b border-border"></div>
-                )}
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-            ))}
-          </div>
 
               {/* 分页 */}
-              <div className="mt-6 flex justify-center">
-                <Pagination>
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious 
-                        onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
-                        className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                      />
-                    </PaginationItem>
-                    
-                    {currentPage > 2 && (
+              {totalPages > 1 && (
+                <div className="mt-8">
+                  <Pagination>
+                    <PaginationContent>
                       <PaginationItem>
-                        <PaginationLink onClick={() => goToPage(1)} className="cursor-pointer">
-                          1
-                        </PaginationLink>
+                        <PaginationPrevious
+                          onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+                          className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
                       </PaginationItem>
-                    )}
-                    
-                    {currentPage > 3 && (
+
+                      {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                        let pageNum;
+                        if (totalPages <= 5) {
+                          pageNum = i + 1;
+                        } else if (currentPage <= 3) {
+                          pageNum = i + 1;
+                        } else if (currentPage >= totalPages - 2) {
+                          pageNum = totalPages - 4 + i;
+                        } else {
+                          pageNum = currentPage - 2 + i;
+                        }
+
+                        return (
+                          <PaginationItem key={i}>
+                            <PaginationLink
+                              onClick={() => goToPage(pageNum)}
+                              isActive={currentPage === pageNum}
+                              className="cursor-pointer"
+                            >
+                              {pageNum}
+                            </PaginationLink>
+                          </PaginationItem>
+                        );
+                      })}
+
+                      {totalPages > 5 && currentPage < totalPages - 2 && (
+                        <PaginationItem>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      )}
+
                       <PaginationItem>
-                        <PaginationEllipsis />
+                        <PaginationNext
+                          onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
+                          className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
                       </PaginationItem>
-                    )}
-                    
-                    {currentPage > 1 && (
-                      <PaginationItem>
-                        <PaginationLink onClick={() => goToPage(currentPage - 1)} className="cursor-pointer">
-                          {currentPage - 1}
-                        </PaginationLink>
-                      </PaginationItem>
-                    )}
-                    
-                    <PaginationItem>
-                      <PaginationLink isActive>
-                        {currentPage}
-                      </PaginationLink>
-                    </PaginationItem>
-                    
-                    {currentPage < totalPages && (
-                      <PaginationItem>
-                        <PaginationLink onClick={() => goToPage(currentPage + 1)} className="cursor-pointer">
-                          {currentPage + 1}
-                        </PaginationLink>
-                      </PaginationItem>
-                    )}
-                    
-                    {currentPage < totalPages - 2 && (
-                      <PaginationItem>
-                        <PaginationEllipsis />
-                      </PaginationItem>
-                    )}
-                
-                {currentPage < totalPages - 1 && (
-                  <PaginationItem>
-                    <PaginationLink onClick={() => goToPage(totalPages)} className="cursor-pointer">
-                      {totalPages}
-                    </PaginationLink>
-                  </PaginationItem>
-                )}
-                
-                <PaginationItem>
-                  <PaginationNext 
-                    onClick={() => currentPage < totalPages && goToPage(currentPage + 1)}
-                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                  />
-                </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
-              </div>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
             </div>
 
-            {/* 右侧边栏 - 仅在大屏幕显示 */}
-            <div className="hidden lg:block lg:w-80 flex-shrink-0">
+            {/* 侧边栏 - 只在大屏幕显示 */}
+            <div className="hidden lg:block w-80">
               <SearchSidebar />
             </div>
           </div>
