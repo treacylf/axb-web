@@ -312,6 +312,49 @@ export default function SearchResults() {
   const size = searchParams.get("size") || ""; // 面积
   const price = searchParams.get("price") || "";
 
+  // 地铁线路映射
+  const subwayMapping: { [key: string]: string } = {
+    "line1": "1号线",
+    "line2": "2号线",
+    "line3": "3号线",
+    "line4": "4号线",
+    "line5": "5号线",
+    "line6": "6号线",
+    "line7": "7号线",
+    "line8": "8号线",
+    "line9": "9号线",
+    "line10": "10号线",
+    "line11": "11号线",
+    "line12": "12号线",
+    "line13": "13号线",
+    "line14": "14号线",
+    "line15": "15号线",
+    "line16": "16号线",
+    "line17": "17号线",
+    "line18": "18号线",
+    "line19": "19号线",
+    "line20": "20号线",
+  };
+
+  // 区域映射
+  const districtMapping: { [key: string]: string } = {
+    "pudong": "浦东",
+    "huangpu": "黄浦",
+    "jingan": "静安",
+    "xuhui": "徐汇",
+    "changning": "长宁",
+    "putuo": "普陀",
+    "minhang": "闵行",
+    "qingpu": "青浦",
+    "hongkou": "虹口",
+    "yangpu": "杨浦",
+    "jiading": "嘉定",
+    "baoshan": "宝山",
+    "songjiang": "松江",
+    "fengxian": "奉贤",
+    "jinshan": "金山",
+  };
+
   // 商圈ID映射 - 匹配 FilterBar 中的定义
   const businessAreaMapping: { [key: string]: string[] } = {
     "99": ["虹桥商务区"],
@@ -338,14 +381,20 @@ export default function SearchResults() {
       return false;
     }
 
-    // 区域筛选
-    if (district && building.district !== district) {
-      return false;
+    // 区域筛选 - 使用映射
+    if (district) {
+      const districtName = districtMapping[district] || district;
+      if (building.district !== districtName) {
+        return false;
+      }
     }
 
-    // 地铁筛选
-    if (subway && !building.subway.includes(subway)) {
-      return false;
+    // 地铁筛选 - 使用映射
+    if (subway) {
+      const subwayName = subwayMapping[subway] || subway;
+      if (!building.subway.includes(subwayName)) {
+        return false;
+      }
     }
 
     // 商圈筛选（根据 aid）
