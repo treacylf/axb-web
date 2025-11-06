@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import vankeCenter from "@/assets/buildings/vanke-center.jpg";
 import exhibitionHub from "@/assets/buildings/exhibition-hub.jpg";
 import hongqiaoHui from "@/assets/buildings/hongqiao-hui.jpg";
@@ -46,7 +47,7 @@ export const BuildingGrid = () => {
                 boxShadow: "var(--card-shadow)",
               }}
             >
-              <a href={`/building/${building.id}`} className="block">
+              <Link to={`/building/${building.id}`} className="block">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={building.image}
@@ -63,17 +64,17 @@ export const BuildingGrid = () => {
                     <span>{building.location}</span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </Card>
           ))}
         </div>
 
         <div className="mt-8 text-center">
-          <a href="/search?nav_id=1">
+          <Link to="/search?nav_id=1">
             <Button size="lg" variant="outline">
               更多上海写字楼出租
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
