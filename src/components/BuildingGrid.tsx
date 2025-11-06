@@ -2,12 +2,17 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import vankeCenter from "@/assets/buildings/vanke-center.jpg";
-import exhibitionHub from "@/assets/buildings/exhibition-hub.jpg";
-import hongqiaoHui from "@/assets/buildings/hongqiao-hui.jpg";
-import sohoTianshan from "@/assets/buildings/soho-tianshan.jpg";
-import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi.jpg";
-import worldCenter from "@/assets/buildings/world-center.jpg";
+import vankeCenter from "@/assets/buildings/vanke-center-real.jpg";
+import exhibitionHub from "@/assets/buildings/exhibition-hub-real.jpg";
+import hongqiaoHui from "@/assets/buildings/hongqiao-hui-real.jpg";
+import sohoTianshan from "@/assets/buildings/soho-tianshan-real.jpg";
+import hongqiaoTiandi from "@/assets/buildings/hongqiao-tiandi-real.jpg";
+import worldCenter from "@/assets/buildings/world-center-real.jpg";
+import zhongjunPlaza from "@/assets/buildings/zhongjun-plaza.png";
+import aliCenter from "@/assets/buildings/ali-center.jpg";
+import yuandongPlaza from "@/assets/buildings/yuandong-plaza.jpg";
+import weijingCenter from "@/assets/buildings/weijing-center.jpg";
+import shangjiaCenter from "@/assets/buildings/shangjia-center.jpg";
 
 interface Building {
   id: number;
@@ -24,8 +29,11 @@ export const BuildingGrid = () => {
     { id: 4, name: "SOHO天山广场", location: "长宁区", image: sohoTianshan },
     { id: 5, name: "虹桥天地", location: "闵行区", image: hongqiaoTiandi },
     { id: 6, name: "虹桥世界中心", location: "闵行区", image: worldCenter },
-    { id: 1, name: "虹桥万科中心", location: "虹桥商务区", image: vankeCenter },
-    { id: 2, name: "虹桥国际展汇", location: "虹桥商务区", image: exhibitionHub },
+    { id: 7, name: "中骏广场二期", location: "闵行区", image: zhongjunPlaza },
+    { id: 8, name: "虹桥阿里中心", location: "虹桥商务区", image: aliCenter },
+    { id: 9, name: "远东国际广场", location: "长宁区", image: yuandongPlaza },
+    { id: 10, name: "维璟中心", location: "长宁区", image: weijingCenter },
+    { id: 11, name: "尚嘉中心", location: "长宁区", image: shangjiaCenter },
   ];
 
   return (

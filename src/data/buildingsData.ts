@@ -15,6 +15,11 @@ import hongqiaoZhengrong from "@/assets/headquarters/hongqiao-zhengrong.jpg";
 import maxTech from "@/assets/headquarters/max-tech.jpg";
 import pingjinCenter from "@/assets/headquarters/pingjin-center.jpg";
 import rongdaCenter from "@/assets/headquarters/rongda-center.jpg";
+import zhongjunPlazaImg from "@/assets/buildings/zhongjun-plaza.png";
+import aliCenter from "@/assets/buildings/ali-center.jpg";
+import yuandongPlaza from "@/assets/buildings/yuandong-plaza.jpg";
+import weijingCenter from "@/assets/buildings/weijing-center.jpg";
+import shangjiaCenter from "@/assets/buildings/shangjia-center.jpg";
 
 export interface BuildingData {
   id: number;
@@ -299,6 +304,205 @@ export const buildingData: Record<string, BuildingData> = {
     nearbyBuildings: [
       { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
       { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
+    ]
+  },
+  "7": {
+    id: 7,
+    name: "中骏广场二期",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站步行约8分钟",
+    address: "上海市闵行区申滨路",
+    price: "4.0~5.0",
+    priceRange: "元/m²/天",
+    totalUnits: 6,
+    availableArea: "200 - 1800m²",
+    images: [
+      zhongjunPlazaImg,
+      zhongjunPlazaImg,
+      zhongjunPlazaImg,
+      zhongjunPlazaImg
+    ],
+    availableRooms: [
+      { area: "200m²", price: "4.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "400m²", price: "4.2元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "600m²", price: "4.8元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "900m²", price: "4.3元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "1200m²", price: "4.7元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1800m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.5m",
+      totalFloors: "15层",
+      elevators: "客梯8部，货梯2部",
+      efficiency: "76%",
+      propertyCompany: "中骏物业",
+      developer: "中骏集团"
+    },
+    description: "中骏广场二期位于虹桥商务区核心位置，是中骏集团在上海的重点商务项目。项目配备现代化办公设施，周边交通便利，商业配套完善。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+  "8": {
+    id: 8,
+    name: "虹桥阿里中心",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站步行约12分钟",
+    address: "上海市闵行区申长路",
+    price: "4.5~5.5",
+    priceRange: "元/m²/天",
+    totalUnits: 7,
+    availableArea: "250 - 2000m²",
+    images: [
+      aliCenter,
+      aliCenter,
+      aliCenter,
+      aliCenter
+    ],
+    availableRooms: [
+      { area: "250m²", price: "4.8元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "450m²", price: "4.5元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "700m²", price: "5.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "950m²", price: "4.7元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "1300m²", price: "5.2元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1600m²", price: "5.3元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "2000m²", price: "5.5元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "16层",
+      elevators: "客梯10部，货梯3部",
+      efficiency: "80%",
+      propertyCompany: "阿里物业",
+      developer: "阿里巴巴集团"
+    },
+    description: "虹桥阿里中心位于虹桥商务区核心区域，是阿里巴巴在上海的重要布局。项目采用智能化办公系统，配备完善的商务设施，为企业提供高效的办公环境。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+    ]
+  },
+  "9": {
+    id: 9,
+    name: "远东国际广场",
+    district: "长宁 - 天山路",
+    subway: "2号线,娄山关路站步行约5分钟",
+    address: "上海市长宁区天山路",
+    price: "5.0~6.5",
+    priceRange: "元/m²/天",
+    totalUnits: 8,
+    availableArea: "150 - 1500m²",
+    images: [
+      yuandongPlaza,
+      yuandongPlaza,
+      yuandongPlaza,
+      yuandongPlaza
+    ],
+    availableRooms: [
+      { area: "150m²", price: "5.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "280m²", price: "5.2元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "420m²", price: "5.8元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "600m²", price: "5.4元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "800m²", price: "6.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1000m²", price: "5.7元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "1200m²", price: "6.2元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1500m²", price: "6.5元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.6m",
+      totalFloors: "18层",
+      elevators: "客梯6部，货梯2部",
+      efficiency: "77%",
+      propertyCompany: "远东物业",
+      developer: "远东集团"
+    },
+    description: "远东国际广场位于长宁区天山路商圈，地理位置优越，交通便利。项目配备现代化办公设施，周边商业配套齐全，适合各类企业入驻。",
+    nearbyBuildings: [
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+  "10": {
+    id: 10,
+    name: "维璟中心",
+    district: "长宁 - 天山路",
+    subway: "2号线,娄山关路站步行约6分钟",
+    address: "上海市长宁区天山路",
+    price: "5.2~6.8",
+    priceRange: "元/m²/天",
+    totalUnits: 6,
+    availableArea: "180 - 1400m²",
+    images: [
+      weijingCenter,
+      weijingCenter,
+      weijingCenter,
+      weijingCenter
+    ],
+    availableRooms: [
+      { area: "180m²", price: "5.6元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "320m²", price: "5.3元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "500m²", price: "6.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "750m²", price: "5.8元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "1000m²", price: "6.4元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1400m²", price: "6.8元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.7m",
+      totalFloors: "20层",
+      elevators: "客梯8部，货梯2部",
+      efficiency: "79%",
+      propertyCompany: "维璟物业",
+      developer: "维璟集团"
+    },
+    description: "维璟中心位于长宁区核心商圈，是区域内的高端商务楼宇。项目采用5A级写字楼标准打造，配备智能化办公系统和完善的配套设施。",
+    nearbyBuildings: [
+      { name: "远东国际广场", price: "5.5元/m²/天", image: yuandongPlaza, link: "/building/9" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+  "11": {
+    id: 11,
+    name: "尚嘉中心",
+    district: "长宁 - 天山路",
+    subway: "2号线,娄山关路站步行约7分钟",
+    address: "上海市长宁区天山路",
+    price: "5.5~7.0",
+    priceRange: "元/m²/天",
+    totalUnits: 7,
+    availableArea: "200 - 1600m²",
+    images: [
+      shangjiaCenter,
+      shangjiaCenter,
+      shangjiaCenter,
+      shangjiaCenter
+    ],
+    availableRooms: [
+      { area: "200m²", price: "5.8元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "350m²", price: "5.5元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "550m²", price: "6.3元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "800m²", price: "6.0元/m²/天", decoration: "标准交付", floor: "中区" },
+      { area: "1100m²", price: "6.6元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1350m²", price: "6.8元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1600m²", price: "7.0元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "22层",
+      elevators: "客梯10部，货梯3部",
+      efficiency: "81%",
+      propertyCompany: "尚嘉物业",
+      developer: "尚嘉集团"
+    },
+    description: "尚嘉中心位于长宁区天山路商圈核心位置，是区域地标性建筑。项目定位高端，配备一流的办公设施和物业服务，适合大型企业和跨国公司入驻。",
+    nearbyBuildings: [
+      { name: "维璟中心", price: "6.0元/m²/天", image: weijingCenter, link: "/building/10" },
+      { name: "远东国际广场", price: "5.5元/m²/天", image: yuandongPlaza, link: "/building/9" },
       { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
     ]
   },
