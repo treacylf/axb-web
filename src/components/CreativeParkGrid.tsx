@@ -1,27 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import show800 from "@/assets/creative/800show.jpg";
-import anken from "@/assets/creative/anken.jpg";
-import bridge8 from "@/assets/creative/bridge8.jpg";
-
-interface CreativePark {
-  id: number;
-  name: string;
-  location: string;
-  image: string;
-}
+import { Link } from "react-router-dom";
+import { buildingData } from "@/data/buildingsData";
 
 export const CreativeParkGrid = () => {
-  const parks: CreativePark[] = [
-    { id: 201, name: "800秀创意园", location: "静安", image: show800 },
-    { id: 202, name: "安垦汇智创意园", location: "静安", image: anken },
-    { id: 203, name: "八号桥Ⅳ期", location: "闸北", image: bridge8 },
-    { id: 204, name: "大宁德必易园", location: "静安", image: show800 },
-    { id: 205, name: "复地四季广场", location: "静安", image: anken },
-    { id: 206, name: "老码头创意园", location: "黄浦", image: bridge8 },
-    { id: 207, name: "幸福里创意园", location: "浦东", image: show800 },
-    { id: 208, name: "越界·世博园", location: "浦东", image: anken },
-  ];
+  // 获取创意园区数据 (ID: 201-208)
+  const creativeParks = Object.values(buildingData)
+    .filter(building => building.id >= 201 && building.id <= 208)
+    .slice(0, 8);
 
   return (
     <section className="bg-muted/30 py-16 lg:py-24">
@@ -34,16 +20,16 @@ export const CreativeParkGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {parks.map((park, index) => (
+          {creativeParks.map((park) => (
             <Card
-              key={index}
+              key={park.id}
               className="group overflow-hidden border-0 transition-all duration-300 hover:-translate-y-1"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              <a href={`/building/${park.id}`} className="block">
+              <Link to={`/building/${park.id}`} className="block">
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={park.image}
+                    src={park.images[0]}
                     alt={park.name}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -52,19 +38,24 @@ export const CreativeParkGrid = () => {
                   <h3 className="mb-1 text-lg font-semibold text-foreground">
                     {park.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{park.location}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {park.district}
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-accent">
+                    {park.price} {park.priceRange}
+                  </p>
                 </div>
-              </a>
+              </Link>
             </Card>
           ))}
         </div>
 
         <div className="mt-8 text-center">
-          <a href="/search?nav_id=2">
+          <Link to="/search?nav_id=2">
             <Button size="lg" variant="outline">
               更多创意园区
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
