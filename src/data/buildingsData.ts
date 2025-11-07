@@ -631,5 +631,217 @@ export const buildingData: Record<string, BuildingData> = {
       { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
       { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" }
     ]
+  },
+  
+  "204": {
+    id: 204,
+    name: "大宁德必易园",
+    district: "静安 - 大宁",
+    subway: "1号线,上海马戏城站步行约8分钟",
+    address: "上海市静安区共和新路",
+    price: "2.9~3.8",
+    priceRange: "元/m²/天",
+    totalUnits: 8,
+    availableArea: "100 - 800m²",
+    images: [
+      show800,
+      show800,
+      show800,
+      show800
+    ],
+    availableRooms: [
+      { area: "100m²", price: "3.2元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "150m²", price: "3.0元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "220m²", price: "3.4元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "300m²", price: "2.9元/m²/天", decoration: "简装", floor: "2F" },
+      { area: "420m²", price: "3.6元/m²/天", decoration: "精装修", floor: "5F" },
+      { area: "550m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "6F" },
+      { area: "680m²", price: "3.7元/m²/天", decoration: "精装修", floor: "7F" },
+      { area: "800m²", price: "3.8元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "7层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "76%",
+      propertyCompany: "德必物业",
+      developer: "德必集团"
+    },
+    description: "大宁德必易园是德必集团在上海的创意园区品牌项目，位于静安区大宁商圈。园区定位于为中小型创意企业提供优质办公空间，配套设施齐全，管理规范。适合设计、文化、科技等行业企业入驻。",
+    nearbyBuildings: [
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" }
+    ]
+  },
+  
+  "205": {
+    id: 205,
+    name: "复地四季广场",
+    district: "静安 - 大宁",
+    subway: "1号线,7号线,上海马戏城站步行约5分钟",
+    address: "上海市静安区万荣路",
+    price: "3.2~4.2",
+    priceRange: "元/m²/天",
+    totalUnits: 10,
+    availableArea: "120 - 1000m²",
+    images: [
+      anken,
+      anken,
+      anken,
+      anken
+    ],
+    availableRooms: [
+      { area: "120m²", price: "3.5元/m²/天", decoration: "精装修", floor: "3F" },
+      { area: "180m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "4F" },
+      { area: "250m²", price: "3.7元/m²/天", decoration: "精装修", floor: "5F" },
+      { area: "350m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "6F" },
+      { area: "480m²", price: "3.9元/m²/天", decoration: "精装修", floor: "7F" },
+      { area: "620m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "8F" },
+      { area: "750m²", price: "4.0元/m²/天", decoration: "精装修", floor: "9F" },
+      { area: "900m²", price: "3.8元/m²/天", decoration: "标准交付", floor: "10F" },
+      { area: "1000m²", price: "4.2元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "10层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "78%",
+      propertyCompany: "复地物业",
+      developer: "复地集团"
+    },
+    description: "复地四季广场位于大宁商圈核心位置，是集商业、办公于一体的综合性建筑。园区环境优美，配套设施完善，提供多种面积段的办公空间选择。适合各类企业入驻，特别是文化创意、咨询服务类企业。",
+    nearbyBuildings: [
+      { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" },
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" }
+    ]
+  },
+  
+  "206": {
+    id: 206,
+    name: "老码头创意园",
+    district: "黄浦 - 董家渡",
+    subway: "9号线,小南门站步行约10分钟",
+    address: "上海市黄浦区中山南路",
+    price: "3.8~5.0",
+    priceRange: "元/m²/天",
+    totalUnits: 6,
+    availableArea: "150 - 800m²",
+    images: [
+      bridge8,
+      bridge8,
+      bridge8,
+      bridge8
+    ],
+    availableRooms: [
+      { area: "150m²", price: "4.2元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "250m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "350m²", price: "4.5元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "500m²", price: "4.1元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "650m²", price: "4.7元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "800m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "6层",
+      elevators: "货梯2部",
+      efficiency: "75%",
+      propertyCompany: "老码头物业",
+      developer: "上海外滩投资"
+    },
+    description: "老码头创意园位于黄浦江畔，由百年历史的老码头仓库改造而成。园区保留了历史建筑的独特风貌，融入现代艺术元素，打造独具特色的创意办公空间。适合艺术、设计、文化传媒等行业企业入驻。周边有十六铺等知名商业街区。",
+    nearbyBuildings: [
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" }
+    ]
+  },
+  
+  "207": {
+    id: 207,
+    name: "幸福里创意园",
+    district: "浦东 - 三林",
+    subway: "11号线,三林站步行约8分钟",
+    address: "上海市浦东新区永泰路",
+    price: "2.8~3.8",
+    priceRange: "元/m²/天",
+    totalUnits: 9,
+    availableArea: "100 - 900m²",
+    images: [
+      show800,
+      show800,
+      show800,
+      show800
+    ],
+    availableRooms: [
+      { area: "100m²", price: "3.0元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "160m²", price: "2.8元/m²/天", decoration: "简装", floor: "3F" },
+      { area: "230m²", price: "3.3元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "320m²", price: "3.1元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "450m²", price: "3.5元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "580m²", price: "3.2元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "700m²", price: "3.6元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "820m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "9F" },
+      { area: "900m²", price: "3.8元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "9层",
+      elevators: "客梯3部，货梯1部",
+      efficiency: "77%",
+      propertyCompany: "幸福里物业",
+      developer: "浦东新区国资"
+    },
+    description: "幸福里创意园位于浦东新区三林商圈，是一座集创意办公、艺术展示、文化交流于一体的综合性创意园区。园区环境优美，配套设施完善，租金性价比高，适合中小型创意企业、初创团队入驻。",
+    nearbyBuildings: [
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "大宁德必易园", price: "3.3元/m²/天", image: show800, link: "/building/204" },
+      { name: "复地四季广场", price: "3.5元/m²/天", image: anken, link: "/building/205" }
+    ]
+  },
+  
+  "208": {
+    id: 208,
+    name: "越界·世博园",
+    district: "浦东 - 世博园区",
+    subway: "7号线,8号线,耀华路站步行约12分钟",
+    address: "上海市浦东新区国展路",
+    price: "3.5~4.8",
+    priceRange: "元/m²/天",
+    totalUnits: 11,
+    availableArea: "120 - 1100m²",
+    images: [
+      anken,
+      anken,
+      anken,
+      anken
+    ],
+    availableRooms: [
+      { area: "120m²", price: "3.8元/m²/天", decoration: "精装修", floor: "3F" },
+      { area: "180m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "4F" },
+      { area: "250m²", price: "4.0元/m²/天", decoration: "精装修", floor: "5F" },
+      { area: "320m²", price: "3.7元/m²/天", decoration: "标准交付", floor: "6F" },
+      { area: "450m²", price: "4.2元/m²/天", decoration: "精装修", floor: "7F" },
+      { area: "580m²", price: "3.9元/m²/天", decoration: "标准交付", floor: "8F" },
+      { area: "700m²", price: "4.4元/m²/天", decoration: "精装修", floor: "9F" },
+      { area: "850m²", price: "4.1元/m²/天", decoration: "标准交付", floor: "10F" },
+      { area: "1000m²", price: "4.6元/m²/天", decoration: "精装修", floor: "11F" },
+      { area: "1100m²", price: "4.8元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "11层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "79%",
+      propertyCompany: "越界物业",
+      developer: "越界集团"
+    },
+    description: "越界·世博园位于浦东世博园区，是越界品牌在上海的旗舰项目。园区定位高端，配备一流的办公设施和配套服务。紧邻世博文化公园，环境优美，适合科技、文化、金融等行业企业入驻。",
+    nearbyBuildings: [
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+      { name: "老码头创意园", price: "4.2元/m²/天", image: bridge8, link: "/building/206" },
+      { name: "幸福里创意园", price: "3.0元/m²/天", image: show800, link: "/building/207" }
+    ]
   }
 };
