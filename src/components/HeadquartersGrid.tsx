@@ -1,36 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import hongqiaoBu from "@/assets/headquarters/hongqiao-bu.jpg";
-import liboReeb from "@/assets/headquarters/libo-reeb.jpg";
-import tianlinFang from "@/assets/headquarters/tianlin-fang.jpg";
-import zhongjunPlaza from "@/assets/headquarters/zhongjun-plaza.jpg";
-import hongqiaoZhengrong from "@/assets/headquarters/hongqiao-zhengrong.jpg";
-import maxTech from "@/assets/headquarters/max-tech.jpg";
-import pingjinCenter from "@/assets/headquarters/pingjin-center.jpg";
-import rongdaCenter from "@/assets/headquarters/rongda-center.jpg";
-
-interface Headquarters {
-  id: number;
-  name: string;
-  location: string;
-  image: string;
-}
+import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { buildingData } from "@/data/buildingsData";
 
 export const HeadquartersGrid = () => {
-  const headquarters: Headquarters[] = [
-    { id: 301, name: "虹桥BU中心（独栋）", location: "长宁区", image: hongqiaoBu },
-    { id: 302, name: "力波REEB1987（独栋）", location: "普陀区", image: liboReeb },
-    { id: 303, name: "田林坊（独栋）", location: "徐汇区", image: tianlinFang },
-    { id: 304, name: "中骏广场（独栋）", location: "长宁区", image: zhongjunPlaza },
-    { id: 305, name: "虹桥正荣中心（独栋）", location: "闵行区", image: hongqiaoZhengrong },
-    { id: 306, name: "MAX科技园（独栋）", location: "闵行区", image: maxTech },
-    { id: 307, name: "平金中心（独栋）", location: "浦东新区", image: pingjinCenter },
-    { id: 308, name: "容大中心（独栋）", location: "闵行区", image: rongdaCenter },
-    { id: 309, name: "E通世界·华新园（独栋）", location: "青浦区", image: hongqiaoBu },
-    { id: 310, name: "丰隆虹桥中心（独栋）", location: "闵行区", image: liboReeb },
-    { id: 311, name: "虹桥展汇（独栋）", location: "闵行区", image: tianlinFang },
-    { id: 312, name: "中建锦绣天地（独栋）", location: "闵行区", image: maxTech },
-  ];
+  // 获取总部独栋数据 (ID: 301-312)
+  const headquarters = Object.values(buildingData)
+    .filter(building => building.id >= 301 && building.id <= 312)
+    .slice(0, 12);
 
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
@@ -45,15 +23,18 @@ export const HeadquartersGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {headquarters.map((hq, index) => (
+          {headquarters.map((hq) => (
             <Card
-              key={index}
-              className="group overflow-hidden border-0 shadow-lg transition-all duration-300 hover:-translate-y-1"
+              key={hq.id}
+              className="group overflow-hidden border-0 transition-all duration-300 hover:-translate-y-1"
+              style={{ 
+                boxShadow: "var(--card-shadow)",
+              }}
             >
-              <a href={`/building/${hq.id}`} className="block">
+              <Link to={`/building/${hq.id}`} className="block">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src={hq.image}
+                    src={hq.images[0]}
                     alt={hq.name}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
@@ -63,19 +44,25 @@ export const HeadquartersGrid = () => {
                   <h3 className="mb-2 text-lg font-semibold text-foreground">
                     {hq.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{hq.location}</p>
+                  <div className="flex items-center text-sm text-muted-foreground mb-2">
+                    <MapPin className="mr-1 h-4 w-4" />
+                    <span>{hq.district}</span>
+                  </div>
+                  <p className="text-sm font-medium text-accent">
+                    {hq.price} {hq.priceRange}
+                  </p>
                 </div>
-              </a>
+              </Link>
             </Card>
           ))}
         </div>
 
         <div className="mt-8 text-center">
-          <a href="/search?nav_id=4">
+          <Link to="/search?nav_id=4">
             <Button size="lg" variant="outline">
               更多上海独栋写字楼
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
