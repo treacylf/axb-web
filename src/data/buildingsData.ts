@@ -843,5 +843,425 @@ export const buildingData: Record<string, BuildingData> = {
       { name: "老码头创意园", price: "4.2元/m²/天", image: bridge8, link: "/building/206" },
       { name: "幸福里创意园", price: "3.0元/m²/天", image: show800, link: "/building/207" }
     ]
+  },
+
+  "301": {
+    id: 301,
+    name: "虹桥BU中心（独栋）",
+    district: "长宁 - 虹桥临空经济园区",
+    subway: "10号线,龙溪路站步行约8分钟",
+    address: "上海市长宁区金钟路",
+    price: "5.8~6.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 8600m²",
+    images: [
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu
+    ],
+    availableRooms: [
+      { area: "8600m²", price: "6.0元/m²/天", decoration: "毛坯可定制", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "6层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "85%",
+      propertyCompany: "第一太平戴维斯",
+      developer: "虹桥临空经济园区开发公司"
+    },
+    description: "虹桥BU中心位于长宁区虹桥临空经济园区核心位置，独栋建筑面积约8600平方米，适合作为企业总部或区域总部。建筑采用现代化设计，配备完善的办公设施。周边交通便利，临近虹桥枢纽，辐射长三角区域。园区环境优美，配套齐全，适合科技、金融、贸易等行业企业入驻。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥世界中心", price: "5.2元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+    ]
+  },
+
+  "302": {
+    id: 302,
+    name: "力波REEB1987（独栋）",
+    district: "普陀 - M50创意园区",
+    subway: "3号线,4号线,金沙江路站步行约10分钟",
+    address: "上海市普陀区莫干山路50号",
+    price: "4.2~5.0",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 6500m²",
+    images: [
+      liboReeb,
+      liboReeb,
+      liboReeb,
+      liboReeb
+    ],
+    availableRooms: [
+      { area: "6500m²", price: "4.5元/m²/天", decoration: "工业风装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "5.0m",
+      totalFloors: "5层",
+      elevators: "客梯1部，货梯1部",
+      efficiency: "80%",
+      propertyCompany: "力波物业",
+      developer: "M50创意园区"
+    },
+    description: "力波REEB1987位于上海著名的M50创意园区内，原为纺织厂房改造而成。建筑保留了工业时代的特色元素，融合现代办公需求。独栋面积约6500平方米，挑高空间适合创意设计、广告传媒、艺术工作室等企业入驻。园区文化氛围浓厚，周边画廊、咖啡馆林立，是上海知名的创意产业聚集地。",
+    nearbyBuildings: [
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+      { name: "安垦汇智创意园", price: "4.0元/m²/天", image: anken, link: "/building/202" }
+    ]
+  },
+
+  "303": {
+    id: 303,
+    name: "田林坊（独栋）",
+    district: "徐汇 - 漕河泾开发区",
+    subway: "9号线,漕河泾开发区站步行约6分钟",
+    address: "上海市徐汇区田林路",
+    price: "4.8~5.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 7200m²",
+    images: [
+      tianlinFang,
+      tianlinFang,
+      tianlinFang,
+      tianlinFang
+    ],
+    availableRooms: [
+      { area: "7200m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "8层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "82%",
+      propertyCompany: "漕河泾物业管理公司",
+      developer: "漕河泾开发区总公司"
+    },
+    description: "田林坊位于徐汇区漕河泾开发区核心地段，独栋建筑面积约7200平方米。建筑设计现代简约，内部精装修标准高。周边为成熟的科技园区，配套设施完善，交通便利。适合科技研发、软件开发、生物医药等高新技术企业作为总部使用。园区创新氛围浓厚，是上海重要的高新技术产业基地。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "SOHO天山广场", price: "5.0元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "维璟中心", price: "4.8元/m²/天", image: weijingCenter, link: "/building/10" }
+    ]
+  },
+
+  "304": {
+    id: 304,
+    name: "中骏广场（独栋）",
+    district: "长宁 - 虹桥临空经济园区",
+    subway: "10号线,龙溪路站步行约5分钟",
+    address: "上海市长宁区金钟路",
+    price: "6.0~7.0",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 12000m²",
+    images: [
+      zhongjunPlaza,
+      zhongjunPlaza,
+      zhongjunPlaza,
+      zhongjunPlaza
+    ],
+    availableRooms: [
+      { area: "12000m²", price: "6.5元/m²/天", decoration: "超甲级装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.8m",
+      totalFloors: "10层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "88%",
+      propertyCompany: "中骏物业",
+      developer: "中骏集团"
+    },
+    description: "中骏广场独栋位于长宁区虹桥临空经济园区核心位置，总建筑面积约12000平方米。建筑品质优异，达到超甲级写字楼标准。地理位置优越，紧邻虹桥枢纽，交通极为便利。周边商务氛围成熟，配套设施一流。适合大型企业总部、跨国公司区域总部等高端企业入驻。建筑设计现代化，智能化程度高，是企业形象展示的理想选择。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥汇", price: "4.5元/m²/天", image: hongqiaoHui, link: "/building/3" },
+      { name: "虹桥世界中心", price: "5.2元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+
+  "305": {
+    id: 305,
+    name: "虹桥正荣中心（独栋）",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥2号航站楼站步行约8分钟",
+    address: "上海市闵行区申滨路",
+    price: "5.5~6.2",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 9500m²",
+    images: [
+      hongqiaoZhengrong,
+      hongqiaoZhengrong,
+      hongqiaoZhengrong,
+      hongqiaoZhengrong
+    ],
+    availableRooms: [
+      { area: "9500m²", price: "5.8元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "8层",
+      elevators: "客梯3部，货梯1部",
+      efficiency: "85%",
+      propertyCompany: "正荣物业",
+      developer: "正荣集团"
+    },
+    description: "虹桥正荣中心位于闵行区虹桥商务区核心区域，独栋建筑面积约9500平方米。紧邻虹桥枢纽，交通四通八达，辐射长三角及全国。建筑设计现代大气，内部精装修标准高，配套设施完善。适合金融、贸易、科技等行业的企业总部入驻。周边商务氛围成熟，是上海西部重要的商务中心。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+    ]
+  },
+
+  "306": {
+    id: 306,
+    name: "MAX科技园（独栋）",
+    district: "闵行 - 紫竹高新技术产业开发区",
+    subway: "5号线,剑川路站步行约15分钟",
+    address: "上海市闵行区东川路",
+    price: "3.8~4.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 8000m²",
+    images: [
+      maxTech,
+      maxTech,
+      maxTech,
+      maxTech
+    ],
+    availableRooms: [
+      { area: "8000m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "7层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "80%",
+      propertyCompany: "紫竹物业",
+      developer: "紫竹高新区开发公司"
+    },
+    description: "MAX科技园位于闵行区紫竹高新技术产业开发区，独栋建筑面积约8000平方米。园区定位高新技术产业，周边高校、科研机构密集，人才资源丰富。适合科技研发、软件开发、人工智能等创新型企业入驻。建筑设计简约实用，性价比高。园区配套设施完善，创新创业氛围浓厚。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "田林坊（独栋）", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" },
+      { name: "容大中心（独栋）", price: "4.2元/m²/天", image: rongdaCenter, link: "/building/308" }
+    ]
+  },
+
+  "307": {
+    id: 307,
+    name: "平金中心（独栋）",
+    district: "浦东 - 金桥出口加工区",
+    subway: "6号线,9号线,金桥路站步行约10分钟",
+    address: "上海市浦东新区金桥路",
+    price: "4.5~5.2",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 10500m²",
+    images: [
+      pingjinCenter,
+      pingjinCenter,
+      pingjinCenter,
+      pingjinCenter
+    ],
+    availableRooms: [
+      { area: "10500m²", price: "4.8元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.3m",
+      totalFloors: "9层",
+      elevators: "客梯3部，货梯2部",
+      efficiency: "83%",
+      propertyCompany: "金桥物业",
+      developer: "金桥集团"
+    },
+    description: "平金中心位于浦东新区金桥出口加工区核心位置，独栋建筑面积约10500平方米。园区产业配套完善，适合制造业、贸易、物流等企业总部入驻。建筑设计现代化，内部精装修，办公环境优越。周边交通便利，距离浦东机场约30分钟车程，地理位置优越。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" },
+      { name: "虹桥阿里中心", price: "6.0元/m²/天", image: aliCenter, link: "/building/8" }
+    ]
+  },
+
+  "308": {
+    id: 308,
+    name: "容大中心（独栋）",
+    district: "闵行 - 莘庄工业区",
+    subway: "1号线,莘庄站步行约12分钟",
+    address: "上海市闵行区莘朱路",
+    price: "3.5~4.2",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 7500m²",
+    images: [
+      rongdaCenter,
+      rongdaCenter,
+      rongdaCenter,
+      rongdaCenter
+    ],
+    availableRooms: [
+      { area: "7500m²", price: "3.8元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "6层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "78%",
+      propertyCompany: "容大物业",
+      developer: "莘庄工业区开发公司"
+    },
+    description: "容大中心位于闵行区莘庄工业区，独栋建筑面积约7500平方米。园区产业基础扎实，适合制造业、研发中心等企业入驻。建筑实用性强，性价比高。周边生活配套齐全，交通便利。是中小型企业总部的理想选择。",
+    nearbyBuildings: [
+      { name: "MAX科技园（独栋）", price: "4.0元/m²/天", image: maxTech, link: "/building/306" },
+      { name: "田林坊（独栋）", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+    ]
+  },
+
+  "309": {
+    id: 309,
+    name: "E通世界·华新园（独栋）",
+    district: "青浦 - 华新镇",
+    subway: "17号线,赵巷站步行约20分钟",
+    address: "上海市青浦区华新镇",
+    price: "3.0~3.8",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 6800m²",
+    images: [
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu
+    ],
+    availableRooms: [
+      { area: "6800m²", price: "3.2元/m²/天", decoration: "简装", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "5层",
+      elevators: "客梯1部，货梯1部",
+      efficiency: "75%",
+      propertyCompany: "华新物业",
+      developer: "青浦工业园区"
+    },
+    description: "E通世界·华新园位于青浦区华新镇，独栋建筑面积约6800平方米。园区环境优美，租金实惠，适合制造业、物流、电商等企业作为总部或运营中心。虽然距离市区较远，但交通逐步改善，性价比优势明显。适合对成本敏感的初创企业和中小企业。",
+    nearbyBuildings: [
+      { name: "虹桥正荣中心（独栋）", price: "5.8元/m²/天", image: hongqiaoZhengrong, link: "/building/305" },
+      { name: "虹桥BU中心（独栋）", price: "6.0元/m²/天", image: hongqiaoBu, link: "/building/301" },
+      { name: "中骏广场（独栋）", price: "6.5元/m²/天", image: zhongjunPlaza, link: "/building/304" }
+    ]
+  },
+
+  "310": {
+    id: 310,
+    name: "丰隆虹桥中心（独栋）",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站站步行约10分钟",
+    address: "上海市闵行区申虹路",
+    price: "5.8~6.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 11000m²",
+    images: [
+      liboReeb,
+      liboReeb,
+      liboReeb,
+      liboReeb
+    ],
+    availableRooms: [
+      { area: "11000m²", price: "6.0元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "9层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "86%",
+      propertyCompany: "丰隆亚洲",
+      developer: "丰隆集团"
+    },
+    description: "丰隆虹桥中心位于闵行区虹桥商务区核心位置，独栋建筑面积约11000平方米。由新加坡丰隆集团开发，建筑品质优异，管理专业。紧邻虹桥枢纽，交通极为便利。周边商务配套完善，适合大型企业总部、跨国公司区域总部入驻。是虹桥商务区的标志性独栋建筑之一。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥世界中心", price: "5.2元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "虹桥正荣中心（独栋）", price: "5.8元/m²/天", image: hongqiaoZhengrong, link: "/building/305" }
+    ]
+  },
+
+  "311": {
+    id: 311,
+    name: "虹桥展汇（独栋）",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站站步行约8分钟",
+    address: "上海市闵行区盈港东路",
+    price: "5.2~6.0",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 9200m²",
+    images: [
+      tianlinFang,
+      tianlinFang,
+      tianlinFang,
+      tianlinFang
+    ],
+    availableRooms: [
+      { area: "9200m²", price: "5.5元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.3m",
+      totalFloors: "8层",
+      elevators: "客梯3部，货梯1部",
+      efficiency: "84%",
+      propertyCompany: "虹桥商务区物业",
+      developer: "虹桥商务区开发公司"
+    },
+    description: "虹桥展汇独栋位于闵行区虹桥商务区核心区域，建筑面积约9200平方米。毗邻国家会展中心，地理位置优越。建筑设计现代化，内部精装修标准高。适合会展服务、贸易、咨询等行业企业总部入驻。周边商务氛围成熟，配套设施一流，是企业形象展示的理想选择。",
+    nearbyBuildings: [
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" },
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" }
+    ]
+  },
+
+  "312": {
+    id: 312,
+    name: "中建锦绣天地（独栋）",
+    district: "闵行 - 七宝商务区",
+    subway: "9号线,七宝站步行约8分钟",
+    address: "上海市闵行区漕宝路",
+    price: "4.2~5.0",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 8500m²",
+    images: [
+      maxTech,
+      maxTech,
+      maxTech,
+      maxTech
+    ],
+    availableRooms: [
+      { area: "8500m²", price: "4.5元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "7层",
+      elevators: "客梯2部，货梯1部",
+      efficiency: "81%",
+      propertyCompany: "中建物业",
+      developer: "中国建筑"
+    },
+    description: "中建锦绣天地位于闵行区七宝商务区，独栋建筑面积约8500平方米。由中国建筑开发，建筑品质可靠。七宝地区商业氛围浓厚，生活配套完善。交通便利，地铁直达市中心各区域。适合贸易、服务、科技等行业企业总部入驻。性价比较高，是企业总部的优质选择。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "容大中心（独栋）", price: "3.8元/m²/天", image: rongdaCenter, link: "/building/308" },
+      { name: "田林坊（独栋）", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" }
+    ]
   }
 };
