@@ -21,6 +21,22 @@ import yuandongPlaza from "@/assets/buildings/yuandong-plaza.jpg";
 import weijingCenter from "@/assets/buildings/weijing-center.jpg";
 import shangjiaCenter from "@/assets/buildings/shangjia-center.jpg";
 
+// Coworking Space Images
+import wework1 from "@/assets/coworking/wework-1.jpg";
+import weworkTiandi from "@/assets/coworking/wework-tiandi.jpg";
+import distrii1 from "@/assets/coworking/distrii-1.jpg";
+import distriiGuanjie from "@/assets/coworking/distrii-guanjie.jpg";
+import umon1 from "@/assets/coworking/umon-1.jpg";
+import umonHongqiao from "@/assets/coworking/umon-hongqiao.jpg";
+import regus1788 from "@/assets/coworking/regus-1788.jpg";
+import krspaceLvgu from "@/assets/coworking/krspace-lvgu.jpg";
+import kuaiyiWantong from "@/assets/coworking/kuaiyi-wantong.jpg";
+import deshiKerry from "@/assets/coworking/deshi-kerry.jpg";
+import wizworkHuanqiugang from "@/assets/coworking/wizwork-huanqiugang.jpg";
+import huantuBaiyulan from "@/assets/coworking/huantu-baiyulan.jpg";
+import dashuxiaTianjie from "@/assets/coworking/dashuxia-tianjie.jpg";
+import aikeWaitan from "@/assets/coworking/aike-waitan.jpg";
+
 export interface BuildingData {
   id: number;
   name: string;
@@ -1262,6 +1278,554 @@ export const buildingData: Record<string, BuildingData> = {
       { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
       { name: "容大中心（独栋）", price: "3.8元/m²/天", image: rongdaCenter, link: "/building/308" },
       { name: "田林坊（独栋）", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" }
+    ]
+  },
+
+  // ==================== 联合办公 (ID: 101-114) ====================
+  
+  "101": {
+    id: 101,
+    name: "WeWork威海路旗舰店",
+    district: "静安 - 静安寺",
+    subway: "2号线,7号线,静安寺站步行约3分钟",
+    address: "上海市静安区威海路696号",
+    price: "1800~3500",
+    priceRange: "元/工位/月",
+    totalUnits: 450,
+    availableArea: "1-50工位",
+    images: [
+      wework1,
+      wework1,
+      wework1,
+      wework1
+    ],
+    availableRooms: [
+      { area: "1工位", price: "3500元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3200元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2400元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-50工位", price: "2000元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.5m",
+      totalFloors: "15层",
+      elevators: "客梯8部",
+      efficiency: "85%",
+      propertyCompany: "WeWork中国",
+      developer: "WeWork"
+    },
+    description: "WeWork威海路旗舰店位于静安寺核心商圈，是WeWork在上海的标志性空间之一。空间设计现代时尚，配备高速WiFi、会议室、电话亭、打印设备等全套办公设施。社区氛围活跃，定期举办各类社交和商业活动。适合初创企业、自由职业者和中小型团队。24小时门禁系统，安全便捷。周边餐饮、商业配套完善，地铁直达。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" }
+    ]
+  },
+
+  "102": {
+    id: 102,
+    name: "WeWork虹桥天地",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站步行约5分钟",
+    address: "上海市闵行区苏虹路333号",
+    price: "1600~3200",
+    priceRange: "元/工位/月",
+    totalUnits: 380,
+    availableArea: "1-50工位",
+    images: [
+      weworkTiandi,
+      weworkTiandi,
+      weworkTiandi,
+      weworkTiandi
+    ],
+    availableRooms: [
+      { area: "1工位", price: "3200元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "2900元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2100元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-50工位", price: "1800元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "12层",
+      elevators: "客梯6部",
+      efficiency: "83%",
+      propertyCompany: "WeWork中国",
+      developer: "WeWork"
+    },
+    description: "WeWork虹桥天地位于虹桥商务区核心位置，紧邻虹桥交通枢纽。空间设计融合了WeWork的全球标准与本地特色，提供灵活的办公解决方案。配备专业级会议室、活动空间、休闲区等设施。社区成员来自科技、金融、贸易等多个行业，商务资源丰富。适合需要便利交通和国际化办公环境的团队。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+
+  "103": {
+    id: 103,
+    name: "Distrii办伴·淮海中路",
+    district: "黄浦 - 淮海中路",
+    subway: "1号线,10号线,13号线,陕西南路站步行约2分钟",
+    address: "上海市黄浦区淮海中路",
+    price: "2000~3800",
+    priceRange: "元/工位/月",
+    totalUnits: 320,
+    availableArea: "1-40工位",
+    images: [
+      distrii1,
+      distrii1,
+      distrii1,
+      distrii1
+    ],
+    availableRooms: [
+      { area: "1工位", price: "3800元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3400元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "3000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2600元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-40工位", price: "2200元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.6m",
+      totalFloors: "10层",
+      elevators: "客梯4部",
+      efficiency: "82%",
+      propertyCompany: "Distrii办伴",
+      developer: "Distrii办伴"
+    },
+    description: "Distrii办伴淮海中路店位于上海时尚核心商圈，周边奢侈品牌云集，商业氛围浓厚。空间设计融合了现代艺术与商务功能，提供高品质的办公体验。配备智能门禁、云打印、高速网络等设施。定期举办行业沙龙和社交活动，助力企业拓展商务网络。适合时尚、设计、咨询等行业的创业团队。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+
+  "104": {
+    id: 104,
+    name: "Distrii办伴·环贸广场",
+    district: "浦东 - 陆家嘴",
+    subway: "2号线,9号线,陆家嘴站步行约5分钟",
+    address: "上海市浦东新区陆家嘴环路1233号",
+    price: "2200~4000",
+    priceRange: "元/工位/月",
+    totalUnits: 400,
+    availableArea: "1-60工位",
+    images: [
+      distriiGuanjie,
+      distriiGuanjie,
+      distriiGuanjie,
+      distriiGuanjie
+    ],
+    availableRooms: [
+      { area: "1工位", price: "4000元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3600元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "3200元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-60工位", price: "2400元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "20层",
+      elevators: "客梯12部",
+      efficiency: "85%",
+      propertyCompany: "Distrii办伴",
+      developer: "Distrii办伴"
+    },
+    description: "Distrii办伴环贸广场店位于陆家嘴金融核心区，享有浦江景观和城市天际线视野。空间设计高端大气，配备顶级办公设施和服务。社区成员多为金融、投资、咨询等高端服务业企业。提供专属会议室、路演厅、商务洽谈区等空间。适合对办公环境和企业形象有高要求的团队。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" }
+    ]
+  },
+
+  "105": {
+    id: 105,
+    name: "优客工场·静安嘉里中心",
+    district: "静安 - 南京西路",
+    subway: "2号线,7号线,静安寺站步行约5分钟",
+    address: "上海市静安区南京西路1515号",
+    price: "2000~3600",
+    priceRange: "元/工位/月",
+    totalUnits: 350,
+    availableArea: "1-50工位",
+    images: [
+      umon1,
+      umon1,
+      umon1,
+      umon1
+    ],
+    availableRooms: [
+      { area: "1工位", price: "3600元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3200元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2400元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-50工位", price: "2000元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.6m",
+      totalFloors: "12层",
+      elevators: "客梯6部",
+      efficiency: "84%",
+      propertyCompany: "优客工场",
+      developer: "优客工场"
+    },
+    description: "优客工场静安嘉里中心店位于南京西路商圈核心，毗邻高端商场和五星级酒店。空间设计兼顾商务与舒适，配备全套办公设施和服务。社区活动丰富，涵盖行业交流、技能培训、休闲娱乐等多个方面。提供企业服务对接平台，助力企业快速成长。适合互联网、文创、咨询等行业团队。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+
+  "106": {
+    id: 106,
+    name: "优客工场·虹桥南丰城",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站步行约8分钟",
+    address: "上海市闵行区申长路869号",
+    price: "1500~2800",
+    priceRange: "元/工位/月",
+    totalUnits: 300,
+    availableArea: "1-40工位",
+    images: [
+      umonHongqiao,
+      umonHongqiao,
+      umonHongqiao,
+      umonHongqiao
+    ],
+    availableRooms: [
+      { area: "1工位", price: "2800元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "2500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2200元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "1900元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-40工位", price: "1600元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.5m",
+      totalFloors: "10层",
+      elevators: "客梯5部",
+      efficiency: "82%",
+      propertyCompany: "优客工场",
+      developer: "优客工场"
+    },
+    description: "优客工场虹桥南丰城店位于虹桥商务区，紧邻虹桥交通枢纽和南丰城购物中心。空间设计现代简约，功能齐全。配备会议室、洽谈区、休闲区等多功能空间。社区氛围友好，定期举办创业交流和商务对接活动。适合需要便利交通和商业配套的初创企业和中小团队。性价比优秀。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" }
+    ]
+  },
+
+  "107": {
+    id: 107,
+    name: "雷格斯·1788国际中心",
+    district: "浦东 - 世纪大道",
+    subway: "2号线,4号线,6号线,9号线,世纪大道站步行约3分钟",
+    address: "上海市浦东新区世纪大道1788号",
+    price: "2500~4500",
+    priceRange: "元/工位/月",
+    totalUnits: 280,
+    availableArea: "1-30工位",
+    images: [
+      regus1788,
+      regus1788,
+      regus1788,
+      regus1788
+    ],
+    availableRooms: [
+      { area: "1工位", price: "4500元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "4000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "3500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "3000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-30工位", price: "2700元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "18层",
+      elevators: "客梯8部",
+      efficiency: "86%",
+      propertyCompany: "雷格斯中国",
+      developer: "雷格斯"
+    },
+    description: "雷格斯1788国际中心位于浦东世纪大道商圈，是雷格斯在上海的高端商务中心。空间设计专业高雅，提供私密办公室和灵活工位选择。配备专业前台接待、商务秘书服务、高端会议室等设施。适合对商务形象和服务品质有高要求的企业。社区成员多为金融、法律、咨询等专业服务机构。",
+    nearbyBuildings: [
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" },
+      { name: "虹桥阿里中心", price: "6.0元/m²/天", image: aliCenter, link: "/building/8" }
+    ]
+  },
+
+  "108": {
+    id: 108,
+    name: "氪空间·绿谷广场",
+    district: "浦东 - 张江高科",
+    subway: "2号线,张江高科站步行约8分钟",
+    address: "上海市浦东新区张衡路1000号",
+    price: "1200~2200",
+    priceRange: "元/工位/月",
+    totalUnits: 400,
+    availableArea: "1-60工位",
+    images: [
+      krspaceLvgu,
+      krspaceLvgu,
+      krspaceLvgu,
+      krspaceLvgu
+    ],
+    availableRooms: [
+      { area: "1工位", price: "2200元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "2000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "1800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "1500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-60工位", price: "1300元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.5m",
+      totalFloors: "8层",
+      elevators: "客梯4部",
+      efficiency: "80%",
+      propertyCompany: "氪空间",
+      developer: "氪空间"
+    },
+    description: "氪空间绿谷广场店位于张江高科技园区核心位置，周边高科技企业云集。空间设计强调科技感与实用性，配备专业办公设施和创业服务。提供投融资对接、法律咨询、财税服务等增值服务。社区氛围开放创新，定期举办技术分享和创业沙龙。适合科技创业团队和研发中心。租金性价比高。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" }
+    ]
+  },
+
+  "109": {
+    id: 109,
+    name: "快易居·万通中心",
+    district: "静安 - 江宁路",
+    subway: "2号线,13号线,江宁路站步行约5分钟",
+    address: "上海市静安区江宁路631号",
+    price: "1600~2800",
+    priceRange: "元/工位/月",
+    totalUnits: 250,
+    availableArea: "1-35工位",
+    images: [
+      kuaiyiWantong,
+      kuaiyiWantong,
+      kuaiyiWantong,
+      kuaiyiWantong
+    ],
+    availableRooms: [
+      { area: "1工位", price: "2800元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "2500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2200元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "1900元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-35工位", price: "1700元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.4m",
+      totalFloors: "12层",
+      elevators: "客梯5部",
+      efficiency: "81%",
+      propertyCompany: "快易居",
+      developer: "快易居"
+    },
+    description: "快易居万通中心店位于静安区江宁路商圈，交通便利，周边配套完善。空间设计简洁实用，提供灵活的办公解决方案。配备基础办公设施和服务，性价比优秀。社区氛围友好，适合初创企业和小型团队。提供企业注册、财税代理等配套服务，降低创业门槛。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" }
+    ]
+  },
+
+  "110": {
+    id: 110,
+    name: "德事·嘉里中心",
+    district: "静安 - 南京西路",
+    subway: "2号线,7号线,静安寺站步行约6分钟",
+    address: "上海市静安区南京西路1376号",
+    price: "2200~4200",
+    priceRange: "元/工位/月",
+    totalUnits: 320,
+    availableArea: "1-40工位",
+    images: [
+      deshiKerry,
+      deshiKerry,
+      deshiKerry,
+      deshiKerry
+    ],
+    availableRooms: [
+      { area: "1工位", price: "4200元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "3300元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-40工位", price: "2400元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "15层",
+      elevators: "客梯7部",
+      efficiency: "85%",
+      propertyCompany: "德事商务中心",
+      developer: "德事"
+    },
+    description: "德事嘉里中心位于静安寺核心商圈，是德事在上海的旗舰店。空间设计高端专业，提供私密办公室和开放工位。配备专业前台、会议室、商务休息室等设施。提供企业秘书、IT支持、行政服务等全方位商务服务。社区成员多为跨国公司和专业服务机构。适合对办公品质和商务形象有高标准的企业。",
+    nearbyBuildings: [
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" }
+    ]
+  },
+
+  "111": {
+    id: 111,
+    name: "WIZ WORK·环球港",
+    district: "普陀 - 长寿路",
+    subway: "3号线,4号线,13号线,金沙江路站步行约5分钟",
+    address: "上海市普陀区中山北路3300号",
+    price: "1400~2600",
+    priceRange: "元/工位/月",
+    totalUnits: 360,
+    availableArea: "1-50工位",
+    images: [
+      wizworkHuanqiugang,
+      wizworkHuanqiugang,
+      wizworkHuanqiugang,
+      wizworkHuanqiugang
+    ],
+    availableRooms: [
+      { area: "1工位", price: "2600元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "2300元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "2000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "1700元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-50工位", price: "1500元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.6m",
+      totalFloors: "14层",
+      elevators: "客梯6部",
+      efficiency: "83%",
+      propertyCompany: "WIZ WORK",
+      developer: "WIZ WORK"
+    },
+    description: "WIZ WORK环球港店位于月星环球港购物中心，商业配套极其完善。空间设计时尚现代，融合休闲与商务元素。配备会议室、活动空间、健身房等多元化设施。社区活动丰富，注重工作生活平衡。适合文创、设计、电商等行业团队。购物、餐饮、娱乐一应俱全，工作之余可享受便利生活。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" }
+    ]
+  },
+
+  "112": {
+    id: 112,
+    name: "寰图·白玉兰广场",
+    district: "黄浦 - 人民广场",
+    subway: "1号线,2号线,8号线,人民广场站步行约8分钟",
+    address: "上海市黄浦区延安东路1号",
+    price: "2800~5000",
+    priceRange: "元/工位/月",
+    totalUnits: 280,
+    availableArea: "1-30工位",
+    images: [
+      huantuBaiyulan,
+      huantuBaiyulan,
+      huantuBaiyulan,
+      huantuBaiyulan
+    ],
+    availableRooms: [
+      { area: "1工位", price: "5000元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "4500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "4000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "3500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-30工位", price: "3000元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "66层",
+      elevators: "客梯16部",
+      efficiency: "88%",
+      propertyCompany: "寰图",
+      developer: "寰图"
+    },
+    description: "寰图白玉兰广场店位于上海地标建筑白玉兰广场内，享有城市全景视野。空间设计奢华精致，提供顶级办公体验。配备米其林级餐饮、健身房、艺术展厅等高端配套设施。提供管家式服务，满足企业各类商务需求。社区成员多为金融、投资、高端服务业精英。适合追求极致办公体验的企业和团队。",
+    nearbyBuildings: [
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" },
+      { name: "虹桥阿里中心", price: "6.0元/m²/天", image: aliCenter, link: "/building/8" }
+    ]
+  },
+
+  "113": {
+    id: 113,
+    name: "大树下·TX淮海天地",
+    district: "黄浦 - 淮海中路",
+    subway: "10号线,13号线,新天地站步行约3分钟",
+    address: "上海市黄浦区淮海中路523号",
+    price: "2400~4200",
+    priceRange: "元/工位/月",
+    totalUnits: 300,
+    availableArea: "1-40工位",
+    images: [
+      dashuxiaTianjie,
+      dashuxiaTianjie,
+      dashuxiaTianjie,
+      dashuxiaTianjie
+    ],
+    availableRooms: [
+      { area: "1工位", price: "4200元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "3800元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "3300元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "2900元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-40工位", price: "2600元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.7m",
+      totalFloors: "12层",
+      elevators: "客梯5部",
+      efficiency: "84%",
+      propertyCompany: "大树下",
+      developer: "大树下"
+    },
+    description: "大树下TX淮海天地位于新天地时尚商圈，是大树下在上海的旗舰空间。设计融合海派文化与现代商务，艺术氛围浓厚。配备高端办公设施、咖啡吧、艺术展览空间等。社区活动多元，涵盖商务、艺术、文化等领域。适合时尚、设计、文创、咨询等行业。周边餐饮娱乐配套顶级，工作生活品质极高。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+
+  "114": {
+    id: 114,
+    name: "艾客·外滩金融中心",
+    district: "黄浦 - 外滩",
+    subway: "2号线,10号线,南京东路站步行约8分钟",
+    address: "上海市黄浦区中山东二路",
+    price: "3000~5500",
+    priceRange: "元/工位/月",
+    totalUnits: 250,
+    availableArea: "1-30工位",
+    images: [
+      aikeWaitan,
+      aikeWaitan,
+      aikeWaitan,
+      aikeWaitan
+    ],
+    availableRooms: [
+      { area: "1工位", price: "5500元/月", decoration: "精装修", floor: "全楼层" },
+      { area: "2-4工位", price: "5000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "5-10工位", price: "4500元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "10-20工位", price: "4000元/工位/月", decoration: "精装修", floor: "全楼层" },
+      { area: "20-30工位", price: "3500元/工位/月", decoration: "精装修", floor: "全楼层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "28层",
+      elevators: "客梯10部",
+      efficiency: "87%",
+      propertyCompany: "艾客",
+      developer: "艾客"
+    },
+    description: "艾客外滩金融中心位于外滩核心区域，享有黄浦江和城市天际线景观。空间设计奢华典雅，融合海派建筑风格与现代商务元素。配备顶级办公设施、私密会议室、商务洽谈室、江景休息区等。提供高端商务服务和私人定制服务。社区成员多为金融、投资、高端服务业领军企业。是上海最顶级的联合办公空间之一。",
+    nearbyBuildings: [
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
+      { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" },
+      { name: "虹桥阿里中心", price: "6.0元/m²/天", image: aliCenter, link: "/building/8" }
     ]
   }
 };
