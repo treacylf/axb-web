@@ -193,6 +193,7 @@ export default function BuildingDetail() {
               buildingName={currentBuilding.name}
               address={currentBuilding.address}
               subway={currentBuilding.subway}
+              coordinates={currentBuilding.coordinates}
             />
 
             {/* 周边楼盘 */}

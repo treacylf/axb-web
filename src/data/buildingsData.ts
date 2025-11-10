@@ -63,6 +63,7 @@ export interface BuildingData {
   priceRange: string;
   totalUnits: number;
   availableArea: string;
+  coordinates?: [number, number]; // [longitude, latitude] 经纬度坐标
   images: string[];
   availableRooms: Array<{
     area: string;
@@ -99,6 +100,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "198 - 2352m²",
+    coordinates: [121.319, 31.196], // 虹桥商务区核心位置
     images: [
       vankeCenter,
       vankeCenter,
@@ -140,6 +142,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "188 - 1853m²",
+    coordinates: [121.308, 31.193], // 虹桥商务区北区
     images: [
       exhibitionHub,
       exhibitionHub,
@@ -184,6 +187,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "188 - 1560m²",
+    coordinates: [121.316, 31.195], // 虹桥商务区中心
     images: [
       hongqiaoHui,
       hongqiaoHui,
@@ -226,6 +230,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 5,
     availableArea: "100 - 500m²",
+    coordinates: [121.421, 31.221], // 长宁区天山路附近
     images: [
       sohoTianshan,
       sohoTianshan,
@@ -264,6 +269,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 10,
     availableArea: "189 - 2200m²",
+    coordinates: [121.320, 31.198], // 虹桥火车站附近
     images: [
       hongqiaoTiandi,
       hongqiaoTiandi,
@@ -307,6 +313,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "300 - 2000m²",
+    coordinates: [121.322, 31.199], // 虹桥商务区高端区域
     images: [
       worldCenter,
       worldCenter,
@@ -349,6 +356,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "200 - 1800m²",
+    coordinates: [121.318, 31.194], // 虹桥商务区申滨路
     images: [
       zhongjunPlazaImg,
       zhongjunPlazaImg,
@@ -388,6 +396,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "250 - 2000m²",
+    coordinates: [121.317, 31.197], // 虹桥商务区申长路
     images: [
       aliCenter,
       aliCenter,
@@ -428,6 +437,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "150 - 1500m²",
+    coordinates: [121.419, 31.223], // 长宁区天山路商圈
     images: [
       yuandongPlaza,
       yuandongPlaza,
@@ -469,6 +479,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "180 - 1400m²",
+    coordinates: [121.420, 31.222], // 长宁区天山路
     images: [
       weijingCenter,
       weijingCenter,
@@ -508,6 +519,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "200 - 1600m²",
+    coordinates: [121.418, 31.221], // 长宁区天山路商圈
     images: [
       shangjiaCenter,
       shangjiaCenter,
@@ -548,6 +560,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 12,
     availableArea: "100 - 1200m²",
+    coordinates: [121.445, 31.228], // 静安区常德路
     images: [
       show800,
       show800,
@@ -590,6 +603,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 15,
     availableArea: "80 - 1500m²",
+    coordinates: [121.451, 31.289], // 静安区大宁商圈
     images: [
       anken,
       anken,
@@ -633,6 +647,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 10,
     availableArea: "120 - 1000m²",
+    coordinates: [121.465, 31.280], // 闸北区汶水路
     images: [
       bridge8,
       bridge8,
@@ -675,6 +690,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "100 - 800m²",
+    coordinates: [121.452, 31.288], // 静安区共和新路
     images: [
       show800,
       show800,
@@ -760,6 +776,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "150 - 800m²",
+    coordinates: [121.497, 31.219], // 黄浦江畔董家渡
     images: [
       bridge8,
       bridge8,
@@ -800,6 +817,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 9,
     availableArea: "100 - 900m²",
+    coordinates: [121.525, 31.169], // 浦东新区三林
     images: [
       show800,
       show800,
@@ -843,6 +861,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 11,
     availableArea: "120 - 1100m²",
+    coordinates: [121.497, 31.183], // 浦东世博园区
     images: [
       anken,
       anken,
@@ -887,6 +906,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 8600m²",
+    coordinates: [121.384, 31.210], // 长宁区虹桥临空
     images: [
       hongqiaoBu,
       hongqiaoBu,
@@ -922,6 +942,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 6500m²",
+    coordinates: [121.431, 31.262], // 普陀区M50创意园
     images: [
       liboReeb,
       liboReeb,
@@ -957,6 +978,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 7200m²",
+    coordinates: [121.408, 31.158], // 徐汇区漕河泾
     images: [
       tianlinFang,
       tianlinFang,
@@ -992,6 +1014,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 12000m²",
+    coordinates: [121.383, 31.211], // 长宁区虹桥临空
     images: [
       zhongjunPlaza,
       zhongjunPlaza,
@@ -1027,6 +1050,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 9500m²",
+    coordinates: [121.315, 31.195], // 闵行区虹桥商务区
     images: [
       hongqiaoZhengrong,
       hongqiaoZhengrong,
@@ -1062,6 +1086,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 8000m²",
+    coordinates: [121.488, 31.021], // 闵行区紫竹高新区
     images: [
       maxTech,
       maxTech,
@@ -1097,6 +1122,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 10500m²",
+    coordinates: [121.605, 31.268], // 浦东新区金桥
     images: [
       pingjinCenter,
       pingjinCenter,
@@ -1132,6 +1158,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 7500m²",
+    coordinates: [121.382, 31.110], // 闵行区莘庄
     images: [
       rongdaCenter,
       rongdaCenter,
@@ -1167,6 +1194,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 6800m²",
+    coordinates: [121.186, 31.131], // 青浦区华新镇
     images: [
       hongqiaoBu,
       hongqiaoBu,
@@ -1202,6 +1230,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 11000m²",
+    coordinates: [121.316, 31.194], // 闵行区虹桥商务区
     images: [
       liboReeb,
       liboReeb,
@@ -1237,6 +1266,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 9200m²",
+    coordinates: [121.314, 31.192], // 闵行区虹桥商务区
     images: [
       tianlinFang,
       tianlinFang,
@@ -1309,6 +1339,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 450,
     availableArea: "1-50工位",
+    coordinates: [121.450, 31.227], // 静安寺商圈
     images: [
       wework1,
       wework1,
@@ -1348,6 +1379,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 380,
     availableArea: "1-50工位",
+    coordinates: [121.320, 31.198], // 虹桥天地
     images: [
       weworkTiandi,
       weworkTiandi,

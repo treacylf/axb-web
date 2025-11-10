@@ -10,14 +10,16 @@ interface BuildingLocationMapProps {
   buildingName: string;
   address: string;
   subway: string;
-  coordinates?: [number, number]; // [longitude, latitude]
+  coordinates?: [number, number]; // [longitude, latitude] 经纬度坐标
+  defaultCoordinates?: [number, number]; // 默认坐标（用于演示）
 }
 
 export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
   buildingName,
   address,
   subway,
-  coordinates = [121.4068, 31.1886] // 默认虹桥商务区坐标
+  coordinates = [121.4068, 31.1886], // 默认虹桥商务区坐标
+  defaultCoordinates = [121.4068, 31.1886]
 }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
