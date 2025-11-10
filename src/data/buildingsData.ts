@@ -37,6 +37,22 @@ import huantuBaiyulan from "@/assets/coworking/huantu-baiyulan.jpg";
 import dashuxiaTianjie from "@/assets/coworking/dashuxia-tianjie.jpg";
 import aikeWaitan from "@/assets/coworking/aike-waitan.jpg";
 
+// District Images
+import hongqiaoBusiness from "@/assets/districts/hongqiao-business.jpg";
+import hongqiaoAirport from "@/assets/districts/hongqiao-airport.jpg";
+import gubei from "@/assets/districts/gubei.jpg";
+import renminSquare from "@/assets/districts/renmin-square.jpg";
+import changfeng from "@/assets/districts/changfeng.jpg";
+import xinzhuang from "@/assets/districts/xinzhuang.jpg";
+import lujiazui from "@/assets/districts/lujiazui.jpg";
+import districtPlaceholder from "@/assets/district-placeholder.jpg";
+
+export interface DistrictData {
+  name: string;
+  image: string;
+  aid: string;
+}
+
 export interface BuildingData {
   id: number;
   name: string;
@@ -1829,3 +1845,15 @@ export const buildingData: Record<string, BuildingData> = {
     ]
   }
 };
+
+// 商圈数据
+export const districtData: DistrictData[] = [
+  { name: "虹桥商务区", image: hongqiaoBusiness, aid: "99" },
+  { name: "徐泾/西虹桥", image: districtPlaceholder, aid: "108" },
+  { name: "虹桥临空经济区", image: hongqiaoAirport, aid: "86" },
+  { name: "虹桥古北开发区", image: gubei, aid: "87" },
+  { name: "人民广场", image: renminSquare, aid: "63" },
+  { name: "长风商务区", image: changfeng, aid: "91" },
+  { name: "莘庄商务区", image: xinzhuang, aid: "101" },
+  { name: "陆家嘴", image: lujiazui, aid: "48" },
+];

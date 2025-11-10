@@ -1,30 +1,7 @@
 import { Card } from "@/components/ui/card";
-import hongqiaoBusiness from "@/assets/districts/hongqiao-business.jpg";
-import hongqiaoAirport from "@/assets/districts/hongqiao-airport.jpg";
-import gubei from "@/assets/districts/gubei.jpg";
-import renminSquare from "@/assets/districts/renmin-square.jpg";
-import changfeng from "@/assets/districts/changfeng.jpg";
-import xinzhuang from "@/assets/districts/xinzhuang.jpg";
-import lujiazui from "@/assets/districts/lujiazui.jpg";
-import districtPlaceholder from "@/assets/district-placeholder.jpg";
-
-interface District {
-  name: string;
-  image: string;
-  aid: string;
-}
+import { districtData } from "@/data/buildingsData";
 
 export const DistrictGrid = () => {
-  const districts: District[] = [
-    { name: "虹桥商务区", image: hongqiaoBusiness, aid: "99" },
-    { name: "徐泾/西虹桥", image: districtPlaceholder, aid: "108" },
-    { name: "虹桥临空经济区", image: hongqiaoAirport, aid: "86" },
-    { name: "虹桥古北开发区", image: gubei, aid: "87" },
-    { name: "人民广场", image: renminSquare, aid: "63" },
-    { name: "长风商务区", image: changfeng, aid: "91" },
-    { name: "莘庄商务区", image: xinzhuang, aid: "101" },
-    { name: "陆家嘴", image: lujiazui, aid: "48" },
-  ];
 
   return (
     <section className="py-16 lg:py-24">
@@ -37,7 +14,7 @@ export const DistrictGrid = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-          {districts.map((district, index) => (
+          {districtData.map((district, index) => (
             <Card
               key={index}
               className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all duration-300 hover:shadow-xl"
