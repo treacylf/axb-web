@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { buildingData, type BuildingData } from "@/data/buildingsData";
 import wxCode from "@/assets/wx_code.png";
+import { BuildingLocationMap } from "@/components/BuildingLocationMap";
 
 export default function BuildingDetail() {
   const { id } = useParams();
@@ -186,6 +187,13 @@ export default function BuildingDetail() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* 地图 */}
+            <BuildingLocationMap
+              buildingName={currentBuilding.name}
+              address={currentBuilding.address}
+              subway={currentBuilding.subway}
+            />
 
             {/* 周边楼盘 */}
             <Card>
