@@ -1419,6 +1419,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 320,
     availableArea: "1-40工位",
+    coordinates: [121.466, 31.221], // 黄浦区淮海中路
     images: [
       distrii1,
       distrii1,
@@ -1458,6 +1459,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 400,
     availableArea: "1-60工位",
+    coordinates: [121.502, 31.238], // 陆家嘴环贸广场
     images: [
       distriiGuanjie,
       distriiGuanjie,
@@ -1497,6 +1499,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 350,
     availableArea: "1-50工位",
+    coordinates: [121.454, 31.228], // 静安嘉里中心
     images: [
       umon1,
       umon1,
@@ -1536,6 +1539,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 300,
     availableArea: "1-40工位",
+    coordinates: [121.318, 31.197], // 虹桥商务区南丰城
     images: [
       umonHongqiao,
       umonHongqiao,
@@ -1575,6 +1579,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 280,
     availableArea: "1-30工位",
+    coordinates: [121.538, 31.232], // 世纪大道1788号
     images: [
       regus1788,
       regus1788,
@@ -1614,6 +1619,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 400,
     availableArea: "1-60工位",
+    coordinates: [121.604, 31.201], // 张江高科绿谷广场
     images: [
       krspaceLvgu,
       krspaceLvgu,
@@ -1653,6 +1659,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 250,
     availableArea: "1-35工位",
+    coordinates: [121.448, 31.250], // 静安区江宁路
     images: [
       kuaiyiWantong,
       kuaiyiWantong,
@@ -1692,6 +1699,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 320,
     availableArea: "1-40工位",
+    coordinates: [121.449, 31.225], // 嘉里中心
     images: [
       deshiKerry,
       deshiKerry,
@@ -1731,6 +1739,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 360,
     availableArea: "1-50工位",
+    coordinates: [121.436, 31.252], // 环球港
     images: [
       wizworkHuanqiugang,
       wizworkHuanqiugang,
@@ -1770,6 +1779,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 280,
     availableArea: "1-30工位",
+    coordinates: [121.477, 31.235], // 白玉兰广场
     images: [
       huantuBaiyulan,
       huantuBaiyulan,
@@ -1809,6 +1819,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 300,
     availableArea: "1-40工位",
+    coordinates: [121.473, 31.220], // TX淮海天地
     images: [
       dashuxiaTianjie,
       dashuxiaTianjie,
@@ -1848,6 +1859,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/工位/月",
     totalUnits: 250,
     availableArea: "1-30工位",
+    coordinates: [121.490, 31.239], // 外滩金融中心
     images: [
       aikeWaitan,
       aikeWaitan,
