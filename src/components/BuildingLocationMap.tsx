@@ -1,10 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { MapPin } from 'lucide-react';
+
+declare global {
+  interface Window {
+    BMapGL: any;
+    BMAP_ANIMATION_BOUNCE: any;
+  }
+}
 
 interface BuildingLocationMapProps {
   buildingName: string;
@@ -18,103 +23,91 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
   buildingName,
   address,
   subway,
-  coordinates = [121.4068, 31.1886], // 默认虹桥商务区坐标
+  coordinates = [121.4068, 31.1886], // 默认虹桥商务区坐标 [longitude, latitude]
   defaultCoordinates = [121.4068, 31.1886]
 }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
+  const map = useRef<any>(null);
+  const [baiduAk, setBaiduAk] = useState<string>('');
   const [isMapInitialized, setIsMapInitialized] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  const loadBaiduMapScript = () => {
+    if (!baiduAk) return;
+
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=${baiduAk}&callback=initBaiduMap`;
+    document.head.appendChild(script);
+
+    (window as any).initBaiduMap = () => {
+      setScriptLoaded(true);
+    };
+  };
 
   const initializeMap = () => {
-    if (!mapContainer.current || !mapboxToken) return;
+    if (!mapContainer.current || !window.BMapGL) return;
 
-    mapboxgl.accessToken = mapboxToken;
+    // 百度地图使用的是 [纬度, 经度] 顺序，需要转换
+    const point = new window.BMapGL.Point(coordinates[0], coordinates[1]);
     
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: coordinates,
-      zoom: 15,
-      pitch: 45,
-    });
+    map.current = new window.BMapGL.Map(mapContainer.current);
+    map.current.centerAndZoom(point, 17);
+    map.current.enableScrollWheelZoom(true);
 
-    // 添加导航控制
-    map.current.addControl(
-      new mapboxgl.NavigationControl({
-        visualizePitch: true,
-      }),
-      'top-right'
+    // 添加3D控件
+    const navi3DCtrl = new window.BMapGL.NavigationControl3D();
+    map.current.addControl(navi3DCtrl);
+
+    // 添加缩放控件
+    const zoomCtrl = new window.BMapGL.ZoomControl();
+    map.current.addControl(zoomCtrl);
+
+    // 添加标记
+    const marker = new window.BMapGL.Marker(point);
+    map.current.addMarker(marker);
+    marker.setAnimation(window.BMAP_ANIMATION_BOUNCE);
+
+    // 创建信息窗口
+    const infoWindow = new window.BMapGL.InfoWindow(
+      `<div style="padding: 10px; max-width: 250px;">
+        <h3 style="font-weight: 600; margin-bottom: 8px; font-size: 16px;">${buildingName}</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 4px;">${address}</p>
+        <p style="color: #666; font-size: 14px;">${subway}</p>
+      </div>`,
+      {
+        width: 280,
+        height: 120,
+        title: ''
+      }
     );
 
-    // 添加建筑位置标记
-    const marker = new mapboxgl.Marker({ color: '#FF6B6B' })
-      .setLngLat(coordinates)
-      .setPopup(
-        new mapboxgl.Popup({ offset: 25 }).setHTML(
-          `<div class="p-2">
-            <h3 class="font-semibold">${buildingName}</h3>
-            <p class="text-sm text-gray-600 mt-1">${address}</p>
-            <p class="text-sm text-gray-600">${subway}</p>
-          </div>`
-        )
-      )
-      .addTo(map.current);
-
-    // 添加3D建筑图层
-    map.current.on('load', () => {
-      const layers = map.current?.getStyle().layers;
-      if (!layers) return;
-
-      const labelLayerId = layers.find(
-        (layer) => layer.type === 'symbol' && layer.layout && layer.layout['text-field']
-      )?.id;
-
-      map.current?.addLayer(
-        {
-          'id': '3d-buildings',
-          'source': 'composite',
-          'source-layer': 'building',
-          'filter': ['==', 'extrude', 'true'],
-          'type': 'fill-extrusion',
-          'minzoom': 15,
-          'paint': {
-            'fill-extrusion-color': '#aaa',
-            'fill-extrusion-height': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              15,
-              0,
-              15.05,
-              ['get', 'height']
-            ],
-            'fill-extrusion-base': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              15,
-              0,
-              15.05,
-              ['get', 'min_height']
-            ],
-            'fill-extrusion-opacity': 0.6
-          }
-        },
-        labelLayerId
-      );
+    // 点击标记显示信息窗口
+    marker.addEventListener('click', () => {
+      map.current.openInfoWindow(infoWindow, point);
     });
+
+    // 默认打开信息窗口
+    map.current.openInfoWindow(infoWindow, point);
 
     setIsMapInitialized(true);
   };
 
   useEffect(() => {
+    if (scriptLoaded) {
+      initializeMap();
+    }
+  }, [scriptLoaded]);
+
+  useEffect(() => {
     return () => {
-      map.current?.remove();
+      if (map.current) {
+        map.current.destroy();
+      }
     };
   }, []);
 
-  if (!isMapInitialized && !mapboxToken) {
+  if (!isMapInitialized && !scriptLoaded) {
     return (
       <Card>
         <CardHeader>
@@ -126,26 +119,26 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
         <CardContent>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              请输入您的 Mapbox 公开访问令牌以显示地图。您可以在{' '}
+              请输入您的百度地图 API Key (AK) 以显示地图。您可以在{' '}
               <a 
-                href="https://mapbox.com/" 
+                href="https://lbsyun.baidu.com/apiconsole/key" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
-                Mapbox 官网
+                百度地图开放平台
               </a>
-              {' '}注册并获取令牌。
+              {' '}注册并获取 AK。
             </p>
             <div className="flex gap-2">
               <Input
                 type="text"
-                placeholder="输入 Mapbox Access Token"
-                value={mapboxToken}
-                onChange={(e) => setMapboxToken(e.target.value)}
+                placeholder="输入百度地图 AK"
+                value={baiduAk}
+                onChange={(e) => setBaiduAk(e.target.value)}
                 className="flex-1"
               />
-              <Button onClick={initializeMap} disabled={!mapboxToken}>
+              <Button onClick={loadBaiduMapScript} disabled={!baiduAk}>
                 加载地图
               </Button>
             </div>
