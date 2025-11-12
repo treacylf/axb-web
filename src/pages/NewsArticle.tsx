@@ -40,9 +40,7 @@ const NewsArticle = () => {
             <ChevronRight className="w-4 h-4" />
             <Link to="/news" className="hover:text-primary">资讯中心</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link to={`/news/category/${article.categoryId}`} className="hover:text-primary">
-              {category?.name}
-            </Link>
+            <span className="text-foreground">{category?.name}</span>
             <ChevronRight className="w-4 h-4" />
             <span className="text-foreground">正文</span>
           </div>
@@ -62,9 +60,7 @@ const NewsArticle = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Tag className="w-4 h-4" />
-                      <Link to={`/news/category/${article.categoryId}`} className="hover:text-primary">
-                        {article.category}
-                      </Link>
+                      <span>{article.category}</span>
                     </div>
                   </div>
 
@@ -92,9 +88,7 @@ const NewsArticle = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
                         标签：
-                        <Link to={`/news/category/${article.categoryId}`} className="text-primary hover:underline ml-2">
-                          {article.category}
-                        </Link>
+                        <span className="text-primary ml-2">{article.category}</span>
                       </span>
                     </div>
                   </div>
@@ -110,15 +104,14 @@ const NewsArticle = () => {
                   <h3 className="text-lg font-semibold mb-4">文章分类</h3>
                   <div className="space-y-2">
                     {newsCategories.map((cat) => (
-                      <Link
+                      <div
                         key={cat.id}
-                        to={`/news/category/${cat.id}`}
-                        className={`block px-4 py-2 rounded hover:bg-accent transition-colors ${
-                          cat.id === article.categoryId ? 'bg-primary text-primary-foreground' : ''
+                        className={`block px-4 py-2 rounded ${
+                          cat.id === article.categoryId ? 'bg-primary text-primary-foreground' : 'bg-muted'
                         }`}
                       >
                         {cat.name}
-                      </Link>
+                      </div>
                     ))}
                   </div>
                 </CardContent>

@@ -199,7 +199,7 @@ export const NewsSection = () => {
                 <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
                   {category.title}
                   <Link
-                    to={`/news/category/${category.cateId}`}
+                    to="/news"
                     className="text-sm text-primary hover:underline font-normal"
                   >
                     更多 &gt;&gt;
@@ -234,7 +234,7 @@ export const NewsSection = () => {
                 <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
                   {category.title}
                   <Link
-                    to={`/news/category/${category.cateId}`}
+                    to="/news"
                     className="text-sm text-primary hover:underline font-normal"
                   >
                     更多 &gt;&gt;
