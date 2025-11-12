@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const NewsSection = () => {
   const newsCategories = [
     {
@@ -196,12 +198,12 @@ export const NewsSection = () => {
               <div key={category.cateId} className="news-items">
                 <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
                   {category.title}
-                  <a
-                    href={`#news-${category.cateId}`}
+                  <Link
+                    to={`/news/category/${category.cateId}`}
                     className="text-sm text-primary hover:underline font-normal"
                   >
                     更多 &gt;&gt;
-                  </a>
+                  </Link>
                 </h4>
                 <ul className="space-y-2">
                   {category.items.map((item, index) => (
@@ -231,12 +233,12 @@ export const NewsSection = () => {
               <div key={category.cateId} className="news-items">
                 <h4 className="text-lg font-semibold mb-4 pb-2 border-b flex items-center justify-between">
                   {category.title}
-                  <a
-                    href={`#news-${category.cateId}`}
+                  <Link
+                    to={`/news/category/${category.cateId}`}
                     className="text-sm text-primary hover:underline font-normal"
                   >
                     更多 &gt;&gt;
-                  </a>
+                  </Link>
                 </h4>
                 <ul className="space-y-2">
                   {category.items.map((item, index) => (
