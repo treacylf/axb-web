@@ -2,8 +2,16 @@ import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { newsData, newsCategories } from "@/data/newsData";
-import { ChevronRight, Calendar, Tag } from "lucide-react";
+import { Calendar, Tag } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const NewsArticle = () => {
   const { id } = useParams<{ id: string }>();
@@ -35,15 +43,31 @@ const NewsArticle = () => {
       <main className="flex-1 bg-muted/30">
         <div className="container mx-auto px-4 py-8">
           {/* 面包屑导航 */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
-            <Link to="/" className="hover:text-primary">首页</Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link to="/news" className="hover:text-primary">资讯中心</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-foreground">{category?.name}</span>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-foreground">正文</span>
-          </div>
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">首页</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/news">资讯中心</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to={`/news?category=${category?.slug}`}>{category?.name}</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{article.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* 文章主体 */}
