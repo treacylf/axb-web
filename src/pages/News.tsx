@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { 
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { newsData, newsCategories } from "@/data/newsData";
 
 interface PropertyItem {
@@ -34,6 +42,8 @@ const hotProperties: PropertyItem[] = [
 
 export default function News() {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const categories = [
     { id: null, name: "全部", count: newsData.length },
@@ -46,6 +56,56 @@ export default function News() {
   const filteredNews = activeCategory === null
     ? newsData 
     : newsData.filter(item => item.categoryId === activeCategory);
+
+  const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentNews = filteredNews.slice(startIndex, endIndex);
+
+  const handleCategoryChange = (categoryId: number | null) => {
+    setActiveCategory(categoryId);
+    setCurrentPage(1); // Reset to first page when category changes
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getPageNumbers = () => {
+    const pages: (number | string)[] = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 4; i++) {
+          pages.push(i);
+        }
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = totalPages - 3; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          pages.push(i);
+        }
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -63,7 +123,7 @@ export default function News() {
                     {categories.map((category) => (
                       <button
                         key={category.id ?? 'all'}
-                        onClick={() => setActiveCategory(category.id)}
+                        onClick={() => handleCategoryChange(category.id)}
                         className={`px-4 py-3 text-left border-b last:border-b-0 transition-colors ${
                           activeCategory === category.id
                             ? "bg-primary text-primary-foreground font-medium"
@@ -117,7 +177,7 @@ export default function News() {
             {/* Right Content - News List */}
             <div className="flex-1">
               <div className="space-y-0">
-                {filteredNews.map((news, index) => (
+                {currentNews.map((news, index) => (
                   <div key={news.id}>
                     {index > 0 && <hr className="border-border" />}
                     <Link 
@@ -158,15 +218,43 @@ export default function News() {
               </div>
 
               {/* Pagination */}
-              <div className="mt-8 flex justify-center gap-2 flex-wrap">
-                <Button variant="outline" size="sm">上一页</Button>
-                <Button variant="default" size="sm">1</Button>
-                <Button variant="outline" size="sm">2</Button>
-                <Button variant="outline" size="sm">3</Button>
-                <Button variant="outline" size="sm">4</Button>
-                <Button variant="outline" size="sm">5</Button>
-                <Button variant="outline" size="sm">下一页</Button>
-              </div>
+              {totalPages > 1 && (
+                <div className="mt-8">
+                  <Pagination>
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious 
+                          onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                          className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                      </PaginationItem>
+                      
+                      {getPageNumbers().map((page, index) => (
+                        <PaginationItem key={index}>
+                          {page === 'ellipsis' ? (
+                            <PaginationEllipsis />
+                          ) : (
+                            <PaginationLink
+                              onClick={() => handlePageChange(page as number)}
+                              isActive={currentPage === page}
+                              className="cursor-pointer"
+                            >
+                              {page}
+                            </PaginationLink>
+                          )}
+                        </PaginationItem>
+                      ))}
+                      
+                      <PaginationItem>
+                        <PaginationNext 
+                          onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                          className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
             </div>
           </div>
         </div>
