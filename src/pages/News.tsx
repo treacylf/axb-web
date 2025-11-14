@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,9 +41,21 @@ const hotProperties: PropertyItem[] = [
 
 
 export default function News() {
+  const [searchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+
+  // Read category from URL on mount
+  useEffect(() => {
+    const categorySlug = searchParams.get('category');
+    if (categorySlug) {
+      const category = newsCategories.find(cat => cat.slug === categorySlug);
+      if (category) {
+        setActiveCategory(category.id);
+      }
+    }
+  }, [searchParams]);
 
   const categories = [
     { id: null, name: "全部", count: newsData.length },
