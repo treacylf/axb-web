@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
 import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MapPin, Phone, Building2 } from "lucide-react";
 import { buildingData } from "@/data/buildingsData";
 import {
@@ -238,38 +239,45 @@ export default function SearchResults() {
           </div>
 
           {/* 顶部导航标签 */}
-          <div className="flex gap-4 mb-6 border-b">
-            <a
-              href="/search?nav_id=0"
-              className={`px-4 py-2 ${navId === "0" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
-            >
-              租办公室
-            </a>
-            <a
-              href="/search?nav_id=1"
-              className={`px-4 py-2 ${navId === "1" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
-            >
-              写字楼
-            </a>
-            <a
-              href="/search?nav_id=2"
-              className={`px-4 py-2 ${navId === "2" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
-            >
-              创意园区
-            </a>
-            <a
-              href="/search?nav_id=3"
-              className={`px-4 py-2 ${navId === "3" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
-            >
-              共享办公
-            </a>
-            <a
-              href="/search?nav_id=4"
-              className={`px-4 py-2 ${navId === "4" ? "border-b-2 border-primary text-primary" : "text-gray-600"}`}
-            >
-              总部独栋
-            </a>
-          </div>
+          <Tabs value={navId} className="mb-6">
+            <TabsList className="bg-transparent border-b border-border rounded-none h-auto p-0 w-full justify-start">
+              <TabsTrigger 
+                value="0"
+                onClick={() => navigate("/search?nav_id=0")}
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
+              >
+                租办公室
+              </TabsTrigger>
+              <TabsTrigger 
+                value="1"
+                onClick={() => navigate("/search?nav_id=1")}
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
+              >
+                写字楼
+              </TabsTrigger>
+              <TabsTrigger 
+                value="2"
+                onClick={() => navigate("/search?nav_id=2")}
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
+              >
+                创意园区
+              </TabsTrigger>
+              <TabsTrigger 
+                value="3"
+                onClick={() => navigate("/search?nav_id=3")}
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
+              >
+                共享办公
+              </TabsTrigger>
+              <TabsTrigger 
+                value="4"
+                onClick={() => navigate("/search?nav_id=4")}
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
+              >
+                总部独栋
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
 
           <div className="flex gap-6">
             {/* 主内容区 */}
