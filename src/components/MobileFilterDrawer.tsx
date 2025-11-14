@@ -1,8 +1,25 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+import { SlidersHorizontal, X } from "lucide-react";
+import { useState } from "react";
 
-export const FilterBar = () => {
+export const MobileFilterDrawer = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const [open, setOpen] = useState(false);
   
   const currentDistrict = searchParams.get("district") || "";
   const currentSubway = searchParams.get("subway") || "";
@@ -20,6 +37,21 @@ export const FilterBar = () => {
     }
     
     navigate(`/search?${params.toString()}`);
+  };
+
+  const handleReset = () => {
+    navigate("/search?nav_id=0");
+    setOpen(false);
+  };
+
+  const getActiveFiltersCount = () => {
+    let count = 0;
+    if (currentDistrict) count++;
+    if (currentSubway) count++;
+    if (currentBusinessArea) count++;
+    if (currentSize) count++;
+    if (currentPrice) count++;
+    return count;
   };
 
   const filters = [
@@ -121,37 +153,87 @@ export const FilterBar = () => {
     },
   ];
 
+  const activeFiltersCount = getActiveFiltersCount();
+
   return (
-    <div className="border-b bg-card hidden lg:block">
-      <div className="container mx-auto px-4 py-3">
-        {filters.map((filter) => (
-          <div key={filter.title} className="flex border-b last:border-0 py-3">
-            <div className="min-w-[80px] font-semibold text-foreground">
-              {filter.title}
-            </div>
-            <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2">
-              {filter.options.map((option, index) => (
-                <a
-                  key={index}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleFilterClick(filter.type, option.value);
-                  }}
-                  href="#"
-                  className={`text-sm transition-colors cursor-pointer ${
-                    (option.value === "" && filter.current === "") || 
-                    (option.value !== "" && filter.current === option.value)
-                      ? "text-primary font-medium"
-                      : "text-muted-foreground hover:text-primary"
-                  }`}
-                >
-                  {option.label}
-                </a>
-              ))}
-            </div>
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <Button 
+          variant="outline" 
+          className="w-full lg:hidden gap-2 relative"
+        >
+          <SlidersHorizontal className="w-4 h-4" />
+          筛选条件
+          {activeFiltersCount > 0 && (
+            <Badge 
+              variant="default" 
+              className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center rounded-full"
+            >
+              {activeFiltersCount}
+            </Badge>
+          )}
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="bottom" className="h-[85vh] p-0">
+        <SheetHeader className="px-6 py-4 border-b">
+          <div className="flex items-center justify-between">
+            <SheetTitle>筛选条件</SheetTitle>
+            {activeFiltersCount > 0 && (
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={handleReset}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-4 h-4 mr-1" />
+                清空
+              </Button>
+            )}
           </div>
-        ))}
-      </div>
-    </div>
+          <SheetDescription>
+            选择您需要的筛选条件，找到理想房源
+          </SheetDescription>
+        </SheetHeader>
+        
+        <ScrollArea className="h-[calc(85vh-160px)]">
+          <div className="px-6 py-4 space-y-6">
+            {filters.map((filter, index) => (
+              <div key={filter.title}>
+                <h3 className="font-semibold text-foreground mb-3 text-sm">
+                  {filter.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {filter.options.map((option) => (
+                    <Button
+                      key={option.value}
+                      variant={
+                        (option.value === "" && filter.current === "") || 
+                        (option.value !== "" && filter.current === option.value)
+                          ? "default"
+                          : "outline"
+                      }
+                      size="sm"
+                      onClick={() => handleFilterClick(filter.type, option.value)}
+                      className="rounded-full"
+                    >
+                      {option.label}
+                    </Button>
+                  ))}
+                </div>
+                {index < filters.length - 1 && <Separator className="mt-6" />}
+              </div>
+            ))}
+          </div>
+        </ScrollArea>
+
+        <SheetFooter className="px-6 py-4 border-t mt-auto">
+          <SheetClose asChild>
+            <Button className="w-full" size="lg">
+              查看结果
+            </Button>
+          </SheetClose>
+        </SheetFooter>
+      </SheetContent>
+    </Sheet>
   );
 };
