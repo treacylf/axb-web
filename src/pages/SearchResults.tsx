@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
+import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -239,8 +240,13 @@ export default function SearchResults() {
       <Header />
       
       <div className="flex-1 bg-gray-50">
-        {/* 筛选栏 */}
+        {/* 桌面端筛选栏 */}
         <FilterBar />
+
+        {/* 移动端筛选按钮 */}
+        <div className="lg:hidden container mx-auto px-4 py-3">
+          <MobileFilterDrawer />
+        </div>
 
         <div className="container mx-auto px-4 py-6">
           {/* 面包屑导航 */}
