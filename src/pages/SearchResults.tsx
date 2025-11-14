@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -6,7 +6,9 @@ import { FilterBar } from "@/components/FilterBar";
 import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MapPin, Phone, Building2 } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { MapPin, Phone, Building2, Search, Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { buildingData } from "@/data/buildingsData";
 import {
   Pagination,
@@ -63,10 +65,20 @@ function convertBuildingDataToSearchFormat(): Building[] {
 export default function SearchResults() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
   const query = searchParams.get("q") || "";
   const currentPage = parseInt(searchParams.get("page") || "1");
   
   const itemsPerPage = 6;
+
+  // 模拟加载效果
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [searchParams]);
 
   // 使用共享的buildingData
   const allBuildings: Building[] = convertBuildingDataToSearchFormat();
@@ -299,7 +311,65 @@ export default function SearchResults() {
 
               {/* 楼盘列表 */}
               <div className="space-y-6">
-                {currentBuildings.map((building) => (
+                {isLoading ? (
+                  // 加载骨架屏
+                  Array.from({ length: 3 }).map((_, index) => (
+                    <Card key={index} className="overflow-hidden">
+                      <CardContent className="p-0">
+                        <div className="flex">
+                          <Skeleton className="w-80 h-60 flex-shrink-0 rounded-none" />
+                          <div className="flex-1 p-6 space-y-4">
+                            <div className="flex justify-between">
+                              <Skeleton className="h-8 w-48" />
+                              <Skeleton className="h-8 w-32" />
+                            </div>
+                            <Skeleton className="h-4 w-full" />
+                            <Skeleton className="h-4 w-3/4" />
+                            <div className="flex gap-2">
+                              <Skeleton className="h-6 w-20" />
+                              <Skeleton className="h-6 w-20" />
+                              <Skeleton className="h-6 w-20" />
+                            </div>
+                            <div className="flex justify-between items-center pt-4">
+                              <Skeleton className="h-10 w-32" />
+                              <Skeleton className="h-10 w-24" />
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))
+                ) : filteredBuildings.length === 0 ? (
+                  // 空状态
+                  <div className="flex flex-col items-center justify-center py-16 px-4">
+                    <div className="w-32 h-32 mb-6 rounded-full bg-muted flex items-center justify-center">
+                      <Search className="w-16 h-16 text-muted-foreground" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-foreground mb-2">
+                      未找到相关房源
+                    </h3>
+                    <p className="text-muted-foreground text-center mb-8 max-w-md">
+                      抱歉，没有找到符合您筛选条件的房源。试试调整筛选条件或浏览其他类别吧。
+                    </p>
+                    <div className="flex gap-4">
+                      <Button 
+                        variant="default" 
+                        onClick={() => navigate("/search?nav_id=0")}
+                        className="gap-2"
+                      >
+                        <Home className="w-4 h-4" />
+                        重置筛选
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        onClick={() => navigate("/")}
+                      >
+                        返回首页
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  currentBuildings.map((building) => (
                   <Card key={building.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                     <Link to={`/building/${building.id}`}>
                       <CardContent className="p-0">
@@ -360,11 +430,12 @@ export default function SearchResults() {
                       </CardContent>
                     </Link>
                   </Card>
-                ))}
+                ))
+                )}
               </div>
 
               {/* 分页 */}
-              {totalPages > 1 && (
+              {!isLoading && filteredBuildings.length > 0 && totalPages > 1 && (
                 <div className="mt-8">
                   <Pagination>
                     <PaginationContent>
