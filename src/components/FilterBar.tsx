@@ -1,6 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-export const FilterBar = ({ hideOnMobile = false }: { hideOnMobile?: boolean }) => {
+export const FilterBar = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   
@@ -122,7 +122,7 @@ export const FilterBar = ({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
   ];
 
   return (
-    <div className={`border-b bg-card ${hideOnMobile ? 'hidden lg:block' : ''}`}>
+    <div className="border-b bg-card">
       <div className="container mx-auto px-4 py-3">
         {filters.map((filter) => (
           <div key={filter.title} className="flex border-b last:border-0 py-3">
