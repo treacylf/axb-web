@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { SearchBox } from "@/components/SearchBox";
 import { FilterBar } from "@/components/FilterBar";
+import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { DistrictGrid } from "@/components/DistrictGrid";
 import { BuildingGrid } from "@/components/BuildingGrid";
 import { CoworkingGrid } from "@/components/CoworkingGrid";
@@ -35,7 +36,12 @@ const Index = () => {
         </div>
 
         {/* Filter Bar */}
-        <FilterBar />
+        <div className="hidden lg:block">
+          <FilterBar />
+        </div>
+        <div className="lg:hidden">
+          <MobileFilterDrawer />
+        </div>
 
         {/* Districts */}
         <DistrictGrid />
