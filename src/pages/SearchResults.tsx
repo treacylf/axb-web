@@ -240,11 +240,13 @@ export default function SearchResults() {
       <Header />
       
       <div className="flex-1 bg-gray-50">
-        {/* 桌面端筛选栏 */}
-        <FilterBar hideOnMobile={true} />
+        {/* 桌面端筛选栏 - 完整展开式 */}
+        <div className="hidden lg:block">
+          <FilterBar />
+        </div>
 
-        {/* 移动端筛选按钮 */}
-        <div className="lg:hidden container mx-auto px-4 py-3">
+        {/* 移动端筛选抽屉 */}
+        <div className="lg:hidden">
           <MobileFilterDrawer />
         </div>
 
