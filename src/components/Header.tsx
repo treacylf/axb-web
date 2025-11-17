@@ -33,7 +33,7 @@ export const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-2">
-              <img src={logo} alt="上海超办网" className="h-12 w-auto" />
+              <img src={logo} alt="上海安选办网" className="h-12 w-auto" />
             </a>
           </div>
 

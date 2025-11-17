@@ -21,7 +21,7 @@ const FindHouse = () => {
       });
       return;
     }
-    
+
     if (!formData.phone.trim() || formData.phone.length !== 11) {
       toast({
         title: "请填写正确的手机号",
@@ -34,14 +34,14 @@ const FindHouse = () => {
       title: "提交成功",
       description: "我们的专业顾问将在24小时内与您联系",
     });
-    
+
     setFormData({ needs: "", phone: "" });
   };
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main>
         {/* Hero Image */}
         <div className="relative w-full">
@@ -60,7 +60,7 @@ const FindHouse = () => {
                 免费委托找房
               </h1>
               <p className="text-lg text-muted-foreground">
-                一键提交找房委托，超办助力轻松办公选址
+                一键提交找房委托，安选办助力轻松办公选址
               </p>
             </div>
 
@@ -152,8 +152,8 @@ const FindHouse = () => {
                 </h2>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    "浦东", "黄浦", "静安", "徐汇", "长宁", "普陀", 
-                    "闵行", "青浦", "虹口", "杨浦", "嘉定", "宝山", 
+                    "浦东", "黄浦", "静安", "徐汇", "长宁", "普陀",
+                    "闵行", "青浦", "虹口", "杨浦", "嘉定", "宝山",
                     "松江", "奉贤", "金山"
                   ].map((area) => (
                     <a

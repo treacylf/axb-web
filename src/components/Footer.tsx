@@ -21,13 +21,13 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <img src={logo} alt="超办" className="h-12 w-auto" />
+              <img src={logo} alt="安选" className="h-12 w-auto" />
             </div>
             <h3 className="mb-4 text-lg font-semibold text-foreground">
-              上海超办信息服务有限公司
+              上海安选信息服务有限公司
             </h3>
             <p className="text-sm text-muted-foreground">
-              专业的写字楼租赁服务商，为您提供优质的办公空间解决方案
+              一站式写字楼租赁平台，让办公选址更高效
             </p>
           </div>
 
@@ -82,11 +82,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Mail className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span>info@chaobanwang.com</span>
+                <span>16651188000@163.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span>上海市闵行区泰虹路268弄1号万科时一区T3栋305室</span>
+                <span>上海市闵行区盘阳路226弄融信绿地3期2号楼203室</span>
               </li>
             </ul>
           </div>
@@ -117,7 +117,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="mt-4 border-t pt-6 text-center text-sm text-muted-foreground">
           <p className="mb-2">
-            Copyright © 2025 上海超办信息服务有限公司. 保留所有权利.
+            Copyright © 2025 . 保留所有权利.
           </p>
           <p className="text-xs">
             <a
@@ -126,7 +126,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="transition-colors hover:text-primary"
             >
-              网站备案/许可证号：沪ICP备2021012780号-2
+              网站备案/许可证号：
             </a>
           </p>
         </div>
