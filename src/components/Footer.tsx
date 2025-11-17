@@ -2,18 +2,6 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export const Footer = () => {
-  const friendlyLinks = [
-    { name: "办公室设计装修", url: "#" },
-    { name: "北京写字楼出租", url: "#" },
-    { name: "深圳办公室出租", url: "#" },
-    { name: "昆明装修公司", url: "#" },
-    { name: "南京新房网", url: "#" },
-    { name: "上海办公室装修", url: "#" },
-    { name: "大虹桥写字楼出租", url: "#" },
-    { name: "北京写字楼租售", url: "#" },
-    { name: "涿州新房", url: "#" },
-  ];
-
   return (
     <footer className="border-t bg-card">
       <div className="container mx-auto px-4 py-12">
@@ -24,7 +12,7 @@ export const Footer = () => {
               <img src={logo} alt="安选" className="h-12 w-auto" />
             </div>
             <h3 className="mb-4 text-lg font-semibold text-foreground">
-              上海安选信息服务有限公司
+              上海安选办信息服务有限公司
             </h3>
             <p className="text-sm text-muted-foreground">
               一站式写字楼租赁平台，让办公选址更高效
@@ -89,28 +77,6 @@ export const Footer = () => {
                 <span>上海市闵行区盘阳路226弄融信绿地3期2号楼203室</span>
               </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Friendly Links */}
-        <div className="mt-8 border-t pt-8">
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-            <span className="font-medium">友情链接：</span>
-            {friendlyLinks.map((link, index) => (
-              <span key={index}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-primary"
-                >
-                  {link.name}
-                </a>
-                {index < friendlyLinks.length - 1 && (
-                  <span className="mx-1">|</span>
-                )}
-              </span>
-            ))}
           </div>
         </div>
 
