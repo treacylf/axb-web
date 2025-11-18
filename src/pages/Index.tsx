@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { SearchBox } from "@/components/SearchBox";
 import { FilterBar } from "@/components/FilterBar";
@@ -27,7 +27,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <ResponsiveNav />
       <main>
         {/* Hero Carousel with Search */}
         <div className="relative">

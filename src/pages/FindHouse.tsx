@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { Footer } from "@/components/Footer";
 import { FloatingSidebar } from "@/components/FloatingSidebar";
 import { Button } from "@/components/ui/button";
@@ -40,7 +40,7 @@ const FindHouse = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <ResponsiveNav />
 
       <main>
         {/* Hero Image */}

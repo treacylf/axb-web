@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
 import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
@@ -239,7 +239,7 @@ export default function SearchResults() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <ResponsiveNav />
       
       <div className="flex-1 bg-gray-50">
         {/* 根据设备类型显示对应的筛选器 */}

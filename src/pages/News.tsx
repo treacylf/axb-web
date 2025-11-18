@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -121,7 +121,7 @@ export default function News() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+      <ResponsiveNav />
       
       <main className="flex-1 py-8">
         <div className="container mx-auto px-4">
