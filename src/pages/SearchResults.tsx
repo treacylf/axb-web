@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FilterBar } from "@/components/FilterBar";
@@ -66,6 +67,7 @@ function convertBuildingDataToSearchFormat(): Building[] {
 export default function SearchResults() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(true);
   const query = searchParams.get("q") || "";
   const currentPage = parseInt(searchParams.get("page") || "1");
@@ -240,15 +242,8 @@ export default function SearchResults() {
       <Header />
       
       <div className="flex-1 bg-gray-50">
-        {/* 桌面端筛选栏 - 完整展开式 */}
-        <div className="hidden lg:block">
-          <FilterBar />
-        </div>
-
-        {/* 移动端筛选抽屉 */}
-        <div className="lg:hidden">
-          <MobileFilterDrawer />
-        </div>
+        {/* 根据设备类型显示对应的筛选器 */}
+        {isMobile ? <MobileFilterDrawer /> : <FilterBar />}
 
         <div className="container mx-auto px-4 py-6">
           {/* 面包屑导航 */}
