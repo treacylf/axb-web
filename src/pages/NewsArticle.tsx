@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { Footer } from "@/components/Footer";
 import { newsData, newsCategories } from "@/data/newsData";
 import { Calendar, Tag } from "lucide-react";
@@ -25,7 +25,7 @@ const NewsArticle = () => {
   if (!article) {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header />
+        <ResponsiveNav />
         <main className="flex-1 container mx-auto px-4 py-12">
           <h1 className="text-2xl font-bold text-center">文章不存在</h1>
         </main>
@@ -38,7 +38,7 @@ const NewsArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <ResponsiveNav />
       
       <main className="flex-1 bg-muted/30">
         <div className="container mx-auto px-4 py-8">

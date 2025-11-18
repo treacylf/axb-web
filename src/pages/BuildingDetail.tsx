@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import { Footer } from "@/components/Footer";
 import { MapPin, Phone, QrCode, Building2, Layers, Users, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -44,7 +44,7 @@ export default function BuildingDetail() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <ResponsiveNav />
 
       {/* 面包屑导航 */}
       <div className="border-b bg-muted/30">
