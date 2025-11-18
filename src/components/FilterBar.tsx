@@ -122,32 +122,50 @@ export const FilterBar = () => {
   ];
 
   return (
-    <div className="border-b bg-card">
+    <div className="border-b bg-card" role="region" aria-label="筛选器">
       <div className="container mx-auto px-4 py-3">
         {filters.map((filter) => (
-          <div key={filter.title} className="flex border-b last:border-0 py-3">
-            <div className="min-w-[80px] font-semibold text-foreground">
+          <div 
+            key={filter.title} 
+            className="flex border-b last:border-0 py-3"
+            role="group"
+            aria-labelledby={`filter-${filter.type}-label`}
+          >
+            <div 
+              id={`filter-${filter.type}-label`}
+              className="min-w-[80px] font-semibold text-foreground"
+            >
               {filter.title}
             </div>
-            <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2">
-              {filter.options.map((option, index) => (
-                <a
-                  key={index}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleFilterClick(filter.type, option.value);
-                  }}
-                  href="#"
-                  className={`text-sm transition-colors cursor-pointer ${
-                    (option.value === "" && filter.current === "") || 
-                    (option.value !== "" && filter.current === option.value)
-                      ? "text-primary font-medium"
-                      : "text-muted-foreground hover:text-primary"
-                  }`}
-                >
-                  {option.label}
-                </a>
-              ))}
+            <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2" role="list">
+              {filter.options.map((option, index) => {
+                const isSelected = (option.value === "" && filter.current === "") || 
+                  (option.value !== "" && filter.current === option.value);
+                
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleFilterClick(filter.type, option.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleFilterClick(filter.type, option.value);
+                      }
+                    }}
+                    className={`text-sm transition-colors cursor-pointer border-0 bg-transparent p-0 ${
+                      isSelected
+                        ? "text-primary font-medium"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                    role="listitem"
+                    aria-pressed={isSelected}
+                    aria-label={`${filter.title}: ${option.label}${isSelected ? ' (已选中)' : ''}`}
+                    tabIndex={0}
+                  >
+                    {option.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}
