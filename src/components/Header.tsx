@@ -2,8 +2,11 @@ import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useLocation, useSearchParams } from "react-router-dom";
+import { ResponsiveNav } from "@/components/ResponsiveNav";
 import logo from "@/assets/logo.png";
 
+// 保持向后兼容的 Header 组件
+// 推荐使用 ResponsiveNav 组件获得更好的响应式体验
 export const Header = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams();
