@@ -245,7 +245,7 @@ export default function SearchResults() {
         {/* 根据设备类型显示对应的筛选器 */}
         {isMobile ? <MobileFilterDrawer /> : <FilterBar />}
 
-        <div className="container mx-auto px-4 py-6">
+        <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 py-4 sm:py-6">
           {/* 面包屑导航 */}
           <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
             <a href="/" className="hover:text-primary">首页</a>
@@ -294,9 +294,9 @@ export default function SearchResults() {
             </TabsList>
           </Tabs>
 
-          <div className="flex gap-6">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
             {/* 主内容区 */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               {/* 排序和统计 */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mb-4 sm:mb-6">
                 <div className="flex gap-2 sm:gap-4 w-full sm:w-auto overflow-x-auto">
@@ -320,8 +320,8 @@ export default function SearchResults() {
                     <Card key={index} className="overflow-hidden">
                       <CardContent className="p-0">
                         <div className="flex flex-col sm:flex-row">
-                          <Skeleton className="w-full sm:w-80 h-48 sm:h-60 flex-shrink-0 rounded-none" />
-                          <div className="flex-1 p-4 sm:p-6 space-y-3 sm:space-y-4">
+                          <Skeleton className="w-full sm:w-64 md:w-80 h-48 sm:h-52 md:h-60 flex-shrink-0 rounded-none" />
+                          <div className="flex-1 min-w-0 p-3 sm:p-4 md:p-6 space-y-2 sm:space-y-3 md:space-y-4">
                             <div className="flex justify-between">
                               <Skeleton className="h-6 sm:h-8 w-32 sm:w-48" />
                               <Skeleton className="h-6 sm:h-8 w-24 sm:w-32" />
@@ -378,7 +378,7 @@ export default function SearchResults() {
                       <CardContent className="p-0">
                         <div className="flex flex-col sm:flex-row">
                           {/* 楼盘图片 */}
-                          <div className="w-full sm:w-80 h-48 sm:h-60 flex-shrink-0">
+                          <div className="w-full sm:w-64 md:w-80 h-48 sm:h-52 md:h-60 flex-shrink-0">
                             <img
                               src={building.image}
                               alt={building.name}
@@ -387,48 +387,48 @@ export default function SearchResults() {
                           </div>
 
                           {/* 楼盘信息 */}
-                          <div className="flex-1 p-4 sm:p-6">
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 sm:mb-4">
-                              <h3 className="text-lg sm:text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer mb-2 sm:mb-0">
+                          <div className="flex-1 min-w-0 p-3 sm:p-4 md:p-6">
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 sm:mb-3 md:mb-4">
+                              <h3 className="text-base sm:text-lg md:text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer mb-1 sm:mb-0 truncate pr-2">
                                 {building.name}
                               </h3>
-                              <span className="text-xl sm:text-2xl font-bold text-primary">
+                              <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap">
                                 {building.price}
                               </span>
                             </div>
 
-                            <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
-                              <div className="flex items-center text-sm sm:text-base text-gray-600">
-                                <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                                <span className="line-clamp-1">{building.description}</span>
+                            <div className="space-y-1.5 sm:space-y-2 md:space-y-3 mb-2 sm:mb-3 md:mb-4">
+                              <div className="flex items-start text-xs sm:text-sm md:text-base text-gray-600">
+                                <MapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5" />
+                                <span className="line-clamp-1 break-all">{building.description}</span>
                               </div>
-                              <div className="flex items-center text-sm sm:text-base text-gray-600">
-                                <Building2 className="w-4 h-4 mr-2 flex-shrink-0" />
-                                <span>地铁：{building.subway}</span>
+                              <div className="flex items-center text-xs sm:text-sm md:text-base text-gray-600">
+                                <Building2 className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0" />
+                                <span className="truncate">地铁：{building.subway}</span>
                               </div>
-                              <div className="flex items-center text-sm sm:text-base text-gray-600">
-                                <Building2 className="w-4 h-4 mr-2 flex-shrink-0" />
-                                <span>面积：{building.area}</span>
+                              <div className="flex items-center text-xs sm:text-sm md:text-base text-gray-600">
+                                <Building2 className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0" />
+                                <span className="truncate">面积：{building.area}</span>
                               </div>
                             </div>
 
-                            <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3 md:mb-4">
                               {building.tags.slice(0, 3).map((tag, idx) => (
                                 <span
                                   key={idx}
-                                  className="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded"
+                                  className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary text-xs rounded whitespace-nowrap"
                                 >
                                   {tag}
                                 </span>
                               ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 pt-3 sm:pt-4 border-t border-gray-200">
-                              <Button variant="default" size="sm" className="w-full sm:w-auto text-sm sm:text-base">
-                                <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-3 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
+                              <Button variant="default" size="sm" className="w-full sm:w-auto text-xs sm:text-sm md:text-base h-8 sm:h-9">
+                                <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                                 立即咨询
                               </Button>
-                              <span className="text-xs sm:text-sm text-gray-500 w-full sm:w-auto text-center sm:text-right">
+                              <span className="text-xs sm:text-sm text-gray-500 text-center sm:text-right">
                                 查看详情 →
                               </span>
                             </div>
