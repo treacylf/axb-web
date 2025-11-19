@@ -298,16 +298,16 @@ export default function SearchResults() {
             {/* 主内容区 */}
             <div className="flex-1">
               {/* 排序和统计 */}
-              <div className="flex justify-between items-center mb-6">
-                <div className="flex gap-4">
-                  <button className="px-4 py-2 bg-primary text-white rounded">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mb-4 sm:mb-6">
+                <div className="flex gap-2 sm:gap-4 w-full sm:w-auto overflow-x-auto">
+                  <button className="px-3 sm:px-4 py-2 bg-primary text-white rounded text-sm sm:text-base whitespace-nowrap">
                     综合排序
                   </button>
-                  <button className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded">
+                  <button className="px-3 sm:px-4 py-2 text-gray-600 hover:bg-gray-100 rounded text-sm sm:text-base whitespace-nowrap">
                     价格排序
                   </button>
                 </div>
-                <div className="text-gray-600">
+                <div className="text-sm sm:text-base text-gray-600 w-full sm:w-auto text-left sm:text-right">
                   已为您找到了 <span className="text-primary font-semibold">{filteredBuildings.length}</span> 条相关信息
                 </div>
               </div>
@@ -319,23 +319,23 @@ export default function SearchResults() {
                   Array.from({ length: 3 }).map((_, index) => (
                     <Card key={index} className="overflow-hidden">
                       <CardContent className="p-0">
-                        <div className="flex">
-                          <Skeleton className="w-80 h-60 flex-shrink-0 rounded-none" />
-                          <div className="flex-1 p-6 space-y-4">
+                        <div className="flex flex-col sm:flex-row">
+                          <Skeleton className="w-full sm:w-80 h-48 sm:h-60 flex-shrink-0 rounded-none" />
+                          <div className="flex-1 p-4 sm:p-6 space-y-3 sm:space-y-4">
                             <div className="flex justify-between">
-                              <Skeleton className="h-8 w-48" />
-                              <Skeleton className="h-8 w-32" />
+                              <Skeleton className="h-6 sm:h-8 w-32 sm:w-48" />
+                              <Skeleton className="h-6 sm:h-8 w-24 sm:w-32" />
                             </div>
                             <Skeleton className="h-4 w-full" />
                             <Skeleton className="h-4 w-3/4" />
                             <div className="flex gap-2">
-                              <Skeleton className="h-6 w-20" />
-                              <Skeleton className="h-6 w-20" />
-                              <Skeleton className="h-6 w-20" />
+                              <Skeleton className="h-6 w-16 sm:w-20" />
+                              <Skeleton className="h-6 w-16 sm:w-20" />
+                              <Skeleton className="h-6 w-16 sm:w-20" />
                             </div>
                             <div className="flex justify-between items-center pt-4">
-                              <Skeleton className="h-10 w-32" />
-                              <Skeleton className="h-10 w-24" />
+                              <Skeleton className="h-10 w-28 sm:w-32" />
+                              <Skeleton className="h-10 w-20 sm:w-24" />
                             </div>
                           </div>
                         </div>
@@ -376,9 +376,9 @@ export default function SearchResults() {
                   <Card key={building.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                     <Link to={`/building/${building.id}`}>
                       <CardContent className="p-0">
-                        <div className="flex">
+                        <div className="flex flex-col sm:flex-row">
                           {/* 楼盘图片 */}
-                          <div className="w-80 h-60 flex-shrink-0">
+                          <div className="w-full sm:w-80 h-48 sm:h-60 flex-shrink-0">
                             <img
                               src={building.image}
                               alt={building.name}
@@ -387,47 +387,51 @@ export default function SearchResults() {
                           </div>
 
                           {/* 楼盘信息 */}
-                          <div className="flex-1 p-6">
-                            <div className="flex justify-between items-start mb-4">
-                              <h3 className="text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer">
+                          <div className="flex-1 p-4 sm:p-6">
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 sm:mb-4">
+                              <h3 className="text-lg sm:text-2xl font-bold text-gray-900 hover:text-primary cursor-pointer mb-2 sm:mb-0">
                                 {building.name}
                               </h3>
-                              <div className="text-right">
-                                <div className="text-3xl font-bold text-primary">
-                                  {building.price.split(" ")[0]}
-                                </div>
-                                <div className="text-sm text-gray-500">
-                                  {building.price.split(" ")[1] || ""}
-                                </div>
+                              <span className="text-xl sm:text-2xl font-bold text-primary">
+                                {building.price}
+                              </span>
+                            </div>
+
+                            <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
+                              <div className="flex items-center text-sm sm:text-base text-gray-600">
+                                <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                                <span className="line-clamp-1">{building.description}</span>
+                              </div>
+                              <div className="flex items-center text-sm sm:text-base text-gray-600">
+                                <Building2 className="w-4 h-4 mr-2 flex-shrink-0" />
+                                <span>地铁：{building.subway}</span>
+                              </div>
+                              <div className="flex items-center text-sm sm:text-base text-gray-600">
+                                <Building2 className="w-4 h-4 mr-2 flex-shrink-0" />
+                                <span>面积：{building.area}</span>
                               </div>
                             </div>
 
-                            <div className="space-y-3 mb-4">
-                              <div className="flex items-center gap-2 text-gray-600">
-                                <MapPin className="w-4 h-4" />
-                                <span>{building.description}</span>
-                              </div>
-                              <div className="flex items-center gap-2 text-gray-600">
-                                <Building2 className="w-4 h-4" />
-                                <span>距离地铁：{building.subway.split(",")[0]}站步行约5分钟</span>
-                              </div>
-                            </div>
-
-                            {/* 可租面积标签 */}
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {building.tags.slice(0, 5).map((tag, index) => (
+                            <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                              {building.tags.slice(0, 3).map((tag, idx) => (
                                 <span
-                                  key={index}
-                                  className="px-3 py-1 bg-blue-50 text-blue-600 rounded text-sm"
+                                  key={idx}
+                                  className="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded"
                                 >
                                   {tag}
                                 </span>
                               ))}
                             </div>
 
-                            <button className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
-                              查看详情
-                            </button>
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 pt-3 sm:pt-4 border-t border-gray-200">
+                              <Button variant="default" size="sm" className="w-full sm:w-auto text-sm sm:text-base">
+                                <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                                立即咨询
+                              </Button>
+                              <span className="text-xs sm:text-sm text-gray-500 w-full sm:w-auto text-center sm:text-right">
+                                查看详情 →
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </CardContent>
