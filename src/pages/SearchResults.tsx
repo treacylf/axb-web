@@ -9,7 +9,7 @@ import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MapPin, Phone, Building2, Search, Home } from "lucide-react";
+import { MapPin, Building2, Search, Home, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildingData } from "@/data/buildingsData";
 import {
@@ -423,14 +423,11 @@ export default function SearchResults() {
                               ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-3 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
+                            <div className="flex justify-end items-center pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
                               <Button variant="default" size="sm" className="w-full sm:w-auto text-xs sm:text-sm md:text-base h-8 sm:h-9">
-                                <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-                                立即咨询
+                                查看详情
+                                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                               </Button>
-                              <span className="text-xs sm:text-sm text-gray-500 text-center sm:text-right">
-                                查看详情 →
-                              </span>
                             </div>
                           </div>
                         </div>
