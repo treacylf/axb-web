@@ -442,9 +442,9 @@ export default function SearchResults() {
 
               {/* 分页 */}
               {!isLoading && filteredBuildings.length > 0 && totalPages > 1 && (
-                <div className="mt-8">
+                <div className="mt-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                   <Pagination>
-                    <PaginationContent>
+                    <PaginationContent className="flex-nowrap">
                       <PaginationItem>
                         <PaginationPrevious
                           onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
