@@ -255,7 +255,7 @@ export default function SearchResults() {
 
           {/* 顶部导航标签 */}
           <Tabs value={navId} className="mb-6">
-            <div className="overflow-x-auto -mx-2 sm:mx-0">
+            <div className="overflow-x-auto -mx-2 sm:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               <TabsList className="bg-transparent border-b border-border rounded-none h-auto p-0 w-max sm:w-full justify-start px-2 sm:px-0">
                 <TabsTrigger 
                   value="0"
