@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { ResponsiveNav } from "@/components/ResponsiveNav";
@@ -9,7 +9,14 @@ import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MapPin, Building2, Search, Home, ArrowRight } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { MapPin, Building2, Search, Home, ArrowRight, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildingData } from "@/data/buildingsData";
 import {
@@ -69,6 +76,8 @@ export default function SearchResults() {
   const navigate = useNavigate();
   const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(true);
+  const [sortBy, setSortBy] = useState("综合排序");
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const query = searchParams.get("q") || "";
   const currentPage = parseInt(searchParams.get("page") || "1");
   
@@ -82,6 +91,21 @@ export default function SearchResults() {
     }, 800);
     return () => clearTimeout(timer);
   }, [searchParams]);
+
+  // 监听滚动，显示/隐藏返回顶部按钮
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // 返回顶部
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   // 使用共享的buildingData
   const allBuildings: Building[] = convertBuildingDataToSearchFormat();
@@ -301,14 +325,68 @@ export default function SearchResults() {
             <div className="flex-1 min-w-0">
               {/* 排序和统计 */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mb-4 sm:mb-6">
-                <div className="flex gap-2 sm:gap-4 w-full sm:w-auto overflow-x-auto">
-                  <button className="px-3 sm:px-4 py-2 bg-primary text-white rounded text-sm sm:text-base whitespace-nowrap">
-                    综合排序
-                  </button>
-                  <button className="px-3 sm:px-4 py-2 text-gray-600 hover:bg-gray-100 rounded text-sm sm:text-base whitespace-nowrap">
-                    价格排序
-                  </button>
+                {/* 移动端使用下拉菜单，桌面端使用按钮组 */}
+                <div className="w-full sm:w-auto">
+                  {/* 移动端下拉菜单 */}
+                  <div className="sm:hidden">
+                    <Select value={sortBy} onValueChange={setSortBy}>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="选择排序方式" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="综合排序">综合排序</SelectItem>
+                        <SelectItem value="价格排序">价格排序</SelectItem>
+                        <SelectItem value="面积排序">面积排序</SelectItem>
+                        <SelectItem value="最新发布">最新发布</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  {/* 桌面端按钮组 */}
+                  <div className="hidden sm:flex gap-4">
+                    <button 
+                      onClick={() => setSortBy("综合排序")}
+                      className={`px-4 py-2 rounded text-base whitespace-nowrap transition-colors ${
+                        sortBy === "综合排序" 
+                          ? "bg-primary text-white" 
+                          : "text-gray-600 hover:bg-gray-100"
+                      }`}
+                    >
+                      综合排序
+                    </button>
+                    <button 
+                      onClick={() => setSortBy("价格排序")}
+                      className={`px-4 py-2 rounded text-base whitespace-nowrap transition-colors ${
+                        sortBy === "价格排序" 
+                          ? "bg-primary text-white" 
+                          : "text-gray-600 hover:bg-gray-100"
+                      }`}
+                    >
+                      价格排序
+                    </button>
+                    <button 
+                      onClick={() => setSortBy("面积排序")}
+                      className={`px-4 py-2 rounded text-base whitespace-nowrap transition-colors ${
+                        sortBy === "面积排序" 
+                          ? "bg-primary text-white" 
+                          : "text-gray-600 hover:bg-gray-100"
+                      }`}
+                    >
+                      面积排序
+                    </button>
+                    <button 
+                      onClick={() => setSortBy("最新发布")}
+                      className={`px-4 py-2 rounded text-base whitespace-nowrap transition-colors ${
+                        sortBy === "最新发布" 
+                          ? "bg-primary text-white" 
+                          : "text-gray-600 hover:bg-gray-100"
+                      }`}
+                    >
+                      最新发布
+                    </button>
+                  </div>
                 </div>
+                
                 <div className="text-sm sm:text-base text-gray-600 w-full sm:w-auto text-left sm:text-right">
                   已为您找到了 <span className="text-primary font-semibold">{filteredBuildings.length}</span> 条相关信息
                 </div>
@@ -504,6 +582,17 @@ export default function SearchResults() {
       </div>
 
       <Footer />
+
+      {/* 返回顶部按钮 */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 animate-fade-in hover-scale"
+          aria-label="返回顶部"
+        >
+          <ChevronUp className="w-6 h-6" />
+        </button>
+      )}
     </div>
   );
 }
