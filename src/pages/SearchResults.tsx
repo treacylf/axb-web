@@ -255,43 +255,45 @@ export default function SearchResults() {
 
           {/* 顶部导航标签 */}
           <Tabs value={navId} className="mb-6">
-            <TabsList className="bg-transparent border-b border-border rounded-none h-auto p-0 w-full justify-start">
-              <TabsTrigger 
-                value="0"
-                onClick={() => navigate("/search?nav_id=0")}
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
-              >
-                租办公室
-              </TabsTrigger>
-              <TabsTrigger 
-                value="1"
-                onClick={() => navigate("/search?nav_id=1")}
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
-              >
-                写字楼
-              </TabsTrigger>
-              <TabsTrigger 
-                value="2"
-                onClick={() => navigate("/search?nav_id=2")}
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
-              >
-                创意园区
-              </TabsTrigger>
-              <TabsTrigger 
-                value="3"
-                onClick={() => navigate("/search?nav_id=3")}
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
-              >
-                共享办公
-              </TabsTrigger>
-              <TabsTrigger 
-                value="4"
-                onClick={() => navigate("/search?nav_id=4")}
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-6 py-3"
-              >
-                总部独栋
-              </TabsTrigger>
-            </TabsList>
+            <div className="overflow-x-auto -mx-2 sm:mx-0">
+              <TabsList className="bg-transparent border-b border-border rounded-none h-auto p-0 w-max sm:w-full justify-start px-2 sm:px-0">
+                <TabsTrigger 
+                  value="0"
+                  onClick={() => navigate("/search?nav_id=0")}
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
+                >
+                  租办公室
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="1"
+                  onClick={() => navigate("/search?nav_id=1")}
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
+                >
+                  写字楼
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="2"
+                  onClick={() => navigate("/search?nav_id=2")}
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
+                >
+                  创意园区
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="3"
+                  onClick={() => navigate("/search?nav_id=3")}
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
+                >
+                  共享办公
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="4"
+                  onClick={() => navigate("/search?nav_id=4")}
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
+                >
+                  总部独栋
+                </TabsTrigger>
+              </TabsList>
+            </div>
           </Tabs>
 
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
