@@ -40,6 +40,7 @@ interface Building {
   tags: string[];
   description: string;
   businessArea?: string;
+  type?: "office" | "building" | "creative" | "coworking" | "headquarters";
 }
 
 // 将buildingData转换为搜索列表格式
@@ -56,6 +57,22 @@ function convertBuildingDataToSearchFormat(): Building[] {
     // 从availableRooms生成tags
     const tags = building.availableRooms.map(room => room.area);
     
+    // 根据ID范围推断房源类型（如果没有type字段）
+    let type: "office" | "building" | "creative" | "coworking" | "headquarters" = building.type || "office";
+    if (!building.type) {
+      if (building.id >= 300 && building.id < 400) {
+        type = "headquarters"; // 总部独栋
+      } else if (building.id >= 200 && building.id < 300) {
+        type = "creative"; // 创意园区
+      } else if (building.name.includes("WeWork") || building.name.includes("优客工场") || building.name.includes("Distrii") || building.name.includes("UMON") || building.name.includes("雷格斯") || building.name.includes("氪空间") || building.name.includes("快易") || building.name.includes("德事") || building.name.includes("未至") || building.name.includes("寰图") || building.name.includes("大树下") || building.name.includes("艾客")) {
+        type = "coworking"; // 共享办公
+      } else if (building.availableArea && parseInt(building.availableArea.split("-")[0]) < 200) {
+        type = "office"; // 小面积为租办公室
+      } else {
+        type = "building"; // 大面积为写字楼
+      }
+    }
+    
     return {
       id: building.id,
       name: building.name,
@@ -66,7 +83,8 @@ function convertBuildingDataToSearchFormat(): Building[] {
       image: building.images[0],
       tags: tags,
       description: building.address,
-      businessArea: businessAreaName
+      businessArea: businessAreaName,
+      type: type
     };
   });
 }
@@ -182,6 +200,19 @@ export default function SearchResults() {
 
   // 根据筛选条件过滤数据
   const filteredBuildings = allBuildings.filter((building) => {
+    // Tab类型筛选
+    if (navId !== "0") { // 0 = 租办公室（显示所有）
+      const typeMapping: { [key: string]: "office" | "building" | "creative" | "coworking" | "headquarters" } = {
+        "1": "building",       // 写字楼
+        "2": "creative",       // 创意园区
+        "3": "coworking",      // 共享办公
+        "4": "headquarters"    // 总部独栋
+      };
+      if (typeMapping[navId] && building.type !== typeMapping[navId]) {
+        return false;
+      }
+    }
+
     // 名称搜索
     if (query && !building.name.toLowerCase().includes(query.toLowerCase())) {
       return false;
