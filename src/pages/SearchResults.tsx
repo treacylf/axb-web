@@ -248,11 +248,39 @@ export default function SearchResults() {
     return true;
   });
 
-  // 分页处理
-  const totalPages = Math.ceil(filteredBuildings.length / itemsPerPage);
+  // 根据排序方式对房源列表进行排序
+  const sortedBuildings = [...filteredBuildings].sort((a, b) => {
+    switch (sortBy) {
+      case "价格排序":
+        // 提取价格数字（例如 "3.5元/m²/天 起" -> 3.5）
+        const priceA = parseFloat(a.price);
+        const priceB = parseFloat(b.price);
+        return priceA - priceB; // 价格从低到高
+      
+      case "面积排序":
+        // 提取面积范围的最小值（例如 "100-200" -> 100）
+        const areaA = parseInt(a.area.split("-")[0]);
+        const areaB = parseInt(b.area.split("-")[0]);
+        return areaB - areaA; // 面积从大到小
+      
+      case "最新发布":
+        // 按ID降序（假设ID越大越新）
+        return b.id - a.id;
+      
+      case "综合排序":
+      default:
+        // 综合排序：考虑价格、面积、ID的综合权重
+        const scoreA = parseFloat(a.price) * 0.3 + parseInt(a.area.split("-")[0]) * 0.3 + a.id * 0.4;
+        const scoreB = parseFloat(b.price) * 0.3 + parseInt(b.area.split("-")[0]) * 0.3 + b.id * 0.4;
+        return scoreB - scoreA;
+    }
+  });
+
+  // 分页处理 - 使用排序后的数据
+  const totalPages = Math.ceil(sortedBuildings.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentBuildings = filteredBuildings.slice(startIndex, endIndex);
+  const currentBuildings = sortedBuildings.slice(startIndex, endIndex);
 
   // 跳转到指定页
   const goToPage = (page: number) => {
@@ -388,7 +416,7 @@ export default function SearchResults() {
                 </div>
                 
                 <div className="text-sm sm:text-base text-gray-600 w-full sm:w-auto text-left sm:text-right">
-                  已为您找到了 <span className="text-primary font-semibold">{filteredBuildings.length}</span> 条相关信息
+                  已为您找到了 <span className="text-primary font-semibold">{sortedBuildings.length}</span> 条相关信息
                 </div>
               </div>
 
@@ -422,7 +450,7 @@ export default function SearchResults() {
                       </CardContent>
                     </Card>
                   ))
-                ) : filteredBuildings.length === 0 ? (
+                ) : sortedBuildings.length === 0 ? (
                   // 空状态
                   <div className="flex flex-col items-center justify-center py-16 px-4">
                     <div className="w-32 h-32 mb-6 rounded-full bg-muted flex items-center justify-center">
