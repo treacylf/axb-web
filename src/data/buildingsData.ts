@@ -63,6 +63,7 @@ export interface BuildingData {
   priceRange: string;
   totalUnits: number;
   availableArea: string;
+  type?: "office" | "building" | "creative" | "coworking" | "headquarters"; // 房源类型：租办公室/写字楼/创意园区/共享办公/总部独栋
   coordinates?: [number, number]; // [longitude, latitude] 经纬度坐标
   images: string[];
   availableRooms: Array<{
@@ -100,6 +101,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "198 - 2352m²",
+    type: "building", // 写字楼
     coordinates: [121.319, 31.196], // 虹桥商务区核心位置
     images: [
       vankeCenter,
@@ -142,6 +144,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "188 - 1853m²",
+    type: "building", // 写字楼
     coordinates: [121.308, 31.193], // 虹桥商务区北区
     images: [
       exhibitionHub,
@@ -187,6 +190,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "188 - 1560m²",
+    type: "office", // 租办公室
     coordinates: [121.316, 31.195], // 虹桥商务区中心
     images: [
       hongqiaoHui,
@@ -230,6 +234,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 5,
     availableArea: "100 - 500m²",
+    type: "office", // 租办公室
     coordinates: [121.421, 31.221], // 长宁区天山路附近
     images: [
       sohoTianshan,
@@ -269,6 +274,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 10,
     availableArea: "189 - 2200m²",
+    type: "building", // 写字楼
     coordinates: [121.320, 31.198], // 虹桥火车站附近
     images: [
       hongqiaoTiandi,
@@ -313,6 +319,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "300 - 2000m²",
+    type: "building", // 写字楼
     coordinates: [121.322, 31.199], // 虹桥商务区高端区域
     images: [
       worldCenter,
@@ -356,6 +363,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "200 - 1800m²",
+    type: "office", // 租办公室
     coordinates: [121.318, 31.194], // 虹桥商务区申滨路
     images: [
       zhongjunPlazaImg,
@@ -396,6 +404,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "250 - 2000m²",
+    type: "building", // 写字楼
     coordinates: [121.317, 31.197], // 虹桥商务区申长路
     images: [
       aliCenter,
@@ -437,6 +446,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "150 - 1500m²",
+    type: "office", // 租办公室
     coordinates: [121.419, 31.223], // 长宁区天山路商圈
     images: [
       yuandongPlaza,
@@ -479,6 +489,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "180 - 1400m²",
+    type: "office", // 租办公室
     coordinates: [121.420, 31.222], // 长宁区天山路
     images: [
       weijingCenter,
@@ -519,6 +530,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "200 - 1600m²",
+    type: "office", // 租办公室
     coordinates: [121.418, 31.221], // 长宁区天山路商圈
     images: [
       shangjiaCenter,
@@ -560,6 +572,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 12,
     availableArea: "100 - 1200m²",
+    type: "creative", // 创意园区
     coordinates: [121.445, 31.228], // 静安区常德路
     images: [
       show800,
@@ -603,6 +616,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 15,
     availableArea: "80 - 1500m²",
+    type: "creative", // 创意园区
     coordinates: [121.451, 31.289], // 静安区大宁商圈
     images: [
       anken,
@@ -647,6 +661,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 10,
     availableArea: "120 - 1000m²",
+    type: "creative", // 创意园区
     coordinates: [121.465, 31.280], // 闸北区汶水路
     images: [
       bridge8,
@@ -690,6 +705,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 8,
     availableArea: "100 - 800m²",
+    type: "creative", // 创意园区
     coordinates: [121.452, 31.288], // 静安区共和新路
     images: [
       show800,
