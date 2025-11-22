@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { buildingData } from "@/data/buildingsData";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const CreativeParkGrid = () => {
   // 获取创意园区数据 (ID: 201-208)
@@ -27,13 +28,11 @@ export const CreativeParkGrid = () => {
               style={{ boxShadow: "var(--card-shadow)" }}
             >
               <Link to={`/building/${park.id}`} className="block">
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={park.images[0]}
-                    alt={park.name}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+                <OptimizedImage
+                  src={park.images[0]}
+                  alt={park.name}
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
                 <div className="p-4">
                   <h3 className="mb-1 text-lg font-semibold text-foreground">
                     {park.name}

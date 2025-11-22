@@ -8,6 +8,7 @@ import { useState } from "react";
 import { buildingData, type BuildingData } from "@/data/buildingsData";
 import wxCode from "@/assets/wx_code.png";
 import { BuildingLocationMap } from "@/components/BuildingLocationMap";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function BuildingDetail() {
   const { id } = useParams();
@@ -70,13 +71,12 @@ export default function BuildingDetail() {
 
             {/* 图片轮播 */}
             <div className="relative">
-              <div className="aspect-video overflow-hidden rounded-lg">
-                <img
-                  src={currentBuilding.images[currentImageIndex]}
-                  alt={currentBuilding.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <OptimizedImage
+                src={currentBuilding.images[currentImageIndex]}
+                alt={currentBuilding.name}
+                aspectRatio="aspect-video"
+                className="rounded-lg"
+              />
               <div className="flex gap-2 mt-4 overflow-x-auto">
                 {currentBuilding.images.map((img, idx) => (
                   <button
@@ -86,7 +86,12 @@ export default function BuildingDetail() {
                       idx === currentImageIndex ? "border-primary" : "border-transparent"
                     }`}
                   >
-                    <img src={img} alt={`${currentBuilding.name} ${idx + 1}`} className="w-full h-full object-cover" />
+                    <img 
+                      src={img} 
+                      alt={`${currentBuilding.name} ${idx + 1}`} 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </button>
                 ))}
               </div>
@@ -128,8 +133,13 @@ export default function BuildingDetail() {
                       {filteredRooms.map((room, idx) => (
                         <tr key={idx} className="border-b hover:bg-muted/50">
                           <td className="py-3 px-4">
-                            <div className="w-20 h-16 rounded overflow-hidden">
-                              <img src={currentBuilding.images[0]} alt="房源" className="w-full h-full object-cover" />
+                            <div className="w-20 h-16 rounded overflow-hidden bg-muted">
+                              <img 
+                                src={currentBuilding.images[0]} 
+                                alt="房源" 
+                                className="w-full h-full object-cover"
+                                loading="lazy"
+                              />
                             </div>
                           </td>
                           <td className="py-3 px-4">{room.area}</td>

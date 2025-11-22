@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildingData } from "@/data/buildingsData";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const BuildingGrid = () => {
   // 获取写字楼数据 (ID: 1-11)
@@ -30,13 +31,11 @@ export const BuildingGrid = () => {
               }}
             >
               <Link to={`/building/${building.id}`} className="block">
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={building.images[0]}
-                    alt={building.name}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+                <OptimizedImage
+                  src={building.images[0]}
+                  alt={building.name}
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
                 <div className="p-4">
                   <h3 className="mb-2 text-lg font-semibold text-foreground">
                     {building.name}

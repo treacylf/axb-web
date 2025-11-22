@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildingData } from "@/data/buildingsData";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const HeadquartersGrid = () => {
   // 获取总部独栋数据 (ID: 301-312)
@@ -32,14 +33,12 @@ export const HeadquartersGrid = () => {
               }}
             >
               <Link to={`/building/${hq.id}`} className="block">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={hq.images[0]}
-                    alt={hq.name}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                </div>
+                <OptimizedImage
+                  src={hq.images[0]}
+                  alt={hq.name}
+                  aspectRatio="aspect-[4/3]"
+                  className="transition-transform duration-300 group-hover:scale-110"
+                />
                 <div className="p-4">
                   <h3 className="mb-2 text-lg font-semibold text-foreground">
                     {hq.name}

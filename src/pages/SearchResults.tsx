@@ -9,6 +9,7 @@ import { SearchSidebar } from "@/components/SearchSidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import {
   Select,
   SelectContent,
@@ -518,10 +519,10 @@ export default function SearchResults() {
                         <div className="flex flex-col sm:flex-row">
                           {/* 楼盘图片 */}
                           <div className="w-full sm:w-64 md:w-80 h-48 sm:h-52 md:h-60 flex-shrink-0">
-                            <img
+                            <OptimizedImage
                               src={building.image}
                               alt={building.name}
-                              className="w-full h-full object-cover"
+                              aspectRatio="h-48 sm:h-52 md:h-60"
                             />
                           </div>
 
