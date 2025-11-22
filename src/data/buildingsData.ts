@@ -105,10 +105,12 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.319, 31.196], // 虹桥商务区核心位置
     images: [
       vankeCenter,
-      vankeCenter,
-      vankeCenter,
-      vankeCenter,
-      vankeCenter
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/aeb2c626e7329000a2553992d92943f8.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/3edfbcf3bc96721c64396557df9ae04b.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/b23f06429df18ceaecf8019a8cefb78b.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/525064ffad6cc7c8d5b03953344894da.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/121728aea18917bf0dba1f28104b27be.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1a5e3c5a86095b2353184cc0575d3d0c.jpg"
     ],
     availableRooms: [
       { area: "198m²", price: "4.7元/m²/天", decoration: "标准交付", floor: "高区" },
@@ -148,12 +150,12 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.308, 31.193], // 虹桥商务区北区
     images: [
       exhibitionHub,
-      exhibitionHub,
-      exhibitionHub,
-      exhibitionHub,
-      exhibitionHub,
-      exhibitionHub,
-      exhibitionHub
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/30041d724ec07ba6fcf219b52d8120cf.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/056b346a986392d74b15ea4f04951d7c.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/9a532c3bc8a85d89c207bd59528b13c8.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/fdf95460dcd325ff4d29172802e2e7ea.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1ecd3b8852e743d6a2ef621d15a167ca.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/42400ca548d9e05ee678b9ff7a2c6988.jpg"
     ],
     availableRooms: [
       { area: "188m²", price: "2.5元/m²/天", decoration: "精装修", floor: "高区" },
@@ -182,42 +184,41 @@ export const buildingData: Record<string, BuildingData> = {
   },
   "3": {
     id: 3,
-    name: "虹桥嘉汇",
-    district: "闵行 - 虹桥商务区",
-    subway: "2号线,10号线,17号线,虹桥火车站站步行约15分钟",
-    address: "上海市闵行区申虹路928弄",
-    price: "2.6~2.8",
+    name: "虹桥汇",
+    district: "长宁 - 虹桥火车站",
+    subway: "2号线,10号线,17号线,虹桥火车站站步行约8分钟",
+    address: "上海市长宁区申虹路",
+    price: "4.0~4.8",
     priceRange: "元/m²/天",
-    totalUnits: 8,
-    availableArea: "188 - 1560m²",
-    type: "office", // 租办公室
-    coordinates: [121.316, 31.195], // 虹桥商务区中心
+    totalUnits: 6,
+    availableArea: "189 - 1200m²",
+    type: "building", // 写字楼
+    coordinates: [121.316, 31.195], // 虹桥火车站附近
     images: [
       hongqiaoHui,
-      hongqiaoHui,
-      hongqiaoHui,
-      hongqiaoHui,
-      hongqiaoHui
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/cd71f858842c2f4ca697edc2a0b4c090.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/7dd7f1150acdaa872bf1a55ea34f0797.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1bfb030e750bb41a2061b138cb2de105.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/2c6098a5facfe397589489ec13d0a1a8.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/e10a5be3fde829fcd519975770a49c38.jpg"
     ],
     availableRooms: [
-      { area: "188m²", price: "2.8元/m²/天", decoration: "精装修", floor: "高区" },
-      { area: "260m²", price: "2.6元/m²/天", decoration: "标准交付", floor: "高区" },
-      { area: "400m²", price: "2.6元/m²/天", decoration: "标准交付", floor: "低区" },
-      { area: "520m²", price: "2.7元/m²/天", decoration: "标准交付", floor: "中区" },
-      { area: "620m²", price: "2.7元/m²/天", decoration: "精装修", floor: "中区" },
-      { area: "880m²", price: "2.6元/m²/天", decoration: "标准交付", floor: "中区" },
-      { area: "1250m²", price: "2.6元/m²/天", decoration: "标准交付", floor: "低区" },
-      { area: "1560m²", price: "2.7元/m²/天", decoration: "标准交付", floor: "中区" }
+      { area: "189m²", price: "4.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "280m²", price: "4.2元/m²/天", decoration: "标准交付", floor: "高区" },
+      { area: "385m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "560m²", price: "4.3元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "820m²", price: "4.6元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1200m²", price: "4.8元/m²/天", decoration: "精装修", floor: "整层" }
     ],
     buildingInfo: {
-      floorHeight: "2.9m",
-      totalFloors: "8层",
-      elevators: "客梯2部，货梯1部",
-      efficiency: "70%",
-      propertyCompany: "上海瑞创物业管理有限公司",
-      developer: "瑞安集团"
+      floorHeight: "3.5m",
+      totalFloors: "12层",
+      elevators: "客梯5部，货梯2部",
+      efficiency: "75%",
+      propertyCompany: "仲量联行",
+      developer: "嘉里建设"
     },
-    description: "IBP三期项目位于虹桥商务区核心区北片区８＃地块，地块北至淮虹路，西至申虹路，南至润虹路，东至申贵路，土地面积43941平方米，为商住办用地。项目预计于2017年建成，建成后项目将涵盖单层面积约1500—1900平方米的总部型办公、单套面积200—400平方米的小面积办公及主力户型为75—95平方米的全装修精致住宅，此外，地块配还建有各类社区型配套商业。IBP三期项目以绿色环保、动感阳光为设计理念，全方位地为客户实现商务生活所需。",
+    description: "虹桥汇位于长宁区虹桥火车站核心区域，是区域内的优质写字楼项目。项目采用现代化设计，配备完善的商务配套设施。紧邻虹桥交通枢纽，交通便利，是企业入驻虹桥的理想选择。",
     nearbyBuildings: [
       { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
       { name: "虹桥国际展汇", price: "2.5元/m²/天", image: exhibitionHub, link: "/building/2" },
@@ -227,27 +228,30 @@ export const buildingData: Record<string, BuildingData> = {
   "4": {
     id: 4,
     name: "SOHO天山广场",
-    district: "闵行 - 虹桥商务区",
+    district: "长宁 - 虹桥古北开发区",
     subway: "2号线,娄山关路站步行约8分钟",
-    address: "上海市闵行区天山路",
+    address: "上海市长宁区天山路",
     price: "5.0~6.5",
     priceRange: "元/m²/天",
-    totalUnits: 5,
-    availableArea: "100 - 500m²",
-    type: "office", // 租办公室
+    totalUnits: 6,
+    availableArea: "120 - 850m²",
+    type: "building", // 写字楼
     coordinates: [121.421, 31.221], // 长宁区天山路附近
     images: [
       sohoTianshan,
-      sohoTianshan,
-      sohoTianshan,
-      sohoTianshan
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/ba52f609e16b1275f061d0ab307b4539.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/33e615edf86428abbe588dea8a84be7c.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/ce131921112686e0b079ea4b8507766a.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/4e90c306c017f5ad9b91e83a8e851b5e.jpg",
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/1e1c30c523100b1f4c4ded0b0906fcb9.jpg"
     ],
     availableRooms: [
-      { area: "100m²", price: "5.8元/m²/天", decoration: "精装修", floor: "中区" },
-      { area: "150m²", price: "5.5元/m²/天", decoration: "精装修", floor: "高区" },
-      { area: "180m²", price: "6.0元/m²/天", decoration: "精装修", floor: "高区" },
-      { area: "220m²", price: "5.2元/m²/天", decoration: "精装修", floor: "中区" },
-      { area: "350m²", price: "6.5元/m²/天", decoration: "精装修", floor: "高区" }
+      { area: "120m²", price: "5.8元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "180m²", price: "5.5元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "250m²", price: "6.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "380m²", price: "5.2元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "550m²", price: "6.2元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "850m²", price: "6.5元/m²/天", decoration: "精装修", floor: "整层" }
     ],
     buildingInfo: {
       floorHeight: "3.5m",
@@ -257,7 +261,7 @@ export const buildingData: Record<string, BuildingData> = {
       propertyCompany: "SOHO中国",
       developer: "SOHO中国"
     },
-    description: "SOHO天山广场位于闵行区虹桥商务区，是SOHO中国在上海的标志性项目之一。项目采用现代化设计理念，配备智能化办公系统，为企业提供高品质的办公环境。周边商业配套完善，交通便利。",
+    description: "SOHO天山广场位于长宁区虹桥古北开发区，是SOHO中国在上海的标志性项目之一。项目采用现代化设计理念，配备智能化办公系统，为企业提供高品质的办公环境。周边商业配套完善，交通便利。",
     nearbyBuildings: [
       { name: "虹桥万科中心", price: "4.3元/m²/天", image: vankeCenter, link: "/building/1" },
       { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" },
@@ -278,6 +282,7 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.320, 31.198], // 虹桥火车站附近
     images: [
       hongqiaoTiandi,
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/7b41e3e1338ae9ec8547204a4f5ea45c.jpg",
       hongqiaoTiandi,
       hongqiaoTiandi,
       hongqiaoTiandi
@@ -323,7 +328,7 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.322, 31.199], // 虹桥商务区高端区域
     images: [
       worldCenter,
-      worldCenter,
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/4311f1718f0286191ccf3b1251551b32.jpg",
       worldCenter,
       worldCenter,
       worldCenter
@@ -363,10 +368,11 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 6,
     availableArea: "200 - 1800m²",
-    type: "office", // 租办公室
+    type: "building", // 写字楼
     coordinates: [121.318, 31.194], // 虹桥商务区申滨路
     images: [
       zhongjunPlazaImg,
+      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/aabe164835b37360a355108fd722a4db.png",
       zhongjunPlazaImg,
       zhongjunPlazaImg,
       zhongjunPlazaImg
