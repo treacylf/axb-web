@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildingData } from "@/data/buildingsData";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const CoworkingGrid = () => {
   // 获取联合办公数据 (ID: 101-114)
@@ -28,13 +29,11 @@ export const CoworkingGrid = () => {
               style={{ boxShadow: "var(--card-shadow)" }}
             >
               <Link to={`/building/${coworking.id}`} className="block">
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={coworking.images[0]}
-                    alt={coworking.name}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+                <OptimizedImage
+                  src={coworking.images[0]}
+                  alt={coworking.name}
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
                 <div className="p-4">
                   <h3 className="mb-2 text-lg font-semibold text-foreground">
                     {coworking.name}
