@@ -90,6 +90,7 @@ export interface BuildingData {
 }
 
 // 建筑数据 - 基于从网站爬取的真实数据
+// 包含36个精选房源：写字楼、创意园区、共享办公、总部独栋
 export const buildingData: Record<string, BuildingData> = {
   "1": {
     id: 1,
