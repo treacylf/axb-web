@@ -1909,6 +1909,94 @@ export const buildingData: Record<string, BuildingData> = {
       { name: "中骏广场二期", price: "5.0元/m²/天", image: zhongjunPlazaImg, link: "/building/7" },
       { name: "虹桥阿里中心", price: "6.0元/m²/天", image: aliCenter, link: "/building/8" }
     ]
+  },
+  "35": {
+    id: 35,
+    name: "金茂大厦",
+    district: "浦东 - 陆家嘴",
+    subway: "2号线,陆家嘴站步行约5分钟",
+    address: "上海市浦东新区世纪大道88号",
+    price: "10.0~15.0",
+    priceRange: "元/m²/天",
+    totalUnits: 12,
+    availableArea: "200 - 5000m²",
+    type: "building",
+    coordinates: [121.506, 31.239],
+    images: [
+      "https://img.zcool.cn/community/01b8a95cd4c0e0a8012193a35a1e9b.jpg",
+      "https://img.zcool.cn/community/01b8a95cd4c0e0a8012193a35a1e9b.jpg"
+    ],
+    availableRooms: [
+      { area: "200m²", price: "12.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "350m²", price: "13.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "500m²", price: "14.0元/m²/天", decoration: "豪华装修", floor: "超高区" },
+      { area: "800m²", price: "11.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "1000m²", price: "15.0元/m²/天", decoration: "豪华装修", floor: "超高区" },
+      { area: "1500m²", price: "14.5元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "2000m²", price: "13.5元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "2500m²", price: "12.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "3000m²", price: "11.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "3500m²", price: "10.5元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "4000m²", price: "10.0元/m²/天", decoration: "标准交付", floor: "低区" },
+      { area: "5000m²", price: "11.0元/m²/天", decoration: "精装修", floor: "中区" }
+    ],
+    buildingInfo: {
+      floorHeight: "4m",
+      totalFloors: "88层",
+      elevators: "客梯22部，货梯3部",
+      efficiency: "75%",
+      propertyCompany: "金茂物业",
+      developer: "中国金茂"
+    },
+    description: "金茂大厦位于上海浦东新区陆家嘴金融贸易区，地处东方明珠旁，与外滩隔江相望。楼高420.5米，是上海第3高的摩天大楼（截至2016年），世界第8高楼，堪称上海的一座地标性建筑。曾经是中国大陆最高的大楼，目前是上海最高的平顶式大楼。2005年荣获世界高层建筑学会（CTBUH）世界最佳高层建筑奖，成为中国建筑的骄傲。大厦拥有多项世界之最的金茂大厦，已成为上海的标志性建筑和名片。",
+    nearbyBuildings: [
+      { name: "环球金融中心", price: "11.0元/m²/天", image: worldCenter, link: "/building/36" },
+      { name: "国金中心", price: "12.0元/m²/天", image: vankeCenter, link: "/building/37" },
+      { name: "上海中心", price: "13.0元/m²/天", image: exhibitionHub, link: "/building/38" }
+    ]
+  },
+  "36": {
+    id: 36,
+    name: "环球金融中心",
+    district: "浦东 - 陆家嘴",
+    subway: "2号线,陆家嘴站步行约3分钟",
+    address: "上海市浦东新区世纪大道100号",
+    price: "11.0~16.0",
+    priceRange: "元/m²/天",
+    totalUnits: 10,
+    availableArea: "180 - 4500m²",
+    type: "building",
+    coordinates: [121.507, 31.240],
+    images: [
+      worldCenter,
+      worldCenter
+    ],
+    availableRooms: [
+      { area: "180m²", price: "13.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "300m²", price: "14.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "450m²", price: "15.0元/m²/天", decoration: "豪华装修", floor: "超高区" },
+      { area: "700m²", price: "12.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "900m²", price: "16.0元/m²/天", decoration: "豪华装修", floor: "超高区" },
+      { area: "1200m²", price: "15.5元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "1800m²", price: "14.5元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "2500m²", price: "13.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "3200m²", price: "12.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "4500m²", price: "11.0元/m²/天", decoration: "标准交付", floor: "低区" }
+    ],
+    buildingInfo: {
+      floorHeight: "4m",
+      totalFloors: "101层",
+      elevators: "客梯24部，货梯4部",
+      efficiency: "76%",
+      propertyCompany: "森大厦物业",
+      developer: "森大厦株式会社"
+    },
+    description: "上海环球金融中心是位于中国上海陆家嘴的一栋摩天大楼，楼高492米，地上101层。2008年8月29日竣工。开发商为上海环球金融中心有限公司，由日本森大厦公司主导兴建。是一座综合商业大厦，其中包括办公楼、观光设施、会议设施、酒店、商业设施等。",
+    nearbyBuildings: [
+      { name: "金茂大厦", price: "10.0元/m²/天", image: vankeCenter, link: "/building/35" },
+      { name: "国金中心", price: "12.0元/m²/天", image: vankeCenter, link: "/building/37" },
+      { name: "上海中心", price: "13.0元/m²/天", image: exhibitionHub, link: "/building/38" }
+    ]
   }
 };
 
