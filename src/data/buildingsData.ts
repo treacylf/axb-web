@@ -90,7 +90,7 @@ export interface BuildingData {
 }
 
 // 建筑数据 - 基于从网站爬取的真实数据
-// 包含36个精选房源：写字楼、创意园区、共享办公、总部独栋
+// 包含56个精选房源：写字楼、创意园区、共享办公、总部独栋
 export const buildingData: Record<string, BuildingData> = {
   "1": {
     id: 1,
@@ -2005,6 +2005,827 @@ export const buildingData: Record<string, BuildingData> = {
       { name: "金茂大厦", price: "10.0元/m²/天", image: vankeCenter, link: "/building/35" },
       { name: "国金中心", price: "12.0元/m²/天", image: vankeCenter, link: "/building/37" },
       { name: "上海中心", price: "13.0元/m²/天", image: exhibitionHub, link: "/building/38" }
+    ]
+  },
+  "12": {
+    id: 12,
+    name: "复星艺术中心",
+    district: "黄浦 - 外滩",
+    subway: "2号线,陆家嘴站步行约10分钟",
+    address: "上海市黄浦区中山东二路600号",
+    price: "12.0~18.0",
+    priceRange: "元/m²/天",
+    totalUnits: 6,
+    availableArea: "300 - 2000m²",
+    type: "building",
+    coordinates: [121.499, 31.238],
+    images: [
+      worldCenter,
+      worldCenter,
+      worldCenter,
+      worldCenter
+    ],
+    availableRooms: [
+      { area: "300m²", price: "15.0元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "500m²", price: "16.0元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "800m²", price: "14.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "1200m²", price: "17.0元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "1500m²", price: "15.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "2000m²", price: "18.0元/m²/天", decoration: "豪华装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "40层",
+      elevators: "客梯16部，货梯3部",
+      efficiency: "80%",
+      propertyCompany: "复星物业",
+      developer: "复星集团"
+    },
+    description: "复星艺术中心位于外滩核心区域，是集艺术、文化、商务于一体的地标性建筑。建筑设计现代前卫，内部配备顶级办公设施，享有黄浦江和外滩景观。适合高端金融、文化、艺术行业企业入驻。",
+    nearbyBuildings: [
+      { name: "金茂大厦", price: "10.0元/m²/天", image: vankeCenter, link: "/building/35" },
+      { name: "环球金融中心", price: "11.0元/m²/天", image: worldCenter, link: "/building/36" },
+      { name: "虹桥世界中心", price: "6.5元/m²/天", image: worldCenter, link: "/building/6" }
+    ]
+  },
+  "13": {
+    id: 13,
+    name: "静安嘉里中心",
+    district: "静安 - 南京西路",
+    subway: "2号线,7号线,静安寺站步行约3分钟",
+    address: "上海市静安区南京西路1515号",
+    price: "11.0~16.0",
+    priceRange: "元/m²/天",
+    totalUnits: 8,
+    availableArea: "250 - 2500m²",
+    type: "building",
+    coordinates: [121.446, 31.227],
+    images: [
+      exhibitionHub,
+      exhibitionHub,
+      exhibitionHub,
+      exhibitionHub
+    ],
+    availableRooms: [
+      { area: "250m²", price: "13.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "400m²", price: "14.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "600m²", price: "12.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "900m²", price: "15.0元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "1200m²", price: "13.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "1600m²", price: "14.5元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "2000m²", price: "15.5元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "2500m²", price: "16.0元/m²/天", decoration: "豪华装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "52层",
+      elevators: "客梯20部，货梯4部",
+      efficiency: "78%",
+      propertyCompany: "嘉里物业",
+      developer: "嘉里建设"
+    },
+    description: "静安嘉里中心位于南京西路黄金地段，是集办公、商业、酒店、服务式公寓于一体的综合体项目。地理位置优越，交通便利，周边商业配套完善。适合跨国企业、金融机构、高端服务业入驻。",
+    nearbyBuildings: [
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" }
+    ]
+  },
+  "14": {
+    id: 14,
+    name: "来福士广场",
+    district: "黄浦 - 人民广场",
+    subway: "1号线,2号线,8号线,人民广场站直达",
+    address: "上海市黄浦区西藏中路268号",
+    price: "10.0~15.0",
+    priceRange: "元/m²/天",
+    totalUnits: 10,
+    availableArea: "200 - 3000m²",
+    type: "building",
+    coordinates: [121.475, 31.232],
+    images: [
+      vankeCenter,
+      vankeCenter,
+      vankeCenter,
+      vankeCenter
+    ],
+    availableRooms: [
+      { area: "200m²", price: "12.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "350m²", price: "13.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "500m²", price: "11.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "750m²", price: "14.0元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "1000m²", price: "12.5元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "1500m²", price: "13.5元/m²/天", decoration: "精装修", floor: "高区" },
+      { area: "2000m²", price: "14.5元/m²/天", decoration: "豪华装修", floor: "高区" },
+      { area: "2500m²", price: "13.0元/m²/天", decoration: "精装修", floor: "中区" },
+      { area: "3000m²", price: "15.0元/m²/天", decoration: "豪华装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "60层",
+      elevators: "客梯22部，货梯4部",
+      efficiency: "77%",
+      propertyCompany: "凯德物业",
+      developer: "凯德集团"
+    },
+    description: "来福士广场位于人民广场核心位置，是上海的地标性综合体建筑。项目集办公、购物、餐饮、娱乐于一体，交通极为便利。适合各类企业总部、区域总部、金融机构入驻。周边商业氛围浓厚，是上海最繁华的商圈之一。",
+    nearbyBuildings: [
+      { name: "金茂大厦", price: "10.0元/m²/天", image: vankeCenter, link: "/building/35" },
+      { name: "静安嘉里中心", price: "13.0元/m²/天", image: exhibitionHub, link: "/building/13" },
+      { name: "复星艺术中心", price: "15.0元/m²/天", image: worldCenter, link: "/building/12" }
+    ]
+  },
+  "115": {
+    id: 115,
+    name: "泰创空间·虹桥",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,虹桥火车站步行约8分钟",
+    address: "上海市闵行区申虹路",
+    price: "2000~3500",
+    priceRange: "元/工位/月",
+    totalUnits: 8,
+    availableArea: "10 - 100工位",
+    type: "coworking",
+    coordinates: [121.318, 31.196],
+    images: [
+      wework1,
+      wework1,
+      wework1,
+      wework1
+    ],
+    availableRooms: [
+      { area: "10工位", price: "2500元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "20工位", price: "2300元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "30工位", price: "2200元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "50工位", price: "2000元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "80工位", price: "2100元/工位/月", decoration: "精装修", floor: "整层" },
+      { area: "100工位", price: "2400元/工位/月", decoration: "精装修", floor: "独立空间" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "20层",
+      elevators: "客梯8部",
+      efficiency: "85%",
+      propertyCompany: "泰创物业",
+      developer: "泰创集团"
+    },
+    description: "泰创空间位于虹桥商务区核心位置，提供灵活办公解决方案。空间设计现代简约，配备完善的办公设施、会议室、休息区等。提供专业的企业服务和社群活动。适合初创企业、小微企业、自由职业者入驻。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "WeWork威海路", price: "2800元/工位/月", image: wework1, link: "/building/101" },
+      { name: "Distrii分布式办公", price: "2600元/工位/月", image: distrii1, link: "/building/103" }
+    ]
+  },
+  "116": {
+    id: 116,
+    name: "德事商务中心·静安",
+    district: "静安 - 南京西路",
+    subway: "2号线,南京西路站步行约5分钟",
+    address: "上海市静安区南京西路",
+    price: "2500~4000",
+    priceRange: "元/工位/月",
+    totalUnits: 6,
+    availableArea: "5 - 80工位",
+    type: "coworking",
+    coordinates: [121.449, 31.228],
+    images: [
+      regus1788,
+      regus1788,
+      regus1788,
+      regus1788
+    ],
+    availableRooms: [
+      { area: "5工位", price: "3500元/工位/月", decoration: "豪华装修", floor: "高区" },
+      { area: "10工位", price: "3200元/工位/月", decoration: "豪华装修", floor: "高区" },
+      { area: "20工位", price: "3000元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "30工位", price: "2800元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "50工位", price: "2600元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "80工位", price: "2500元/工位/月", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.8m",
+      totalFloors: "30层",
+      elevators: "客梯12部",
+      efficiency: "82%",
+      propertyCompany: "德事物业",
+      developer: "德事集团"
+    },
+    description: "德事商务中心位于静安区南京西路商圈，是全球知名的商务中心品牌。提供全方位的办公服务和商务支持，包括前台接待、会议室、商务秘书等。适合跨国企业、金融机构、咨询公司等高端企业。",
+    nearbyBuildings: [
+      { name: "静安嘉里中心", price: "13.0元/m²/天", image: exhibitionHub, link: "/building/13" },
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "Regus雷格斯", price: "3000元/工位/月", image: regus1788, link: "/building/107" }
+    ]
+  },
+  "117": {
+    id: 117,
+    name: "氪空间·陆家嘴",
+    district: "浦东 - 陆家嘴",
+    subway: "2号线,陆家嘴站步行约3分钟",
+    address: "上海市浦东新区世纪大道",
+    price: "2800~4500",
+    priceRange: "元/工位/月",
+    totalUnits: 7,
+    availableArea: "8 - 120工位",
+    type: "coworking",
+    coordinates: [121.506, 31.240],
+    images: [
+      krspaceLvgu,
+      krspaceLvgu,
+      krspaceLvgu,
+      krspaceLvgu
+    ],
+    availableRooms: [
+      { area: "8工位", price: "3800元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "15工位", price: "3500元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "25工位", price: "3200元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "40工位", price: "3000元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "60工位", price: "2900元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "80工位", price: "2800元/工位/月", decoration: "精装修", floor: "整层" },
+      { area: "120工位", price: "3200元/工位/月", decoration: "精装修", floor: "独立空间" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "45层",
+      elevators: "客梯18部",
+      efficiency: "84%",
+      propertyCompany: "氪空间物业",
+      developer: "36氪"
+    },
+    description: "氪空间位于陆家嘴金融贸易区核心位置，是36氪旗下的联合办公品牌。空间设计科技感十足，提供智能化办公体验。定期举办创业沙龙、投融资对接等活动。适合科技创业公司、金融科技企业入驻。",
+    nearbyBuildings: [
+      { name: "金茂大厦", price: "10.0元/m²/天", image: vankeCenter, link: "/building/35" },
+      { name: "环球金融中心", price: "11.0元/m²/天", image: worldCenter, link: "/building/36" },
+      { name: "氪空间绿谷广场", price: "2500元/工位/月", image: krspaceLvgu, link: "/building/108" }
+    ]
+  },
+  "118": {
+    id: 118,
+    name: "梦想加·徐家汇",
+    district: "徐汇 - 徐家汇",
+    subway: "1号线,9号线,11号线,徐家汇站步行约5分钟",
+    address: "上海市徐汇区虹桥路",
+    price: "2200~3800",
+    priceRange: "元/工位/月",
+    totalUnits: 9,
+    availableArea: "6 - 100工位",
+    type: "coworking",
+    coordinates: [121.437, 31.195],
+    images: [
+      umon1,
+      umon1,
+      umon1,
+      umon1
+    ],
+    availableRooms: [
+      { area: "6工位", price: "3200元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "12工位", price: "2900元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "20工位", price: "2700元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "30工位", price: "2500元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "45工位", price: "2400元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "60工位", price: "2300元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "80工位", price: "2200元/工位/月", decoration: "精装修", floor: "整层" },
+      { area: "100工位", price: "2600元/工位/月", decoration: "精装修", floor: "独立空间" }
+    ],
+    buildingInfo: {
+      floorHeight: "3.9m",
+      totalFloors: "25层",
+      elevators: "客梯10部",
+      efficiency: "83%",
+      propertyCompany: "梦想加物业",
+      developer: "梦想加"
+    },
+    description: "梦想加位于徐家汇商圈核心位置，采用智能化办公系统，提供无感化办公体验。空间设计简约时尚，配备咖啡吧、休闲区、会议室等。定期举办各类社群活动。适合互联网、文创、咨询等行业企业入驻。",
+    nearbyBuildings: [
+      { name: "虹桥天地", price: "5.5元/m²/天", image: hongqiaoTiandi, link: "/building/5" },
+      { name: "优客工场", price: "2400元/工位/月", image: umon1, link: "/building/105" },
+      { name: "纳什空间", price: "2300元/工位/月", image: umon1, link: "/building/120" }
+    ]
+  },
+  "119": {
+    id: 119,
+    name: "米域·长宁",
+    district: "长宁 - 中山公园",
+    subway: "2号线,3号线,4号线,中山公园站步行约5分钟",
+    address: "上海市长宁区长宁路",
+    price: "2100~3500",
+    priceRange: "元/工位/月",
+    totalUnits: 8,
+    availableArea: "8 - 90工位",
+    type: "coworking",
+    coordinates: [121.424, 31.222],
+    images: [
+      distrii1,
+      distrii1,
+      distrii1,
+      distrii1
+    ],
+    availableRooms: [
+      { area: "8工位", price: "3000元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "15工位", price: "2800元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "25工位", price: "2600元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "35工位", price: "2400元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "50工位", price: "2300元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "70工位", price: "2200元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "90工位", price: "2100元/工位/月", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.0m",
+      totalFloors: "22层",
+      elevators: "客梯9部",
+      efficiency: "81%",
+      propertyCompany: "米域物业",
+      developer: "米域"
+    },
+    description: "米域位于长宁区中山公园商圈，是新型联合办公空间品牌。空间设计融合艺术与科技，提供多样化的办公场景。配备健身房、咖啡吧、图书角等设施。定期举办艺术展览、文化沙龙。适合文创、设计、科技企业入驻。",
+    nearbyBuildings: [
+      { name: "SOHO天山广场", price: "5.8元/m²/天", image: sohoTianshan, link: "/building/4" },
+      { name: "Distrii分布式办公", price: "2600元/工位/月", image: distrii1, link: "/building/103" },
+      { name: "维璟中心", price: "6.0元/m²/天", image: weijingCenter, link: "/building/10" }
+    ]
+  },
+  "120": {
+    id: 120,
+    name: "纳什空间·张江",
+    district: "浦东 - 张江高科",
+    subway: "2号线,张江高科站步行约8分钟",
+    address: "上海市浦东新区张江路",
+    price: "1800~3200",
+    priceRange: "元/工位/月",
+    totalUnits: 10,
+    availableArea: "10 - 150工位",
+    type: "coworking",
+    coordinates: [121.608, 31.203],
+    images: [
+      weworkTiandi,
+      weworkTiandi,
+      weworkTiandi,
+      weworkTiandi
+    ],
+    availableRooms: [
+      { area: "10工位", price: "2500元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "20工位", price: "2300元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "30工位", price: "2100元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "45工位", price: "2000元/工位/月", decoration: "精装修", floor: "高区" },
+      { area: "60工位", price: "1900元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "80工位", price: "1800元/工位/月", decoration: "精装修", floor: "中区" },
+      { area: "100工位", price: "2000元/工位/月", decoration: "精装修", floor: "整层" },
+      { area: "150工位", price: "2200元/工位/月", decoration: "精装修", floor: "独立空间" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.1m",
+      totalFloors: "18层",
+      elevators: "客梯7部",
+      efficiency: "80%",
+      propertyCompany: "纳什物业",
+      developer: "纳什空间"
+    },
+    description: "纳什空间位于张江高科技园区，是专注于科技创新的联合办公品牌。空间设计科技感强，配备实验室、路演厅、创客空间等。提供投融资对接、技术交流等服务。适合科技研发、人工智能、生物医药等创新企业入驻。",
+    nearbyBuildings: [
+      { name: "WeWork威海路", price: "2800元/工位/月", image: wework1, link: "/building/101" },
+      { name: "梦想加", price: "2500元/工位/月", image: umon1, link: "/building/118" },
+      { name: "张江科学城", price: "4.0元/m²/天", image: tianlinFang, link: "/building/309" }
+    ]
+  },
+  "209": {
+    id: 209,
+    name: "开弈创意园",
+    district: "杨浦 - 五角场",
+    subway: "10号线,五角场站步行约10分钟",
+    address: "上海市杨浦区国定路",
+    price: "2.5~4.2",
+    priceRange: "元/m²/天",
+    totalUnits: 12,
+    availableArea: "100 - 1500m²",
+    type: "creative",
+    coordinates: [121.514, 31.299],
+    images: [
+      show800,
+      show800,
+      show800,
+      show800
+    ],
+    availableRooms: [
+      { area: "100m²", price: "3.2元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "150m²", price: "3.0元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "220m²", price: "3.5元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "300m²", price: "2.9元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "450m²", price: "3.7元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "600m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "800m²", price: "3.9元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "1000m²", price: "3.6元/m²/天", decoration: "标准交付", floor: "9F" },
+      { area: "1200m²", price: "4.0元/m²/天", decoration: "精装修", floor: "10F" },
+      { area: "1500m²", price: "4.2元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.3m",
+      totalFloors: "10层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "76%",
+      propertyCompany: "开弈物业",
+      developer: "杨浦创业园区"
+    },
+    description: "开弈创意园位于杨浦区五角场商圈，毗邻复旦大学、同济大学等高校。园区定位知识创新和文化创意产业，配套设施完善，创业氛围浓厚。适合科技研发、文化传媒、教育培训等行业企业入驻。",
+    nearbyBuildings: [
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "明珠创意产业园", price: "3.0元/m²/天", image: anken, link: "/building/210" }
+    ]
+  },
+  "210": {
+    id: 210,
+    name: "明珠创意产业园",
+    district: "浦东 - 金桥",
+    subway: "6号线,北洋泾路站步行约8分钟",
+    address: "上海市浦东新区金桥路",
+    price: "2.8~4.5",
+    priceRange: "元/m²/天",
+    totalUnits: 15,
+    availableArea: "90 - 1800m²",
+    type: "creative",
+    coordinates: [121.608, 31.267],
+    images: [
+      anken,
+      anken,
+      anken,
+      anken
+    ],
+    availableRooms: [
+      { area: "90m²", price: "3.3元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "140m²", price: "3.1元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "200m²", price: "3.6元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "280m²", price: "3.0元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "400m²", price: "3.8元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "550m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "750m²", price: "4.0元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "950m²", price: "3.7元/m²/天", decoration: "标准交付", floor: "9F" },
+      { area: "1200m²", price: "4.2元/m²/天", decoration: "精装修", floor: "10F" },
+      { area: "1500m²", price: "3.9元/m²/天", decoration: "精装修", floor: "11F" },
+      { area: "1800m²", price: "4.5元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.2m",
+      totalFloors: "11层",
+      elevators: "客梯5部，货梯2部",
+      efficiency: "78%",
+      propertyCompany: "明珠物业",
+      developer: "金桥集团"
+    },
+    description: "明珠创意产业园位于浦东金桥出口加工区，是集研发、设计、制造于一体的综合性创意园区。园区配套完善，交通便利，适合科技研发、工业设计、智能制造等企业入驻。周边产业集聚，协同效应明显。",
+    nearbyBuildings: [
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+      { name: "开弈创意园", price: "3.5元/m²/天", image: show800, link: "/building/209" }
+    ]
+  },
+  "211": {
+    id: 211,
+    name: "创邑MIX·徐汇滨江",
+    district: "徐汇 - 徐汇滨江",
+    subway: "11号线,云锦路站步行约12分钟",
+    address: "上海市徐汇区龙腾大道",
+    price: "3.5~5.5",
+    priceRange: "元/m²/天",
+    totalUnits: 10,
+    availableArea: "120 - 1200m²",
+    type: "creative",
+    coordinates: [121.465, 31.172],
+    images: [
+      bridge8,
+      bridge8,
+      bridge8,
+      bridge8
+    ],
+    availableRooms: [
+      { area: "120m²", price: "4.2元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "200m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "300m²", price: "4.6元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "420m²", price: "4.3元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "580m²", price: "4.9元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "750m²", price: "4.5元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "900m²", price: "5.2元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "1200m²", price: "5.5元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.8m",
+      totalFloors: "8层",
+      elevators: "客梯3部，货梯1部",
+      efficiency: "82%",
+      propertyCompany: "创邑物业",
+      developer: "创邑集团"
+    },
+    description: "创邑MIX位于徐汇滨江文化创意产业带，是由老工业厂房改造而成的创意园区。园区保留工业遗存特色，融入现代艺术元素。毗邻黄浦江，环境优美，适合艺术设计、文化传媒、科技创新等企业入驻。",
+    nearbyBuildings: [
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" },
+      { name: "800秀创意园", price: "3.5元/m²/天", image: show800, link: "/building/201" },
+      { name: "田林坊", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" }
+    ]
+  },
+  "212": {
+    id: 212,
+    name: "临港新业坊",
+    district: "浦东 - 临港新片区",
+    subway: "16号线,临港大道站步行约15分钟",
+    address: "上海市浦东新区临港新城",
+    price: "2.2~3.8",
+    priceRange: "元/m²/天",
+    totalUnits: 18,
+    availableArea: "80 - 2000m²",
+    type: "creative",
+    coordinates: [121.901, 30.900],
+    images: [
+      show800,
+      show800,
+      show800,
+      show800
+    ],
+    availableRooms: [
+      { area: "80m²", price: "2.8元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "130m²", price: "2.6元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "190m²", price: "3.1元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "270m²", price: "2.5元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "380m²", price: "3.3元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "520m²", price: "2.9元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "700m²", price: "3.5元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "900m²", price: "3.2元/m²/天", decoration: "标准交付", floor: "9F" },
+      { area: "1200m²", price: "3.7元/m²/天", decoration: "精装修", floor: "10F" },
+      { area: "1500m²", price: "3.4元/m²/天", decoration: "精装修", floor: "11F" },
+      { area: "2000m²", price: "3.8元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "11层",
+      elevators: "客梯6部，货梯3部",
+      efficiency: "79%",
+      propertyCompany: "临港新业坊物业",
+      developer: "临港集团"
+    },
+    description: "临港新业坊位于临港新片区核心位置，是上海自贸区临港新片区重点打造的创新创业园区。园区定位高端智能制造、人工智能、生物医药等前沿产业。配套政策优惠，适合科技创新企业、研发中心入驻。",
+    nearbyBuildings: [
+      { name: "开弈创意园", price: "3.5元/m²/天", image: show800, link: "/building/209" },
+      { name: "明珠创意产业园", price: "3.3元/m²/天", image: anken, link: "/building/210" },
+      { name: "临港新片区总部", price: "3.5元/m²/天", image: maxTech, link: "/building/310" }
+    ]
+  },
+  "213": {
+    id: 213,
+    name: "复客北翼·大学路",
+    district: "杨浦 - 大学路",
+    subway: "10号线,五角场站步行约8分钟",
+    address: "上海市杨浦区大学路",
+    price: "3.0~5.0",
+    priceRange: "元/m²/天",
+    totalUnits: 14,
+    availableArea: "100 - 1600m²",
+    type: "creative",
+    coordinates: [121.517, 31.300],
+    images: [
+      anken,
+      anken,
+      anken,
+      anken
+    ],
+    availableRooms: [
+      { area: "100m²", price: "3.6元/m²/天", decoration: "精装修", floor: "2F" },
+      { area: "160m²", price: "3.4元/m²/天", decoration: "标准交付", floor: "3F" },
+      { area: "240m²", price: "3.9元/m²/天", decoration: "精装修", floor: "4F" },
+      { area: "330m²", price: "3.3元/m²/天", decoration: "标准交付", floor: "5F" },
+      { area: "460m²", price: "4.2元/m²/天", decoration: "精装修", floor: "6F" },
+      { area: "620m²", price: "3.8元/m²/天", decoration: "标准交付", floor: "7F" },
+      { area: "820m²", price: "4.5元/m²/天", decoration: "精装修", floor: "8F" },
+      { area: "1050m²", price: "4.1元/m²/天", decoration: "标准交付", floor: "9F" },
+      { area: "1300m²", price: "4.7元/m²/天", decoration: "精装修", floor: "10F" },
+      { area: "1600m²", price: "5.0元/m²/天", decoration: "精装修", floor: "整层" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.4m",
+      totalFloors: "10层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "80%",
+      propertyCompany: "复客物业",
+      developer: "复客集团"
+    },
+    description: "复客北翼位于杨浦区大学路创业街区，紧邻复旦大学、同济大学等知名高校。园区定位知识经济和创新创业，汇聚大量科技、文化、教育类企业。创业氛围浓厚，人才资源丰富，适合初创企业和创新型企业入驻。",
+    nearbyBuildings: [
+      { name: "开弈创意园", price: "3.5元/m²/天", image: show800, link: "/building/209" },
+      { name: "安垦汇智创意园", price: "3.2元/m²/天", image: anken, link: "/building/202" },
+      { name: "八号桥Ⅳ期", price: "3.8元/m²/天", image: bridge8, link: "/building/203" }
+    ]
+  },
+  "315": {
+    id: 315,
+    name: "张江科学城总部园",
+    district: "浦东 - 张江高科",
+    subway: "2号线,张江高科站步行约10分钟",
+    address: "上海市浦东新区张衡路",
+    price: "3.5~4.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 15000m²",
+    type: "headquarters",
+    coordinates: [121.611, 31.205],
+    images: [
+      tianlinFang,
+      tianlinFang,
+      tianlinFang,
+      tianlinFang
+    ],
+    availableRooms: [
+      { area: "15000m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "12层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "86%",
+      propertyCompany: "张江集团物业",
+      developer: "张江集团"
+    },
+    description: "张江科学城总部园位于浦东张江科学城核心区域，是上海科创中心建设的重要组成部分。园区配套设施一流，科研环境优越，适合科技研发、生物医药、集成电路、人工智能等高新技术企业总部入驻。享受张江特区政策优惠。",
+    nearbyBuildings: [
+      { name: "MAX科技园", price: "4.0元/m²/天", image: maxTech, link: "/building/306" },
+      { name: "平金中心", price: "4.8元/m²/天", image: pingjinCenter, link: "/building/307" },
+      { name: "纳什空间", price: "2000元/工位/月", image: weworkTiandi, link: "/building/120" }
+    ]
+  },
+  "316": {
+    id: 316,
+    name: "临港新片区总部基地",
+    district: "浦东 - 临港新片区",
+    subway: "16号线,临港大道站步行约20分钟",
+    address: "上海市浦东新区临港新城环湖西三路",
+    price: "3.0~4.0",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 18000m²",
+    type: "headquarters",
+    coordinates: [121.904, 30.902],
+    images: [
+      maxTech,
+      maxTech,
+      maxTech,
+      maxTech
+    ],
+    availableRooms: [
+      { area: "18000m²", price: "3.5元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "5.0m",
+      totalFloors: "15层",
+      elevators: "客梯6部，货梯3部",
+      efficiency: "88%",
+      propertyCompany: "临港集团物业",
+      developer: "临港集团"
+    },
+    description: "临港新片区总部基地位于上海自贸区临港新片区核心位置，是国家战略新兴产业示范区。园区享受自贸区政策红利，配套设施完善，适合高端装备制造、智能网联汽车、生物医药、人工智能等产业总部入驻。发展前景广阔。",
+    nearbyBuildings: [
+      { name: "张江科学城", price: "4.0元/m²/天", image: tianlinFang, link: "/building/315" },
+      { name: "MAX科技园", price: "4.0元/m²/天", image: maxTech, link: "/building/306" },
+      { name: "临港新业坊", price: "3.0元/m²/天", image: show800, link: "/building/212" }
+    ]
+  },
+  "317": {
+    id: 317,
+    name: "虹桥商务区总部湾",
+    district: "闵行 - 虹桥商务区",
+    subway: "2号线,10号线,17号线,诸光路站步行约8分钟",
+    address: "上海市闵行区联友路",
+    price: "5.0~6.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 20000m²",
+    type: "headquarters",
+    coordinates: [121.306, 31.201],
+    images: [
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu,
+      hongqiaoBu
+    ],
+    availableRooms: [
+      { area: "20000m²", price: "5.8元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.8m",
+      totalFloors: "18层",
+      elevators: "客梯8部，货梯4部",
+      efficiency: "87%",
+      propertyCompany: "虹桥商务区物业",
+      developer: "虹桥商务区开发公司"
+    },
+    description: "虹桥商务区总部湾位于虹桥商务区核心位置，紧邻虹桥枢纽，辐射长三角及全国。建筑品质卓越，配套设施一流，适合大型企业总部、跨国公司区域总部、金融机构入驻。地理位置优越，是企业总部选址的首选之地。",
+    nearbyBuildings: [
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" },
+      { name: "虹桥BU中心", price: "6.0元/m²/天", image: hongqiaoBu, link: "/building/301" },
+      { name: "虹桥正荣中心", price: "5.8元/m²/天", image: hongqiaoZhengrong, link: "/building/305" }
+    ]
+  },
+  "318": {
+    id: 318,
+    name: "松江G60科创云廊",
+    district: "松江 - G60科创走廊",
+    subway: "9号线,松江大学城站转公交约15分钟",
+    address: "上海市松江区文翔路",
+    price: "3.2~4.5",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 16000m²",
+    type: "headquarters",
+    coordinates: [121.196, 31.019],
+    images: [
+      rongdaCenter,
+      rongdaCenter,
+      rongdaCenter,
+      rongdaCenter
+    ],
+    availableRooms: [
+      { area: "16000m²", price: "3.8元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.6m",
+      totalFloors: "14层",
+      elevators: "客梯5部，货梯2部",
+      efficiency: "85%",
+      propertyCompany: "G60物业",
+      developer: "松江区国资"
+    },
+    description: "松江G60科创云廊位于G60科创走廊核心区域，是长三角一体化国家战略的重要载体。园区定位高端智能制造、新材料、人工智能等产业。配套政策优惠，发展空间广阔，适合制造业总部、研发中心入驻。",
+    nearbyBuildings: [
+      { name: "容大中心", price: "3.8元/m²/天", image: rongdaCenter, link: "/building/308" },
+      { name: "MAX科技园", price: "4.0元/m²/天", image: maxTech, link: "/building/306" },
+      { name: "田林坊", price: "5.0元/m²/天", image: tianlinFang, link: "/building/303" }
+    ]
+  },
+  "319": {
+    id: 319,
+    name: "嘉定汽车城总部园",
+    district: "嘉定 - 汽车城",
+    subway: "11号线,嘉定西站步行约15分钟",
+    address: "上海市嘉定区博园路",
+    price: "3.5~4.8",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 14000m²",
+    type: "headquarters",
+    coordinates: [121.186, 31.296],
+    images: [
+      pingjinCenter,
+      pingjinCenter,
+      pingjinCenter,
+      pingjinCenter
+    ],
+    availableRooms: [
+      { area: "14000m²", price: "4.0元/m²/天", decoration: "标准交付", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.5m",
+      totalFloors: "11层",
+      elevators: "客梯4部，货梯2部",
+      efficiency: "84%",
+      propertyCompany: "汽车城物业",
+      developer: "嘉定汽车城开发公司"
+    },
+    description: "嘉定汽车城总部园位于上海国际汽车城核心区域，是中国汽车产业的重要基地。园区聚焦智能网联汽车、新能源汽车、汽车电子等产业。配套完善，产业集聚效应显著，适合汽车产业链企业总部入驻。",
+    nearbyBuildings: [
+      { name: "平金中心", price: "4.8元/m²/天", image: pingjinCenter, link: "/building/307" },
+      { name: "松江G60科创云廊", price: "3.8元/m²/天", image: rongdaCenter, link: "/building/318" },
+      { name: "青浦西虹桥", price: "4.2元/m²/天", image: zhongjunPlaza, link: "/building/320" }
+    ]
+  },
+  "320": {
+    id: 320,
+    name: "青浦西虹桥总部基地",
+    district: "青浦 - 徐泾",
+    subway: "17号线,徐泾北城站步行约10分钟",
+    address: "上海市青浦区诸光路",
+    price: "4.0~5.2",
+    priceRange: "元/m²/天",
+    totalUnits: 1,
+    availableArea: "整栋 17000m²",
+    type: "headquarters",
+    coordinates: [121.289, 31.206],
+    images: [
+      zhongjunPlaza,
+      zhongjunPlaza,
+      zhongjunPlaza,
+      zhongjunPlaza
+    ],
+    availableRooms: [
+      { area: "17000m²", price: "4.5元/m²/天", decoration: "精装修", floor: "整栋" }
+    ],
+    buildingInfo: {
+      floorHeight: "4.7m",
+      totalFloors: "16层",
+      elevators: "客梯6部，货梯3部",
+      efficiency: "86%",
+      propertyCompany: "青浦物业",
+      developer: "青浦区国资"
+    },
+    description: "青浦西虹桥总部基地位于青浦区徐泾镇，紧邻虹桥商务区和国家会展中心。地理位置优越，交通便利，是长三角一体化的重要节点。适合贸易、物流、会展服务、科技研发等企业总部入驻。发展潜力巨大。",
+    nearbyBuildings: [
+      { name: "中骏广场", price: "6.5元/m²/天", image: zhongjunPlaza, link: "/building/304" },
+      { name: "虹桥商务区总部湾", price: "5.8元/m²/天", image: hongqiaoBu, link: "/building/317" },
+      { name: "虹桥万科中心", price: "4.5元/m²/天", image: vankeCenter, link: "/building/1" }
     ]
   }
 };
