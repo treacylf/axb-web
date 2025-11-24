@@ -98,11 +98,11 @@ export const buildingData: Record<string, BuildingData> = {
     district: "闵行 - 虹桥商务区",
     subway: "2号线,10号线,17号线,虹桥火车站站步行约5分钟",
     address: "上海市闵行区申长路988弄",
+    type: "building", // 写字楼
     price: "4.3~5.0",
     priceRange: "元/m²/天",
     totalUnits: 7,
     availableArea: "198 - 2352m²",
-    type: "building", // 写字楼
     coordinates: [121.319, 31.196], // 虹桥商务区核心位置
     images: [
       vankeCenter,
@@ -929,6 +929,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 8600m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.384, 31.210], // 长宁区虹桥临空
     images: [
       hongqiaoBu,
@@ -965,6 +966,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 6500m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.431, 31.262], // 普陀区M50创意园
     images: [
       liboReeb,
@@ -1001,6 +1003,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 7200m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.408, 31.158], // 徐汇区漕河泾
     images: [
       tianlinFang,
@@ -1037,6 +1040,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 12000m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.383, 31.211], // 长宁区虹桥临空
     images: [
       zhongjunPlaza,
@@ -1073,6 +1077,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 9500m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.315, 31.195], // 闵行区虹桥商务区
     images: [
       hongqiaoZhengrong,
@@ -1109,6 +1114,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 8000m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.488, 31.021], // 闵行区紫竹高新区
     images: [
       maxTech,
@@ -1145,6 +1151,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 10500m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.605, 31.268], // 浦东新区金桥
     images: [
       pingjinCenter,
@@ -1181,6 +1188,7 @@ export const buildingData: Record<string, BuildingData> = {
     priceRange: "元/m²/天",
     totalUnits: 1,
     availableArea: "整栋 7500m²",
+    type: "headquarters", // 总部独栋
     coordinates: [121.382, 31.110], // 闵行区莘庄
     images: [
       rongdaCenter,
