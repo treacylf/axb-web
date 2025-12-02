@@ -93,6 +93,13 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
     setIsMapInitialized(true);
   };
 
+  // 自动加载地图脚本
+  useEffect(() => {
+    if (baiduAk && !scriptLoaded && !isMapInitialized) {
+      loadBaiduMapScript();
+    }
+  }, []);
+
   useEffect(() => {
     if (scriptLoaded) {
       initializeMap();
