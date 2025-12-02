@@ -65,7 +65,7 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
 
     // 添加标记
     const marker = new window.BMapGL.Marker(point);
-    map.current.addMarker(marker);
+    map.current.addOverlay(marker);
     marker.setAnimation(window.BMAP_ANIMATION_BOUNCE);
 
     // 创建信息窗口
