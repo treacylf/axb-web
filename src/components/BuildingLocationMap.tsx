@@ -28,7 +28,7 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
 }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<any>(null);
-  const [baiduAk, setBaiduAk] = useState<string>('');
+  const [baiduAk, setBaiduAk] = useState<string>('vxpfS0Bobq24tXyENR9n6VTmiLjlBZCo');
   const [isMapInitialized, setIsMapInitialized] = useState(false);
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
@@ -50,7 +50,7 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
 
     // 百度地图使用的是 [纬度, 经度] 顺序，需要转换
     const point = new window.BMapGL.Point(coordinates[0], coordinates[1]);
-    
+
     map.current = new window.BMapGL.Map(mapContainer.current);
     map.current.centerAndZoom(point, 17);
     map.current.enableScrollWheelZoom(true);
@@ -120,9 +120,9 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
               请输入您的百度地图 API Key (AK) 以显示地图。您可以在{' '}
-              <a 
-                href="https://lbsyun.baidu.com/apiconsole/key" 
-                target="_blank" 
+              <a
+                href="https://lbsyun.baidu.com/apiconsole/key"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
@@ -157,8 +157,8 @@ export const BuildingLocationMap: React.FC<BuildingLocationMapProps> = ({
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div 
-          ref={mapContainer} 
+        <div
+          ref={mapContainer}
           className="w-full h-[400px] rounded-lg overflow-hidden"
         />
         <div className="mt-4 p-4 bg-muted/30 rounded-lg space-y-2">
