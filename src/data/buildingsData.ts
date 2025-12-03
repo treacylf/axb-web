@@ -21,6 +21,33 @@ import yuandongPlaza from "@/assets/buildings/yuandong-plaza.jpg";
 import weijingCenter from "@/assets/buildings/weijing-center.jpg";
 import shangjiaCenter from "@/assets/buildings/shangjia-center.jpg";
 
+// Building Detail Images
+import vanke1 from "@/assets/buildings/detail/vanke-1.jpg";
+import vanke2 from "@/assets/buildings/detail/vanke-2.jpg";
+import vanke3 from "@/assets/buildings/detail/vanke-3.jpg";
+import vanke4 from "@/assets/buildings/detail/vanke-4.jpg";
+import vanke5 from "@/assets/buildings/detail/vanke-5.jpg";
+import vanke6 from "@/assets/buildings/detail/vanke-6.jpg";
+import exhibition1 from "@/assets/buildings/detail/exhibition-1.jpg";
+import exhibition2 from "@/assets/buildings/detail/exhibition-2.jpg";
+import exhibition3 from "@/assets/buildings/detail/exhibition-3.jpg";
+import exhibition4 from "@/assets/buildings/detail/exhibition-4.jpg";
+import exhibition5 from "@/assets/buildings/detail/exhibition-5.jpg";
+import exhibition6 from "@/assets/buildings/detail/exhibition-6.jpg";
+import hongqiaohui1 from "@/assets/buildings/detail/hongqiaohui-1.jpg";
+import hongqiaohui2 from "@/assets/buildings/detail/hongqiaohui-2.jpg";
+import hongqiaohui3 from "@/assets/buildings/detail/hongqiaohui-3.jpg";
+import hongqiaohui4 from "@/assets/buildings/detail/hongqiaohui-4.jpg";
+import hongqiaohui5 from "@/assets/buildings/detail/hongqiaohui-5.jpg";
+import soho1 from "@/assets/buildings/detail/soho-1.jpg";
+import soho2 from "@/assets/buildings/detail/soho-2.jpg";
+import soho3 from "@/assets/buildings/detail/soho-3.jpg";
+import soho4 from "@/assets/buildings/detail/soho-4.jpg";
+import soho5 from "@/assets/buildings/detail/soho-5.jpg";
+import tiandi1 from "@/assets/buildings/detail/tiandi-1.jpg";
+import world1 from "@/assets/buildings/detail/world-1.jpg";
+import zhongjun1 from "@/assets/buildings/detail/zhongjun-1.png";
+
 // Coworking Space Images
 import wework1 from "@/assets/coworking/wework-1.jpg";
 import weworkTiandi from "@/assets/coworking/wework-tiandi.jpg";
@@ -106,12 +133,12 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.319, 31.196], // 虹桥商务区核心位置
     images: [
       vankeCenter,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/aeb2c626e7329000a2553992d92943f8.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/3edfbcf3bc96721c64396557df9ae04b.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/b23f06429df18ceaecf8019a8cefb78b.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/525064ffad6cc7c8d5b03953344894da.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/121728aea18917bf0dba1f28104b27be.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1a5e3c5a86095b2353184cc0575d3d0c.jpg"
+      vanke1,
+      vanke2,
+      vanke3,
+      vanke4,
+      vanke5,
+      vanke6
     ],
     availableRooms: [
       { area: "198m²", price: "4.7元/m²/天", decoration: "标准交付", floor: "高区" },
@@ -151,12 +178,12 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.308, 31.193], // 虹桥商务区北区
     images: [
       exhibitionHub,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/30041d724ec07ba6fcf219b52d8120cf.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/056b346a986392d74b15ea4f04951d7c.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/9a532c3bc8a85d89c207bd59528b13c8.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/fdf95460dcd325ff4d29172802e2e7ea.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1ecd3b8852e743d6a2ef621d15a167ca.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/42400ca548d9e05ee678b9ff7a2c6988.jpg"
+      exhibition1,
+      exhibition2,
+      exhibition3,
+      exhibition4,
+      exhibition5,
+      exhibition6
     ],
     availableRooms: [
       { area: "188m²", price: "2.5元/m²/天", decoration: "精装修", floor: "高区" },
@@ -197,11 +224,11 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.316, 31.195], // 虹桥火车站附近
     images: [
       hongqiaoHui,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/cd71f858842c2f4ca697edc2a0b4c090.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/7dd7f1150acdaa872bf1a55ea34f0797.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/1bfb030e750bb41a2061b138cb2de105.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/2c6098a5facfe397589489ec13d0a1a8.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/e10a5be3fde829fcd519975770a49c38.jpg"
+      hongqiaohui1,
+      hongqiaohui2,
+      hongqiaohui3,
+      hongqiaohui4,
+      hongqiaohui5
     ],
     availableRooms: [
       { area: "189m²", price: "4.5元/m²/天", decoration: "精装修", floor: "中区" },
@@ -240,11 +267,11 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.421, 31.221], // 长宁区天山路附近
     images: [
       sohoTianshan,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/ba52f609e16b1275f061d0ab307b4539.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/33e615edf86428abbe588dea8a84be7c.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/ce131921112686e0b079ea4b8507766a.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/4e90c306c017f5ad9b91e83a8e851b5e.jpg",
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210626/1e1c30c523100b1f4c4ded0b0906fcb9.jpg"
+      soho1,
+      soho2,
+      soho3,
+      soho4,
+      soho5
     ],
     availableRooms: [
       { area: "120m²", price: "5.8元/m²/天", decoration: "精装修", floor: "中区" },
@@ -283,7 +310,7 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.320, 31.198], // 虹桥火车站附近
     images: [
       hongqiaoTiandi,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/7b41e3e1338ae9ec8547204a4f5ea45c.jpg",
+      tiandi1,
       hongqiaoTiandi,
       hongqiaoTiandi,
       hongqiaoTiandi
@@ -329,7 +356,7 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.322, 31.199], // 虹桥商务区高端区域
     images: [
       worldCenter,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/4311f1718f0286191ccf3b1251551b32.jpg",
+      world1,
       worldCenter,
       worldCenter,
       worldCenter
@@ -373,7 +400,7 @@ export const buildingData: Record<string, BuildingData> = {
     coordinates: [121.318, 31.194], // 虹桥商务区申滨路
     images: [
       zhongjunPlazaImg,
-      "https://chaoban.oss-cn-shanghai.aliyuncs.com/images/uploads_eWr6Ld/uploads/20210624/aabe164835b37360a355108fd722a4db.png",
+      zhongjun1,
       zhongjunPlazaImg,
       zhongjunPlazaImg,
       zhongjunPlazaImg
